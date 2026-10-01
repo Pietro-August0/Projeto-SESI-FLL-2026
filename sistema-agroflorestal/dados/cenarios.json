@@ -1,0 +1,59 @@
+[
+  {
+    "id": "solo-a",
+    "nome": "Solo A",
+    "titulo": "Mais nitrogênio, mais vida",
+    "descricao": "N baixo: explore fixação de nitrogênio e biomassa.",
+    "demonstrativo": true,
+    "dados": {
+      "ph": 5.8,
+      "umidade": 55,
+      "temperatura": 26,
+      "nitrogenio": 18,
+      "fosforo": 25,
+      "potassio": 100,
+      "condutividade": null,
+      "municipio": "Belém",
+      "estado": "PA",
+      "objetivo": "MISTO"
+    }
+  },
+  {
+    "id": "solo-b",
+    "nome": "Solo B",
+    "titulo": "Proteger para recuperar",
+    "descricao": "Baixa umidade e nutrientes: cobertura e recuperação.",
+    "demonstrativo": true,
+    "dados": {
+      "ph": 4.8,
+      "umidade": 22,
+      "temperatura": 30,
+      "nitrogenio": 15,
+      "fosforo": 8,
+      "potassio": 40,
+      "condutividade": null,
+      "municipio": "Petrolina",
+      "estado": "PE",
+      "objetivo": "RECUPERACAO"
+    }
+  },
+  {
+    "id": "solo-c",
+    "nome": "Solo C",
+    "titulo": "Diversidade que produz",
+    "descricao": "Faixas equilibradas: combine diferentes produções.",
+    "demonstrativo": true,
+    "dados": {
+      "ph": 6.2,
+      "umidade": 60,
+      "temperatura": 25,
+      "nitrogenio": 45,
+      "fosforo": 30,
+      "potassio": 150,
+      "condutividade": null,
+      "municipio": "Registro",
+      "estado": "SP",
+      "objetivo": "PRODUCAO"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+.cenarios-compactos h2 { font-family: 'Segoe UI', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0; }
+.cenarios-compactos .cenario { padding: 18px 20px; gap: 7px; }
+.cenarios-compactos .cenario strong { font-size: 20px; }
+.cenarios-compactos .cenario > span { font-size: 12px; }
+.mensagem-status { min-height: 26px; font-size: 13px; color: var(--verde); margin: 14px 0 26px; }
+.analise-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 70px; }
+fieldset { border: 0; border-bottom: 1px solid var(--borda); margin: 0 0 30px; padding: 0 0 30px; min-width: 0; }
+legend { font-size: 19px; font-weight: 600; margin-bottom: 20px; padding: 0; }
+legend > span { color: var(--ocre); font-weight: 400; font-size: 14px; margin-right: 12px; }
+.campos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px 18px; }
+.campos.localizacao { grid-template-columns: 2fr 1fr; }
+.objetivos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.objetivo { display: flex; align-items: flex-start; gap: 10px; border: 1px solid var(--borda); border-radius: var(--raio); padding: 18px 16px; background: var(--superficie); cursor: pointer; }
+.objetivo:has(input:checked) { border-color: var(--verde); background: var(--sage); }
+.objetivo input { accent-color: var(--verde); margin-top: 5px; flex-shrink: 0; width: 16px; height: 16px; }
+.objetivo strong { display: block; font-size: 14px; }
+.objetivo small { display: block; font-size: 12px; font-weight: 400; margin-top: 5px; color: var(--muted); }
+form > .ajuda { margin-top: 12px; }
+@media (max-width: 1000px) { .analise-layout { grid-template-columns: minmax(0, 1fr) 250px; gap: 30px; } .campos { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 700px) { .analise-layout { grid-template-columns: 1fr; gap: 30px; } .campos, .objetivos { grid-template-columns: 1fr; } .campos.localizacao { grid-template-columns: 1fr; } .analise-layout .botao { width: 100%; } }
