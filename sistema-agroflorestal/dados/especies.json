@@ -32,7 +32,23 @@
             "titulo": "Embrapa — Adubação verde e conservação do solo",
             "url": "https://www.embrapa.br/documents/1355054/32245427/4a%2B%2Bfolder%2BAduba%C3%A7%C3%A3o%2Bverde.pdf/6a472dad-6782-491b-8393-61fc6510bf7d"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/feijao-guandu.jpg",
+            "alt": "Folhas e vagens de feijão-guandu",
+            "autor": "Forest & Kim Starr",
+            "licenca": "CC BY 3.0",
+            "licencaUrl": "https://creativecommons.org/licenses/by/3.0/",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:Starr_070215-4542_Cajanus_cajan.jpg",
+            "urlOrigem": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Starr_070215-4542_Cajanus_cajan.jpg/960px-Starr_070215-4542_Cajanus_cajan.jpg",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": "Adubo verde citado pela Embrapa para a implantação de SAFs. Neste catálogo, ajuda a representar as funções de fixação de nitrogênio e produção de biomassa.",
+        "fonteComplementar": {
+            "titulo": "Embrapa — SAFs e recuperação",
+            "url": "https://www.embrapa.br/en/codigo-florestal/sistemas-agroflorestais-safs"
+        },
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "crotalaria",
@@ -68,7 +84,23 @@
             "titulo": "Embrapa — Adubação verde e conservação do solo",
             "url": "https://www.embrapa.br/documents/1355054/32245427/4a%2B%2Bfolder%2BAduba%C3%A7%C3%A3o%2Bverde.pdf/6a472dad-6782-491b-8393-61fc6510bf7d"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/crotalaria.jpg",
+            "alt": "Registro fotográfico de Crotalaria juncea",
+            "autor": "A16898",
+            "licenca": "CC BY-SA 3.0",
+            "licencaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:Crotalaria_juncea_Da220020.JPG",
+            "urlOrigem": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Crotalaria_juncea_Da220020.JPG",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": "Adubo verde citado pela Embrapa entre as espécies usadas no início de SAFs. No catálogo educativo, reúne papéis de cobertura, adubação verde e suporte.",
+        "fonteComplementar": {
+            "titulo": "Embrapa — SAFs e recuperação",
+            "url": "https://www.embrapa.br/en/codigo-florestal/sistemas-agroflorestais-safs"
+        },
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "feijao-de-porco",
@@ -103,7 +135,23 @@
             "titulo": "Embrapa — Adubação verde e conservação do solo",
             "url": "https://www.embrapa.br/documents/1355054/32245427/4a%2B%2Bfolder%2BAduba%C3%A7%C3%A3o%2Bverde.pdf/6a472dad-6782-491b-8393-61fc6510bf7d"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/feijao-de-porco.jpg",
+            "alt": "Registro fotográfico de Canavalia ensiformis",
+            "autor": "Don McCulley",
+            "licenca": "CC BY-SA 4.0",
+            "licencaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:Canavalia_ensiformis_IMG_7981.jpg",
+            "urlOrigem": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Canavalia_ensiformis_IMG_7981.jpg/960px-Canavalia_ensiformis_IMG_7981.jpg",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": "A Embrapa inclui o feijão-de-porco entre os adubos verdes usados em SAFs. No catálogo, seus papéis ajudam a discutir cobertura e diversidade de funções.",
+        "fonteComplementar": {
+            "titulo": "Embrapa — SAFs e recuperação",
+            "url": "https://www.embrapa.br/en/codigo-florestal/sistemas-agroflorestais-safs"
+        },
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "mucuna",
@@ -138,7 +186,20 @@
             "titulo": "Embrapa — Adubação verde e conservação do solo",
             "url": "https://www.embrapa.br/documents/1355054/32245427/4a%2B%2Bfolder%2BAduba%C3%A7%C3%A3o%2Bverde.pdf/6a472dad-6782-491b-8393-61fc6510bf7d"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/mucuna.jpg",
+            "alt": "Flores de Mucuna pruriens; a variedade da planta fotografada não foi identificada",
+            "autor": "Agong1",
+            "licenca": "CC BY-SA 3.0",
+            "licencaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:Mucuna_pruriens_flower.jpg",
+            "nota": "Imagem de Mucuna pruriens; variedade não identificada na fonte. Não confirma a cultivar mucuna-preta.",
+            "urlOrigem": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Mucuna_pruriens_flower.jpg/960px-Mucuna_pruriens_flower.jpg",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": null,
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "gliricidia",
@@ -173,7 +234,19 @@
             "titulo": "Embrapa — Fixação de N por caupi e gliricídia",
             "url": "https://apct.sede.embrapa.br/pab/pt_BR/article/view/19971"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/gliricidia.jpg",
+            "alt": "Registro fotográfico de Gliricidia sepium",
+            "autor": "Forest & Kim Starr",
+            "licenca": "CC BY 3.0",
+            "licencaUrl": "https://creativecommons.org/licenses/by/3.0",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:Starr_070111-3216_Gliricidia_sepium.jpg",
+            "urlOrigem": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Starr_070111-3216_Gliricidia_sepium.jpg/960px-Starr_070111-3216_Gliricidia_sepium.jpg",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": null,
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "caupi",
@@ -209,7 +282,19 @@
             "titulo": "Embrapa — Fixação de N por caupi e gliricídia",
             "url": "https://apct.sede.embrapa.br/pab/pt_BR/article/view/19971"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/caupi.jpg",
+            "alt": "Registro fotográfico de Vigna unguiculata",
+            "autor": "Ganesh Mohan T",
+            "licenca": "CC BY-SA 4.0",
+            "licencaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:Cowpea_cultivation_01.jpg",
+            "urlOrigem": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Cowpea_cultivation_01.jpg/960px-Cowpea_cultivation_01.jpg",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": null,
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "mandioca",
@@ -244,7 +329,23 @@
             "titulo": "Embrapa Webambiente — Sistemas agroflorestais",
             "url": "https://www.webambiente.cnptia.embrapa.br/webambiente/wiki/doku.php?id=webambiente:safs_sistema_agroflorestal"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/mandioca.jpg",
+            "alt": "Registro fotográfico de Manihot esculenta",
+            "autor": "David Monniaux",
+            "licenca": "CC BY-SA 3.0",
+            "licencaUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:Manihot_esculenta_dsc07325.jpg",
+            "urlOrigem": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Manihot_esculenta_dsc07325.jpg/960px-Manihot_esculenta_dsc07325.jpg",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": "Espécie citada pela Embrapa entre as culturas semiperenes de SAFs. Pode compor a discussão sobre produção nos primeiros anos do sistema.",
+        "fonteComplementar": {
+            "titulo": "Embrapa — SAFs e recuperação",
+            "url": "https://www.embrapa.br/en/codigo-florestal/sistemas-agroflorestais-safs"
+        },
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "milho",
@@ -279,7 +380,23 @@
             "titulo": "Embrapa Webambiente — Sistemas agroflorestais",
             "url": "https://www.webambiente.cnptia.embrapa.br/webambiente/wiki/doku.php?id=webambiente:safs_sistema_agroflorestal"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/milho.jpg",
+            "alt": "Registro fotográfico de Zea mays",
+            "autor": "Spedona",
+            "licenca": "CC BY-SA 3.0",
+            "licencaUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:Corntassel_7095.jpg",
+            "urlOrigem": "https://upload.wikimedia.org/wikipedia/commons/7/73/Corntassel_7095.jpg",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": "Cultura anual citada pela Embrapa entre as opções de produção no início de um SAF. Seu papel permite discutir a participação de culturas de ciclo curto.",
+        "fonteComplementar": {
+            "titulo": "Embrapa — SAFs e recuperação",
+            "url": "https://www.embrapa.br/en/codigo-florestal/sistemas-agroflorestais-safs"
+        },
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "abacaxi",
@@ -313,7 +430,23 @@
             "titulo": "Embrapa — Produção de mudas de espécies agroflorestais",
             "url": "https://www.infoteca.cnptia.embrapa.br/handle/doc/498801"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/abacaxi.jpg",
+            "alt": "Abacaxi com fruto e folhas",
+            "autor": "Forest & Kim Starr",
+            "licenca": "CC BY 3.0",
+            "licencaUrl": "https://creativecommons.org/licenses/by/3.0/",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:Starr_020630-0018_Ananas_comosus.jpg",
+            "urlOrigem": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Starr_020630-0018_Ananas_comosus.jpg/500px-Starr_020630-0018_Ananas_comosus.jpg",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": "Cultura semiperene citada pela Embrapa para SAFs. No catálogo, participa da proposta de diversificar a produção alimentar.",
+        "fonteComplementar": {
+            "titulo": "Embrapa — SAFs e recuperação",
+            "url": "https://www.embrapa.br/en/codigo-florestal/sistemas-agroflorestais-safs"
+        },
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "banana",
@@ -349,7 +482,24 @@
             "titulo": "Embrapa — Produção de mudas de espécies agroflorestais",
             "url": "https://www.infoteca.cnptia.embrapa.br/handle/doc/498801"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/banana.jpg",
+            "alt": "Registro fotográfico de Musa spp.",
+            "autor": "Günter Pisch",
+            "licenca": "CC BY 4.0",
+            "licencaUrl": "https://creativecommons.org/licenses/by/4.0",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:Musa_acuminata_424264268.jpg",
+            "nota": "Registro de Musa acuminata; representa uma das espécies do grupo de bananeiras do catálogo.",
+            "urlOrigem": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Musa_acuminata_424264268.jpg/960px-Musa_acuminata_424264268.jpg",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": "A Embrapa inclui a banana entre as culturas semiperenes usadas em SAFs. A espécie permite discutir produção alimentar durante a formação do sistema.",
+        "fonteComplementar": {
+            "titulo": "Embrapa — SAFs e recuperação",
+            "url": "https://www.embrapa.br/en/codigo-florestal/sistemas-agroflorestais-safs"
+        },
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "mamao",
@@ -384,7 +534,23 @@
             "titulo": "Embrapa Webambiente — Sistemas agroflorestais",
             "url": "https://www.webambiente.cnptia.embrapa.br/webambiente/wiki/doku.php?id=webambiente:safs_sistema_agroflorestal"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/mamao.jpg",
+            "alt": "Registro fotográfico de Carica papaya",
+            "autor": "© William Crochot / Wikimedia Commons",
+            "licenca": "CC BY-SA 4.0",
+            "licencaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:Carica_papaya_(Papayer)_-_105.jpg",
+            "urlOrigem": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Carica_papaya_%28Papayer%29_-_105.jpg/960px-Carica_papaya_%28Papayer%29_-_105.jpg",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": "Cultura semiperene citada pela Embrapa entre as opções para SAFs. Neste catálogo educativo, representa uma das alternativas de produção alimentar.",
+        "fonteComplementar": {
+            "titulo": "Embrapa — SAFs e recuperação",
+            "url": "https://www.embrapa.br/en/codigo-florestal/sistemas-agroflorestais-safs"
+        },
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "acai",
@@ -419,7 +585,19 @@
             "titulo": "Embrapa — Produção de mudas de espécies agroflorestais",
             "url": "https://www.infoteca.cnptia.embrapa.br/handle/doc/498801"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/acai.jpg",
+            "alt": "Registro fotográfico de Euterpe oleracea",
+            "autor": "User:Arouck",
+            "licenca": "Public domain",
+            "licencaUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:A%C3%A7aizeiro_no_pal%C3%A1cio.JPG",
+            "urlOrigem": "https://upload.wikimedia.org/wikipedia/commons/7/71/A%C3%A7aizeiro_no_pal%C3%A1cio.JPG",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": null,
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "cupuacu",
@@ -454,7 +632,19 @@
             "titulo": "Embrapa — Produção de mudas de espécies agroflorestais",
             "url": "https://www.infoteca.cnptia.embrapa.br/handle/doc/498801"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/cupuacu.jpg",
+            "alt": "Registro fotográfico de Theobroma grandiflorum",
+            "autor": "Dick Culbert from Gibsons, B.C., Canada",
+            "licenca": "CC BY 2.0",
+            "licencaUrl": "https://creativecommons.org/licenses/by/2.0",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:Theobroma_grandiflorum,_source_of_Cupulate_Chocolate_(9906147393).jpg",
+            "urlOrigem": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Theobroma_grandiflorum%2C_source_of_Cupulate_Chocolate_%289906147393%29.jpg",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": null,
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "cacau",
@@ -489,7 +679,19 @@
             "titulo": "Embrapa Amazônia Oriental — SAFs: sistema agroflorestal",
             "url": "https://www.embrapa.br/en/web/amazonia-oriental/busca-de-imagens/-/midia/6761001/safs-sistema-agroflorestal"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/cacau.jpg",
+            "alt": "Registro fotográfico de Theobroma cacao",
+            "autor": "VpuipV",
+            "licenca": "CC BY-SA 4.0",
+            "licencaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:Fruitful_cocoa_tree(cheche).jpg",
+            "urlOrigem": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Fruitful_cocoa_tree%28cheche%29.jpg/960px-Fruitful_cocoa_tree%28cheche%29.jpg",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": null,
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "pupunha",
@@ -524,7 +726,19 @@
             "titulo": "Embrapa — Produção de mudas de espécies agroflorestais",
             "url": "https://www.infoteca.cnptia.embrapa.br/handle/doc/498801"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/pupunha.jpg",
+            "alt": "Registro fotográfico de Bactris gasipaes",
+            "autor": "Autor indicado na fonte",
+            "licenca": "Public domain",
+            "licencaUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:Pupunha_(Bactris_gasipaes)_2.jpg",
+            "urlOrigem": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Pupunha_%28Bactris_gasipaes%29_2.jpg",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": null,
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "andiroba",
@@ -559,7 +773,19 @@
             "titulo": "Embrapa Amazônia Oriental — SAFs: sistema agroflorestal",
             "url": "https://www.embrapa.br/en/web/amazonia-oriental/busca-de-imagens/-/midia/6761001/safs-sistema-agroflorestal"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": {
+            "url": "assets/plantas/andiroba.jpg",
+            "alt": "Registro fotográfico de Carapa guianensis",
+            "autor": "Mauroguanandi",
+            "licenca": "Public domain",
+            "licencaUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+            "fonteUrl": "https://commons.wikimedia.org/wiki/File:Andirobajovem.jpg",
+            "urlOrigem": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Andirobajovem.jpg",
+            "consultadoEm": "2026-10-22"
+        },
+        "descricao": null,
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "parica",
@@ -593,7 +819,10 @@
             "titulo": "Embrapa — Arranjos agroflorestais (Bezerra)",
             "url": "https://ainfo.cnptia.embrapa.br/digital/bitstream/item/45761/1/BezerraNR.pdf"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": null,
+        "descricao": null,
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     },
     {
         "id": "margaridao",
@@ -627,6 +856,9 @@
             "titulo": "Embrapa Amazônia Oriental — SAFs: sistema agroflorestal",
             "url": "https://www.embrapa.br/en/web/amazonia-oriental/busca-de-imagens/-/midia/6761001/safs-sistema-agroflorestal"
         },
-        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional."
+        "nota": "Classificação de papéis, estratos e sucessão didática. Referência confirma uso/função geral, não adaptação numérica ou regional.",
+        "imagem": null,
+        "descricao": null,
+        "observacaoManejo": "A posição e o papel desta planta são uma simplificação educativa. O manejo deve considerar a variedade e as condições da área."
     }
 ]

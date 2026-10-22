@@ -1,0 +1,27 @@
+/* Estilos das páginas que apresentam o time e o acesso por conta. */
+.historia-intro { max-width: 760px; margin-bottom: 40px; }
+.historia-grade { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.historia-cartao, .conta-painel { padding: 28px; border: 1px solid var(--borda); border-radius: var(--raio); background: var(--superficie); }
+.historia-cartao h2 { font-size: 26px; }
+.historia-cartao p { color: var(--muted); }
+.historia-etiqueta { display: block; margin-bottom: 20px; color: var(--ocre); font-size: 12px; font-weight: 600; }
+.historia-equipe { margin-top: 40px; padding: 32px; border-radius: var(--raio); background: var(--sage); }
+.conta-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: 64px; align-items: start; }
+.conta-painel fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.conta-painel .campo { margin-bottom: 18px; }
+.conta-painel input:not([type=checkbox]) { width: 100%; }
+.conta-modos { display: flex; gap: 10px; margin-bottom: 24px; }
+.conta-modos button { flex: 1; }
+.conta-modos button[aria-pressed=true] { background: var(--verde); color: white; }
+.conta-mostrar { display: flex; align-items: center; gap: 8px; margin-bottom: 22px; font-size: 14px; }
+.conta-mensagem { margin-top: 20px; font-size: 14px; overflow-wrap: anywhere; }
+.conta-mensagem:empty { display: none; }
+button:disabled { cursor: not-allowed; opacity: .6; transform: none; }
+@media (max-width: 800px) {
+    .historia-grade, .conta-layout { grid-template-columns: 1fr; gap: 20px; }
+    .historia-cartao, .conta-painel, .historia-equipe { padding: 22px; }
+}
+
+.historia-identidade { display: flex; align-items: flex-start; gap: 24px; padding-top: 40px; margin-top: 40px; border-top: 1px solid var(--borda); }
+.historia-identidade img { flex-shrink: 0; }
+@media (max-width: 600px) { .historia-identidade { flex-direction: column; } }

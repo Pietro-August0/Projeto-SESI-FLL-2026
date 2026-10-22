@@ -7,15 +7,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Texto de descrição para buscas e sugestão de cor para o navegador. -->
-        <meta name="description" content="Demonstração educativa de recomendação agroflorestal com regras transparentes e dados locais.">
-        <meta name="theme-color" content="#234b36">
+        <meta name="description" content="Projeto de apoio ao trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais, com propostas ilustrativas e regras transparentes.">
+        <meta name="theme-color" content="#2F905D">
         <!-- Nome mostrado na aba e arquivo local usado como ícone. -->
         <title>
-            Metodologia e fontes — Raiz
+            Metodologia e fontes — ybyrá
         </title>
-        <link rel="icon" href="assets/icones/folha.svg" type="image/svg+xml">
+        <link rel="icon" href="assets/icones/manaca.svg" type="image/svg+xml">
         <!-- A metodologia usa os estilos compartilhados; não precisa de um CSS próprio. -->
         <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/orientacao.css">
+    <link rel="stylesheet" href="css/ecologico.css">
         <!-- module permite que os mesmos utilitários sejam usados pelas outras páginas. -->
         <script type="module" src="js/utils.js">
         </script>
@@ -25,15 +27,12 @@
         <a class="pular" href="#conteudo">Pular para o conteúdo</a>
         <!-- Cabeçalho comum com marca vetorial, links locais e acesso ao formulário. -->
         <header class="cabecalho">
-            <div class="container cabecalho-interno">
-                <a class="marca" href="index.html"><svg width="28" height="32" viewBox="0 0 28 32" fill="none" aria-hidden="true"><path d="M14 29V9M14 21C5 22 2 15 3 11c7-1 11 3 11 10Zm0-8C22 14 26 7 25 3c-7-1-11 3-11 10ZM8 16l6 5m6-13-6 5M8 29h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Raiz<small>Sistema agroflorestal</small></span></a>
-                <!-- aria-label distingue este menu de outros grupos de links. -->
-                <nav aria-label="Navegação principal">
-                    <a href="index.html">Início</a><a href="analise.html">Análise</a><a href="especies.html">Espécies</a><a href="sobre.html">Sobre</a>
-                </nav>
-                <a class="botao cabecalho-acao" href="analise.html">Começar análise <span aria-hidden="true">↗</span></a>
-            </div>
-        </header>
+    <div class="container cabecalho-interno">
+        <a class="marca" href="index.html"><img class="marca-flor" src="assets/icones/manaca.svg" alt="" width="42" height="42"><span>ybyrá<small>Sistema agroflorestal</small></span></a>
+        <nav aria-label="Navegação principal"><a href="index.html">Início</a><a href="analise.html">Criar SAF</a><a href="especies.html">Plantas</a><a href="historia.html">O projeto</a></nav>
+        <div class="cabecalho-ferramentas"><button class="ajuda-cabecalho" type="button" data-abrir-guia>Como usar</button><a class="conta-atalho" href="conta.html"><svg width="22" height="24" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M3 24v-4c0-7 18-7 18 0v4Z"/></svg><span>Entrar</span></a></div>
+    </div>
+</header>
         <main class="container" id="conteudo">
             <!-- Mesmo com o JS desativado, os textos de metodologia abaixo podem ser lidos. -->
             <noscript>
@@ -53,10 +52,10 @@
             <div class="metodologia">
                 <section>
                     <h2>
-                        Uma ferramenta para aprender
+                        Uma ferramenta de apoio ao projeto de SAFs
                     </h2>
                     <p>
-                        O Raiz demonstra como uma medição de solo pode orientar a escolha de funções e espécies em um Sistema Agroflorestal (SAF). Não utiliza inteligência artificial, sensores conectados ou serviços externos. Os dados e as regras ficam no próprio projeto.
+                        Criado para complementar o trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais, o ybyrá demonstra como uma medição de solo pode orientar a escolha de funções e espécies em um Sistema Agroflorestal (SAF). As propostas são geradas com dados e regras do próprio projeto. O acesso ao sistema exige uma conta; o servidor local cuida do cadastro e das sessões.
                     </p>
                     <!-- Lista ordenada: as etapas precisam acontecer nesta sequência.
                          strong destaca o nome; p explica o que acontece em cada uma. -->
@@ -111,7 +110,7 @@
                         Limitações
                     </h2>
                     <p>
-                        As propostas não substituem avaliação agronômica, laudo laboratorial ou planejamento de campo. O sistema não prevê produtividade, não prescreve fertilizantes, não calcula crescimento e não avalia risco de espécies invasoras. A escolha definitiva precisa considerar clima, bioma, método de medição, água e contexto da área.
+                        As propostas não substituem avaliação agronômica, laudo laboratorial ou planejamento de campo. A animação ilustra as fases com plantas e raízes, sem escala de tempo, altura ou profundidade. O sistema não prevê produtividade, não prescreve fertilizantes, não calcula crescimento e não avalia risco de espécies invasoras. A escolha definitiva precisa considerar clima, bioma, método de medição, água e contexto da área.
                     </p>
                     <h2>
                         Fontes da curadoria
@@ -161,17 +160,17 @@
                 <!-- Explica acesso local e privacidade, separados do texto das regras. -->
                 <aside class="dicas">
                     <h2>
-                        A demonstração continua offline
+                        Dados e acesso local
                     </h2>
                     <p>
-                        Depois de servido localmente, o aplicativo usa somente arquivos deste repositório. Os links das fontes são opcionais e exigem internet para abrir.
+                        A análise usa arquivos deste repositório. O login e os arquivos do projeto funcionam pelo servidor local. As fotos externas do catálogo e os links de referências exigem internet. Se uma foto não carregar, o catálogo continua disponível.
                     </p>
                     <hr>
                     <h3>
                         Privacidade
                     </h3>
                     <p>
-                        Somente a análise atual é guardada no localStorage deste navegador. Não há contas, envio de dados ou banco de dados.
+                        A análise atual é guardada no localStorage deste navegador. O login é obrigatório. O servidor guarda e-mail, hash da senha e sessões em um banco local fora da pasta pública. Senhas não são guardadas em texto simples. A sessão dura até oito horas e pode ser encerrada em Minha conta. As fotos são carregadas do Wikimedia Commons.
                     </p>
                     <a class="botao" href="analise.html">Experimentar →</a>
                 </aside>
@@ -179,13 +178,14 @@
         </main>
         <!-- Rodapé repete a identificação do site para manter a navegação consistente. -->
         <footer class="rodape">
-            <div class="container rodape-interno">
-                <a class="marca" href="index.html">Raiz<span class="rodape-descricao">Sistema agroflorestal</span></a>
-                <p>
-                    Uma demonstração de como dados podem orientar a diversidade.
-                </p>
-                <a href="sobre.html">Metodologia e fontes ↗</a>
-            </div>
-        </footer>
+    <div class="container">
+        <div class="rodape-superior">
+            <a class="marca" href="index.html"><img class="marca-flor" src="assets/icones/manaca.svg" alt="" width="42" height="42"><span>ybyrá<small>Sistema agroflorestal</small></span></a>
+            <div class="rodape-proposito"><h2>Ideias que criam raízes.</h2><p>Um projeto que complementa o trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais.</p></div>
+            <nav aria-label="Navegação do rodapé"><a href="index.html">Início</a><a href="analise.html">Criar SAF</a><a href="especies.html">Plantas</a><a href="historia.html">O projeto</a></nav>
+        </div>
+        <div class="rodape-base"><p>ybyrá · Sistemas agroflorestais · FIRST LEGO League</p><div class="rodape-links"><a href="sobre.html">Metodologia e fontes</a><a href="conta.html">Minha conta</a><button class="ajuda-rodape" type="button" data-abrir-guia>Como usar</button></div></div>
+    </div>
+</footer>
     </body>
 </html>

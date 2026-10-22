@@ -5,12 +5,15 @@
 import { carregarJSON, lerAnalise, objetivos, rotulos, estratos, escapar, numero, mostrarErro } from './utils.js';
 import { diagnosticar } from './diagnostico.js';
 import { montarSAFs } from './saf.js';
+import { iniciarCrescimento } from './crescimento.js';
+let encerrarCrescimento = () => {};
 // O HTML inicial contém esse espaço vazio; os cartões serão acrescentados nele.
 const alvo = document.querySelector('#resultado');
 const analise = lerAnalise();
 
 // Desenha uma única proposta no painel compartilhado pelas abas.
 function exibirProposta(saf) {
+    encerrarCrescimento();
     // As chaves correspondem às fases guardadas em saf.fases; os valores são as explicações.
     const faseTextos = {
         implantacao: 'Cobertura, culturas curtas e plantio das mudas perenes.',
@@ -32,7 +35,8 @@ function exibirProposta(saf) {
                 <h3>${escapar(saf.titulo)}</h3>
                 <p>${escapar(saf.resumo)}</p>
                 </div>
-                <h4>Uma composição em diferentes alturas</h4>
+                <section id="crescimento-resultado" aria-label="Evolução visual desta proposta"></section>
+                <details class="painel-extra"><summary>Entender as camadas e as fases do sistema</summary><h4>Uma composição em diferentes alturas</h4>
                 <p class="muted">Estratos ilustrativos, sem escala de altura ou previsão de crescimento.</p>
                 <div class="estratos">${estratos.map(estrato => `<div class="estrato estrato-${estrato.toLowerCase()}">
                 <span class="estrato-nome">${rotulos[estrato]}</span>
@@ -45,7 +49,7 @@ function exibirProposta(saf) {
                 <p>${faseTextos[fase]}</p>
                 <ul>${ids.map(id => `<li>${escapar(saf.especies.find(e => e.id === id).nome)}</li>`).join('') || '<li>Sem espécie para esta fase.</li>'}</ul>
                 </section>`).join('')}</div>
-                <h4 class="titulo-fases">Por que cada espécie foi escolhida?</h4>
+                </details><h4 class="titulo-fases" id="conhecer-plantas">Conheça a função de cada planta</h4><p class="orientacao-curta">Abra o nome de uma planta para entender por que ela entrou na proposta e consultar sua fonte.</p>
                 <div class="justificativas">${saf.especies.map(e => `<details id="especie-${e.id}">
                 <summary>
                 <span>
@@ -69,6 +73,7 @@ function exibirProposta(saf) {
                 <strong>${escapar(r.especieA)} + ${escapar(r.especieB)}</strong>: ${r.status} — ${escapar(r.motivo)}${r.fonte ? ` <a href="${escapar(r.fonte.url)}" target="_blank" rel="noopener noreferrer">Fonte ↗</a>` : ''}</li>`).join('')}</ul>
                 </div>
                 </details>`;
+    encerrarCrescimento = iniciarCrescimento(document.querySelector('#crescimento-resultado'), saf);
     // O link aponta para #especie-id; slice(1) remove o # para localizar o details pelo id.
     // Abrimos os detalhes antes de o navegador levar a pessoa até o destino do link.
     document.querySelectorAll('.especie-chip').forEach(link => {
@@ -106,7 +111,7 @@ async function iniciar() {
                 </div>
                 <a class="botao secundario" href="analise.html?editar">Editar dados</a>
                 </section>
-                <section aria-labelledby="titulo-diagnostico">
+                <details class="painel-extra" id="leitura-solo"><summary>Entender a leitura dos dados do solo</summary><section aria-labelledby="titulo-diagnostico">
                 <div class="section-heading">
                 <h2 id="titulo-diagnostico">O que os dados mostram</h2>
                 <span>01 / Diagnóstico</span>
@@ -123,17 +128,18 @@ async function iniciar() {
                 <section class="necessidades">
                 <h3>Prioridades desta composição</h3>
                 <div>${diagnostico.necessidades.map(n => `<span class="necessidade">${rotulos[n] || n}</span>`).join('')}</div>
-                <p class="muted">Cobertura e diversidade são princípios dos modelos, não condições medidas pelo sensor.</p>
-                </section>
+                <p class="muted">Estas funções orientam a combinação de plantas. Cobertura e diversidade fazem parte do planejamento do modelo.</p>
+                </section></details>
                 <section aria-labelledby="titulo-safs">
                 <div class="section-heading">
-                <h2 id="titulo-safs">Caminhos para a sua agrofloresta</h2>
-                <span>02 / Composições</span>
+                <h2 id="titulo-safs">Opções para sua agrofloresta</h2>
+                <span>${safs.length} ${safs.length === 1 ? "opção disponível" : "opções disponíveis"}</span>
                 </div>
-                <p class="muted">Compare alternativas e explore a função de cada espécie. Aptidão regional e faixas ausentes precisam de validação.</p>${safs.length ? `<div class="abas" role="tablist" aria-label="Propostas de SAF">${safs.map((s, i) => `<button id="aba-${i}" role="tab" aria-selected="${i === 0}" aria-controls="proposta" tabindex="${i === 0 ? 0 : -1}" data-proposta="${i}">${String(i + 1).padStart(2, '0')} · ${escapar(s.titulo)}</button>`).join('')}</div>
+                <p class="muted">Selecione uma opção para ver as plantas e suas fases.</p>${safs.length ? `<div class="abas" role="tablist" aria-label="Propostas de SAF">${safs.map((s, i) => `<button id="aba-${i}" role="tab" aria-selected="${i === 0}" aria-controls="proposta" tabindex="${i === 0 ? 0 : -1}" data-proposta="${i}">${String(i + 1).padStart(2, '0')} · ${escapar(s.titulo)}</button>`).join('')}</div>
                 <div id="proposta" role="tabpanel" aria-labelledby="aba-0">
                 </div>` : '<p class="aviso">Não há espécies elegíveis suficientes para preencher um modelo. Revise os dados e o catálogo.</p>'}${safs.length === 1 ? '<p class="aviso">Apenas uma composição completa está disponível para estes critérios.</p>' : ''}</section>
-                <aside class="aviso">Demonstração educativa. Regras de solo, papéis, estratos e fases são simplificados. Não substitui avaliação agronômica, não prescreve fertilizantes nem prevê produtividade. <a href="sobre.html">Entenda a metodologia →</a>
+                <section class="proximo-passo"><div><h2>Quer explorar outro caminho?</h2><p>Edite o objetivo ou os dados para gerar outras combinações.</p></div><a class="botao secundario" href="analise.html?editar">Voltar e ajustar os dados →</a></section>
+                <aside class="aviso">Protótipo demonstrativo. Regras de solo, papéis, estratos e fases são simplificados. Não substitui avaliação agronômica, não prescreve fertilizantes nem prevê produtividade. <a href="sobre.html">Entenda a metodologia →</a>
                 </aside>`;
         // Sem propostas, não existe painel de abas para configurar.
         if (!safs.length) {

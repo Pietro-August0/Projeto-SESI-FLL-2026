@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 84" role="img" aria-labelledby="titulo"><title id="titulo">ybyrá — Sistema agroflorestal</title>
+<g transform="translate(4 8)">  <!-- Cinco pétalas: o mesmo desenho é girado ao redor do centro da flor. -->
+  <g fill="#8E699C">
+    <path id="petala" d="M32 33C22 24 21 8 30 5c13-5 19 17 2 28Z"/>
+    <use href="#petala" transform="rotate(72 32 32)"/>
+    <use href="#petala" transform="rotate(144 32 32)" fill="#D543F9"/>
+    <use href="#petala" transform="rotate(216 32 32)"/>
+    <use href="#petala" transform="rotate(288 32 32)" fill="#B9A0C4"/>
+  </g>
+  <circle cx="32" cy="32" r="5" fill="#FFFFFF"/>
+  <circle cx="32" cy="32" r="2" fill="#2F905D"/>
+</g>
+<text x="82" y="48" fill="#39434A" font-family="Georgia,serif" font-size="49" font-weight="600" letter-spacing="-2">ybyrá</text>
+<text x="84" y="70" fill="#59666E" font-family="Segoe UI,Arial,sans-serif" font-size="12">Sistema agroflorestal</text>
+</svg>

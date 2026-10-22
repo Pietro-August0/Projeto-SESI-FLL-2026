@@ -7,16 +7,19 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Apresentação em buscas e cor de interface em navegadores que aceitam theme-color. -->
-        <meta name="description" content="Demonstração educativa de recomendação agroflorestal com regras transparentes e dados locais.">
-        <meta name="theme-color" content="#234b36">
+        <meta name="description" content="Projeto de apoio ao trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais, com propostas ilustrativas e regras transparentes.">
+        <meta name="theme-color" content="#2F905D">
         <!-- Título da aba; o arquivo SVG logo abaixo fornece o ícone da página. -->
         <title>
-            Propostas agroflorestais — Raiz
+            Propostas agroflorestais — ybyrá
         </title>
-        <link rel="icon" href="assets/icones/folha.svg" type="image/svg+xml">
+        <link rel="icon" href="assets/icones/manaca.svg" type="image/svg+xml">
         <!-- O CSS da resposta complementa o global com cartões, estratos, fases e abas. -->
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/resultado.css">
+        <link rel="stylesheet" href="css/crescimento.css">
+        <link rel="stylesheet" href="css/orientacao.css">
+    <link rel="stylesheet" href="css/ecologico.css">
         <!-- Esse módulo calcula e apresenta a resposta depois de o documento ser lido. -->
         <script type="module" src="js/resultado.js">
         </script>
@@ -26,15 +29,12 @@
         <a class="pular" href="#conteudo">Pular para o conteúdo</a>
         <!-- Cabeçalho compartilhado: a folha é um desenho SVG e href indica o destino dos links. -->
         <header class="cabecalho">
-            <div class="container cabecalho-interno">
-                <a class="marca" href="index.html"><svg width="28" height="32" viewBox="0 0 28 32" fill="none" aria-hidden="true"><path d="M14 29V9M14 21C5 22 2 15 3 11c7-1 11 3 11 10Zm0-8C22 14 26 7 25 3c-7-1-11 3-11 10ZM8 16l6 5m6-13-6 5M8 29h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Raiz<small>Sistema agroflorestal</small></span></a>
-                <!-- Leitores de tela reconhecem este grupo como a navegação principal. -->
-                <nav aria-label="Navegação principal">
-                    <a href="index.html">Início</a><a href="analise.html">Análise</a><a href="especies.html">Espécies</a><a href="sobre.html">Sobre</a>
-                </nav>
-                <a class="botao cabecalho-acao" href="analise.html">Começar análise <span aria-hidden="true">↗</span></a>
-            </div>
-        </header>
+    <div class="container cabecalho-interno">
+        <a class="marca" href="index.html"><img class="marca-flor" src="assets/icones/manaca.svg" alt="" width="42" height="42"><span>ybyrá<small>Sistema agroflorestal</small></span></a>
+        <nav aria-label="Navegação principal"><a href="index.html">Início</a><a href="analise.html">Criar SAF</a><a href="especies.html">Plantas</a><a href="historia.html">O projeto</a></nav>
+        <div class="cabecalho-ferramentas"><button class="ajuda-cabecalho" type="button" data-abrir-guia>Como usar</button><a class="conta-atalho" href="conta.html"><svg width="22" height="24" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M3 24v-4c0-7 18-7 18 0v4Z"/></svg><span>Entrar</span></a></div>
+    </div>
+</header>
         <main class="container" id="conteudo">
             <!-- Esta página não consegue produzir propostas sem JavaScript. -->
             <noscript>
@@ -46,10 +46,10 @@
                 <!-- ?editar é lido por analise.js para recuperar os dados em vez de começar vazio. -->
                 <a class="voltar" href="analise.html?editar">← Análise</a>
                 <h1>
-                    Do solo ao sistema agroflorestal.
+                    Explore suas propostas de SAF.
                 </h1>
                 <p>
-                    Uma leitura dos dados. Diferentes caminhos para combinar espécies.
+                    Compare combinações de plantas e veja como cada proposta se organiza.
                 </p>
             </div>
             <!-- Erros começam ocultos; o JS mostra a mensagem se faltar arquivo ou houver falha. -->
@@ -57,7 +57,7 @@
             </p>
             <!-- Destino do resumo, diagnóstico e propostas criados por resultado.js.
                  aria-live polite sinaliza mudanças de conteúdo sem interromper a leitura atual. -->
-            <div id="resultado" aria-live="polite">
+            <div id="resultado">
                 <p>
                     Preparando a composição…
                 </p>
@@ -65,13 +65,14 @@
         </main>
         <!-- Metodologia e fontes continuam acessíveis após a exploração do resultado. -->
         <footer class="rodape">
-            <div class="container rodape-interno">
-                <a class="marca" href="index.html">Raiz<span class="rodape-descricao">Sistema agroflorestal</span></a>
-                <p>
-                    Uma demonstração de como dados podem orientar a diversidade.
-                </p>
-                <a href="sobre.html">Metodologia e fontes ↗</a>
-            </div>
-        </footer>
+    <div class="container">
+        <div class="rodape-superior">
+            <a class="marca" href="index.html"><img class="marca-flor" src="assets/icones/manaca.svg" alt="" width="42" height="42"><span>ybyrá<small>Sistema agroflorestal</small></span></a>
+            <div class="rodape-proposito"><h2>Ideias que criam raízes.</h2><p>Um projeto que complementa o trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais.</p></div>
+            <nav aria-label="Navegação do rodapé"><a href="index.html">Início</a><a href="analise.html">Criar SAF</a><a href="especies.html">Plantas</a><a href="historia.html">O projeto</a></nav>
+        </div>
+        <div class="rodape-base"><p>ybyrá · Sistemas agroflorestais · FIRST LEGO League</p><div class="rodape-links"><a href="sobre.html">Metodologia e fontes</a><a href="conta.html">Minha conta</a><button class="ajuda-rodape" type="button" data-abrir-guia>Como usar</button></div></div>
+    </div>
+</footer>
     </body>
 </html>

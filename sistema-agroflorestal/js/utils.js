@@ -4,6 +4,20 @@
  */
 
 // À esquerda ficam os códigos salvos nos dados; à direita, os nomes mostrados na tela.
+import { iniciarGuia } from './guia.js';
+import { exigirSessao } from './sessao.js';
+
+let usuarioAtual;
+try {
+    usuarioAtual = await exigirSessao();
+} catch (erro) {
+    const aviso = document.createElement('p');
+    aviso.className = 'erro';
+    aviso.textContent = 'Inicie o projeto com python servidor.py e abra http://127.0.0.1:8765 para usar o login.';
+    document.querySelector('main').replaceChildren(aviso);
+    throw erro;
+}
+
 export const objetivos = {
     PRODUCAO: 'Produção',
     RECUPERACAO: 'Recuperação',
@@ -165,6 +179,9 @@ export function iniciarPagina() {
             a.setAttribute('aria-current', 'page');
         }
     });
+    iniciarGuia(pagina, Boolean(lerAnalise()));
+    const conta = document.querySelector('.conta-atalho span');
+    if (conta && usuarioAtual) conta.textContent = 'Minha conta';
 }
 // Os módulos que importam utils também recebem esta preparação compartilhada.
 iniciarPagina();

@@ -29,8 +29,8 @@
 }
 /* Caixa que reúne nome, medida, status, explicação e faixa de referência. */
 .parametro {
-    background: #eeeee5;
-    border: 1px solid #e0e3d8;
+    background: #F0F5F2;
+    border: 1px solid #DCE5E1;
     border-radius: var(--raio);
     padding: 17px 15px;
 }
@@ -113,7 +113,7 @@
 /* flex: 1 divide o espaço entre as abas; só os cantos de cima são arredondados. */
 .abas button {
     flex: 1;
-    background: #eeeee5;
+    background: #F0F5F2;
     border: 1px solid transparent;
     border-bottom: 0;
     border-radius: 6px 6px 0 0;
@@ -161,17 +161,17 @@
     gap: 24px;
     min-height: 68px;
     padding: 14px 24px;
-    background: #f0f1e9;
+    background: #F3F8F5;
     border-bottom: 1px solid var(--borda);
 }
 /* Alterna o fundo das posições pares para ajudar a acompanhar as linhas. */
 .estrato:nth-child(even) {
-    background: #e9ede1;
+    background: #EDF6F0;
 }
 /* A última linha é a cobertura; recebe fundo próprio e não precisa de divisória inferior. */
 .estrato:last-child {
     border: 0;
-    background: #dfe8d6;
+    background: #E0F4E8;
 }
 .estrato-nome {
     font-size: 13px;
@@ -188,14 +188,14 @@
 .especie-chip {
     background: var(--superficie);
     padding: 6px 14px;
-    border: 1px solid #cbd7c1;
+    border: 1px solid #CCDCD2;
     border-radius: 4px;
     text-decoration: none;
     font-size: 13px;
 }
 /* A mudança de fundo ajuda a reconhecer que o nome pode ser clicado. */
 .especie-chip:hover {
-    background: #d8e4c8;
+    background: #DCF4E5;
     border-color: var(--verde);
 }
 /* Separa os grupos de conteúdo dentro da proposta. */
@@ -211,7 +211,7 @@
 }
 /* Cada fase começa com uma linha mais forte; o número e o título vêm logo abaixo. */
 .fase {
-    border-top: 2px solid #a7b697;
+    border-top: 2px solid #8E699C;
     padding: 20px 4px 0;
 }
 .fase-numero {

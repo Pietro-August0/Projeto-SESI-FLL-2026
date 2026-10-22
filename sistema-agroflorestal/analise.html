@@ -7,16 +7,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Descrição para buscas; theme-color sugere a cor da interface do navegador. -->
-        <meta name="description" content="Demonstração educativa de recomendação agroflorestal com regras transparentes e dados locais.">
-        <meta name="theme-color" content="#234b36">
+        <meta name="description" content="Projeto de apoio ao trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais, com propostas ilustrativas e regras transparentes.">
+        <meta name="theme-color" content="#2F905D">
         <!-- Nome da aba, seguido do ícone da folha. -->
         <title>
-            Análise do solo — Raiz
+            Análise do solo — ybyrá
         </title>
-        <link rel="icon" href="assets/icones/folha.svg" type="image/svg+xml">
+        <link rel="icon" href="assets/icones/manaca.svg" type="image/svg+xml">
         <!-- Regras comuns e depois ajustes do formulário; os caminhos partem desta página. -->
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/analise.css">
+        <link rel="stylesheet" href="css/orientacao.css">
+    <link rel="stylesheet" href="css/ecologico.css">
         <!-- O módulo registra o envio após o navegador ler os elementos do formulário. -->
         <script type="module" src="js/analise.js">
         </script>
@@ -26,15 +28,12 @@
         <a class="pular" href="#conteudo">Pular para o conteúdo</a>
         <!-- Cabeçalho com a marca desenhada em SVG e os mesmos links das outras páginas. -->
         <header class="cabecalho">
-            <div class="container cabecalho-interno">
-                <a class="marca" href="index.html"><svg width="28" height="32" viewBox="0 0 28 32" fill="none" aria-hidden="true"><path d="M14 29V9M14 21C5 22 2 15 3 11c7-1 11 3 11 10Zm0-8C22 14 26 7 25 3c-7-1-11 3-11 10ZM8 16l6 5m6-13-6 5M8 29h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Raiz<small>Sistema agroflorestal</small></span></a>
-                <!-- aria-label nomeia o menu para quem navega com leitor de tela. -->
-                <nav aria-label="Navegação principal">
-                    <a href="index.html">Início</a><a href="analise.html">Análise</a><a href="especies.html">Espécies</a><a href="sobre.html">Sobre</a>
-                </nav>
-                <a class="botao cabecalho-acao" href="analise.html">Começar análise <span aria-hidden="true">↗</span></a>
-            </div>
-        </header>
+    <div class="container cabecalho-interno">
+        <a class="marca" href="index.html"><img class="marca-flor" src="assets/icones/manaca.svg" alt="" width="42" height="42"><span>ybyrá<small>Sistema agroflorestal</small></span></a>
+        <nav aria-label="Navegação principal"><a href="index.html">Início</a><a href="analise.html">Criar SAF</a><a href="especies.html">Plantas</a><a href="historia.html">O projeto</a></nav>
+        <div class="cabecalho-ferramentas"><button class="ajuda-cabecalho" type="button" data-abrir-guia>Como usar</button><a class="conta-atalho" href="conta.html"><svg width="22" height="24" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M3 24v-4c0-7 18-7 18 0v4Z"/></svg><span>Entrar</span></a></div>
+    </div>
+</header>
         <main class="container" id="conteudo">
             <!-- Sem JavaScript o formulário não pode gerar propostas; mostramos esta orientação. -->
             <noscript>
@@ -42,20 +41,18 @@
                     Ative o JavaScript para carregar o catálogo, os cenários e as análises.
                 </p>
             </noscript>
-            <div class="pagina-titulo">
+            <div class="pagina-titulo analise-titulo">
                 <a class="voltar" href="index.html">← Início</a>
                 <h1>
-                    O ponto de partida é o solo.
+                    Vamos conhecer sua área.
                 </h1>
                 <p>
-                    Insira os dados e escolha o que você quer cultivar com este sistema.
+                    Preencha uma etapa de cada vez. Você pode voltar e ajustar antes de gerar a proposta.
                 </p>
             </div>
             <!-- Exemplos fictícios podem preencher todos os campos, que continuam editáveis. -->
-            <section class="cenarios-compactos" aria-labelledby="titulo-cenarios">
-                <h2 id="titulo-cenarios">
-                    Comece com um cenário demonstrativo
-                </h2>
+            <details class="escolha-exemplo cenarios-compactos" id="escolher-cenario"><summary>Não tenho dados. Quero usar um exemplo</summary>
+                <p>Escolha um cenário fictício. Todos os campos serão preenchidos e você poderá conferir cada etapa.</p>
                 <!-- Destino dos botões criados pela função renderizarCenarios de inicio.js. -->
                 <div id="cenarios-analise" class="cenarios">
                     <p>
@@ -63,21 +60,21 @@
                     </p>
                 </div>
                 <!-- O JavaScript escreve aqui o exemplo escolhido; polite permite anunciar sem interromper. -->
-                <p id="aviso-cenario" class="mensagem-status" role="status" aria-live="polite">
-                </p>
-            </section>
+            </details>
+            <p id="aviso-cenario" class="mensagem-status" role="status"></p>
             <div class="analise-layout">
                 <!-- O evento submit será tratado em analise.js, que valida e salva antes de navegar. -->
-                <form id="form-analise">
+                <form id="form-analise" class="formulario-guiado">
+                    <div class="formulario-progresso"><p id="etapa-contagem" role="status">Seus dados · etapa 1 de 3</p><progress id="etapa-progresso" max="3" value="1" aria-label="Progresso do formulário"></progress></div>
                     <!-- O aviso começa oculto e aceita foco por código ao ocorrer uma falha. -->
                     <p id="erro" class="erro" role="alert" tabindex="-1" hidden>
                     </p>
                     <!-- fieldset agrupa os campos da localização; legend dá o título do grupo. -->
                     <fieldset>
                         <legend>
-                            <span>01</span> Localização da área
+                            <span>01</span> Onde fica a área?
                         </legend>
-                        <div class="campos localizacao">
+                        <p class="ajuda">Informe o município e o estado usados neste exercício.</p><div class="campos localizacao">
                             <div class="campo">
                                 <label for="municipio">
                                     Município
@@ -101,10 +98,10 @@
                     </fieldset>
                     <fieldset>
                         <legend>
-                            <span>02</span> Dados do solo
+                            <span>02</span> Como está o solo?
                         </legend>
                         <p class="ajuda">
-                            Todos os valores são obrigatórios, exceto a condutividade. N, P e K usam unidades arbitrárias da demonstração; não copie valores de laudos sem adaptar as regras e unidades.
+                            Confira os valores abaixo. N, P e K usam unidades de demonstração; utilize um exemplo para explorar o funcionamento. A condutividade é opcional.
                         </p>
                         <div class="campos">
                             <div class="campo">
@@ -161,7 +158,7 @@
                     </fieldset>
                     <fieldset>
                         <legend>
-                            <span>03</span> Objetivo do sistema
+                            <span>03</span> Qual é seu objetivo?
                         </legend>
                         <!-- Radios com o mesmo name formam uma escolha única.
                              Cada value corresponde a um código do objeto objetivos em utils.js.
@@ -182,48 +179,35 @@
                         </div>
                     </fieldset>
                     <!-- submit envia o formulário e aciona a função registrada em analise.js. -->
-                    <button class="botao" type="submit">
-                        Analisar e visualizar SAFs <span aria-hidden="true">→</span>
-                    </button>
+                    <div class="formulario-acoes">
+                        <button class="botao secundario" id="etapa-voltar" type="button" hidden>← Voltar</button>
+                        <span id="etapa-proxima">Próximo: dados do solo</span>
+                        <button class="botao" id="etapa-continuar" type="button" hidden>Continuar →</button>
+                        <button class="botao" id="gerar-proposta" type="submit">Gerar minhas propostas →</button>
+                    </div>
                     <p class="ajuda">
                         A análise fica salva somente neste navegador.
                     </p>
                 </form>
                 <!-- Explicação complementar, ao lado do formulário em telas largas. -->
-                <aside class="dicas">
-                    <h2>
-                        Uma análise que você entende
-                    </h2>
-                    <p>
-                        Não calculamos uma nota geral de saúde do solo. Cada parâmetro é classificado separadamente.
-                    </p>
-                    <hr>
-                    <h3>
-                        Como ler o resultado
-                    </h3>
-                    <p>
-                        As faixas são configuráveis e demonstrativas. Cada espécie traz seus motivos de seleção e a referência consultada.
-                    </p>
-                    <hr>
-                    <h3>
-                        O que ainda precisa ser avaliado
-                    </h3>
-                    <p>
-                        Clima local, método de medição, manejo, disponibilidade de água e aptidão das espécies exigem avaliação profissional.
-                    </p>
-                    <a href="sobre.html">Entender a metodologia ↗</a>
+                <aside class="dicas" aria-label="Ajuda desta etapa">
+                    <h2>Nesta etapa</h2><p id="ajuda-etapa">A localização identifica sua proposta. Ela não confirma que as plantas são adequadas à região.</p>
+                    <h3>O que acontece depois?</h3><ol><li>Confira os dados do solo.</li><li>Escolha seu objetivo.</li><li>Explore uma proposta ilustrada.</li></ol>
+                    <hr><button class="ajuda-link" type="button" data-abrir-guia>Precisa de ajuda? Como usar</button>
+                    <p><small>Protótipo demonstrativo. Sua conta permite navegar pelo sistema.</small></p>
                 </aside>
             </div>
         </main>
         <!-- Rodapé com o caminho para conferir as fontes das regras. -->
         <footer class="rodape">
-            <div class="container rodape-interno">
-                <a class="marca" href="index.html">Raiz<span class="rodape-descricao">Sistema agroflorestal</span></a>
-                <p>
-                    Uma demonstração de como dados podem orientar a diversidade.
-                </p>
-                <a href="sobre.html">Metodologia e fontes ↗</a>
-            </div>
-        </footer>
+    <div class="container">
+        <div class="rodape-superior">
+            <a class="marca" href="index.html"><img class="marca-flor" src="assets/icones/manaca.svg" alt="" width="42" height="42"><span>ybyrá<small>Sistema agroflorestal</small></span></a>
+            <div class="rodape-proposito"><h2>Ideias que criam raízes.</h2><p>Um projeto que complementa o trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais.</p></div>
+            <nav aria-label="Navegação do rodapé"><a href="index.html">Início</a><a href="analise.html">Criar SAF</a><a href="especies.html">Plantas</a><a href="historia.html">O projeto</a></nav>
+        </div>
+        <div class="rodape-base"><p>ybyrá · Sistemas agroflorestais · FIRST LEGO League</p><div class="rodape-links"><a href="sobre.html">Metodologia e fontes</a><a href="conta.html">Minha conta</a><button class="ajuda-rodape" type="button" data-abrir-guia>Como usar</button></div></div>
+    </div>
+</footer>
     </body>
 </html>

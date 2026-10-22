@@ -2,6 +2,24 @@
  * A mesma função serve à página inicial e ao formulário, que dão respostas diferentes ao clique.
  */
 import { carregarJSON, escapar, mostrarErro } from './utils.js';
+import { iniciarCrescimento } from './crescimento.js';
+
+// A cena da abertura usa um exemplo identificado, independente da análise salva.
+const crescimentoInicio = document.querySelector('#crescimento-inicio');
+if (crescimentoInicio) {
+    carregarJSON('especies.json').then(catalogo => {
+        const ids = ['andiroba', 'banana', 'feijao-guandu', 'mandioca', 'feijao-de-porco'];
+        const especies = ids.map(id => catalogo.find(e => e.id === id));
+        iniciarCrescimento(crescimentoInicio, {
+            especies,
+            fases: {
+                implantacao: ids,
+                desenvolvimento: especies.filter(e => e.ciclo !== 'CURTO').map(e => e.id),
+                estabelecido: especies.filter(e => e.ciclo === 'PERENE' || e.estrato === 'COBERTURA').map(e => e.id)
+            }
+        }, { compacto: true });
+    }).catch(erro => mostrarErro(document.querySelector('#erro'), erro));
+}
 
 // alvo é o elemento que receberá os botões; aoSelecionar é a função chamada após a escolha.
 export function renderizarCenarios(cenarios, alvo, aoSelecionar) {

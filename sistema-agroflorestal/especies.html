@@ -7,16 +7,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Descrição da página para buscas e cor sugerida para a interface do navegador. -->
-        <meta name="description" content="Demonstração educativa de recomendação agroflorestal com regras transparentes e dados locais.">
-        <meta name="theme-color" content="#234b36">
+        <meta name="description" content="Projeto de apoio ao trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais, com propostas ilustrativas e regras transparentes.">
+        <meta name="theme-color" content="#2F905D">
         <!-- Título da aba e, no link seguinte, ícone local da folha. -->
         <title>
-            Catálogo de espécies — Raiz
+            Catálogo de espécies — ybyrá
         </title>
-        <link rel="icon" href="assets/icones/folha.svg" type="image/svg+xml">
+        <link rel="icon" href="assets/icones/manaca.svg" type="image/svg+xml">
         <!-- Estilos comuns primeiro, depois regras específicas dos filtros e cartões. -->
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/especies.css">
+        <link rel="stylesheet" href="css/orientacao.css">
+    <link rel="stylesheet" href="css/ecologico.css">
         <!-- O módulo espera a leitura do HTML e pode importar as ferramentas de utils.js. -->
         <script type="module" src="js/especies.js">
         </script>
@@ -26,15 +28,12 @@
         <a class="pular" href="#conteudo">Pular para o conteúdo</a>
         <!-- Marca e menu comuns às cinco páginas; SVG desenha a folha com coordenadas. -->
         <header class="cabecalho">
-            <div class="container cabecalho-interno">
-                <a class="marca" href="index.html"><svg width="28" height="32" viewBox="0 0 28 32" fill="none" aria-hidden="true"><path d="M14 29V9M14 21C5 22 2 15 3 11c7-1 11 3 11 10Zm0-8C22 14 26 7 25 3c-7-1-11 3-11 10ZM8 16l6 5m6-13-6 5M8 29h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Raiz<small>Sistema agroflorestal</small></span></a>
-                <!-- Os links levam a arquivos locais; aria-label identifica a finalidade do menu. -->
-                <nav aria-label="Navegação principal">
-                    <a href="index.html">Início</a><a href="analise.html">Análise</a><a href="especies.html">Espécies</a><a href="sobre.html">Sobre</a>
-                </nav>
-                <a class="botao cabecalho-acao" href="analise.html">Começar análise <span aria-hidden="true">↗</span></a>
-            </div>
-        </header>
+    <div class="container cabecalho-interno">
+        <a class="marca" href="index.html"><img class="marca-flor" src="assets/icones/manaca.svg" alt="" width="42" height="42"><span>ybyrá<small>Sistema agroflorestal</small></span></a>
+        <nav aria-label="Navegação principal"><a href="index.html">Início</a><a href="analise.html">Criar SAF</a><a href="especies.html">Plantas</a><a href="historia.html">O projeto</a></nav>
+        <div class="cabecalho-ferramentas"><button class="ajuda-cabecalho" type="button" data-abrir-guia>Como usar</button><a class="conta-atalho" href="conta.html"><svg width="22" height="24" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M3 24v-4c0-7 18-7 18 0v4Z"/></svg><span>Entrar</span></a></div>
+    </div>
+</header>
         <main class="container" id="conteudo">
             <!-- A lista depende do carregamento de JSON pelo JS; avisamos se ele estiver desativado. -->
             <noscript>
@@ -44,13 +43,14 @@
             </noscript>
             <div class="pagina-titulo">
                 <h1>
-                    Diversidade com propósito.
+                    Conheça as plantas do SAF.
                 </h1>
                 <p>
-                    Conheça as espécies e os papéis que elas podem ocupar em uma agrofloresta.
+                    Busque uma planta ou escolha um filtro. Em cada ficha, abra os detalhes para conhecer sua função e consultar as fontes.
                 </p>
             </div>
             <!-- Cada id abaixo é consultado por especies.js para acompanhar as escolhas. -->
+            <details class="painel-extra"><summary>O que significam estrato e função?</summary><p><strong>Estrato</strong> é a camada que a planta ocupa, das mais baixas às copas mais altas. <strong>Função</strong> é seu papel no SAF, como produzir alimentos, proteger o solo ou fornecer biomassa.</p></details>
             <div class="filtros">
                 <div class="campo busca">
                     <label for="busca">
@@ -130,7 +130,7 @@
                 <p id="contagem" role="status">
                     Carregando catálogo…
                 </p>
-                <span>Curadoria local · sem consulta a APIs</span>
+                <span>18 espécies · funções e referências</span>
             </div>
             <!-- Um erro de carregamento ficará visível aqui, sem apagar as opções dos filtros. -->
             <p id="erro" class="erro" role="alert" tabindex="-1" hidden>
@@ -138,6 +138,7 @@
             <!-- O JavaScript preenche esta seção com um article por espécie encontrada. -->
             <section id="catalogo" class="catalogo" aria-label="Espécies do catálogo">
             </section>
+            <section class="proximo-passo"><div><h2>Quer ver estas plantas juntas?</h2><p>Crie uma proposta para explorar as espécies e suas fases.</p></div><a class="botao" href="analise.html?cenario=solo-a">Experimentar um exemplo →</a></section>
             <!-- O aviso evita confundir um cadastro educativo com validação científica de adaptação. -->
             <aside class="aviso">
                 Faixas numéricas não confirmadas permanecem ausentes. Papéis, estratos e sucessão são simplificados para demonstração; não confirmam adaptação regional. <a href="sobre.html">Fontes e metodologia →</a>
@@ -145,13 +146,14 @@
         </main>
         <!-- Identificação final e link para consultar as referências utilizadas. -->
         <footer class="rodape">
-            <div class="container rodape-interno">
-                <a class="marca" href="index.html">Raiz<span class="rodape-descricao">Sistema agroflorestal</span></a>
-                <p>
-                    Uma demonstração de como dados podem orientar a diversidade.
-                </p>
-                <a href="sobre.html">Metodologia e fontes ↗</a>
-            </div>
-        </footer>
+    <div class="container">
+        <div class="rodape-superior">
+            <a class="marca" href="index.html"><img class="marca-flor" src="assets/icones/manaca.svg" alt="" width="42" height="42"><span>ybyrá<small>Sistema agroflorestal</small></span></a>
+            <div class="rodape-proposito"><h2>Ideias que criam raízes.</h2><p>Um projeto que complementa o trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais.</p></div>
+            <nav aria-label="Navegação do rodapé"><a href="index.html">Início</a><a href="analise.html">Criar SAF</a><a href="especies.html">Plantas</a><a href="historia.html">O projeto</a></nav>
+        </div>
+        <div class="rodape-base"><p>ybyrá · Sistemas agroflorestais · FIRST LEGO League</p><div class="rodape-links"><a href="sobre.html">Metodologia e fontes</a><a href="conta.html">Minha conta</a><button class="ajuda-rodape" type="button" data-abrir-guia>Como usar</button></div></div>
+    </div>
+</footer>
     </body>
 </html>

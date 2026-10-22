@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Acesso por e-mail e senha ao projeto ybyrá.">
+    <meta name="theme-color" content="#2F905D">
+    <title>Entrar ou criar conta — ybyrá</title>
+    <link rel="icon" href="assets/icones/manaca.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/projeto.css">
+        <link rel="stylesheet" href="css/orientacao.css">
+    <link rel="stylesheet" href="css/ecologico.css">
+    <script type="module" src="js/conta.js"></script>
+</head>
+<body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+    <header class="cabecalho">
+    <div class="container cabecalho-interno">
+        <a class="marca" href="index.html"><img class="marca-flor" src="assets/icones/manaca.svg" alt="" width="42" height="42"><span>ybyrá<small>Sistema agroflorestal</small></span></a>
+        <nav aria-label="Navegação principal"><a href="index.html">Início</a><a href="analise.html">Criar SAF</a><a href="especies.html">Plantas</a><a href="historia.html">O projeto</a></nav>
+        <div class="cabecalho-ferramentas"><button class="ajuda-cabecalho" type="button" data-abrir-guia>Como usar</button><a class="conta-atalho" href="conta.html"><svg width="22" height="24" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M3 24v-4c0-7 18-7 18 0v4Z"/></svg><span>Entrar</span></a></div>
+    </div>
+</header>
+    <main class="container conta-entrada" id="conteudo">
+    <div class="conta-layout">
+        <section class="conta-convite">
+            <figure class="conta-natureza"><img src="assets/imagens/natureza-manaca.png" width="1536" height="1024" alt="Imagem ilustrativa de floresta com folhas verdes e flores roxas" fetchpriority="high"><figcaption>Imagem de natureza gerada para ilustrar o projeto.</figcaption></figure>
+            <h1>Cultive ideias.<br><span class="destaque-flor">Crie sua agrofloresta.</span></h1>
+            <p>Entre para explorar as plantas, criar propostas de SAF e acompanhar suas fases.</p>
+        </section>
+        <section class="conta-painel" aria-label="Acesso à conta">
+            <div id="modos-conta" class="conta-modos" role="group" aria-label="Escolher entre entrar e cadastrar">
+                <button class="botao secundario" type="button" data-modo="entrar" aria-pressed="true">Entrar</button>
+                <button class="botao secundario" type="button" data-modo="cadastrar" aria-pressed="false">Criar conta</button>
+            </div>
+            <div id="conta-apresentacao"><h2 id="conta-titulo">Boas-vindas ao ybyrá</h2><p>Acesse sua conta para continuar.</p></div>
+            <noscript><p class="erro">Ative o JavaScript para entrar na sua conta.</p></noscript>
+            <form id="form-conta">
+                <fieldset id="campos-conta" disabled>
+                    <legend class="visualmente-oculto">E-mail e senha</legend>
+                    <div class="campo"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="voce@exemplo.com"></div>
+                    <div class="campo"><label for="senha">Senha</label><input id="senha" name="senha" type="password" autocomplete="current-password" maxlength="128" required aria-describedby="ajuda-senha"><small id="ajuda-senha">Ao criar sua conta, use pelo menos 8 caracteres.</small></div>
+                    <div class="campo" id="campo-confirmacao" hidden><label for="confirmacao">Confirmar senha</label><input id="confirmacao" name="confirmacao" type="password" autocomplete="new-password" minlength="8" maxlength="128"></div>
+                    <label class="conta-mostrar"><input id="mostrar-senha" type="checkbox"> Mostrar senhas</label>
+                    <button class="botao" id="enviar-conta" type="submit">Entrar →</button>
+                </fieldset>
+            </form>
+            <div id="sessao-conta" hidden><h2>Sua conta está conectada</h2><p id="conta-email"></p><p>Você já pode explorar o sistema.</p><a class="botao" id="continuar-conta" href="index.html">Continuar no ybyrá →</a><button class="botao secundario" type="button" id="sair-conta">Sair da conta</button></div>
+            <p id="mensagem-conta" class="conta-mensagem" role="status" tabindex="-1"></p>
+        </section>
+    </div>
+</main>
+    <footer class="rodape">
+    <div class="container">
+        <div class="rodape-superior">
+            <a class="marca" href="index.html"><img class="marca-flor" src="assets/icones/manaca.svg" alt="" width="42" height="42"><span>ybyrá<small>Sistema agroflorestal</small></span></a>
+            <div class="rodape-proposito"><h2>Ideias que criam raízes.</h2><p>Um projeto que complementa o trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais.</p></div>
+            <nav aria-label="Navegação do rodapé"><a href="index.html">Início</a><a href="analise.html">Criar SAF</a><a href="especies.html">Plantas</a><a href="historia.html">O projeto</a></nav>
+        </div>
+        <div class="rodape-base"><p>ybyrá · Sistemas agroflorestais · FIRST LEGO League</p><div class="rodape-links"><a href="sobre.html">Metodologia e fontes</a><a href="conta.html">Minha conta</a><button class="ajuda-rodape" type="button" data-abrir-guia>Como usar</button></div></div>
+    </div>
+</footer>
+</body>
+</html>

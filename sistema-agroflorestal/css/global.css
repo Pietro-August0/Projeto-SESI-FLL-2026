@@ -7,14 +7,20 @@
 
 /* :root é a raiz do documento. As variáveis --nome podem ser usadas com var(--nome). */
 :root {
-    --fundo: #f6f5ef;       /* Fundo principal, em tom claro. */
-    --superficie: #fffef9;  /* Fundo dos cartões e dos campos. */
-    --verde: #234b36;       /* Cor principal dos links e botões. */
-    --texto: #20372b;       /* Cor das letras. */
-    --muted: #5b665d;       /* Cor dos textos secundários. */
-    --borda: #d8ddd2;       /* Cor dos contornos e divisórias. */
-    --sage: #e8edde;        /* Verde claro usado nos destaques. */
-    --ocre: #986727;        /* Tom de terra usado em números e foco. */
+    --fundo: #f8faf9;       /* Fundo principal, em tom claro. */
+    --superficie: #ffffff;  /* Fundo dos cartões e dos campos. */
+    --verde: #246F48;       /* Cor principal dos links e botões. */
+    --texto: #39434A;       /* Cor das letras. */
+    --muted: #59666E;       /* Cor dos textos secundários. */
+    --borda: #DCE5E1;       /* Cor dos contornos e divisórias. */
+    --sage: #E8F7EE;        /* Verde claro usado nos destaques. */
+    --ocre: #7D538C;        /* Tom de terra usado em números e foco. */
+    --folha: #2F905D;       /* Verde escolhido pela equipe. */
+    --roxo: #8E699C;        /* Manacá e identidade. */
+    --magenta: #D543F9;     /* Pequenos detalhes, sem uso em textos longos. */
+    --menta: #72FFB0;       /* Realces e detalhes naturais. */
+    --acao: #246F48;        /* Variante escura do verde para contraste com branco. */
+    --lilas-suave: #F1EBF5;
     --raio: 7px;           /* Arredondamento compartilhado pelos cantos. */
     font-family: 'Segoe UI', Arial, sans-serif; /* Usa a primeira fonte disponível. */
     color: var(--texto);   /* Os descendentes herdam esta cor quando não têm outra. */
@@ -103,7 +109,7 @@ small {
     min-height: 94px;
     display: flex;
     align-items: center;
-    gap: 56px;
+    gap: 28px;
 }
 /* A marca reúne o desenho da folha e o nome, com um pequeno espaço entre eles. */
 .marca {
@@ -126,7 +132,7 @@ small {
 nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 /* A borda transparente reserva o espaço do destaque antes de uma página ficar ativa. */
 nav a {
@@ -163,7 +169,7 @@ nav a:hover {
 }
 /* Escurece e sobe um pixel ao passar o mouse. A transformação não muda o espaço do layout. */
 .botao:hover {
-    background: #173625;
+    background: #1C593A;
     transform: translateY(-1px);
 }
 /* Sem espaço entre as classes: o elemento precisa ter botao E secundario. */
@@ -241,8 +247,8 @@ nav a:hover {
 }
 /* Avisos educativos usam uma borda lateral e fundo suave para se distinguirem dos textos. */
 .aviso {
-    border-left: 3px solid #a37a39;
-    background: #eeeddf;
+    border-left: 3px solid #8E699C;
+    background: #F1EBF5;
     padding: 22px 26px;
     margin: 40px 0;
     font-size: 13px;
@@ -342,7 +348,7 @@ input:hover, select:hover {
 }
 .cenario:hover {
     border-color: var(--verde);
-    background: #f0f3e9;
+    background: #E8F7EE;
 }
 .cenario strong {
     font: 23px Georgia, serif;
@@ -455,7 +461,7 @@ details[open] summary {
 /* Uma única borda superior desenha a divisória, substituindo o contorno padrão de hr. */
 hr {
     border: 0;
-    border-top: 1px solid #cbd4c3;
+    border-top: 1px solid #DCE5E1;
     margin: 24px 0;
 }
 /* Até 1000px, reduzimos espaços e a coluna lateral para caber em janelas intermediárias. */
@@ -559,3 +565,24 @@ hr {
         scroll-behavior: auto !important;
     }
 }
+
+/* Conteúdo disponível a leitores de tela sem ocupar espaço visual. */
+.visualmente-oculto { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (max-width: 1100px) {
+    .cabecalho-interno { flex-wrap: wrap; gap: 16px; padding-top: 16px; }
+    .cabecalho-interno nav { order: 3; width: 100%; justify-content: flex-start; flex-wrap: wrap; column-gap: 22px; row-gap: 0; }
+    .cabecalho-interno nav a { padding: 12px 0; }
+}
+
+/* Identidade ybyrá: flor vetorial, acentos roxos e superfícies claras. */
+.marca { color: var(--texto); font-weight: 600; letter-spacing: -.8px; }
+.marca-flor { display: block; flex-shrink: 0; }
+.destaque-flor { color: var(--roxo); }
+nav a[aria-current='page'] { border-color: var(--roxo); color: #704B80; }
+nav a:hover { color: #704B80; }
+.botao { box-shadow: 0 2px 0 #00000008; }
+.botao.secundario { box-shadow: none; }
+.cenario-letra, .historia-etiqueta { color: #795287; }
+.cenario:hover { border-color: var(--folha); }
+.campo input:focus, .campo select:focus { border-color: var(--roxo); }
+::selection { background: var(--menta); color: var(--texto); }
