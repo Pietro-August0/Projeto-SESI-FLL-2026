@@ -1,190 +1,190 @@
 [
     {
-        "id":  "producao-recuperacao",
-        "titulo":  "Produção + recuperação",
-        "resumo":  "Cobrir o solo, manter suporte vegetal e combinar alimentos com árvores.",
-        "objetivos":  [
-                          "MISTO",
-                          "PRODUCAO",
-                          "RECUPERACAO",
-                          "BIODIVERSIDADE"
-                      ],
-        "papeis":  [
-                       {
-                           "tipo":  "COBERTURA",
-                           "fase":  "IMPLANTACAO",
-                           "sucessao":  [
-                                            "INICIAL"
-                                        ],
-                           "opcional":  false,
-                           "estratosPreferidos":  [
-                                                      "COBERTURA"
-                                                  ]
-                       },
-                       {
-                           "tipo":  "CULTURA_CURTA",
-                           "fase":  "IMPLANTACAO",
-                           "sucessao":  [
-                                            "INICIAL"
-                                        ],
-                           "opcional":  false
-                       },
-                       {
-                           "tipo":  "SUPORTE",
-                           "fase":  "IMPLANTACAO",
-                           "sucessao":  [
-                                            "INICIAL"
-                                        ],
-                           "opcional":  false
-                       },
-                       {
-                           "tipo":  "FRUTIFERA",
-                           "fase":  "DESENVOLVIMENTO",
-                           "sucessao":  [
-                                            "INTERMEDIARIA",
-                                            "INICIAL"
-                                        ],
-                           "opcional":  false
-                       },
-                       {
-                           "tipo":  "ARBOREA",
-                           "fase":  "ESTABELECIDO",
-                           "sucessao":  [
-                                            "TARDIA",
-                                            "INTERMEDIARIA"
-                                        ],
-                           "opcional":  false
-                       }
-                   ]
+        "id": "producao-recuperacao",
+        "titulo": "Produção + recuperação",
+        "resumo": "Cobrir o solo, manter suporte vegetal e combinar alimentos com árvores.",
+        "objetivos": [
+            "MISTO",
+            "PRODUCAO",
+            "RECUPERACAO",
+            "BIODIVERSIDADE"
+        ],
+        "papeis": [
+            {
+                "tipo": "COBERTURA",
+                "fase": "IMPLANTACAO",
+                "sucessao": [
+                    "INICIAL"
+                ],
+                "opcional": false,
+                "estratosPreferidos": [
+                    "COBERTURA"
+                ]
+            },
+            {
+                "tipo": "CULTURA_CURTA",
+                "fase": "IMPLANTACAO",
+                "sucessao": [
+                    "INICIAL"
+                ],
+                "opcional": false
+            },
+            {
+                "tipo": "SUPORTE",
+                "fase": "IMPLANTACAO",
+                "sucessao": [
+                    "INICIAL"
+                ],
+                "opcional": false
+            },
+            {
+                "tipo": "FRUTIFERA",
+                "fase": "DESENVOLVIMENTO",
+                "sucessao": [
+                    "INTERMEDIARIA",
+                    "INICIAL"
+                ],
+                "opcional": false
+            },
+            {
+                "tipo": "ARBOREA",
+                "fase": "ESTABELECIDO",
+                "sucessao": [
+                    "TARDIA",
+                    "INTERMEDIARIA"
+                ],
+                "opcional": false
+            }
+        ]
     },
     {
-        "id":  "producao-diversificada",
-        "titulo":  "Produção diversificada",
-        "resumo":  "Duas culturas produtivas, uma frutífera e suporte para ampliar as funções.",
-        "objetivos":  [
-                          "PRODUCAO",
-                          "MISTO"
-                      ],
-        "papeis":  [
-                       {
-                           "tipo":  "COBERTURA",
-                           "fase":  "IMPLANTACAO",
-                           "sucessao":  [
-                                            "INICIAL"
-                                        ],
-                           "opcional":  false,
-                           "estratosPreferidos":  [
-                                                      "COBERTURA"
-                                                  ]
-                       },
-                       {
-                           "tipo":  "PRODUTIVA",
-                           "fase":  "IMPLANTACAO",
-                           "sucessao":  [
-                                            "INICIAL"
-                                        ],
-                           "opcional":  false
-                       },
-                       {
-                           "tipo":  "PRODUTIVA",
-                           "fase":  "DESENVOLVIMENTO",
-                           "sucessao":  [
-                                            "INTERMEDIARIA",
-                                            "INICIAL"
-                                        ],
-                           "opcional":  false
-                       },
-                       {
-                           "tipo":  "FRUTIFERA",
-                           "fase":  "DESENVOLVIMENTO",
-                           "sucessao":  [
-                                            "INTERMEDIARIA",
-                                            "INICIAL"
-                                        ],
-                           "opcional":  false
-                       },
-                       {
-                           "tipo":  "SUPORTE",
-                           "fase":  "IMPLANTACAO",
-                           "sucessao":  [
-                                            "INICIAL"
-                                        ],
-                           "opcional":  false
-                       },
-                       {
-                           "tipo":  "ARBOREA",
-                           "fase":  "ESTABELECIDO",
-                           "sucessao":  [
-                                            "TARDIA",
-                                            "INTERMEDIARIA"
-                                        ],
-                           "opcional":  true
-                       }
-                   ]
+        "id": "producao-diversificada",
+        "titulo": "Produção diversificada",
+        "resumo": "Duas culturas produtivas, uma frutífera e suporte para ampliar as funções.",
+        "objetivos": [
+            "PRODUCAO",
+            "MISTO"
+        ],
+        "papeis": [
+            {
+                "tipo": "COBERTURA",
+                "fase": "IMPLANTACAO",
+                "sucessao": [
+                    "INICIAL"
+                ],
+                "opcional": false,
+                "estratosPreferidos": [
+                    "COBERTURA"
+                ]
+            },
+            {
+                "tipo": "PRODUTIVA",
+                "fase": "IMPLANTACAO",
+                "sucessao": [
+                    "INICIAL"
+                ],
+                "opcional": false
+            },
+            {
+                "tipo": "PRODUTIVA",
+                "fase": "DESENVOLVIMENTO",
+                "sucessao": [
+                    "INTERMEDIARIA",
+                    "INICIAL"
+                ],
+                "opcional": false
+            },
+            {
+                "tipo": "FRUTIFERA",
+                "fase": "DESENVOLVIMENTO",
+                "sucessao": [
+                    "INTERMEDIARIA",
+                    "INICIAL"
+                ],
+                "opcional": false
+            },
+            {
+                "tipo": "SUPORTE",
+                "fase": "IMPLANTACAO",
+                "sucessao": [
+                    "INICIAL"
+                ],
+                "opcional": false
+            },
+            {
+                "tipo": "ARBOREA",
+                "fase": "ESTABELECIDO",
+                "sucessao": [
+                    "TARDIA",
+                    "INTERMEDIARIA"
+                ],
+                "opcional": true
+            }
+        ]
     },
     {
-        "id":  "recuperacao-diversidade",
-        "titulo":  "Recuperação + biodiversidade",
-        "resumo":  "Cobertura e adubação verde acompanham o desenvolvimento de perenes e árvores.",
-        "objetivos":  [
-                          "RECUPERACAO",
-                          "BIODIVERSIDADE",
-                          "MISTO"
-                      ],
-        "papeis":  [
-                       {
-                           "tipo":  "COBERTURA",
-                           "fase":  "IMPLANTACAO",
-                           "sucessao":  [
-                                            "INICIAL"
-                                        ],
-                           "opcional":  false,
-                           "estratosPreferidos":  [
-                                                      "COBERTURA"
-                                                  ]
-                       },
-                       {
-                           "tipo":  "ADUBACAO_VERDE",
-                           "fase":  "IMPLANTACAO",
-                           "sucessao":  [
-                                            "INICIAL"
-                                        ],
-                           "opcional":  false
-                       },
-                       {
-                           "tipo":  "SUPORTE",
-                           "fase":  "IMPLANTACAO",
-                           "sucessao":  [
-                                            "INICIAL"
-                                        ],
-                           "opcional":  false
-                       },
-                       {
-                           "tipo":  "PERENE",
-                           "fase":  "DESENVOLVIMENTO",
-                           "sucessao":  [
-                                            "INTERMEDIARIA"
-                                        ],
-                           "opcional":  false
-                       },
-                       {
-                           "tipo":  "ARBOREA",
-                           "fase":  "ESTABELECIDO",
-                           "sucessao":  [
-                                            "TARDIA",
-                                            "INTERMEDIARIA"
-                                        ],
-                           "opcional":  false
-                       },
-                       {
-                           "tipo":  "ARBOREA",
-                           "fase":  "ESTABELECIDO",
-                           "sucessao":  [
-                                            "TARDIA",
-                                            "INTERMEDIARIA"
-                                        ],
-                           "opcional":  false
-                       }
-                   ]
+        "id": "recuperacao-diversidade",
+        "titulo": "Recuperação + biodiversidade",
+        "resumo": "Cobertura e adubação verde acompanham o desenvolvimento de perenes e árvores.",
+        "objetivos": [
+            "RECUPERACAO",
+            "BIODIVERSIDADE",
+            "MISTO"
+        ],
+        "papeis": [
+            {
+                "tipo": "COBERTURA",
+                "fase": "IMPLANTACAO",
+                "sucessao": [
+                    "INICIAL"
+                ],
+                "opcional": false,
+                "estratosPreferidos": [
+                    "COBERTURA"
+                ]
+            },
+            {
+                "tipo": "ADUBACAO_VERDE",
+                "fase": "IMPLANTACAO",
+                "sucessao": [
+                    "INICIAL"
+                ],
+                "opcional": false
+            },
+            {
+                "tipo": "SUPORTE",
+                "fase": "IMPLANTACAO",
+                "sucessao": [
+                    "INICIAL"
+                ],
+                "opcional": false
+            },
+            {
+                "tipo": "PERENE",
+                "fase": "DESENVOLVIMENTO",
+                "sucessao": [
+                    "INTERMEDIARIA"
+                ],
+                "opcional": false
+            },
+            {
+                "tipo": "ARBOREA",
+                "fase": "ESTABELECIDO",
+                "sucessao": [
+                    "TARDIA",
+                    "INTERMEDIARIA"
+                ],
+                "opcional": false
+            },
+            {
+                "tipo": "ARBOREA",
+                "fase": "ESTABELECIDO",
+                "sucessao": [
+                    "TARDIA",
+                    "INTERMEDIARIA"
+                ],
+                "opcional": false
+            }
+        ]
     }
 ]

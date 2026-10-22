@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#234b36"/><path d="M10 24 22 9M13 21C8 18 9 9 24 7c0 12-3 16-11 14Z" stroke="#f6f5ef" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+<!-- folha.svg é o ícone mostrado na aba do navegador.
+     viewBox define uma área de desenho de 32 por 32 unidades, que pode ser redimensionada. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <!-- rect desenha o fundo verde; rx arredonda seus cantos. -->
+    <rect width="32" height="32" rx="7" fill="#234b36"/>
+    <!-- path desenha a folha: d contém coordenadas de linhas e curvas.
+         stroke é a cor do traço; fill none deixa o interior sem preenchimento. -->
+    <path
+        d="M10 24 22 9M13 21C8 18 9 9 24 7c0 12-3 16-11 14Z"
+        stroke="#f6f5ef"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none"
+    />
+</svg>

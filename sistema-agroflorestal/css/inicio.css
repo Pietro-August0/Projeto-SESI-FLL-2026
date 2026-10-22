@@ -1,20 +1,148 @@
-.hero { display: grid; grid-template-columns: 1.15fr 1fr; gap: 100px; align-items: center; padding: 76px 0 66px; }
-.hero h1 { font-size: clamp(42px, 5vw, 66px); letter-spacing: -2.2px; }
-.hero-texto > p { max-width: 480px; color: var(--muted); font-size: 18px; }
-.hero-acoes { display: flex; flex-wrap: wrap; gap: 14px; margin: 30px 0; }
-.hero .nota { font-size: 12px; line-height: 1.8; margin: 0; }
-.hero-sistema { border-top: 2px solid var(--verde); padding-top: 20px; }
-.sistema-titulo { font: 24px Georgia, serif; margin-bottom: 24px; }
-.camada { display: flex; align-items: center; min-height: 59px; gap: 10px; border-bottom: 1px solid var(--borda); }
-.camada > span { width: 95px; flex-shrink: 0; font-size: 11px; text-transform: uppercase; letter-spacing: .7px; color: var(--muted); }
-.camada strong { font-size: 13px; font-weight: 500; background: var(--sage); padding: 5px 12px; border-radius: 4px; }
-.camada:last-of-type strong { background: #dce6cc; flex-grow: 1; }
-.hero-sistema p { margin: 16px 0 0; font-size: 12px; color: var(--muted); }
-.fluxo-secao { border-top: 1px solid var(--borda); border-bottom: 1px solid var(--borda); padding: 36px 0; }
-.fluxo { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
-.fluxo li > span { color: var(--ocre); font: 24px Georgia, serif; }
-.fluxo h3 { margin-top: 16px; margin-bottom: 10px; font-size: 16px; }
-.fluxo p { font-size: 13px; color: var(--muted); margin: 0; }
-.cenarios-secao { padding-top: 48px; }
-@media (max-width: 1000px) { .hero { gap: 40px; } .camada { flex-wrap: wrap; padding: 12px 0; } .fluxo { gap: 24px; } }
-@media (max-width: 700px) { .hero { grid-template-columns: 1fr; padding: 40px 0; gap: 40px; } .hero h1 { font-size: 46px; } .hero-texto > p { font-size: 16px; } .fluxo { grid-template-columns: 1fr 1fr; gap: 28px 20px; } .cenarios-secao { padding-top: 32px; } }
+/* inicio.css estiliza a apresentação de index.html.
+ * hero é a área de abertura: texto à esquerda e exemplo de camadas à direita.
+ */
+.hero {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr; /* O texto recebe um pouco mais de espaço que o desenho. */
+    gap: 100px;
+    align-items: center;
+    padding: 76px 0 66px;
+}
+/* O título acompanha a janela (5vw), mas nunca fica menor que 42px ou maior que 66px. */
+.hero h1 {
+    font-size: clamp(42px, 5vw, 66px);
+    letter-spacing: -2.2px;
+}
+/* Limita as linhas da apresentação para que não fiquem compridas demais para ler. */
+.hero-texto > p {
+    max-width: 480px;
+    color: var(--muted);
+    font-size: 18px;
+}
+/* Os dois links principais ficam lado a lado e podem quebrar a linha quando faltar espaço. */
+.hero-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 30px 0;
+}
+/* A observação sobre a demonstração tem letras menores e linhas mais espaçadas. */
+.hero .nota {
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 0;
+}
+/* Uma borda superior delimita a ilustração das camadas sem usar uma imagem externa. */
+.hero-sistema {
+    border-top: 2px solid var(--verde);
+    padding-top: 20px;
+}
+/* Título próprio da ilustração, com a mesma família serifada dos títulos da página. */
+.sistema-titulo {
+    font: 24px Georgia, serif;
+    margin-bottom: 24px;
+}
+/* Cada camada é uma linha: nome do estrato seguido das plantas que o ilustram. */
+.camada {
+    display: flex;
+    align-items: center;
+    min-height: 59px;
+    gap: 10px;
+    border-bottom: 1px solid var(--borda);
+}
+/* A largura fixa alinha as plantas das linhas diferentes; zero impede encolher o rótulo. */
+.camada > span {
+    width: 95px;
+    flex-shrink: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+    color: var(--muted);
+}
+/* As plantas aparecem como etiquetas; padding cria espaço ao redor de cada nome. */
+.camada strong {
+    font-size: 13px;
+    font-weight: 500;
+    background: var(--sage);
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+/* O último grupo representa a cobertura do solo; suas etiquetas ocupam o espaço restante. */
+.camada:last-of-type strong {
+    background: #dce6cc;
+    flex-grow: 1;
+}
+/* A legenda explica que a organização é apenas ilustrativa. */
+.hero-sistema p {
+    margin: 16px 0 0;
+    font-size: 12px;
+    color: var(--muted);
+}
+/* Duas linhas horizontais separam a explicação das etapas das outras áreas da página. */
+.fluxo-secao {
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+    padding: 36px 0;
+}
+/* A lista ol mantém o sentido de sequência; retiramos os marcadores porque há números no HTML. */
+.fluxo {
+    list-style: none;
+    padding: 0;
+    margin: 28px 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Uma coluna igual para cada uma das quatro etapas. */
+    gap: 40px;
+}
+/* Os números das etapas recebem o tom de terra; h3 e p formatam o título e a explicação. */
+.fluxo li > span {
+    color: var(--ocre);
+    font: 24px Georgia, serif;
+}
+.fluxo h3 {
+    margin-top: 16px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.fluxo p {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0;
+}
+/* Afasta os exemplos fictícios da explicação anterior. */
+.cenarios-secao {
+    padding-top: 48px;
+}
+/* Em uma janela média, reduzimos os espaços e permitimos que os nomes das plantas quebrem linha. */
+@media (max-width: 1000px) {
+    .hero {
+        gap: 40px;
+    }
+    .camada {
+        flex-wrap: wrap;
+        padding: 12px 0;
+    }
+    .fluxo {
+        gap: 24px;
+    }
+}
+/* No celular, texto e ilustração se empilham e as quatro etapas viram uma grade de duas colunas. */
+@media (max-width: 700px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 0;
+        gap: 40px;
+    }
+    .hero h1 {
+        font-size: 46px;
+    }
+    .hero-texto > p {
+        font-size: 16px;
+    }
+    .fluxo {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 20px;
+    }
+    .cenarios-secao {
+        padding-top: 32px;
+    }
+}

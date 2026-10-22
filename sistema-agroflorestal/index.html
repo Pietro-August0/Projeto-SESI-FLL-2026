@@ -1,23 +1,179 @@
 <!DOCTYPE html>
+<!-- index.html é a entrada do site: apresenta a ideia e permite escolher um exemplo.
+     Para executar no VS Code, abra este arquivo com Live Server, usando um endereço HTTP.
+     HTML organiza o conteúdo, CSS dá aparência e inicio.js cria os cenários.
+     A indentação mostra os grupos; estes comentários não aparecem como texto na página. -->
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Demonstração educativa de recomendação agroflorestal com regras transparentes e dados locais.">
-  <meta name="theme-color" content="#234b36">
-  <title>Raiz — Do solo à agrofloresta</title>
-  <link rel="icon" href="assets/icones/folha.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/inicio.css">
-  <script type="module" src="js/inicio.js"></script>
-</head>
-<body>
-<a class="pular" href="#conteudo">Pular para o conteúdo</a><header class="cabecalho"><div class="container cabecalho-interno"><a class="marca" href="index.html"><svg width="28" height="32" viewBox="0 0 28 32" fill="none" aria-hidden="true"><path d="M14 29V9M14 21C5 22 2 15 3 11c7-1 11 3 11 10Zm0-8C22 14 26 7 25 3c-7-1-11 3-11 10ZM8 16l6 5m6-13-6 5M8 29h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Raiz<small>Sistema agroflorestal</small></span></a><nav aria-label="Navegação principal"><a href="index.html">Início</a><a href="analise.html">Análise</a><a href="especies.html">Espécies</a><a href="sobre.html">Sobre</a></nav><a class="botao cabecalho-acao" href="analise.html">Começar análise <span aria-hidden="true">↗</span></a></div></header>
-<main class="container" id="conteudo">
-<noscript><p class="erro">Ative o JavaScript para carregar o catálogo, os cenários e as análises.</p></noscript>
-<section class="hero"><div class="hero-texto"><h1>Um solo.<br>Muitas possibilidades.</h1><p>Transforme dados do solo em composições agroflorestais simples, diversas e explicáveis.</p><div class="hero-acoes"><a class="botao" href="analise.html">Começar análise <span aria-hidden="true">→</span></a><a class="botao secundario" href="especies.html">Explorar espécies</a></div><p class="nota">Sem sensores conectados. Sem inteligência artificial.<br>Dados demonstrativos, regras transparentes.</p></div><div class="hero-sistema" aria-label="Exemplo ilustrativo de estratos agroflorestais"><div class="sistema-titulo">Diversidade, em cada camada</div><div class="camada"><span>Emergente</span><strong>Andiroba</strong></div><div class="camada"><span>Alto</span><strong>Gliricídia</strong></div><div class="camada"><span>Médio</span><strong>Bananeira</strong><strong>Guandu</strong></div><div class="camada"><span>Baixo</span><strong>Mandioca</strong></div><div class="camada"><span>Cobertura</span><strong>Feijão-de-porco</strong></div><p>Um exemplo de organização vertical.<br>A composição depende dos dados e do objetivo.</p></div></section><section class="fluxo-secao" aria-labelledby="titulo-fluxo"><div class="section-heading"><h2 id="titulo-fluxo">Dos dados às possibilidades</h2><span>Um caminho que você pode entender</span></div><ol class="fluxo"><li><span>01</span><h3>Observe o solo</h3><p>Informe pH, umidade, temperatura e nutrientes.</p></li><li><span>02</span><h3>Entenda as prioridades</h3><p>Veja os parâmetros e as necessidades indicadas pelas regras.</p></li><li><span>03</span><h3>Combine funções</h3><p>Explore espécies, estratos e três fases do sistema.</p></li><li><span>04</span><h3>Conheça os motivos</h3><p>Leia por que cada espécie participa da composição.</p></li></ol></section><section class="cenarios-secao"><div class="section-heading"><div><h2>Experimente um ponto de partida</h2><p class="muted">Três cenários fictícios. Selecione um e ajuste os dados.</p></div><span>Dados demonstrativos</span></div><p id="erro" class="erro" role="alert" tabindex="-1" hidden></p><div id="cenarios-inicio" class="cenarios" aria-label="Cenários demonstrativos"><p>Carregando cenários…</p></div></section><aside class="aviso">Ferramenta educativa. As sugestões não substituem uma avaliação agronômica. <a href="sobre.html">Conheça as limitações →</a></aside>
-</main>
-<footer class="rodape"><div class="container rodape-interno"><a class="marca" href="index.html">Raiz<span class="rodape-descricao">Sistema agroflorestal</span></a><p>Uma demonstração de como dados podem orientar a diversidade.</p><a href="sobre.html">Metodologia e fontes ↗</a></div></footer>
-</body>
+    <head>
+        <!-- UTF-8 permite acentos; viewport adapta a largura ao dispositivo. -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Resumo para mecanismos de busca e cor da interface de navegadores compatíveis. -->
+        <meta name="description" content="Demonstração educativa de recomendação agroflorestal com regras transparentes e dados locais.">
+        <meta name="theme-color" content="#234b36">
+        <!-- Nome da aba do navegador; o link icon abaixo escolhe seu desenho de folha. -->
+        <title>
+            Raiz — Do solo à agrofloresta
+        </title>
+        <link rel="icon" href="assets/icones/folha.svg" type="image/svg+xml">
+        <!-- O estilo compartilhado vem antes do estilo exclusivo da página inicial. -->
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/inicio.css">
+        <!-- module permite import/export e executa após a leitura do HTML. -->
+        <script type="module" src="js/inicio.js">
+        </script>
+    </head>
+    <body>
+        <!-- #conteudo aponta para o id do main; o atalho evita percorrer o menu com Tab. -->
+        <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+        <!-- Cabeçalho comum às páginas: marca, navegação e link para iniciar a análise. -->
+        <header class="cabecalho">
+            <div class="container cabecalho-interno">
+                <a class="marca" href="index.html"><svg width="28" height="32" viewBox="0 0 28 32" fill="none" aria-hidden="true"><path d="M14 29V9M14 21C5 22 2 15 3 11c7-1 11 3 11 10Zm0-8C22 14 26 7 25 3c-7-1-11 3-11 10ZM8 16l6 5m6-13-6 5M8 29h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Raiz<small>Sistema agroflorestal</small></span></a>
+                <!-- nav identifica o menu. Cada href aponta para outro arquivo HTML local. -->
+                <nav aria-label="Navegação principal">
+                    <a href="index.html">Início</a><a href="analise.html">Análise</a><a href="especies.html">Espécies</a><a href="sobre.html">Sobre</a>
+                </nav>
+                <a class="botao cabecalho-acao" href="analise.html">Começar análise <span aria-hidden="true">↗</span></a>
+            </div>
+        </header>
+        <!-- class liga o elemento ao CSS; id é um nome único usado por links e JavaScript. -->
+        <main class="container" id="conteudo">
+            <!-- Orientação para o caso de JavaScript estar desativado no navegador. -->
+            <noscript>
+                <p class="erro">
+                    Ative o JavaScript para carregar o catálogo, os cenários e as análises.
+                </p>
+            </noscript>
+            <!-- Apresentação: h1 é o título principal; br quebra a linha dentro dele. -->
+            <section class="hero">
+                <div class="hero-texto">
+                    <h1>
+                        Um solo.<br>Muitas possibilidades.
+                    </h1>
+                    <p>
+                        Transforme dados do solo em composições agroflorestais simples, diversas e explicáveis.
+                    </p>
+                    <!-- São links, pois levam a páginas; a classe botao dá sua aparência. -->
+                    <div class="hero-acoes">
+                        <a class="botao" href="analise.html">Começar análise <span aria-hidden="true">→</span></a><a class="botao secundario" href="especies.html">Explorar espécies</a>
+                    </div>
+                    <p class="nota">
+                        Sem sensores conectados. Sem inteligência artificial.<br>Dados demonstrativos, regras transparentes.
+                    </p>
+                </div>
+                <!-- Exemplo fixo de alturas: span nomeia a camada e strong destaca cada planta.
+                     Esses nomes não são o resultado de uma análise; o exemplo não usa JavaScript. -->
+                <div class="hero-sistema" aria-label="Exemplo ilustrativo de estratos agroflorestais">
+                    <div class="sistema-titulo">
+                        Diversidade, em cada camada
+                    </div>
+                    <div class="camada">
+                        <span>Emergente</span><strong>Andiroba</strong>
+                    </div>
+                    <div class="camada">
+                        <span>Alto</span><strong>Gliricídia</strong>
+                    </div>
+                    <div class="camada">
+                        <span>Médio</span><strong>Bananeira</strong><strong>Guandu</strong>
+                    </div>
+                    <div class="camada">
+                        <span>Baixo</span><strong>Mandioca</strong>
+                    </div>
+                    <div class="camada">
+                        <span>Cobertura</span><strong>Feijão-de-porco</strong>
+                    </div>
+                    <p>
+                        Um exemplo de organização vertical.<br>A composição depende dos dados e do objetivo.
+                    </p>
+                </div>
+            </section>
+            <!-- aria-labelledby usa o id do título para dar um nome acessível à seção. -->
+            <section class="fluxo-secao" aria-labelledby="titulo-fluxo">
+                <div class="section-heading">
+                    <h2 id="titulo-fluxo">
+                        Dos dados às possibilidades
+                    </h2>
+                    <span>Um caminho que você pode entender</span>
+                </div>
+                <!-- ol indica uma sequência ordenada; cada li descreve uma das quatro etapas. -->
+                <ol class="fluxo">
+                    <li>
+                        <span>01</span>
+                        <h3>
+                            Observe o solo
+                        </h3>
+                        <p>
+                            Informe pH, umidade, temperatura e nutrientes.
+                        </p>
+                    </li>
+                    <li>
+                        <span>02</span>
+                        <h3>
+                            Entenda as prioridades
+                        </h3>
+                        <p>
+                            Veja os parâmetros e as necessidades indicadas pelas regras.
+                        </p>
+                    </li>
+                    <li>
+                        <span>03</span>
+                        <h3>
+                            Combine funções
+                        </h3>
+                        <p>
+                            Explore espécies, estratos e três fases do sistema.
+                        </p>
+                    </li>
+                    <li>
+                        <span>04</span>
+                        <h3>
+                            Conheça os motivos
+                        </h3>
+                        <p>
+                            Leia por que cada espécie participa da composição.
+                        </p>
+                    </li>
+                </ol>
+            </section>
+            <!-- inicio.js lê dados/cenarios.json e cria um botão para cada exemplo fictício. -->
+            <section class="cenarios-secao">
+                <div class="section-heading">
+                    <div>
+                        <h2>
+                            Experimente um ponto de partida
+                        </h2>
+                        <p class="muted">
+                            Três cenários fictícios. Selecione um e ajuste os dados.
+                        </p>
+                    </div>
+                    <span>Dados demonstrativos</span>
+                </div>
+                <!-- hidden começa oculto; role alert anuncia uma falha a leitores de tela.
+                     tabindex -1 permite ao código focar o aviso sem incluí-lo na sequência de Tab. -->
+                <p id="erro" class="erro" role="alert" tabindex="-1" hidden>
+                </p>
+                <!-- Esta mensagem será substituída pelos botões quando os dados chegarem. -->
+                <div id="cenarios-inicio" class="cenarios" aria-label="Cenários demonstrativos">
+                    <p>
+                        Carregando cenários…
+                    </p>
+                </div>
+            </section>
+            <!-- Informação complementar sobre o alcance educativo das sugestões. -->
+            <aside class="aviso">
+                Ferramenta educativa. As sugestões não substituem uma avaliação agronômica. <a href="sobre.html">Conheça as limitações →</a>
+            </aside>
+        </main>
+        <!-- Rodapé com identificação e acesso à metodologia, presente em todas as páginas. -->
+        <footer class="rodape">
+            <div class="container rodape-interno">
+                <a class="marca" href="index.html">Raiz<span class="rodape-descricao">Sistema agroflorestal</span></a>
+                <p>
+                    Uma demonstração de como dados podem orientar a diversidade.
+                </p>
+                <a href="sobre.html">Metodologia e fontes ↗</a>
+            </div>
+        </footer>
+    </body>
 </html>
-
