@@ -23,10 +23,7 @@
     "estrato": "MEDIO",
     "sucessao": "INICIAL",
     "ciclo": "MEDIO",
-    "papeis": [
-      "ADUBACAO_VERDE",
-      "SUPORTE"
-    ],
+    "papeis": ["ADUBACAO_VERDE", "SUPORTE"],
     "funcaoPrincipal": "Fixação de nitrogênio e biomassa",
     "fonte": {
       "titulo": "Embrapa — Adubação verde e conservação do solo",
@@ -95,11 +92,7 @@
     "estrato": "BAIXO",
     "sucessao": "INICIAL",
     "ciclo": "CURTO",
-    "papeis": [
-      "ADUBACAO_VERDE",
-      "SUPORTE",
-      "COBERTURA"
-    ],
+    "papeis": ["ADUBACAO_VERDE", "SUPORTE", "COBERTURA"],
     "funcaoPrincipal": "Adubação verde e cobertura",
     "fonte": {
       "titulo": "Embrapa — Adubação verde e conservação do solo",
@@ -151,10 +144,7 @@
     "estrato": "COBERTURA",
     "sucessao": "INICIAL",
     "ciclo": "CURTO",
-    "papeis": [
-      "ADUBACAO_VERDE",
-      "COBERTURA"
-    ],
+    "papeis": ["ADUBACAO_VERDE", "COBERTURA"],
     "funcaoPrincipal": "Cobertura e fixação de nitrogênio",
     "fonte": {
       "titulo": "Embrapa — Adubação verde e conservação do solo",
@@ -206,10 +196,7 @@
     "estrato": "COBERTURA",
     "sucessao": "INICIAL",
     "ciclo": "CURTO",
-    "papeis": [
-      "ADUBACAO_VERDE",
-      "COBERTURA"
-    ],
+    "papeis": ["ADUBACAO_VERDE", "COBERTURA"],
     "funcaoPrincipal": "Adubação verde e cobertura",
     "fonte": {
       "titulo": "Embrapa — Adubação verde e conservação do solo",
@@ -262,10 +249,7 @@
     "estrato": "ALTO",
     "sucessao": "INICIAL",
     "ciclo": "PERENE",
-    "papeis": [
-      "SUPORTE",
-      "ARBOREA"
-    ],
+    "papeis": ["SUPORTE", "ARBOREA"],
     "funcaoPrincipal": "Suporte com fixação de nitrogênio",
     "fonte": {
       "titulo": "Embrapa — Fixação de N por caupi e gliricídia",
@@ -330,11 +314,7 @@
     "estrato": "BAIXO",
     "sucessao": "INICIAL",
     "ciclo": "CURTO",
-    "papeis": [
-      "CULTURA_CURTA",
-      "PRODUTIVA",
-      "ADUBACAO_VERDE"
-    ],
+    "papeis": ["CULTURA_CURTA", "PRODUTIVA", "ADUBACAO_VERDE"],
     "funcaoPrincipal": "Grãos e fixação de nitrogênio",
     "fonte": {
       "titulo": "Embrapa — Fixação de N por caupi e gliricídia",
@@ -399,10 +379,7 @@
     "estrato": "BAIXO",
     "sucessao": "INICIAL",
     "ciclo": "MEDIO",
-    "papeis": [
-      "CULTURA_CURTA",
-      "PRODUTIVA"
-    ],
+    "papeis": ["CULTURA_CURTA", "PRODUTIVA"],
     "funcaoPrincipal": "Produção de raízes",
     "fonte": {
       "titulo": "Embrapa Webambiente — Sistemas agroflorestais",
@@ -464,10 +441,7 @@
     "estrato": "MEDIO",
     "sucessao": "INICIAL",
     "ciclo": "CURTO",
-    "papeis": [
-      "CULTURA_CURTA",
-      "PRODUTIVA"
-    ],
+    "papeis": ["CULTURA_CURTA", "PRODUTIVA"],
     "funcaoPrincipal": "Produção de grãos no início do sistema",
     "fonte": {
       "titulo": "Embrapa Webambiente — Sistemas agroflorestais",
@@ -519,9 +493,7 @@
     "estrato": "BAIXO",
     "sucessao": "INICIAL",
     "ciclo": "MEDIO",
-    "papeis": [
-      "PRODUTIVA"
-    ],
+    "papeis": ["PRODUTIVA"],
     "funcaoPrincipal": "Produção de frutos",
     "fonte": {
       "titulo": "Embrapa — Produção de mudas de espécies agroflorestais",
@@ -583,11 +555,7 @@
     "estrato": "MEDIO",
     "sucessao": "INTERMEDIARIA",
     "ciclo": "PERENE",
-    "papeis": [
-      "FRUTIFERA",
-      "PRODUTIVA",
-      "PERENE"
-    ],
+    "papeis": ["FRUTIFERA", "PRODUTIVA", "PERENE"],
     "funcaoPrincipal": "Produção de frutos",
     "fonte": {
       "titulo": "Embrapa — Produção de mudas de espécies agroflorestais",
@@ -673,10 +641,7 @@
     "estrato": "MEDIO",
     "sucessao": "INICIAL",
     "ciclo": "MEDIO",
-    "papeis": [
-      "FRUTIFERA",
-      "PRODUTIVA"
-    ],
+    "papeis": ["FRUTIFERA", "PRODUTIVA"],
     "funcaoPrincipal": "Produção de frutos na fase inicial",
     "fonte": {
       "titulo": "Embrapa Webambiente — Sistemas agroflorestais",
@@ -738,10 +703,7 @@
     "estrato": "ALTO",
     "sucessao": "INTERMEDIARIA",
     "ciclo": "PERENE",
-    "papeis": [
-      "FRUTIFERA",
-      "PERENE"
-    ],
+    "papeis": ["FRUTIFERA", "PERENE"],
     "funcaoPrincipal": "Produção de frutos perenes",
     "fonte": {
       "titulo": "Embrapa — Produção de mudas de espécies agroflorestais",
@@ -793,10 +755,7 @@
     "estrato": "MEDIO",
     "sucessao": "INTERMEDIARIA",
     "ciclo": "PERENE",
-    "papeis": [
-      "FRUTIFERA",
-      "PERENE"
-    ],
+    "papeis": ["FRUTIFERA", "PERENE"],
     "funcaoPrincipal": "Produção de frutos perenes",
     "fonte": {
       "titulo": "Embrapa — Produção de mudas de espécies agroflorestais",
@@ -848,10 +807,7 @@
     "estrato": "BAIXO",
     "sucessao": "INTERMEDIARIA",
     "ciclo": "PERENE",
-    "papeis": [
-      "PERENE",
-      "PRODUTIVA"
-    ],
+    "papeis": ["PERENE", "PRODUTIVA"],
     "funcaoPrincipal": "Produção de sementes de cacau",
     "fonte": {
       "titulo": "Embrapa Amazônia Oriental — SAFs: sistema agroflorestal",
@@ -903,10 +859,7 @@
     "estrato": "ALTO",
     "sucessao": "INTERMEDIARIA",
     "ciclo": "PERENE",
-    "papeis": [
-      "FRUTIFERA",
-      "PERENE"
-    ],
+    "papeis": ["FRUTIFERA", "PERENE"],
     "funcaoPrincipal": "Produção alimentar perene",
     "fonte": {
       "titulo": "Embrapa — Produção de mudas de espécies agroflorestais",
@@ -958,10 +911,7 @@
     "estrato": "EMERGENTE",
     "sucessao": "TARDIA",
     "ciclo": "PERENE",
-    "papeis": [
-      "ARBOREA",
-      "PERENE"
-    ],
+    "papeis": ["ARBOREA", "PERENE"],
     "funcaoPrincipal": "Componente arbóreo de longa permanência",
     "fonte": {
       "titulo": "Embrapa Amazônia Oriental — SAFs: sistema agroflorestal",
@@ -1020,9 +970,7 @@
     "estrato": "EMERGENTE",
     "sucessao": "TARDIA",
     "ciclo": "PERENE",
-    "papeis": [
-      "ARBOREA"
-    ],
+    "papeis": ["ARBOREA"],
     "funcaoPrincipal": "Diversidade no estrato arbóreo",
     "fonte": {
       "titulo": "Embrapa — Arranjos agroflorestais (Bezerra)",
@@ -1089,9 +1037,7 @@
     "estrato": "MEDIO",
     "sucessao": "INICIAL",
     "ciclo": "PERENE",
-    "papeis": [
-      "SUPORTE"
-    ],
+    "papeis": ["SUPORTE"],
     "funcaoPrincipal": "Suporte vegetal do sistema",
     "fonte": {
       "titulo": "Embrapa Amazônia Oriental — SAFs: sistema agroflorestal",
@@ -1236,10 +1182,7 @@
     "estrato": "BAIXO",
     "sucessao": "INTERMEDIARIA",
     "ciclo": "MEDIO",
-    "papeis": [
-      "CULTURA_CURTA",
-      "PRODUTIVA"
-    ],
+    "papeis": ["CULTURA_CURTA", "PRODUTIVA"],
     "funcaoPrincipal": "Hortaliças e condimentos",
     "fonte": {
       "titulo": "Embrapa — Cultivo de Curcuma longa",
@@ -2605,10 +2548,7 @@
     "estrato": "BAIXO",
     "sucessao": "INICIAL",
     "ciclo": "MEDIO",
-    "papeis": [
-      "CULTURA_CURTA",
-      "PRODUTIVA"
-    ],
+    "papeis": ["CULTURA_CURTA", "PRODUTIVA"],
     "funcaoPrincipal": "Hortaliças e condimentos",
     "fonte": {
       "titulo": "Incaper — Gengibre, 101 culturas",
@@ -2976,10 +2916,7 @@
     "estrato": "ALTO",
     "sucessao": "INTERMEDIARIA",
     "ciclo": "PERENE",
-    "papeis": [
-      "FRUTIFERA",
-      "ARBOREA"
-    ],
+    "papeis": ["FRUTIFERA", "ARBOREA"],
     "funcaoPrincipal": "Frutíferas",
     "fonte": {
       "titulo": "Embrapa — Ingá-cipó, Inga edulis",
@@ -3699,9 +3636,7 @@
     "estrato": "EMERGENTE",
     "sucessao": "INTERMEDIARIA",
     "ciclo": "PERENE",
-    "papeis": [
-      "ARBOREA"
-    ],
+    "papeis": ["ARBOREA"],
     "funcaoPrincipal": "Árvores e restauração",
     "fonte": {
       "titulo": "Embrapa — Mutamba, Circular Técnica 141",
@@ -4379,10 +4314,7 @@
     "estrato": "MEDIO",
     "sucessao": "INTERMEDIARIA",
     "ciclo": "PERENE",
-    "papeis": [
-      "FRUTIFERA",
-      "PRODUTIVA"
-    ],
+    "papeis": ["FRUTIFERA", "PRODUTIVA"],
     "funcaoPrincipal": "Frutíferas",
     "fonte": {
       "titulo": "IF Baiano — Cartilha PLAME",
@@ -4731,10 +4663,7 @@
     "estrato": "MEDIO",
     "sucessao": "INTERMEDIARIA",
     "ciclo": "PERENE",
-    "papeis": [
-      "FRUTIFERA",
-      "PRODUTIVA"
-    ],
+    "papeis": ["FRUTIFERA", "PRODUTIVA"],
     "funcaoPrincipal": "Hortaliças e condimentos",
     "fonte": {
       "titulo": "Embrapa — Urucum, plantas condimentares",

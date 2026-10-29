@@ -1,169 +1,305 @@
 /* Estilos das páginas que apresentam o time e o acesso por conta. */
 .historia-intro {
-    max-width: 760px;
-    margin-bottom: 40px;
+  max-width: 760px;
+  margin-bottom: 40px;
 }
 
 .historia-grade {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
 }
 
 .historia-cartao,
 .conta-painel {
-    padding: 28px;
-    border: 1px solid var(--borda);
-    border-radius: var(--raio);
-    background: var(--superficie);
+  padding: 28px;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background: var(--superficie);
 }
 
 .historia-cartao h2 {
-    font-size: 26px;
+  font-size: 26px;
 }
 
 .historia-cartao p {
-    color: var(--muted);
+  color: var(--muted);
 }
 
 .historia-etiqueta {
-    display: block;
-    margin-bottom: 20px;
-    color: var(--ocre);
-    font-size: 12px;
-    font-weight: 600;
+  display: block;
+  margin-bottom: 20px;
+  color: var(--ocre);
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .historia-equipe {
-    margin-top: 40px;
-    padding: 32px;
-    border-radius: var(--raio);
-    background: var(--sage);
+  margin-top: 40px;
+  padding: 32px;
+  border-radius: var(--raio);
+  background: var(--sage);
 }
 
 .conta-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
-    gap: 64px;
-    align-items: start;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
+  gap: 64px;
+  align-items: start;
 }
 
 .conta-painel fieldset {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
 }
 
 .conta-painel .campo {
-    margin-bottom: 18px;
+  margin-bottom: 18px;
 }
 
-.conta-painel input:not([type=checkbox]) {
-    width: 100%;
+.conta-painel input:not([type='checkbox']) {
+  width: 100%;
 }
 
 .conta-modos {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 24px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
 }
 
 .conta-modos button {
-    flex: 1;
+  flex: 1;
 }
 
-.conta-modos button[aria-selected=true] {
-    background: var(--verde);
-    color: white;
+.conta-modos button[aria-selected='true'] {
+  background: var(--verde);
+  color: white;
 }
 
 .conta-mostrar {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 22px;
-    font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  font-size: 14px;
 }
 
 .conta-mensagem {
-    margin-top: 20px;
-    font-size: 14px;
-    overflow-wrap: anywhere;
+  margin-top: 20px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
 }
 
 .conta-mensagem:empty {
-    display: none;
+  display: none;
 }
 
-#confirmacao-codigo { margin: 24px 0; border: 1px solid #d8e5dd; border-radius: 12px; background: #f3f8f4; }
-#confirmacao-codigo summary { padding: 16px; color: #26533e; font-weight: 600; cursor: pointer; }
-#form-codigo { padding: 0 16px 18px; }
-#codigo-email { font-family: ui-monospace, Consolas, monospace; font-size: 22px; letter-spacing: .13em; }
-.codigo-ferramentas { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 18px; }
-.codigo-ferramentas .botao { padding: 9px 13px; font-size: 12px; }
+#confirmacao-codigo {
+  margin: 24px 0;
+  border: 1px solid #d8e5dd;
+  border-radius: 12px;
+  background: #f3f8f4;
+}
+#confirmacao-codigo summary {
+  padding: 16px;
+  color: #26533e;
+  font-weight: 600;
+  cursor: pointer;
+}
+#form-codigo {
+  padding: 0 16px 18px;
+}
+#codigo-email {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 22px;
+  letter-spacing: 0.13em;
+}
+.codigo-ferramentas {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 0 18px;
+}
+.codigo-ferramentas .botao {
+  padding: 9px 13px;
+  font-size: 12px;
+}
 
-.jumpers-numeros { display: flex; flex-wrap: wrap; gap: 14px 32px; margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--borda); }
-.jumpers-numeros span { font-size: 12px; color: var(--muted); }
-.jumpers-numeros strong { display: block; font-family: Georgia, serif; font-size: 30px; color: #26533e; font-weight: normal; }
-.jumpers-registros { margin: 40px 0 56px; }
-.jumpers-album { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
-.jumpers-album figure { margin: 0; border: 1px solid var(--borda); border-radius: 12px; overflow: hidden; background: white; }
-.jumpers-miniatura { min-height: 112px; display: flex; align-items: center; justify-content: center; padding: 16px; background: #edf3ed; }
-.jumpers-miniatura img { width: auto; height: auto; max-width: 100%; max-height: 110px; }
-.jumpers-album figcaption { padding: 12px 14px; font-size: 12px; line-height: 1.6; color: #536459; }
-.conta-modos { flex-wrap: wrap; }
-.conta-modos button { min-width: 90px; font-size: 12px; padding: 10px 8px; }
-.conta-etapas { display: flex; align-items: center; gap: 10px; padding: 12px 0 18px; color: #6e7d73; font-size: 11px; }
-.conta-etapas [aria-current=step] { color: #26533e; font-weight: 700; }
-#senha-orientacao { margin-bottom: 18px; padding: 14px; background: #f3f7f2; border-radius: 10px; }
-#senha-orientacao meter { display: block; width: 100%; height: 10px; margin: 6px 0; }
-#senha-orientacao p { margin: 6px 0 0; color: #63746a; font-size: 11px; line-height: 1.6; }
-#senha-combinacao { display: block; margin-top: 5px; color: #63746a; font-size: 11px; }
-#confirmacao-codigo { padding: 20px; margin: 0; }
-#confirmacao-codigo #form-codigo { padding: 0; }
-.codigo-destinatario { overflow-wrap: anywhere; font-size: 13px; }
-.codigo-destinatario strong { color: #26533e; }
-.conta-link { border: 0; padding: 0; background: none; color: #26533e; font-size: 12px; text-decoration: underline; cursor: pointer; }
-.conta-seguranca { padding-top: 20px; border-top: 1px solid var(--borda); margin-top: 24px; color: #6e7d73; font-size: 11px; line-height: 1.7; }
-@media(max-width:600px) { .jumpers-album { grid-template-columns: repeat(2,minmax(0,1fr)); } .conta-modos button { flex: 1 1 30%; } }
+.jumpers-numeros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 32px;
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--borda);
+}
+.jumpers-numeros span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.jumpers-numeros strong {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  color: #26533e;
+  font-weight: normal;
+}
+.jumpers-registros {
+  margin: 40px 0 56px;
+}
+.jumpers-album {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.jumpers-album figure {
+  margin: 0;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+.jumpers-miniatura {
+  min-height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: #edf3ed;
+}
+.jumpers-miniatura img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 110px;
+}
+.jumpers-album figcaption {
+  padding: 12px 14px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #536459;
+}
+.conta-modos {
+  flex-wrap: wrap;
+}
+.conta-modos button {
+  min-width: 90px;
+  font-size: 12px;
+  padding: 10px 8px;
+}
+.conta-etapas {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0 18px;
+  color: #6e7d73;
+  font-size: 11px;
+}
+.conta-etapas [aria-current='step'] {
+  color: #26533e;
+  font-weight: 700;
+}
+#senha-orientacao {
+  margin-bottom: 18px;
+  padding: 14px;
+  background: #f3f7f2;
+  border-radius: 10px;
+}
+#senha-orientacao meter {
+  display: block;
+  width: 100%;
+  height: 10px;
+  margin: 6px 0;
+}
+#senha-orientacao p {
+  margin: 6px 0 0;
+  color: #63746a;
+  font-size: 11px;
+  line-height: 1.6;
+}
+#senha-combinacao {
+  display: block;
+  margin-top: 5px;
+  color: #63746a;
+  font-size: 11px;
+}
+#confirmacao-codigo {
+  padding: 20px;
+  margin: 0;
+}
+#confirmacao-codigo #form-codigo {
+  padding: 0;
+}
+.codigo-destinatario {
+  overflow-wrap: anywhere;
+  font-size: 13px;
+}
+.codigo-destinatario strong {
+  color: #26533e;
+}
+.conta-link {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: #26533e;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.conta-seguranca {
+  padding-top: 20px;
+  border-top: 1px solid var(--borda);
+  margin-top: 24px;
+  color: #6e7d73;
+  font-size: 11px;
+  line-height: 1.7;
+}
+@media (max-width: 600px) {
+  .jumpers-album {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .conta-modos button {
+    flex: 1 1 30%;
+  }
+}
 
 button:disabled {
-    cursor: not-allowed;
-    opacity: .6;
-    transform: none;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
 }
 
 @media (max-width: 800px) {
+  .historia-grade,
+  .conta-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
-    .historia-grade,
-    .conta-layout {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .historia-cartao,
-    .conta-painel,
-    .historia-equipe {
-        padding: 22px;
-    }
+  .historia-cartao,
+  .conta-painel,
+  .historia-equipe {
+    padding: 22px;
+  }
 }
 
 .historia-identidade {
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;
-    padding-top: 40px;
-    margin-top: 40px;
-    border-top: 1px solid var(--borda);
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 1px solid var(--borda);
 }
 
 .historia-identidade img {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 @media (max-width: 600px) {
-    .historia-identidade {
-        flex-direction: column;
-    }
+  .historia-identidade {
+    flex-direction: column;
+  }
 }

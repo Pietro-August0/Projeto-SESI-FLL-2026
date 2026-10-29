@@ -4,7 +4,6 @@
 
 [Identidade visual](IDENTIDADE-VISUAL.md) · [Apresentação do projeto](../README.md)
 
-
 Revisão em 22/10/2026.
 
 ## Testes automatizados

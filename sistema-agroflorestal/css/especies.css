@@ -4,287 +4,377 @@
 
 /* Quatro colunas: a busca recebe duas partes, os seletores uma cada e o botão só o necessário. */
 .filtros {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr auto;
-    gap: 18px;
-    /* Espaço entre os controles. */
-    align-items: end;
-    /* Alinha a base do botão com a base dos campos. */
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 18px;
+  /* Espaço entre os controles. */
+  align-items: end;
+  /* Alinha a base do botão com a base dos campos. */
 }
 
 /* A contagem fica à esquerda e a informação da curadoria, à direita. */
 .catalogo-nota {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    font-size: 12px;
-    color: var(--muted);
-    padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 12px;
+  color: var(--muted);
+  padding: 24px 0;
 }
 
 /* Evita que a margem global de parágrafos desalinhe a contagem com a nota ao lado. */
 .catalogo-nota p {
-    margin: 0;
+  margin: 0;
 }
 
 /* Três cartões por linha; cada um conserva sua própria altura em vez de se esticar. */
 .catalogo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-    align-items: start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: start;
 }
 
 /* A caixa do cartão: contorno, cantos arredondados e espaço entre borda e conteúdo. */
 .especie-card {
-    border: 1px solid var(--borda);
-    border-radius: var(--raio);
-    padding: 24px;
-    background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 24px;
+  background: var(--superficie);
 }
 
 /* A área da imagem reserva altura antes do carregamento para evitar saltos na página. */
 .especie-foto {
-    margin: -24px -24px 22px;
+  margin: -24px -24px 22px;
 }
 
 .foto-planta,
 .foto-reserva {
-    width: 100%;
-    height: 200px;
-    border-radius: var(--raio) var(--raio) 0 0;
+  width: 100%;
+  height: 200px;
+  border-radius: var(--raio) var(--raio) 0 0;
 }
 
 .foto-planta {
-    display: block;
-    object-fit: cover;
+  display: block;
+  object-fit: cover;
 }
 
 .foto-reserva {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    background: var(--sage);
-    color: var(--muted);
-    font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: var(--sage);
+  color: var(--muted);
+  font-size: 12px;
 }
 
 .especie-foto figcaption {
-    padding: 8px 14px;
-    font-size: 10px;
-    color: var(--muted);
-    overflow-wrap: anywhere;
+  padding: 8px 14px;
+  font-size: 10px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
 }
 
 /* Estrato e sucessão ficam nas pontas da primeira linha do cartão. */
 .especie-cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    font-size: 11px;
-    margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  margin-bottom: 22px;
 }
 
 /* Pequena etiqueta de fundo verde claro para o estrato da planta. */
 .estrato-tag {
-    background: var(--sage);
-    padding: 3px 9px;
-    border-radius: 3px;
+  background: var(--sage);
+  padding: 3px 9px;
+  border-radius: 3px;
 }
 
 /* O nome comum é maior que os demais textos e fica próximo do nome científico. */
 .especie-card h2 {
-    font-size: 25px;
-    margin-bottom: 7px;
+  font-size: 25px;
+  margin-bottom: 7px;
 }
 
 /* O nome científico usa itálico para se distinguir do nome comum. */
 .cientifico {
-    font: italic 14px Georgia, serif;
-    color: var(--muted);
+  font:
+    italic 14px Georgia,
+    serif;
+  color: var(--muted);
 }
 
 /* > escolhe parágrafos filhos diretos; :not exclui o nome científico.
  * A altura mínima reserva espaço semelhante para as descrições curtas dos cartões.
  */
-.especie-card>p:not(.cientifico) {
-    font-size: 13px;
-    min-height: 44px;
-    color: var(--muted);
+.especie-card > p:not(.cientifico) {
+  font-size: 13px;
+  min-height: 44px;
+  color: var(--muted);
 }
 
 /* As etiquetas dos papéis podem passar à linha seguinte quando não cabem lado a lado. */
 .funcoes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin: 18px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 18px 0;
 }
 
 /* Cada span vira uma etiqueta pequena, com preenchimento e cantos suaves. */
 .funcoes span {
-    font-size: 10px;
-    padding: 3px 7px;
-    background: var(--lilas-suave);
-    color: var(--muted);
-    border-radius: 3px;
+  font-size: 10px;
+  padding: 3px 7px;
+  background: var(--lilas-suave);
+  color: var(--muted);
+  border-radius: 3px;
 }
 
 /* Uma divisória separa os dados extras do resumo; retiramos a borda inferior global. */
 .especie-card details {
-    border-top: 1px solid var(--borda);
-    border-bottom: 0;
+  border-top: 1px solid var(--borda);
+  border-bottom: 0;
 }
 
 /* O texto que abre os dados tem uma área de clique com espaço acima. */
 .especie-card summary {
-    padding: 16px 0 0;
-    font-size: 12px;
+  padding: 16px 0 0;
+  font-size: 12px;
 }
 
 /* dl organiza pares: dt é o nome da informação e dd é seu valor, em duas colunas. */
 .especie-card dl {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    font-size: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  font-size: 12px;
 }
 
 /* Os nomes das informações usam a cor secundária; os valores perdem o recuo padrão de dd. */
 .especie-card dt {
-    color: var(--muted);
+  color: var(--muted);
 }
 
 .especie-card dd {
-    margin: 0;
+  margin: 0;
 }
 
 /* Endereços longos podem quebrar dentro de uma palavra para não ultrapassar o cartão. */
 .especie-card details p,
 .especie-card details a {
-    font-size: 12px;
-    overflow-wrap: anywhere;
+  font-size: 12px;
+  overflow-wrap: anywhere;
 }
 
 /* Em janelas intermediárias, cartões e filtros ficam em duas colunas. */
 @media (max-width: 1000px) {
-    .catalogo {
-        grid-template-columns: 1fr 1fr;
-    }
+  .catalogo {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    .filtros {
-        grid-template-columns: 1fr 1fr;
-    }
+  .filtros {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* No celular, tudo fica em uma coluna; a nota também passa a empilhar seus textos. */
 @media (max-width: 700px) {
+  .catalogo,
+  .filtros {
+    grid-template-columns: 1fr;
+  }
 
-    .catalogo,
-    .filtros {
-        grid-template-columns: 1fr;
-    }
-
-    .catalogo-nota {
-        flex-direction: column;
-        gap: 6px;
-    }
+  .catalogo-nota {
+    flex-direction: column;
+    gap: 6px;
+  }
 }
 
 /* As evidências acompanham o dado, sem sobrecarregar o resumo da planta. */
 .foto-nota {
-    display: block;
-    margin-top: 5px;
+  display: block;
+  margin-top: 5px;
 }
 
 .especie-card details h3 {
-    font-size: 16px;
-    margin: 24px 0 12px;
+  font-size: 16px;
+  margin: 24px 0 12px;
 }
 
 .especie-card dd,
 .especie-card dt {
-    overflow-wrap: anywhere;
+  overflow-wrap: anywhere;
 }
 
 .faixas-consulta,
 .fontes-ficha {
-    list-style: none;
-    padding: 0;
-    font-size: 12px;
+  list-style: none;
+  padding: 0;
+  font-size: 12px;
 }
 
 .faixas-consulta li,
 .fontes-ficha li {
-    margin: 0 0 16px;
+  margin: 0 0 16px;
 }
 
 .faixas-consulta span,
 .fontes-ficha span {
-    display: block;
-    margin: 4px 0;
-    color: var(--muted);
+  display: block;
+  margin: 4px 0;
+  color: var(--muted);
 }
 
 .nota-curadoria {
-    padding: 12px;
-    border-left: 3px solid #8E699C;
-    background: var(--lilas-suave);
+  padding: 12px;
+  border-left: 3px solid #8e699c;
+  background: var(--lilas-suave);
 }
 
 .consulta-interacoes {
-    margin-bottom: 28px;
+  margin-bottom: 28px;
 }
 
 .consulta-interacoes summary span {
-    display: inline-block;
-    margin-left: 8px;
-    font-size: 12px;
-    color: var(--muted);
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 12px;
+  color: var(--muted);
 }
 
 .consulta-seletores {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-    margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 700px) {
-    .consulta-seletores {
-        grid-template-columns: 1fr;
-    }
+  .consulta-seletores {
+    grid-template-columns: 1fr;
+  }
 }
 /* Consulta ao inventário histórico do parceiro. */
-.banco-taiobas { margin: 64px 0 40px; padding-top: 28px; border-top: 1px solid var(--borda, #ddd); scroll-margin-top: 110px; }
-.banco-taiobas > p { max-width: 85ch; }
-.banco-filtros { grid-template-columns: minmax(0, 1fr) minmax(230px, .65fr) auto; margin-top: 24px; }
-.registro-banco { border-bottom: 1px solid var(--borda, #ddd); scroll-margin-top: 110px; }
-.registro-banco > summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 8px; cursor: pointer; }
-.registro-banco > summary::before { content: '+'; flex: 0 0 auto; font-size: 22px; }
-.registro-banco[open] > summary::before { content: '−'; }
-.registro-banco > summary > span:first-child { flex: 1; min-width: 0; }
-.registro-banco > summary:focus-visible { outline: 2px solid var(--roxo, #725184); outline-offset: 3px; }
-.banco-identificacao { display: block; margin-top: 4px; font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
-.banco-status { padding: 6px 10px; border-radius: 6px; font-size: 12px; line-height: 1.4; background: #edf4ef; color: #26533e; max-width: 190px; }
-.banco-pendente { background: #f3edf5; color: #654475; }
-.banco-ficha { max-width: 90ch; padding: 0 12px 20px 36px; }
-.banco-ficha dl { display: block; }
-.banco-ficha dt { font-weight: 600; margin-top: 18px; }
-.banco-ficha dd { margin: 6px 0 18px; }
-.banco-ficha h3 { margin-top: 24px; }
-.banco-ficha a { overflow-wrap: anywhere; }
-.banco-solo { margin-top: 28px; }
+.banco-taiobas {
+  margin: 64px 0 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--borda, #ddd);
+  scroll-margin-top: 110px;
+}
+.banco-taiobas > p {
+  max-width: 85ch;
+}
+.banco-filtros {
+  grid-template-columns: minmax(0, 1fr) minmax(230px, 0.65fr) auto;
+  margin-top: 24px;
+}
+.registro-banco {
+  border-bottom: 1px solid var(--borda, #ddd);
+  scroll-margin-top: 110px;
+}
+.registro-banco > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 8px;
+  cursor: pointer;
+}
+.registro-banco > summary::before {
+  content: '+';
+  flex: 0 0 auto;
+  font-size: 22px;
+}
+.registro-banco[open] > summary::before {
+  content: '−';
+}
+.registro-banco > summary > span:first-child {
+  flex: 1;
+  min-width: 0;
+}
+.registro-banco > summary:focus-visible {
+  outline: 2px solid var(--roxo, #725184);
+  outline-offset: 3px;
+}
+.banco-identificacao {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.banco-status {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+  background: #edf4ef;
+  color: #26533e;
+  max-width: 190px;
+}
+.banco-pendente {
+  background: #f3edf5;
+  color: #654475;
+}
+.banco-ficha {
+  max-width: 90ch;
+  padding: 0 12px 20px 36px;
+}
+.banco-ficha dl {
+  display: block;
+}
+.banco-ficha dt {
+  font-weight: 600;
+  margin-top: 18px;
+}
+.banco-ficha dd {
+  margin: 6px 0 18px;
+}
+.banco-ficha h3 {
+  margin-top: 24px;
+}
+.banco-ficha a {
+  overflow-wrap: anywhere;
+}
+.banco-solo {
+  margin-top: 28px;
+}
 @media (max-width: 700px) {
-    .banco-filtros { grid-template-columns: minmax(0, 1fr); }
-    .registro-banco > summary { display: grid; grid-template-columns: 16px minmax(0, 1fr); align-items: start; gap: 10px; }
-    .banco-status { grid-column: 2; justify-self: start; max-width: 100%; }
-    .banco-ficha { padding-left: 8px; padding-right: 8px; }
+  .banco-filtros {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .registro-banco > summary {
+    display: grid;
+    grid-template-columns: 16px minmax(0, 1fr);
+    align-items: start;
+    gap: 10px;
+  }
+  .banco-status {
+    grid-column: 2;
+    justify-self: start;
+    max-width: 100%;
+  }
+  .banco-ficha {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
 
-.preview-planta svg { display: block; margin: 0 auto; max-width: 100%; }
-.preview-planta label { display: block; }
-.preview-planta input { display: block; width: 100%; margin-top: 12px; }
+.preview-planta svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.preview-planta label {
+  display: block;
+}
+.preview-planta input {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+}

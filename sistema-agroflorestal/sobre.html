@@ -1,198 +1,397 @@
-<!DOCTYPE html>
+<!doctype html>
 <!-- sobre.html explica as regras e as referências. Seu conteúdo já está no próprio HTML;
      utils.js só destaca o item Sobre no menu. Não há cálculo nesta página. -->
 <html lang="pt-BR">
-    <head>
-        <!-- UTF-8 permite acentos; viewport adapta o conteúdo à largura do dispositivo. -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Texto de descrição para buscas e sugestão de cor para o navegador. -->
-        <meta name="description" content="Projeto de apoio ao trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais, com propostas ilustrativas e regras transparentes.">
-        <meta name="theme-color" content="#26533E">
-        <!-- Nome mostrado na aba e arquivo local usado como ícone. -->
-        <title>
-            Metodologia e fontes — ybyrá
-        </title>
-        <link rel="icon" href="assets/marca/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="assets/marca/favicon-32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="assets/marca/favicon-16.png" sizes="16x16" type="image/png">
-    <link rel="shortcut icon" href="assets/marca/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png" sizes="180x180">
-    <link rel="manifest" href="assets/marca/site.webmanifest">
-        <!-- A metodologia usa os estilos compartilhados; não precisa de um CSS próprio. -->
-        <link rel="stylesheet" href="css/global.css">
-        <link rel="stylesheet" href="css/orientacao.css">
-    <link rel="stylesheet" href="css/ecologico.css">
-        <!-- module permite que os mesmos utilitários sejam usados pelas outras páginas. -->
-        <script type="module" src="js/utils.js">
-        </script>
-        <link rel="stylesheet" href="css/experiencia.css">
+  <head>
+    <!-- UTF-8 permite acentos; viewport adapta o conteúdo à largura do dispositivo. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Texto de descrição para buscas e sugestão de cor para o navegador. -->
+    <meta
+      name="description"
+      content="Projeto de apoio ao trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais, com propostas ilustrativas e regras transparentes."
+    />
+    <meta name="theme-color" content="#26533E" />
+    <!-- Nome mostrado na aba e arquivo local usado como ícone. -->
+    <title>Metodologia e fontes — ybyrá</title>
+    <link rel="icon" href="assets/marca/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/marca/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="assets/marca/favicon-16.png" sizes="16x16" type="image/png" />
+    <link rel="shortcut icon" href="assets/marca/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="assets/marca/site.webmanifest" />
+    <!-- A metodologia usa os estilos compartilhados; não precisa de um CSS próprio. -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/orientacao.css" />
+    <link rel="stylesheet" href="css/ecologico.css" />
+    <!-- module permite que os mesmos utilitários sejam usados pelas outras páginas. -->
+    <script type="module" src="js/utils.js"></script>
+    <link rel="stylesheet" href="css/experiencia.css" />
     <script type="module" src="js/interacoes.js"></script>
-</head>
-    <body>
-        <!-- Atalho de teclado que aponta ao id do conteúdo principal. -->
-        <a class="pular" href="#conteudo">Pular para o conteúdo</a>
-        <!-- Cabeçalho comum com marca vetorial, links locais e acesso ao formulário. -->
-        <header class="cabecalho">
-    <div class="container cabecalho-interno">
-        <a class="marca" href="index.html"><img class="marca-logo" src="assets/marca/logo-negativa.svg" alt="ybyrá — Sistema agroflorestal" width="180" height="95"></a>
-        <nav aria-label="Navegação principal"><a href="index.html">Início</a><a href="analise.html">Criar SAF</a><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a></nav>
-        <div class="cabecalho-ferramentas"><button class="ajuda-cabecalho" type="button" data-abrir-guia>Como usar</button><a class="conta-atalho" href="conta.html"><svg width="22" height="24" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M3 24v-4c0-7 18-7 18 0v4Z"/></svg><span>Entrar</span></a></div>
-    </div>
-</header>
-        <main class="container" id="conteudo">
-            <!-- Mesmo com o JS desativado, os textos de metodologia abaixo podem ser lidos. -->
-            <noscript>
-                <p class="erro">
-                    Ative o JavaScript para carregar o catálogo, os cenários e as análises.
-                </p>
-            </noscript>
-            <div class="pagina-titulo">
-                <h1>
-                    Regras abertas. Limites claros.
-                </h1>
-                <p>
-                    Entenda o caminho entre os dados do solo e as propostas agroflorestais.
-                </p>
-            </div>
-            <!-- Duas áreas: o texto principal em section e o quadro complementar em aside. -->
-            <div class="metodologia">
-                <section><details class="leitura-secao"><summary>Uma ferramenta de apoio ao projeto de SAFs</summary><div>
-                    <p>
-                        Criado para complementar o trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais, o ybyrá demonstra como uma medição de solo pode orientar a escolha de funções e espécies em um Sistema Agroflorestal (SAF). As propostas são geradas com dados e regras do próprio projeto. O acesso ao sistema exige uma conta; o servidor local cuida do cadastro e das sessões.
-                    </p>
-                    <!-- Lista ordenada: as etapas precisam acontecer nesta sequência.
+  </head>
+  <body>
+    <!-- Atalho de teclado que aponta ao id do conteúdo principal. -->
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+    <!-- Cabeçalho comum com marca vetorial, links locais e acesso ao formulário. -->
+    <header class="cabecalho">
+      <div class="container cabecalho-interno">
+        <a class="marca" href="index.html"
+          ><img
+            class="marca-logo"
+            src="assets/marca/logo-negativa.svg"
+            alt="ybyrá — Sistema agroflorestal"
+            width="180"
+            height="95"
+        /></a>
+        <nav aria-label="Navegação principal">
+          <a href="index.html">Início</a><a href="analise.html">Criar SAF</a
+          ><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a>
+        </nav>
+        <div class="cabecalho-ferramentas">
+          <button class="ajuda-cabecalho" type="button" data-abrir-guia>Como usar</button
+          ><a class="conta-atalho" href="conta.html"
+            ><svg
+              width="22"
+              height="24"
+              viewBox="0 0 24 26"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="7" r="4" />
+              <path d="M3 24v-4c0-7 18-7 18 0v4Z" /></svg
+            ><span>Entrar</span></a
+          >
+        </div>
+      </div>
+    </header>
+    <main class="container" id="conteudo">
+      <!-- Mesmo com o JS desativado, os textos de metodologia abaixo podem ser lidos. -->
+      <noscript>
+        <p class="erro">Ative o JavaScript para carregar o catálogo, os cenários e as análises.</p>
+      </noscript>
+      <div class="pagina-titulo">
+        <h1>Regras abertas. Limites claros.</h1>
+        <p>Entenda o caminho entre os dados do solo e as propostas agroflorestais.</p>
+      </div>
+      <!-- Duas áreas: o texto principal em section e o quadro complementar em aside. -->
+      <div class="metodologia">
+        <section>
+          <details class="leitura-secao">
+            <summary>Uma ferramenta de apoio ao projeto de SAFs</summary>
+            <div>
+              <p>
+                Criado para complementar o trabalho da equipe na FIRST LEGO League sobre sistemas
+                agroflorestais, o ybyrá demonstra como uma medição de solo pode orientar a escolha
+                de funções e espécies em um Sistema Agroflorestal (SAF). As propostas são geradas
+                com dados e regras do próprio projeto. O acesso ao sistema exige uma conta; o
+                servidor local cuida do cadastro e das sessões.
+              </p>
+              <!-- Lista ordenada: as etapas precisam acontecer nesta sequência.
                          strong destaca o nome; p explica o que acontece em cada uma. -->
-                    <ol class="metodo-passos">
-                        <li>
-                            <strong>Receber e validar</strong>
-                            <p>
-                                pH, umidade, temperatura, N, P, K, município, estado e objetivo. Condutividade é opcional.
-                            </p>
-                        </li>
-                        <li>
-                            <strong>Interpretar cada parâmetro</strong>
-                            <p>
-                                As faixas de <code>faixas-solo.json</code> geram BAIXO, ADEQUADO, ALTO ou ATENÇÃO. Não existe uma nota geral de saúde do solo.
-                            </p>
-                        </li>
-                        <li>
-                            <strong>Ordenar espécies por motivos</strong>
-                            <p>
-                                Faixas conhecidas de pH (+25), temperatura (+20) e umidade (+15), cada necessidade atendida (+15), novo estrato (+10), sucessão adequada ao papel (+10) e nova função (+5). Um limite conhecido incompatível elimina a espécie. Um valor <code>null</code> ignora o critério.
-                            </p>
-                        </li>
-                        <li>
-                            <strong>Preencher modelos</strong>
-                            <p>
-                                Produção + recuperação, produção diversificada e recuperação + biodiversidade. A montagem evita repetição de espécies, considera funções e estratos, e exclui pares marcados EVITAR. Alternativas empatadas podem compor variações.
-                            </p>
-                        </li>
-                    </ol>
-                    </div></details><details class="leitura-secao"><summary>O que os dados representam</summary><div>
-                    <p>
-                        Os três cenários são fictícios. Todos os limiares do solo são regras pedagógicas, sem calibração laboratorial. N, P e K usam unidades arbitrárias de demonstração: não são mg/kg, mg/dm³ ou recomendação de adubação. A condutividade usa dS/m, também com limiar demonstrativo.
-                    </p>
-                    <p>
-                        Cobertura e diversidade são prioridades dos modelos, não medições de solo exposto ou biodiversidade. Baixo P ou K sugere avaliação de nutrientes; biomassa não garante correção dessas deficiências.
-                    </p>
-                    </div></details><details class="leitura-secao"><summary>Ausência de informação é informação</summary><div>
-                    <p>
-                        O catálogo reúne 18 espécies e uma curadoria de 30 fontes, incluindo Embrapa, FAO, Kew, IDAM, MAPA, SENAR, EMATER-PA e Tropical Forages. As fichas apresentam 43 referências numéricas de cultivo, com unidades, contexto e fonte por valor. Faixas ótimas, condições de ocorrência e limites absolutos são identificados separadamente. O resultado não confirma adequação climática ou regional.
-                    </p>
-                    <p>
-                        Funções sem confirmação específica também permanecem <code>null</code>. Papéis, estratos, ciclo e sucessão são uma organização didática e podem variar com cultivar e manejo. A fase de entrada indica quando a função se consolida; mudas perenes podem ser plantadas desde a implantação. A cobertura precisa de renovação e manejo.
-                    </p>
-                    <p>
-                        <code>interacoes.json</code> reúne 20 pares com fonte, tipo de evidência, contexto e cuidado de manejo. Consórcio documentado não significa benefício comprovado: os registros incluem recomendações, observações e experimentos com competição. Os avisos contextuais não excluem automaticamente um par em todo ambiente. Relações futuras explicitamente marcadas EVITAR são excluídas pelo modelo. Ausência de registro significa DESCONHECIDA. Os modelos não definem espaçamento, densidade ou calendário de manejo.
-                    </p>
-                    </div></details><details class="leitura-secao"><summary>Referência de cultivo não é limite automático</summary><div>
-                    <p>Os limites numéricos usados para exclusão de espécies continuam ausentes quando não há equivalência validada com as entradas do sistema. A temperatura do ar não é a temperatura do solo, a chuva em milímetros não é umidade do solo em porcentagem e uma faixa ótima não é um limite de sobrevivência. As referências estão em <code>cultivo.json</code> e <code>referencias.json</code>; o catálogo permite consultá-las sem aplicar essas conversões indevidas.</p>
-                    <p>Não foram inventadas doses de N, P e K nem listas de estados aptos. Uma indicação de distribuição natural ou de cultivo em um município não valida toda a região. A fixação biológica de N é uma capacidade dependente da simbiose e do manejo, sem garantia de fornecer N à cultura vizinha.</p>
-                    </div></details><details class="leitura-secao"><summary>Limitações</summary><div>
-                    <p>
-                        As propostas não substituem avaliação agronômica, laudo laboratorial ou planejamento de campo. A animação usa formas estilizadas próprias para as 18 espécies, incluindo suas folhas, ramos, frutos e tipos de raízes. Os ritmos de desenho são diferentes, mas não são taxas agronômicas. Culturas iniciais saem do arranjo e coberturas de ciclo curto são renovadas por novas plantas. Não há escala de tempo, altura ou profundidade. O sistema não prevê produtividade, não prescreve fertilizantes, não calcula crescimento e não realiza avaliação local de invasividade. A escolha definitiva precisa considerar clima, bioma, método de medição, água e contexto da área.
-                    </p>
-                    </div></details><details class="leitura-secao"><summary>Fontes da curadoria</summary><div>
-                    <!-- ul é uma lista sem sequência obrigatória. Cada li guarda uma referência.
+              <ol class="metodo-passos">
+                <li>
+                  <strong>Receber e validar</strong>
+                  <p>
+                    pH, umidade, temperatura, N, P, K, município, estado e objetivo. Condutividade é
+                    opcional.
+                  </p>
+                </li>
+                <li>
+                  <strong>Interpretar cada parâmetro</strong>
+                  <p>
+                    As faixas de <code>faixas-solo.json</code> geram BAIXO, ADEQUADO, ALTO ou
+                    ATENÇÃO. Não existe uma nota geral de saúde do solo.
+                  </p>
+                </li>
+                <li>
+                  <strong>Ordenar espécies por motivos</strong>
+                  <p>
+                    Faixas conhecidas de pH (+25), temperatura (+20) e umidade (+15), cada
+                    necessidade atendida (+15), novo estrato (+10), sucessão adequada ao papel (+10)
+                    e nova função (+5). Um limite conhecido incompatível elimina a espécie. Um valor
+                    <code>null</code> ignora o critério.
+                  </p>
+                </li>
+                <li>
+                  <strong>Preencher modelos</strong>
+                  <p>
+                    Produção + recuperação, produção diversificada e recuperação + biodiversidade. A
+                    montagem evita repetição de espécies, considera funções e estratos, e exclui
+                    pares marcados EVITAR. Alternativas empatadas podem compor variações.
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </details>
+          <details class="leitura-secao">
+            <summary>O que os dados representam</summary>
+            <div>
+              <p>
+                Os três cenários são fictícios. Todos os limiares do solo são regras pedagógicas,
+                sem calibração laboratorial. N, P e K usam unidades arbitrárias de demonstração: não
+                são mg/kg, mg/dm³ ou recomendação de adubação. A condutividade usa dS/m, também com
+                limiar demonstrativo.
+              </p>
+              <p>
+                Cobertura e diversidade são prioridades dos modelos, não medições de solo exposto ou
+                biodiversidade. Baixo P ou K sugere avaliação de nutrientes; biomassa não garante
+                correção dessas deficiências.
+              </p>
+            </div>
+          </details>
+          <details class="leitura-secao">
+            <summary>Ausência de informação é informação</summary>
+            <div>
+              <p>
+                O catálogo reúne 18 espécies e uma curadoria de 30 fontes, incluindo Embrapa, FAO,
+                Kew, IDAM, MAPA, SENAR, EMATER-PA e Tropical Forages. As fichas apresentam 43
+                referências numéricas de cultivo, com unidades, contexto e fonte por valor. Faixas
+                ótimas, condições de ocorrência e limites absolutos são identificados separadamente.
+                O resultado não confirma adequação climática ou regional.
+              </p>
+              <p>
+                Funções sem confirmação específica também permanecem <code>null</code>. Papéis,
+                estratos, ciclo e sucessão são uma organização didática e podem variar com cultivar
+                e manejo. A fase de entrada indica quando a função se consolida; mudas perenes podem
+                ser plantadas desde a implantação. A cobertura precisa de renovação e manejo.
+              </p>
+              <p>
+                <code>interacoes.json</code> reúne 20 pares com fonte, tipo de evidência, contexto e
+                cuidado de manejo. Consórcio documentado não significa benefício comprovado: os
+                registros incluem recomendações, observações e experimentos com competição. Os
+                avisos contextuais não excluem automaticamente um par em todo ambiente. Relações
+                futuras explicitamente marcadas EVITAR são excluídas pelo modelo. Ausência de
+                registro significa DESCONHECIDA. Os modelos não definem espaçamento, densidade ou
+                calendário de manejo.
+              </p>
+            </div>
+          </details>
+          <details class="leitura-secao">
+            <summary>Referência de cultivo não é limite automático</summary>
+            <div>
+              <p>
+                Os limites numéricos usados para exclusão de espécies continuam ausentes quando não
+                há equivalência validada com as entradas do sistema. A temperatura do ar não é a
+                temperatura do solo, a chuva em milímetros não é umidade do solo em porcentagem e
+                uma faixa ótima não é um limite de sobrevivência. As referências estão em
+                <code>cultivo.json</code> e <code>referencias.json</code>; o catálogo permite
+                consultá-las sem aplicar essas conversões indevidas.
+              </p>
+              <p>
+                Não foram inventadas doses de N, P e K nem listas de estados aptos. Uma indicação de
+                distribuição natural ou de cultivo em um município não valida toda a região. A
+                fixação biológica de N é uma capacidade dependente da simbiose e do manejo, sem
+                garantia de fornecer N à cultura vizinha.
+              </p>
+            </div>
+          </details>
+          <details class="leitura-secao">
+            <summary>Limitações</summary>
+            <div>
+              <p>
+                As propostas não substituem avaliação agronômica, laudo laboratorial ou planejamento
+                de campo. A animação usa formas estilizadas próprias para as 18 espécies, incluindo
+                suas folhas, ramos, frutos e tipos de raízes. Os ritmos de desenho são diferentes,
+                mas não são taxas agronômicas. Culturas iniciais saem do arranjo e coberturas de
+                ciclo curto são renovadas por novas plantas. Não há escala de tempo, altura ou
+                profundidade. O sistema não prevê produtividade, não prescreve fertilizantes, não
+                calcula crescimento e não realiza avaliação local de invasividade. A escolha
+                definitiva precisa considerar clima, bioma, método de medição, água e contexto da
+                área.
+              </p>
+            </div>
+          </details>
+          <details class="leitura-secao">
+            <summary>Fontes da curadoria</summary>
+            <div>
+              <!-- ul é uma lista sem sequência obrigatória. Cada li guarda uma referência.
                          Os únicos destinos externos do site são estes links de consulta.
                          _blank abre outra aba; noopener impede que ela controle a página original. -->
-                    <ul class="fontes">
-                        <li>
-                            <a href="https://www.webambiente.cnptia.embrapa.br/webambiente/wiki/doku.php?id=webambiente:safs_sistema_agroflorestal" target="_blank" rel="noopener noreferrer">Embrapa Webambiente — Sistemas agroflorestais ↗</a>
-                            <p>
-                                Conceitos, manejo e culturas de implantação.
-                            </p>
-                        </li>
-                        <li>
-                            <a href="https://www.embrapa.br/documents/1355054/32245427/4a%2B%2Bfolder%2BAduba%C3%A7%C3%A3o%2Bverde.pdf/6a472dad-6782-491b-8393-61fc6510bf7d" target="_blank" rel="noopener noreferrer">Embrapa Agrobiologia — Adubação verde ↗</a>
-                            <p>
-                                Leguminosas, cobertura e fixação de nitrogênio.
-                            </p>
-                        </li>
-                        <li>
-                            <a href="https://www.infoteca.cnptia.embrapa.br/handle/doc/498801" target="_blank" rel="noopener noreferrer">Embrapa — Produção de mudas de espécies agroflorestais ↗</a>
-                            <p>
-                                Banana, açaí, abacaxi, citros, cupuaçu e pupunha.
-                            </p>
-                        </li>
-                        <li>
-                            <a href="https://apct.sede.embrapa.br/pab/pt_BR/article/view/19971" target="_blank" rel="noopener noreferrer">Embrapa — Fixação de N por caupi e gliricídia ↗</a>
-                            <p>
-                                Pesquisa de fixação biológica em condições semiáridas.
-                            </p>
-                        </li>
-                        <li>
-                            <a href="https://www.embrapa.br/en/web/amazonia-oriental/busca-de-imagens/-/midia/6761001/safs-sistema-agroflorestal" target="_blank" rel="noopener noreferrer">Embrapa Amazônia Oriental — SAFs ↗</a>
-                            <p>
-                                Espécies presentes em composições agroflorestais.
-                            </p>
-                        </li>
-                        <li>
-                            <a href="https://ainfo.cnptia.embrapa.br/digital/bitstream/item/45761/1/BezerraNR.pdf" target="_blank" rel="noopener noreferrer">Acervo Embrapa — Arranjos agroflorestais (Bezerra) ↗</a>
-                            <p>
-                                Arranjos com paricá e outras espécies arbóreas.
-                            </p>
-                        </li>
-                    </ul>
-                    </div></details><section id="origem-taiobas"><details class="leitura-secao"><summary>Banco de sementes do parceiro</summary><div><p>O banco de sementes de 2021 foi providenciado à equipe pelo nosso parceiro, o <strong>Grupo Taiobas do Matão USP</strong>. A contribuição está registrada no <a href="historia.html#parceiros">espaço do parceiro</a>. O documento é a fonte do inventário histórico; as fontes agronômicas complementares aparecem individualmente nas <a href="especies.html#catalogo">fichas pesquisadas</a>.</p><p>Nomes populares ambíguos e registros indeterminados foram preservados, sem confirmação botânica presumida. Os novos acessos são de consulta e não alteram as propostas automáticas; a lista não comprova estoque ou viabilidade atual. O relato de solo de 2022 é uma observação local sem laudo e não foi usado como regra do algoritmo.</p></div></details></section>
-                    <p>As referências específicas de cultivo e de cada interação estão nos links das <a href="especies.html">fichas de plantas</a>, junto ao dado que sustentam. Curadoria revisada em 22/10/2026.</p>
-                </section>
-                <!-- Explica acesso local e privacidade, separados do texto das regras. -->
-                <aside class="dicas">
-                    <h2>
-                        Dados e acesso local
-                    </h2>
-                    <p>
-                        A análise usa arquivos deste repositório. O login e os arquivos do projeto funcionam pelo servidor local. As imagens do catálogo estão armazenadas no projeto com créditos e licenças. Os links para fontes externas exigem internet. Se uma imagem não carregar, a ficha continua disponível.
-                    </p>
-                    <hr>
-                    <h3>
-                        Privacidade
-                    </h3>
-                    <p>
-                        A análise atual é guardada no localStorage deste navegador. O login é obrigatório. O servidor guarda e-mail, hash da senha e sessões em um banco local fora da pasta pública. Senhas não são guardadas em texto simples. A sessão dura até oito horas e pode ser encerrada em Minha conta. As imagens licenciadas foram obtidas do Wikimedia Commons e são servidas localmente.
-                    </p>
-                    <a class="botao" href="analise.html">Experimentar →</a>
-                </aside>
+              <ul class="fontes">
+                <li>
+                  <a
+                    href="https://www.webambiente.cnptia.embrapa.br/webambiente/wiki/doku.php?id=webambiente:safs_sistema_agroflorestal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Embrapa Webambiente — Sistemas agroflorestais ↗</a
+                  >
+                  <p>Conceitos, manejo e culturas de implantação.</p>
+                </li>
+                <li>
+                  <a
+                    href="https://www.embrapa.br/documents/1355054/32245427/4a%2B%2Bfolder%2BAduba%C3%A7%C3%A3o%2Bverde.pdf/6a472dad-6782-491b-8393-61fc6510bf7d"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Embrapa Agrobiologia — Adubação verde ↗</a
+                  >
+                  <p>Leguminosas, cobertura e fixação de nitrogênio.</p>
+                </li>
+                <li>
+                  <a
+                    href="https://www.infoteca.cnptia.embrapa.br/handle/doc/498801"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Embrapa — Produção de mudas de espécies agroflorestais ↗</a
+                  >
+                  <p>Banana, açaí, abacaxi, citros, cupuaçu e pupunha.</p>
+                </li>
+                <li>
+                  <a
+                    href="https://apct.sede.embrapa.br/pab/pt_BR/article/view/19971"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Embrapa — Fixação de N por caupi e gliricídia ↗</a
+                  >
+                  <p>Pesquisa de fixação biológica em condições semiáridas.</p>
+                </li>
+                <li>
+                  <a
+                    href="https://www.embrapa.br/en/web/amazonia-oriental/busca-de-imagens/-/midia/6761001/safs-sistema-agroflorestal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Embrapa Amazônia Oriental — SAFs ↗</a
+                  >
+                  <p>Espécies presentes em composições agroflorestais.</p>
+                </li>
+                <li>
+                  <a
+                    href="https://ainfo.cnptia.embrapa.br/digital/bitstream/item/45761/1/BezerraNR.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Acervo Embrapa — Arranjos agroflorestais (Bezerra) ↗</a
+                  >
+                  <p>Arranjos com paricá e outras espécies arbóreas.</p>
+                </li>
+              </ul>
             </div>
-        </main>
-        <!-- Rodapé repete a identificação do site para manter a navegação consistente. -->
-        <footer class="rodape">
-    <div class="container">
+          </details>
+          <section id="origem-taiobas">
+            <details class="leitura-secao">
+              <summary>Banco de sementes do parceiro</summary>
+              <div>
+                <p>
+                  O banco de sementes de 2021 foi providenciado à equipe pelo nosso parceiro, o
+                  <strong>Grupo Taiobas do Matão USP</strong>. A contribuição está registrada no
+                  <a href="historia.html#parceiros">espaço do parceiro</a>. O documento é a fonte do
+                  inventário histórico; as fontes agronômicas complementares aparecem
+                  individualmente nas <a href="especies.html#catalogo">fichas pesquisadas</a>.
+                </p>
+                <p>
+                  Nomes populares ambíguos e registros indeterminados foram preservados, sem
+                  confirmação botânica presumida. Os novos acessos são de consulta e não alteram as
+                  propostas automáticas; a lista não comprova estoque ou viabilidade atual. O relato
+                  de solo de 2022 é uma observação local sem laudo e não foi usado como regra do
+                  algoritmo.
+                </p>
+              </div>
+            </details>
+          </section>
+          <p>
+            As referências específicas de cultivo e de cada interação estão nos links das
+            <a href="especies.html">fichas de plantas</a>, junto ao dado que sustentam. Curadoria
+            revisada em 22/10/2026.
+          </p>
+        </section>
+        <!-- Explica acesso local e privacidade, separados do texto das regras. -->
+        <aside class="dicas">
+          <h2>Dados e acesso local</h2>
+          <p>
+            A análise usa arquivos deste repositório. O login e os arquivos do projeto funcionam
+            pelo servidor local. As imagens do catálogo estão armazenadas no projeto com créditos e
+            licenças. Os links para fontes externas exigem internet. Se uma imagem não carregar, a
+            ficha continua disponível.
+          </p>
+          <hr />
+          <h3>Privacidade</h3>
+          <p>
+            A análise atual é guardada no localStorage deste navegador. O login é obrigatório. O
+            servidor guarda e-mail, hash da senha e sessões em um banco local fora da pasta pública.
+            Senhas não são guardadas em texto simples. A sessão dura até oito horas e pode ser
+            encerrada em Minha conta. As imagens licenciadas foram obtidas do Wikimedia Commons e
+            são servidas localmente.
+          </p>
+          <a class="botao" href="analise.html">Experimentar →</a>
+        </aside>
+      </div>
+    </main>
+    <!-- Rodapé repete a identificação do site para manter a navegação consistente. -->
+    <footer class="rodape">
+      <div class="container">
         <div class="rodape-superior">
-            <a class="marca" href="index.html"><img class="marca-logo" src="assets/marca/logo-negativa.svg" alt="ybyrá — Sistema agroflorestal" width="180" height="95"></a>
-            <div class="rodape-proposito"><h2>Ideias que criam raízes.</h2><p>Uma ideia dos Jumpers. Robótica, pesquisa e agrofloresta.</p></div>
-            <nav aria-label="Navegação do rodapé"><a href="index.html">Início</a><a href="analise.html">Criar SAF</a><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a></nav>
+          <a class="marca" href="index.html"
+            ><img
+              class="marca-logo"
+              src="assets/marca/logo-negativa.svg"
+              alt="ybyrá — Sistema agroflorestal"
+              width="180"
+              height="95"
+          /></a>
+          <div class="rodape-proposito">
+            <h2>Ideias que criam raízes.</h2>
+            <p>Uma ideia dos Jumpers. Robótica, pesquisa e agrofloresta.</p>
+          </div>
+          <nav aria-label="Navegação do rodapé">
+            <a href="index.html">Início</a><a href="analise.html">Criar SAF</a
+            ><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a>
+          </nav>
         </div>
-        <div class="rede-projeto marcas-rodape" aria-label="SESI, FIESP, FIRST LEGO League e Taiobas do Matão">
-    <div class="marca-instituicao"><img class="logo-sesi" src="assets/instituicoes/sesi.png" alt="SESI" width="1352" height="436" loading="lazy"></div>
-    <div class="marca-instituicao"><img class="logo-fiesp" src="assets/instituicoes/fiesp.png" alt="FIESP" width="372" height="93" loading="lazy"></div>
-    <div class="marca-instituicao"><div class="logo-fll-moldura"><img src="assets/instituicoes/fll.png" alt="FIRST LEGO League" width="1024" height="1024" loading="lazy"></div></div>
-    <div class="marca-instituicao"><div class="logo-taiobas" role="img" aria-label="Taiobas do Matão"><img src="assets/instituicoes/taiobas-simbolo.jpeg" alt="" width="693" height="693" loading="lazy"><span aria-hidden="true">Taiobas<small>do Matão</small></span></div></div>
-</div>
-<div class="rodape-base"><p>ybyrá · Sistemas agroflorestais · FIRST LEGO League</p><div class="rodape-links"><a href="sobre.html">Metodologia e fontes</a><a href="conta.html">Minha conta</a><button class="ajuda-rodape" type="button" data-abrir-guia>Como usar</button></div></div>
-    </div>
-</footer>
-    </body>
+        <div
+          class="rede-projeto marcas-rodape"
+          aria-label="SESI, FIESP, FIRST LEGO League e Taiobas do Matão"
+        >
+          <div class="marca-instituicao">
+            <img
+              class="logo-sesi"
+              src="assets/instituicoes/sesi.png"
+              alt="SESI"
+              width="1352"
+              height="436"
+              loading="lazy"
+            />
+          </div>
+          <div class="marca-instituicao">
+            <img
+              class="logo-fiesp"
+              src="assets/instituicoes/fiesp.png"
+              alt="FIESP"
+              width="372"
+              height="93"
+              loading="lazy"
+            />
+          </div>
+          <div class="marca-instituicao">
+            <div class="logo-fll-moldura">
+              <img
+                src="assets/instituicoes/fll.png"
+                alt="FIRST LEGO League"
+                width="1024"
+                height="1024"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="marca-instituicao">
+            <div class="logo-taiobas" role="img" aria-label="Taiobas do Matão">
+              <img
+                src="assets/instituicoes/taiobas-simbolo.jpeg"
+                alt=""
+                width="693"
+                height="693"
+                loading="lazy"
+              /><span aria-hidden="true">Taiobas<small>do Matão</small></span>
+            </div>
+          </div>
+        </div>
+        <div class="rodape-base">
+          <p>ybyrá · Sistemas agroflorestais · FIRST LEGO League</p>
+          <div class="rodape-links">
+            <a href="sobre.html">Metodologia e fontes</a><a href="conta.html">Minha conta</a
+            ><button class="ajuda-rodape" type="button" data-abrir-guia>Como usar</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

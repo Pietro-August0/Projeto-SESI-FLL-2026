@@ -1,174 +1,246 @@
-<!DOCTYPE html>
-<!-- index.html é a entrada do site: apresenta a ideia e permite escolher um exemplo.
-     Para executar no VS Code, abra este arquivo com Live Server, usando um endereço HTTP.
-     HTML organiza o conteúdo, CSS dá aparência e inicio.js cria os cenários.
-     A indentação mostra os grupos; estes comentários não aparecem como texto na página. -->
+<!doctype html>
+<!-- Entrada autenticada: fotografia, exemplo interativo e álbum dos Jumpers.
+     Execute python servidor.py; um servidor estático não aplica a autenticação. -->
 <html lang="pt-BR">
-
-<head>
+  <head>
     <!-- UTF-8 permite acentos; viewport adapta a largura ao dispositivo. -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Resumo para mecanismos de busca e cor da interface de navegadores compatíveis. -->
-    <meta name="description"
-        content="Projeto de apoio ao trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais, com propostas ilustrativas e regras transparentes.">
-    <meta name="theme-color" content="#26533E">
+    <meta
+      name="description"
+      content="Projeto de apoio ao trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais, com propostas ilustrativas e regras transparentes."
+    />
+    <meta name="theme-color" content="#26533E" />
     <!-- Nome da aba do navegador; o link icon abaixo escolhe seu desenho de folha. -->
-    <title>
-        ybyrá — Do solo à agrofloresta
-    </title>
-    <link rel="icon" href="assets/marca/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="assets/marca/favicon-32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="assets/marca/favicon-16.png" sizes="16x16" type="image/png">
-    <link rel="shortcut icon" href="assets/marca/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png" sizes="180x180">
-    <link rel="manifest" href="assets/marca/site.webmanifest">
+    <title>ybyrá — Do solo à agrofloresta</title>
+    <link rel="icon" href="assets/marca/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/marca/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="assets/marca/favicon-16.png" sizes="16x16" type="image/png" />
+    <link rel="shortcut icon" href="assets/marca/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="assets/marca/site.webmanifest" />
     <!-- O estilo compartilhado vem antes do estilo exclusivo da página inicial. -->
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/inicio.css">
-    <link rel="stylesheet" href="css/crescimento.css">
-    <link rel="stylesheet" href="css/orientacao.css">
-    <link rel="stylesheet" href="css/ecologico.css">
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/inicio.css" />
+    <link rel="stylesheet" href="css/crescimento.css" />
+    <link rel="stylesheet" href="css/orientacao.css" />
+    <link rel="stylesheet" href="css/ecologico.css" />
     <!-- module permite import/export e executa após a leitura do HTML. -->
-    <script type="module" src="js/inicio.js">
-    </script>
-    <link rel="stylesheet" href="css/experiencia.css">
+    <script type="module" src="js/inicio.js"></script>
+    <link rel="stylesheet" href="css/experiencia.css" />
     <script type="module" src="js/interacoes.js"></script>
-    <link rel="stylesheet" href="ui/interface.css">
+    <link rel="stylesheet" href="ui/interface.css" />
     <script type="module" src="ui/interface.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- #conteudo aponta para o id do main; o atalho evita percorrer o menu com Tab. -->
     <a class="pular" href="#conteudo">Pular para o conteúdo</a>
     <!-- Cabeçalho comum às páginas: marca, navegação e link para iniciar a análise. -->
     <header class="cabecalho">
-        <div class="container cabecalho-interno">
-            <a class="marca" href="index.html"><img class="marca-logo" src="assets/marca/logo-negativa.svg"
-                    alt="ybyrá — Sistema agroflorestal" width="180" height="95"></a>
-            <nav aria-label="Navegação principal"><a href="index.html">Início</a><a href="analise.html">Criar SAF</a><a
-                    href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a></nav>
-            <div class="cabecalho-ferramentas"><button class="ajuda-cabecalho" type="button" data-abrir-guia>Como
-                    usar</button><a class="conta-atalho" href="conta.html"><svg width="22" height="24"
-                        viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                        <circle cx="12" cy="7" r="4" />
-                        <path d="M3 24v-4c0-7 18-7 18 0v4Z" />
-                    </svg><span>Entrar</span></a></div>
+      <div class="container cabecalho-interno">
+        <a class="marca" href="index.html"
+          ><img
+            class="marca-logo"
+            src="assets/marca/logo-negativa.svg"
+            alt="ybyrá — Sistema agroflorestal"
+            width="180"
+            height="95"
+        /></a>
+        <nav aria-label="Navegação principal">
+          <a href="index.html">Início</a><a href="analise.html">Criar SAF</a
+          ><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a>
+        </nav>
+        <div class="cabecalho-ferramentas">
+          <button class="ajuda-cabecalho" type="button" data-abrir-guia>Como usar</button
+          ><a class="conta-atalho" href="conta.html"
+            ><svg
+              width="22"
+              height="24"
+              viewBox="0 0 24 26"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="7" r="4" />
+              <path d="M3 24v-4c0-7 18-7 18 0v4Z" /></svg
+            ><span>Entrar</span></a
+          >
         </div>
+      </div>
     </header>
     <!-- class liga o elemento ao CSS; id é um nome único usado por links e JavaScript. -->
     <main class="container inicio-page" id="conteudo">
-        <!-- Orientação para o caso de JavaScript estar desativado no navegador. -->
-        <noscript>
-            <p class="erro">
-                Ative o JavaScript para carregar o catálogo, os cenários e as análises.
-            </p>
-        </noscript>
-        <!-- Apresentação: h1 é o título principal; br quebra a linha dentro dele. -->
-        <section class="hero hero-natural">
-            <picture class="hero-foto" aria-hidden="true"><source media="(max-width: 640px)" srcset="assets/imagens/floresta-luz-mobile.webp"><img src="assets/imagens/floresta-luz.webp" alt="" width="1920" height="1280" fetchpriority="high"></picture>
-            <div class="hero-texto">
-                <h1>
-                    Sua agrofloresta,<br><span class="destaque-flor">passo a passo.</span>
-                </h1>
-                <p>
-                    Combine árvores e outras plantas. Explore espécies e veja sua agrofloresta ganhar forma.
-                </p>
-                <!-- São links, pois levam a páginas; a classe botao dá sua aparência. -->
-                <div class="hero-acoes">
-                    <a class="botao" href="analise.html?cenario=solo-a">Experimentar exemplo</a><a
-                        class="botao secundario" href="analise.html">Usar meus dados</a>
-                </div>
-                <p class="nota">
-                    Sem dados do solo? Comece por um exemplo. <button class="ajuda-link"
-                        type="button" data-abrir-guia>Primeira vez? Veja como usar</button>
-                </p>
-            </div>
-            <!-- inicio.js monta aqui a cena interativa de exemplo, usando o catálogo local. -->
+      <!-- Orientação para o caso de JavaScript estar desativado no navegador. -->
+      <noscript>
+        <p class="erro">Ative o JavaScript para carregar o catálogo, os cenários e as análises.</p>
+      </noscript>
+      <!-- Apresentação: h1 é o título principal; br quebra a linha dentro dele. -->
+      <section class="hero hero-natural">
+        <picture class="hero-foto" aria-hidden="true"
+          ><source media="(max-width: 640px)" srcset="assets/imagens/floresta-luz-mobile.webp" />
+          <img
+            src="assets/imagens/floresta-luz.webp"
+            alt=""
+            width="1920"
+            height="1280"
+            fetchpriority="high"
+        /></picture>
+        <div class="hero-texto">
+          <h1>Sua agrofloresta,<br /><span class="destaque-flor">passo a passo.</span></h1>
+          <p>
+            Combine árvores e outras plantas. Explore espécies e veja sua agrofloresta ganhar forma.
+          </p>
+          <!-- São links, pois levam a páginas; a classe botao dá sua aparência. -->
+          <div class="hero-acoes">
+            <a class="botao" href="analise.html?cenario=solo-a">Experimentar exemplo</a
+            ><a class="botao secundario" href="analise.html">Usar meus dados</a>
+          </div>
+          <p class="nota">
+            Sem dados do solo? Comece por um exemplo.
+            <button class="ajuda-link" type="button" data-abrir-guia>
+              Primeira vez? Veja como usar
+            </button>
+          </p>
+        </div>
+        <!-- inicio.js monta aqui a cena interativa de exemplo, usando o catálogo local. -->
+      </section>
+      <section
+        id="crescimento-inicio"
+        aria-label="Exemplo ilustrativo de crescimento agroflorestal"
+        data-reveal
+      ></section>
+      <div data-ui-carousel></div>
 
-        </section>
-        <section id="crescimento-inicio" aria-label="Exemplo ilustrativo de crescimento agroflorestal" data-reveal></section>
-        <div data-ui-carousel></div>
-
-        <!-- aria-labelledby usa o id do título para dar um nome acessível à seção. -->
-        <section class="fluxo-secao" aria-labelledby="titulo-fluxo">
-            <div class="section-heading">
-                <h2 id="titulo-fluxo">Do solo à sua ideia</h2><span>Três passos. Você pode voltar e
-                    ajustar.</span>
-            </div>
-            <ol class="fluxo">
-                <li><span>01</span>
-                    <h3>Escolha um cenário</h3>
-                    <p>Use um exemplo ou comece do zero.</p>
-                </li>
-                <li><span>02</span>
-                    <h3>Ajuste os dados</h3>
-                    <p>Localização, solo e objetivo. Uma etapa por vez.</p>
-                </li>
-                <li><span>03</span>
-                    <h3>Explore o SAF</h3>
-                    <p>Compare propostas e acompanhe as plantas crescerem.</p>
-                </li>
-            </ol>
-        </section>
-        <!-- inicio.js lê dados/cenarios.json e cria um botão para cada exemplo fictício. -->
-        <details class="escolha-exemplo cenarios-secao">
-            <summary>Quero escolher outro exemplo</summary>
-            <div class="section-heading">
-                <div>
-                    <h2>
-                        Explore um cenário demonstrativo
-                    </h2>
-                    <p class="muted">
-                        Três cenários fictícios. Selecione um e ajuste os dados.
-                    </p>
-                </div>
-                <span>Dados demonstrativos</span>
-            </div>
-            <!-- hidden começa oculto; role alert anuncia uma falha a leitores de tela.
+      <!-- aria-labelledby usa o id do título para dar um nome acessível à seção. -->
+      <section class="fluxo-secao" aria-labelledby="titulo-fluxo">
+        <div class="section-heading">
+          <h2 id="titulo-fluxo">Do solo à sua ideia</h2>
+          <span>Três passos. Você pode voltar e ajustar.</span>
+        </div>
+        <ol class="fluxo">
+          <li>
+            <span>01</span>
+            <h3>Escolha um cenário</h3>
+            <p>Use um exemplo ou comece do zero.</p>
+          </li>
+          <li>
+            <span>02</span>
+            <h3>Ajuste os dados</h3>
+            <p>Localização, solo e objetivo. Uma etapa por vez.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <h3>Explore o SAF</h3>
+            <p>Compare propostas e acompanhe as plantas crescerem.</p>
+          </li>
+        </ol>
+      </section>
+      <!-- inicio.js lê dados/cenarios.json e cria um botão para cada exemplo fictício. -->
+      <details class="escolha-exemplo cenarios-secao">
+        <summary>Quero escolher outro exemplo</summary>
+        <div class="section-heading">
+          <div>
+            <h2>Explore um cenário demonstrativo</h2>
+            <p class="muted">Três cenários fictícios. Selecione um e ajuste os dados.</p>
+          </div>
+          <span>Dados demonstrativos</span>
+        </div>
+        <!-- hidden começa oculto; role alert anuncia uma falha a leitores de tela.
                      tabindex -1 permite ao código focar o aviso sem incluí-lo na sequência de Tab. -->
-            <p id="erro" class="erro" role="alert" tabindex="-1" hidden>
-            </p>
-            <!-- Esta mensagem será substituída pelos botões quando os dados chegarem. -->
-            <div id="cenarios-inicio" class="cenarios" aria-label="Cenários demonstrativos">
-                <p>
-                    Carregando cenários…
-                </p>
-            </div>
-        </details>
-        <!-- Informação complementar sobre o alcance educativo das sugestões. -->
-        <aside class="aviso">
-            Protótipo de apoio ao projeto da equipe. As sugestões não substituem uma avaliação agronômica. <a
-                href="sobre.html">Conheça as limitações →</a>
-        </aside>
+        <p id="erro" class="erro" role="alert" tabindex="-1" hidden></p>
+        <!-- Esta mensagem será substituída pelos botões quando os dados chegarem. -->
+        <div id="cenarios-inicio" class="cenarios" aria-label="Cenários demonstrativos">
+          <p>Carregando cenários…</p>
+        </div>
+      </details>
+      <!-- Informação complementar sobre o alcance educativo das sugestões. -->
+      <aside class="aviso">
+        Protótipo de apoio ao projeto da equipe. As sugestões não substituem uma avaliação
+        agronômica. <a href="sobre.html">Conheça as limitações →</a>
+      </aside>
     </main>
     <!-- Rodapé com identificação e acesso à metodologia, presente em todas as páginas. -->
     <footer class="rodape">
-        <div class="container">
-            <div class="rodape-superior">
-                <a class="marca" href="index.html"><img class="marca-logo" src="assets/marca/logo-negativa.svg"
-                        alt="ybyrá — Sistema agroflorestal" width="180" height="95"></a>
-                <div class="rodape-proposito">
-                    <h2>Ideias que criam raízes.</h2>
-                    <p>Um projeto que complementa o trabalho da equipe na FIRST LEGO League sobre sistemas
-                        agroflorestais.</p>
-                </div>
-                <nav aria-label="Navegação do rodapé"><a href="index.html">Início</a><a href="analise.html">Criar
-                        SAF</a><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a></nav>
-            </div>
-            <div class="rede-projeto marcas-rodape" aria-label="SESI, FIESP, FIRST LEGO League e Taiobas do Matão">
-    <div class="marca-instituicao"><img class="logo-sesi" src="assets/instituicoes/sesi.png" alt="SESI" width="1352" height="436" loading="lazy"></div>
-    <div class="marca-instituicao"><img class="logo-fiesp" src="assets/instituicoes/fiesp.png" alt="FIESP" width="372" height="93" loading="lazy"></div>
-    <div class="marca-instituicao"><div class="logo-fll-moldura"><img src="assets/instituicoes/fll.png" alt="FIRST LEGO League" width="1024" height="1024" loading="lazy"></div></div>
-    <div class="marca-instituicao"><div class="logo-taiobas" role="img" aria-label="Taiobas do Matão"><img src="assets/instituicoes/taiobas-simbolo.jpeg" alt="" width="693" height="693" loading="lazy"><span aria-hidden="true">Taiobas<small>do Matão</small></span></div></div>
-</div>
-<div class="rodape-base">
-                <p>ybyrá · Sistemas agroflorestais · FIRST LEGO League</p>
-                <div class="rodape-links"><a href="sobre.html">Metodologia e fontes</a><a href="conta.html">Minha
-                        conta</a><button class="ajuda-rodape" type="button" data-abrir-guia>Como usar</button></div>
-            </div>
+      <div class="container">
+        <div class="rodape-superior">
+          <a class="marca" href="index.html"
+            ><img
+              class="marca-logo"
+              src="assets/marca/logo-negativa.svg"
+              alt="ybyrá — Sistema agroflorestal"
+              width="180"
+              height="95"
+          /></a>
+          <div class="rodape-proposito">
+            <h2>Ideias que criam raízes.</h2>
+            <p>
+              Um projeto que complementa o trabalho da equipe na FIRST LEGO League sobre sistemas
+              agroflorestais.
+            </p>
+          </div>
+          <nav aria-label="Navegação do rodapé">
+            <a href="index.html">Início</a><a href="analise.html">Criar SAF</a
+            ><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a>
+          </nav>
         </div>
+        <div
+          class="rede-projeto marcas-rodape"
+          aria-label="SESI, FIESP, FIRST LEGO League e Taiobas do Matão"
+        >
+          <div class="marca-instituicao">
+            <img
+              class="logo-sesi"
+              src="assets/instituicoes/sesi.png"
+              alt="SESI"
+              width="1352"
+              height="436"
+              loading="lazy"
+            />
+          </div>
+          <div class="marca-instituicao">
+            <img
+              class="logo-fiesp"
+              src="assets/instituicoes/fiesp.png"
+              alt="FIESP"
+              width="372"
+              height="93"
+              loading="lazy"
+            />
+          </div>
+          <div class="marca-instituicao">
+            <div class="logo-fll-moldura">
+              <img
+                src="assets/instituicoes/fll.png"
+                alt="FIRST LEGO League"
+                width="1024"
+                height="1024"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="marca-instituicao">
+            <div class="logo-taiobas" role="img" aria-label="Taiobas do Matão">
+              <img
+                src="assets/instituicoes/taiobas-simbolo.jpeg"
+                alt=""
+                width="693"
+                height="693"
+                loading="lazy"
+              /><span aria-hidden="true">Taiobas<small>do Matão</small></span>
+            </div>
+          </div>
+        </div>
+        <div class="rodape-base">
+          <p>ybyrá · Sistemas agroflorestais · FIRST LEGO League</p>
+          <div class="rodape-links">
+            <a href="sobre.html">Metodologia e fontes</a><a href="conta.html">Minha conta</a
+            ><button class="ajuda-rodape" type="button" data-abrir-guia>Como usar</button>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

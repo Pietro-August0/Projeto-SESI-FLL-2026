@@ -1,0 +1,15 @@
+{
+  "name": "ybyra",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --test tests/crescimento.test.mjs",
+    "ui:check": "npm run check --prefix frontend",
+    "ui:build": "npm run build --prefix frontend"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2"
+  },
+  "type": "module"
+}

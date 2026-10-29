@@ -1,322 +1,322 @@
 [
-    {
-        "especieA": "banana",
-        "especieB": "cacau",
-        "status": "FAVORAVEL_CONDICIONAL",
-        "tipoEvidencia": "Recomendação técnica",
-        "motivo": "Bananeiras são indicadas como sombra provisória para cacaueiros.",
-        "contexto": "Implantação do cacau no sistema descrito pelo SENAR.",
-        "manejo": "Ajustar a sombra à fase do cacau; não significa benefício em qualquer densidade.",
-        "fonte": {
-            "titulo": "SENAR / MAPA-CEPLAC — Cacau: produção, manejo e colheita",
-            "url": "https://www.gov.br/agricultura/pt-br/assuntos/ceplac/arquivos/cartilhas-senar/215-cacau-producao-manejo-colheita.pdf",
-            "trecho": "Seções 4.1 e 4.2: sombreamento provisório e definitivo",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+  {
+    "especieA": "banana",
+    "especieB": "cacau",
+    "status": "FAVORAVEL_CONDICIONAL",
+    "tipoEvidencia": "Recomendação técnica",
+    "motivo": "Bananeiras são indicadas como sombra provisória para cacaueiros.",
+    "contexto": "Implantação do cacau no sistema descrito pelo SENAR.",
+    "manejo": "Ajustar a sombra à fase do cacau; não significa benefício em qualquer densidade.",
+    "fonte": {
+      "titulo": "SENAR / MAPA-CEPLAC — Cacau: produção, manejo e colheita",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/ceplac/arquivos/cartilhas-senar/215-cacau-producao-manejo-colheita.pdf",
+      "trecho": "Seções 4.1 e 4.2: sombreamento provisório e definitivo",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "gliricidia",
-        "especieB": "cacau",
-        "status": "FAVORAVEL_CONDICIONAL",
-        "tipoEvidencia": "Recomendação técnica",
-        "motivo": "A gliricídia é citada entre as opções de sombreamento provisório do cacau.",
-        "contexto": "Estabelecimento de cacaueiros.",
-        "manejo": "Manejar a copa e a duração da sombra conforme o arranjo.",
-        "fonte": {
-            "titulo": "SENAR / MAPA-CEPLAC — Cacau: produção, manejo e colheita",
-            "url": "https://www.gov.br/agricultura/pt-br/assuntos/ceplac/arquivos/cartilhas-senar/215-cacau-producao-manejo-colheita.pdf",
-            "trecho": "Seções 4.1 e 4.2: sombreamento provisório e definitivo",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "gliricidia",
+    "especieB": "cacau",
+    "status": "FAVORAVEL_CONDICIONAL",
+    "tipoEvidencia": "Recomendação técnica",
+    "motivo": "A gliricídia é citada entre as opções de sombreamento provisório do cacau.",
+    "contexto": "Estabelecimento de cacaueiros.",
+    "manejo": "Manejar a copa e a duração da sombra conforme o arranjo.",
+    "fonte": {
+      "titulo": "SENAR / MAPA-CEPLAC — Cacau: produção, manejo e colheita",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/ceplac/arquivos/cartilhas-senar/215-cacau-producao-manejo-colheita.pdf",
+      "trecho": "Seções 4.1 e 4.2: sombreamento provisório e definitivo",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "banana",
-        "especieB": "cupuacu",
-        "status": "CONSORCIO_DOCUMENTADO",
-        "tipoEvidencia": "Unidade de observação",
-        "motivo": "Banana e cupuaçu integram um arranjo com paricá descrito pela Embrapa.",
-        "contexto": "Dom Eliseu, PA; unidade implantada em 2006, com três espécies.",
-        "manejo": "O registro comprova a composição estudada, não uma vantagem isolada entre este par.",
-        "fonte": {
-            "titulo": "Embrapa — SAF com paricá, cupuaçu e banana em Dom Eliseu, PA",
-            "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/409311/1/Digitalizar0197.pdf",
-            "trecho": "Unidade de observação implantada em 2006; composição do sistema",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "banana",
+    "especieB": "cupuacu",
+    "status": "CONSORCIO_DOCUMENTADO",
+    "tipoEvidencia": "Unidade de observação",
+    "motivo": "Banana e cupuaçu integram um arranjo com paricá descrito pela Embrapa.",
+    "contexto": "Dom Eliseu, PA; unidade implantada em 2006, com três espécies.",
+    "manejo": "O registro comprova a composição estudada, não uma vantagem isolada entre este par.",
+    "fonte": {
+      "titulo": "Embrapa — SAF com paricá, cupuaçu e banana em Dom Eliseu, PA",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/409311/1/Digitalizar0197.pdf",
+      "trecho": "Unidade de observação implantada em 2006; composição do sistema",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "parica",
-        "especieB": "cupuacu",
-        "status": "CONSORCIO_DOCUMENTADO",
-        "tipoEvidencia": "Unidade de observação",
-        "motivo": "Paricá e cupuaçu integram o SAF com banana descrito na publicação.",
-        "contexto": "Dom Eliseu, PA; arranjo de três espécies.",
-        "manejo": "Exige planejamento de copas e recursos; não há efeito causal isolado do par no registro.",
-        "fonte": {
-            "titulo": "Embrapa — SAF com paricá, cupuaçu e banana em Dom Eliseu, PA",
-            "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/409311/1/Digitalizar0197.pdf",
-            "trecho": "Unidade de observação implantada em 2006; composição do sistema",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "parica",
+    "especieB": "cupuacu",
+    "status": "CONSORCIO_DOCUMENTADO",
+    "tipoEvidencia": "Unidade de observação",
+    "motivo": "Paricá e cupuaçu integram o SAF com banana descrito na publicação.",
+    "contexto": "Dom Eliseu, PA; arranjo de três espécies.",
+    "manejo": "Exige planejamento de copas e recursos; não há efeito causal isolado do par no registro.",
+    "fonte": {
+      "titulo": "Embrapa — SAF com paricá, cupuaçu e banana em Dom Eliseu, PA",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/409311/1/Digitalizar0197.pdf",
+      "trecho": "Unidade de observação implantada em 2006; composição do sistema",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "parica",
-        "especieB": "banana",
-        "status": "CONSORCIO_DOCUMENTADO",
-        "tipoEvidencia": "Unidade de observação",
-        "motivo": "Paricá e banana aparecem no mesmo SAF com cupuaçu.",
-        "contexto": "Dom Eliseu, PA; arranjo de três espécies.",
-        "manejo": "Acompanhar a luz disponível ao longo do desenvolvimento das árvores.",
-        "fonte": {
-            "titulo": "Embrapa — SAF com paricá, cupuaçu e banana em Dom Eliseu, PA",
-            "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/409311/1/Digitalizar0197.pdf",
-            "trecho": "Unidade de observação implantada em 2006; composição do sistema",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "parica",
+    "especieB": "banana",
+    "status": "CONSORCIO_DOCUMENTADO",
+    "tipoEvidencia": "Unidade de observação",
+    "motivo": "Paricá e banana aparecem no mesmo SAF com cupuaçu.",
+    "contexto": "Dom Eliseu, PA; arranjo de três espécies.",
+    "manejo": "Acompanhar a luz disponível ao longo do desenvolvimento das árvores.",
+    "fonte": {
+      "titulo": "Embrapa — SAF com paricá, cupuaçu e banana em Dom Eliseu, PA",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/409311/1/Digitalizar0197.pdf",
+      "trecho": "Unidade de observação implantada em 2006; composição do sistema",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "milho",
-        "especieB": "caupi",
-        "status": "ATENCAO",
-        "tipoEvidencia": "Experimento de campo",
-        "motivo": "O estudo registrou vantagem de uso da terra, mas redução da produção do caupi e competição por luz e água.",
-        "contexto": "Petrolina, PE; cultivares e populações específicas no semiárido.",
-        "manejo": "Ajustar população, cultivar e época; não prometer aumento de produção para ambas as culturas.",
-        "fonte": {
-            "titulo": "Lima Filho — Respostas fisiológicas do milho e caupi à consorciação",
-            "url": "https://apct.sede.embrapa.br/pab/pt_BR/article/view/5875",
-            "trecho": "Resumo; experimento em Petrolina, PE",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "milho",
+    "especieB": "caupi",
+    "status": "ATENCAO",
+    "tipoEvidencia": "Experimento de campo",
+    "motivo": "O estudo registrou vantagem de uso da terra, mas redução da produção do caupi e competição por luz e água.",
+    "contexto": "Petrolina, PE; cultivares e populações específicas no semiárido.",
+    "manejo": "Ajustar população, cultivar e época; não prometer aumento de produção para ambas as culturas.",
+    "fonte": {
+      "titulo": "Lima Filho — Respostas fisiológicas do milho e caupi à consorciação",
+      "url": "https://apct.sede.embrapa.br/pab/pt_BR/article/view/5875",
+      "trecho": "Resumo; experimento em Petrolina, PE",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "milho",
-        "especieB": "mucuna",
-        "status": "ATENCAO",
-        "tipoEvidencia": "Recomendação técnica",
-        "motivo": "A mucuna pode compor o consórcio, mas seu crescimento vigoroso pode competir com o milho e dificultar a colheita.",
-        "contexto": "Sistema com semeadura diferida da mucuna descrito pela Embrapa.",
-        "manejo": "Planejar semeadura e colheita; o protótipo não agenda essas operações.",
-        "fonte": {
-            "titulo": "Embrapa — Consórcio de milho com mucuna",
-            "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/255547/1/CT200713.pdf",
-            "trecho": "Seção 3.1.1: semeadura diferida e competição",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "milho",
+    "especieB": "mucuna",
+    "status": "ATENCAO",
+    "tipoEvidencia": "Recomendação técnica",
+    "motivo": "A mucuna pode compor o consórcio, mas seu crescimento vigoroso pode competir com o milho e dificultar a colheita.",
+    "contexto": "Sistema com semeadura diferida da mucuna descrito pela Embrapa.",
+    "manejo": "Planejar semeadura e colheita; o protótipo não agenda essas operações.",
+    "fonte": {
+      "titulo": "Embrapa — Consórcio de milho com mucuna",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/255547/1/CT200713.pdf",
+      "trecho": "Seção 3.1.1: semeadura diferida e competição",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "milho",
-        "especieB": "crotalaria",
-        "status": "ATENCAO",
-        "tipoEvidencia": "Experimento de campo",
-        "motivo": "O consórcio simultâneo com Crotalaria juncea reduziu a produtividade do milho no verão do experimento, embora fornecesse biomassa.",
-        "contexto": "Itiquira, MT; arranjos e safras avaliados em 2012/13 e 2013/14.",
-        "manejo": "Não extrapolar o resultado para outras crotalárias ou épocas; avaliar densidade e semeadura.",
-        "fonte": {
-            "titulo": "Kappes e Zancanaro — Consórcios de crotalárias com milho",
-            "url": "https://rbms.sede.embrapa.br/ojs/article/view/615",
-            "trecho": "Resumo; Itiquira, MT, safras 2012/13 e 2013/14",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "milho",
+    "especieB": "crotalaria",
+    "status": "ATENCAO",
+    "tipoEvidencia": "Experimento de campo",
+    "motivo": "O consórcio simultâneo com Crotalaria juncea reduziu a produtividade do milho no verão do experimento, embora fornecesse biomassa.",
+    "contexto": "Itiquira, MT; arranjos e safras avaliados em 2012/13 e 2013/14.",
+    "manejo": "Não extrapolar o resultado para outras crotalárias ou épocas; avaliar densidade e semeadura.",
+    "fonte": {
+      "titulo": "Kappes e Zancanaro — Consórcios de crotalárias com milho",
+      "url": "https://rbms.sede.embrapa.br/ojs/article/view/615",
+      "trecho": "Resumo; Itiquira, MT, safras 2012/13 e 2013/14",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "gliricidia",
-        "especieB": "caupi",
-        "status": "ATENCAO",
-        "tipoEvidencia": "Experimento de campo",
-        "motivo": "No SAF com milho e caupi estudado, a gliricídia não apresentou fixação de N e o aporte do caupi foi limitado.",
-        "contexto": "Quarto ciclo de cultivo em um experimento no semiárido da Paraíba; presença também de milho.",
-        "manejo": "Não somar automaticamente o potencial de fixação das duas espécies.",
-        "fonte": {
-            "titulo": "Martins et al. (2015) — Nitrogênio fixado por caupi e gliricídia em SAF",
-            "url": "https://apct.sede.embrapa.br/pab/pt_BR/article/view/19971",
-            "trecho": "Resumo; quarto ciclo de cultivo no semiárido da Paraíba",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "gliricidia",
+    "especieB": "caupi",
+    "status": "ATENCAO",
+    "tipoEvidencia": "Experimento de campo",
+    "motivo": "No SAF com milho e caupi estudado, a gliricídia não apresentou fixação de N e o aporte do caupi foi limitado.",
+    "contexto": "Quarto ciclo de cultivo em um experimento no semiárido da Paraíba; presença também de milho.",
+    "manejo": "Não somar automaticamente o potencial de fixação das duas espécies.",
+    "fonte": {
+      "titulo": "Martins et al. (2015) — Nitrogênio fixado por caupi e gliricídia em SAF",
+      "url": "https://apct.sede.embrapa.br/pab/pt_BR/article/view/19971",
+      "trecho": "Resumo; quarto ciclo de cultivo no semiárido da Paraíba",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "gliricidia",
-        "especieB": "milho",
-        "status": "ATENCAO",
-        "tipoEvidencia": "Experimento de campo",
-        "motivo": "A fixação de N pela gliricídia não foi detectada no tratamento com milho e caupi.",
-        "contexto": "Mesmo experimento na Paraíba; efeito do sistema, não antagonismo universal do par.",
-        "manejo": "Não contar com fornecimento garantido de N; avaliar poda e competição.",
-        "fonte": {
-            "titulo": "Martins et al. (2015) — Nitrogênio fixado por caupi e gliricídia em SAF",
-            "url": "https://apct.sede.embrapa.br/pab/pt_BR/article/view/19971",
-            "trecho": "Resumo; quarto ciclo de cultivo no semiárido da Paraíba",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "gliricidia",
+    "especieB": "milho",
+    "status": "ATENCAO",
+    "tipoEvidencia": "Experimento de campo",
+    "motivo": "A fixação de N pela gliricídia não foi detectada no tratamento com milho e caupi.",
+    "contexto": "Mesmo experimento na Paraíba; efeito do sistema, não antagonismo universal do par.",
+    "manejo": "Não contar com fornecimento garantido de N; avaliar poda e competição.",
+    "fonte": {
+      "titulo": "Martins et al. (2015) — Nitrogênio fixado por caupi e gliricídia em SAF",
+      "url": "https://apct.sede.embrapa.br/pab/pt_BR/article/view/19971",
+      "trecho": "Resumo; quarto ciclo de cultivo no semiárido da Paraíba",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "mandioca",
-        "especieB": "abacaxi",
-        "status": "FAVORAVEL_CONDICIONAL",
-        "tipoEvidencia": "Experimento de campo",
-        "motivo": "O estudo de produção orgânica descreve uso mais eficiente da terra e manejo de luz ao longo do crescimento do abacaxi.",
-        "contexto": "Rio Branco, AC; arranjo e densidades do estudo.",
-        "manejo": "O benefício depende da fase e do arranjo, sem garantia para outra área.",
-        "fonte": {
-            "titulo": "Embrapa — Produção orgânica de abacaxi e mandioca consorciados",
-            "url": "https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/999737/producao-organica-de-abacaxi-e-mandioca-consorciados",
-            "trecho": "Resumo; cultivo orgânico em Rio Branco, AC",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "mandioca",
+    "especieB": "abacaxi",
+    "status": "FAVORAVEL_CONDICIONAL",
+    "tipoEvidencia": "Experimento de campo",
+    "motivo": "O estudo de produção orgânica descreve uso mais eficiente da terra e manejo de luz ao longo do crescimento do abacaxi.",
+    "contexto": "Rio Branco, AC; arranjo e densidades do estudo.",
+    "manejo": "O benefício depende da fase e do arranjo, sem garantia para outra área.",
+    "fonte": {
+      "titulo": "Embrapa — Produção orgânica de abacaxi e mandioca consorciados",
+      "url": "https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/999737/producao-organica-de-abacaxi-e-mandioca-consorciados",
+      "trecho": "Resumo; cultivo orgânico em Rio Branco, AC",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "abacaxi",
-        "especieB": "caupi",
-        "status": "CONSORCIO_DOCUMENTADO",
-        "tipoEvidencia": "Recomendação técnica",
-        "motivo": "Caupi é citado entre as culturas de ciclo curto em consórcio com abacaxi.",
-        "contexto": "Ficha agroecológica do MAPA.",
-        "manejo": "Organizar as entrelinhas e o calendário; a indicação não fornece um efeito numérico do par.",
-        "fonte": {
-            "titulo": "MAPA — Ficha agroecológica: cultivo do abacaxi em consórcios",
-            "url": "https://www.gov.br/agricultura/pt-br/assuntos/sustentabilidade/organicos/fichas-agroecologicas/arquivos-producao-vegetal/10-cultivo-do-abacaxi-em-consorcios-1.pdf",
-            "trecho": "Consórcios com culturas de ciclo curto",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "abacaxi",
+    "especieB": "caupi",
+    "status": "CONSORCIO_DOCUMENTADO",
+    "tipoEvidencia": "Recomendação técnica",
+    "motivo": "Caupi é citado entre as culturas de ciclo curto em consórcio com abacaxi.",
+    "contexto": "Ficha agroecológica do MAPA.",
+    "manejo": "Organizar as entrelinhas e o calendário; a indicação não fornece um efeito numérico do par.",
+    "fonte": {
+      "titulo": "MAPA — Ficha agroecológica: cultivo do abacaxi em consórcios",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/sustentabilidade/organicos/fichas-agroecologicas/arquivos-producao-vegetal/10-cultivo-do-abacaxi-em-consorcios-1.pdf",
+      "trecho": "Consórcios com culturas de ciclo curto",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "mandioca",
-        "especieB": "caupi",
-        "status": "CONSORCIO_DOCUMENTADO",
-        "tipoEvidencia": "Recomendação técnica",
-        "motivo": "O plantio de mandioca em fileiras duplas pode ser intercalado com caupi.",
-        "contexto": "Recomendação da Embrapa no contexto do Baixo Tocantins.",
-        "manejo": "Avaliar o arranjo e a manutenção da cobertura do solo.",
-        "fonte": {
-            "titulo": "Embrapa — O Trio da Produtividade na Cultura da Mandioca",
-            "url": "https://cnpma.embrapa.br/boaspraticas/download/Trio_Produtividade_Cultura_Mandioca.pdf",
-            "trecho": "Módulo técnico: clima, solos e conservação do solo",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "mandioca",
+    "especieB": "caupi",
+    "status": "CONSORCIO_DOCUMENTADO",
+    "tipoEvidencia": "Recomendação técnica",
+    "motivo": "O plantio de mandioca em fileiras duplas pode ser intercalado com caupi.",
+    "contexto": "Recomendação da Embrapa no contexto do Baixo Tocantins.",
+    "manejo": "Avaliar o arranjo e a manutenção da cobertura do solo.",
+    "fonte": {
+      "titulo": "Embrapa — O Trio da Produtividade na Cultura da Mandioca",
+      "url": "https://cnpma.embrapa.br/boaspraticas/download/Trio_Produtividade_Cultura_Mandioca.pdf",
+      "trecho": "Módulo técnico: clima, solos e conservação do solo",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "mandioca",
-        "especieB": "milho",
-        "status": "CONSORCIO_DOCUMENTADO",
-        "tipoEvidencia": "Recomendação técnica",
-        "motivo": "O milho é citado como opção de cultivo intercalado com mandioca em fileiras duplas.",
-        "contexto": "Contexto da recomendação para mandioca no Baixo Tocantins.",
-        "manejo": "Planejar luz, espaço e época de colheita; não prova benefício para toda densidade.",
-        "fonte": {
-            "titulo": "Embrapa — O Trio da Produtividade na Cultura da Mandioca",
-            "url": "https://cnpma.embrapa.br/boaspraticas/download/Trio_Produtividade_Cultura_Mandioca.pdf",
-            "trecho": "Módulo técnico: clima, solos e conservação do solo",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "mandioca",
+    "especieB": "milho",
+    "status": "CONSORCIO_DOCUMENTADO",
+    "tipoEvidencia": "Recomendação técnica",
+    "motivo": "O milho é citado como opção de cultivo intercalado com mandioca em fileiras duplas.",
+    "contexto": "Contexto da recomendação para mandioca no Baixo Tocantins.",
+    "manejo": "Planejar luz, espaço e época de colheita; não prova benefício para toda densidade.",
+    "fonte": {
+      "titulo": "Embrapa — O Trio da Produtividade na Cultura da Mandioca",
+      "url": "https://cnpma.embrapa.br/boaspraticas/download/Trio_Produtividade_Cultura_Mandioca.pdf",
+      "trecho": "Módulo técnico: clima, solos e conservação do solo",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "andiroba",
-        "especieB": "acai",
-        "status": "CONSORCIO_DOCUMENTADO",
-        "tipoEvidencia": "Registro em SAF",
-        "motivo": "A Embrapa registra andiroba e açaizeiro juntos em matas secundarizadas e em SAFs de várzea.",
-        "contexto": "Várzeas amazônicas, incluindo rio Juba, Cametá, PA.",
-        "manejo": "Não extrapolar a ocorrência em várzea para aptidão em terra firme.",
-        "fonte": {
-            "titulo": "Embrapa — Espécies Arbóreas Brasileiras, volume 5: Andiroba",
-            "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140287/1/Especies-Arboreas-Brasileiras-vol-5-Andiroba.pdf",
-            "trecho": "Solos; clima; características silviculturais; SAFs",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "andiroba",
+    "especieB": "acai",
+    "status": "CONSORCIO_DOCUMENTADO",
+    "tipoEvidencia": "Registro em SAF",
+    "motivo": "A Embrapa registra andiroba e açaizeiro juntos em matas secundarizadas e em SAFs de várzea.",
+    "contexto": "Várzeas amazônicas, incluindo rio Juba, Cametá, PA.",
+    "manejo": "Não extrapolar a ocorrência em várzea para aptidão em terra firme.",
+    "fonte": {
+      "titulo": "Embrapa — Espécies Arbóreas Brasileiras, volume 5: Andiroba",
+      "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140287/1/Especies-Arboreas-Brasileiras-vol-5-Andiroba.pdf",
+      "trecho": "Solos; clima; características silviculturais; SAFs",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "banana",
-        "especieB": "pupunha",
-        "status": "FAVORAVEL_CONDICIONAL",
-        "tipoEvidencia": "Recomendação técnica",
-        "motivo": "Bananeiras são indicadas como uma opção de quebra-ventos para pupunha.",
-        "contexto": "Cultivo de pupunha para palmito em áreas sujeitas a ventos fortes.",
-        "manejo": "Posicionar a barreira e preservar a luz e a drenagem do cultivo.",
-        "fonte": {
-            "titulo": "Embrapa Florestas — Cultivo da pupunheira para produção de palmito",
-            "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1002146/1/2014ApostilaTTPupunha.pdf",
-            "trecho": "Página impressa 9: clima, solo e quebra-ventos",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "banana",
+    "especieB": "pupunha",
+    "status": "FAVORAVEL_CONDICIONAL",
+    "tipoEvidencia": "Recomendação técnica",
+    "motivo": "Bananeiras são indicadas como uma opção de quebra-ventos para pupunha.",
+    "contexto": "Cultivo de pupunha para palmito em áreas sujeitas a ventos fortes.",
+    "manejo": "Posicionar a barreira e preservar a luz e a drenagem do cultivo.",
+    "fonte": {
+      "titulo": "Embrapa Florestas — Cultivo da pupunheira para produção de palmito",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1002146/1/2014ApostilaTTPupunha.pdf",
+      "trecho": "Página impressa 9: clima, solo e quebra-ventos",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "parica",
-        "especieB": "cacau",
-        "status": "CONSORCIO_DOCUMENTADO",
-        "tipoEvidencia": "Registro de uso",
-        "motivo": "Há registro de uso de paricá para sombrear cacau em Rondônia.",
-        "contexto": "Uso agroflorestal descrito na monografia da Embrapa.",
-        "manejo": "Planejar a copa; o relato não define intensidade ideal de sombra.",
-        "fonte": {
-            "titulo": "Embrapa — Espécies Arbóreas Brasileiras, volume 2: Paricá",
-            "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140876/1/Especies-Arboreas-Brasileiras-vol-2-Parica.pdf",
-            "trecho": "Clima; solos; associações simbióticas; SAFs",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "parica",
+    "especieB": "cacau",
+    "status": "CONSORCIO_DOCUMENTADO",
+    "tipoEvidencia": "Registro de uso",
+    "motivo": "Há registro de uso de paricá para sombrear cacau em Rondônia.",
+    "contexto": "Uso agroflorestal descrito na monografia da Embrapa.",
+    "manejo": "Planejar a copa; o relato não define intensidade ideal de sombra.",
+    "fonte": {
+      "titulo": "Embrapa — Espécies Arbóreas Brasileiras, volume 2: Paricá",
+      "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140876/1/Especies-Arboreas-Brasileiras-vol-2-Parica.pdf",
+      "trecho": "Clima; solos; associações simbióticas; SAFs",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "parica",
-        "especieB": "milho",
-        "status": "CONSORCIO_DOCUMENTADO",
-        "tipoEvidencia": "Registro de uso",
-        "motivo": "A publicação relata milho nos três primeiros anos de um plantio com paricá.",
-        "contexto": "Paragominas, PA; culturas anuais durante a fase inicial.",
-        "manejo": "O registro é temporal; não indica manter milho sob copa fechada.",
-        "fonte": {
-            "titulo": "Embrapa — Espécies Arbóreas Brasileiras, volume 2: Paricá",
-            "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140876/1/Especies-Arboreas-Brasileiras-vol-2-Parica.pdf",
-            "trecho": "Clima; solos; associações simbióticas; SAFs",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "parica",
+    "especieB": "milho",
+    "status": "CONSORCIO_DOCUMENTADO",
+    "tipoEvidencia": "Registro de uso",
+    "motivo": "A publicação relata milho nos três primeiros anos de um plantio com paricá.",
+    "contexto": "Paragominas, PA; culturas anuais durante a fase inicial.",
+    "manejo": "O registro é temporal; não indica manter milho sob copa fechada.",
+    "fonte": {
+      "titulo": "Embrapa — Espécies Arbóreas Brasileiras, volume 2: Paricá",
+      "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140876/1/Especies-Arboreas-Brasileiras-vol-2-Parica.pdf",
+      "trecho": "Clima; solos; associações simbióticas; SAFs",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "margaridao",
-        "especieB": "gliricidia",
-        "status": "CONSORCIO_DOCUMENTADO",
-        "tipoEvidencia": "Ficha técnica de espécies",
-        "motivo": "A gliricídia consta entre as espécies acompanhantes do margaridão na ficha Tropical Forages.",
-        "contexto": "Uso em sistemas de biomassa e forragem; sem ensaio local do par no ybyrá.",
-        "manejo": "Controlar expansão do margaridão e manejar cortes; não significa fornecimento quantificado de nutrientes.",
-        "fonte": {
-            "titulo": "Tropical Forages — Tithonia diversifolia",
-            "url": "https://www.tropicalforages.info/text/entities/tithonia_diversifolia.htm",
-            "trecho": "Ecology; Companion species; Weed potential; Toxicity",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "margaridao",
+    "especieB": "gliricidia",
+    "status": "CONSORCIO_DOCUMENTADO",
+    "tipoEvidencia": "Ficha técnica de espécies",
+    "motivo": "A gliricídia consta entre as espécies acompanhantes do margaridão na ficha Tropical Forages.",
+    "contexto": "Uso em sistemas de biomassa e forragem; sem ensaio local do par no ybyrá.",
+    "manejo": "Controlar expansão do margaridão e manejar cortes; não significa fornecimento quantificado de nutrientes.",
+    "fonte": {
+      "titulo": "Tropical Forages — Tithonia diversifolia",
+      "url": "https://www.tropicalforages.info/text/entities/tithonia_diversifolia.htm",
+      "trecho": "Ecology; Companion species; Weed potential; Toxicity",
+      "consultadoEm": "2026-10-22"
     },
-    {
-        "especieA": "abacaxi",
-        "especieB": "milho",
-        "status": "ATENCAO",
-        "tipoEvidencia": "Alerta técnico regional",
-        "motivo": "O manual da EMATER-PA recomenda evitar milho no consórcio com abacaxi por preocupação fitossanitária associada a Fusarium.",
-        "contexto": "Recomendação do manual para o Pará; não demonstra incompatibilidade universal nem identifica aqui todos os agentes causais.",
-        "manejo": "Solicitar avaliação fitossanitária local. O alerta é mostrado ao usuário, sem exclusão automática global.",
-        "fonte": {
-            "titulo": "EMATER-PA — Manual técnico: cultivo do abacaxi",
-            "url": "https://www.emater.pa.gov.br/storage/app/uploads/public/648/b27/807/648b27807eafd458945489.pdf",
-            "trecho": "Seção 8, página impressa 19: cuidados fitossanitários em consórcios",
-            "consultadoEm": "2026-10-22"
-        },
-        "revisadoEm": "2026-10-22"
-    }
+    "revisadoEm": "2026-10-22"
+  },
+  {
+    "especieA": "abacaxi",
+    "especieB": "milho",
+    "status": "ATENCAO",
+    "tipoEvidencia": "Alerta técnico regional",
+    "motivo": "O manual da EMATER-PA recomenda evitar milho no consórcio com abacaxi por preocupação fitossanitária associada a Fusarium.",
+    "contexto": "Recomendação do manual para o Pará; não demonstra incompatibilidade universal nem identifica aqui todos os agentes causais.",
+    "manejo": "Solicitar avaliação fitossanitária local. O alerta é mostrado ao usuário, sem exclusão automática global.",
+    "fonte": {
+      "titulo": "EMATER-PA — Manual técnico: cultivo do abacaxi",
+      "url": "https://www.emater.pa.gov.br/storage/app/uploads/public/648/b27/807/648b27807eafd458945489.pdf",
+      "trecho": "Seção 8, página impressa 19: cuidados fitossanitários em consórcios",
+      "consultadoEm": "2026-10-22"
+    },
+    "revisadoEm": "2026-10-22"
+  }
 ]

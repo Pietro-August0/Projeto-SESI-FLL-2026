@@ -2,105 +2,138 @@
  * hero é a área de abertura: texto à esquerda e cena interativa à direita.
  */
 .hero {
-    display: grid;
-    grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); /* O texto recebe um pouco mais de espaço que o desenho. */
-    gap: 64px;
-    align-items: center;
-    padding: 54px 0 48px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr); /* O texto recebe um pouco mais de espaço que o desenho. */
+  gap: 64px;
+  align-items: center;
+  padding: 54px 0 48px;
 }
 /* O título acompanha a janela (5vw), mas nunca fica menor que 42px ou maior que 66px. */
 .hero h1 {
-    font-size: clamp(42px, 5vw, 66px);
-    letter-spacing: -2.2px;
+  font-size: clamp(42px, 5vw, 66px);
+  letter-spacing: -2.2px;
 }
 /* Limita as linhas da apresentação para que não fiquem compridas demais para ler. */
 .hero-texto > p {
-    max-width: 480px;
-    color: var(--muted);
-    font-size: 18px;
+  max-width: 480px;
+  color: var(--muted);
+  font-size: 18px;
 }
 /* Os dois links principais ficam lado a lado e podem quebrar a linha quando faltar espaço. */
 .hero-acoes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 30px 0;
 }
 /* A observação sobre a demonstração tem letras menores e linhas mais espaçadas. */
 .hero .nota {
-    font-size: 12px;
-    line-height: 1.8;
-    margin: 0;
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 0;
 }
 /* Duas linhas horizontais separam a explicação das etapas das outras áreas da página. */
 .fluxo-secao {
-    border-top: 1px solid var(--borda);
-    border-bottom: 1px solid var(--borda);
-    padding: 36px 0;
+  border-top: 1px solid var(--borda);
+  border-bottom: 1px solid var(--borda);
+  padding: 36px 0;
 }
 /* A lista ol mantém o sentido de sequência; retiramos os marcadores porque há números no HTML. */
 .fluxo {
-    list-style: none;
-    padding: 0;
-    margin: 28px 0 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Uma coluna igual para cada uma das quatro etapas. */
-    gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Uma coluna igual para cada uma das quatro etapas. */
+  gap: 40px;
 }
 /* Os números das etapas recebem o tom de terra; h3 e p formatam o título e a explicação. */
 .fluxo li > span {
-    color: var(--ocre);
-    font: 24px Georgia, serif;
+  color: var(--ocre);
+  font:
+    24px Georgia,
+    serif;
 }
 .fluxo h3 {
-    margin-top: 16px;
-    margin-bottom: 10px;
-    font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 .fluxo p {
-    font-size: 13px;
-    color: var(--muted);
-    margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
 }
 /* Afasta os exemplos fictícios da explicação anterior. */
 .cenarios-secao {
-    margin-top: 28px;
+  margin-top: 28px;
 }
 /* Em uma janela média, reduzimos os espaços e permitimos que os nomes das plantas quebrem linha. */
 @media (max-width: 1000px) {
-    .hero {
-        gap: 40px;
-    }
-    .fluxo {
-        gap: 24px;
-    }
+  .hero {
+    gap: 40px;
+  }
+  .fluxo {
+    gap: 24px;
+  }
 }
 /* No celular, texto e ilustração se empilham e as quatro etapas viram uma grade de duas colunas. */
 @media (max-width: 700px) {
-    .hero {
-        grid-template-columns: 1fr;
-        padding: 40px 0;
-        gap: 40px;
-    }
-    .hero h1 {
-        font-size: 46px;
-    }
-    .hero-texto > p {
-        font-size: 16px;
-    }
-    .fluxo {
-        grid-template-columns: 1fr 1fr;
-        gap: 28px 20px;
-    }
-    .cenarios-secao {
-        padding-top: 32px;
-    }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 0;
+    gap: 40px;
+  }
+  .hero h1 {
+    font-size: 46px;
+  }
+  .hero-texto > p {
+    font-size: 16px;
+  }
+  .fluxo {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 20px;
+  }
+  .cenarios-secao {
+    padding-top: 32px;
+  }
 }
 
-.hero h1 { font-size: clamp(42px, 4.8vw, 66px); line-height: 1.04; }
-.hero .hero-texto { min-width: 0; }
-#crescimento-inicio .crescimento-titulo h2 { font-size: 15px; }
-@media (max-width: 800px) { .hero { grid-template-columns: 1fr; gap: 36px; } }
+.hero h1 {
+  font-size: clamp(42px, 4.8vw, 66px);
+  line-height: 1.04;
+}
+.hero .hero-texto {
+  min-width: 0;
+}
+#crescimento-inicio .crescimento-titulo h2 {
+  font-size: 15px;
+}
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
 
-.hero h1 { font-size: clamp(38px, 4.3vw, 60px); }
-@media (max-width: 600px) { .fluxo { grid-template-columns: 1fr; gap: 22px; } .fluxo li { padding-left: 40px; position: relative; } .fluxo li > span { position: absolute; left: 0; top: 0; } .fluxo h3 { margin-top: 0; } }
+.hero h1 {
+  font-size: clamp(38px, 4.3vw, 60px);
+}
+@media (max-width: 600px) {
+  .fluxo {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .fluxo li {
+    padding-left: 40px;
+    position: relative;
+  }
+  .fluxo li > span {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .fluxo h3 {
+    margin-top: 0;
+  }
+}

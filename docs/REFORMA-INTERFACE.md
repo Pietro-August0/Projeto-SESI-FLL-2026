@@ -53,3 +53,5 @@ O rodapé passou a ter quatro marcas alinhadas, sem as legendas Instituições/N
 Validação local: Playwright/Chrome (Browser plugin não disponível), em 1440 × 1000 e 390 × 844. Passaram: texto preservado; fotografia responsiva; crescimento abaixo e centralizado; entrada ao rolar; movimento reduzido; nove slides; setas, teclado e arraste; ampliação, Escape e foco; marcas sem legendas; início e Sobre nós sem transbordamento; controles do crescimento. Sem erros JavaScript. TypeScript e build aprovados. Evidências em docs/imagens/inicio-natural.png, inicio-natural-mobile.png e logos-rodape.png.
 
 Publicação deste ajuste confirmada: `dpl_2LtVhEjZXnHPrLBy8heMctpNb4db`. JavaScript, CSS e foto publicados conferidos por SHA-1; rotas protegidas mantidas. Rodapé também validado em 320 e 768 pixels.
+
+A organização posterior removeu as fontes intermediárias sem consumidores e moveu o inventário original. Consulte [Organização](ORGANIZACAO.md) para distinguir esses ajustes dos registros históricos acima.

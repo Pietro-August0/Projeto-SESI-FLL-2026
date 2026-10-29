@@ -1,187 +1,267 @@
-<!DOCTYPE html>
+<!doctype html>
 <!-- especies.html contém os controles da pesquisa. especies.js lê dados/especies.json
      e cria os cartões na seção catalogo. Os dados ficam separados do HTML para serem reutilizados. -->
 <html lang="pt-BR">
-    <head>
-        <!-- UTF-8 permite acentos; viewport usa a largura real da janela em celulares. -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Descrição da página para buscas e cor sugerida para a interface do navegador. -->
-        <meta name="description" content="Projeto de apoio ao trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais, com propostas ilustrativas e regras transparentes.">
-        <meta name="theme-color" content="#26533E">
-        <!-- Título da aba e, no link seguinte, ícone local da folha. -->
-        <title>
-            Catálogo de espécies — ybyrá
-        </title>
-        <link rel="icon" href="assets/marca/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="assets/marca/favicon-32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="assets/marca/favicon-16.png" sizes="16x16" type="image/png">
-    <link rel="shortcut icon" href="assets/marca/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png" sizes="180x180">
-    <link rel="manifest" href="assets/marca/site.webmanifest">
-        <!-- Estilos comuns primeiro, depois regras específicas dos filtros e cartões. -->
-        <link rel="stylesheet" href="css/global.css">
-        <link rel="stylesheet" href="css/especies.css">
-        <link rel="stylesheet" href="css/orientacao.css">
-    <link rel="stylesheet" href="css/ecologico.css">
-        <!-- O módulo espera a leitura do HTML e pode importar as ferramentas de utils.js. -->
-        <script type="module" src="js/especies.js">
-        </script>
-        <link rel="stylesheet" href="css/experiencia.css">
+  <head>
+    <!-- UTF-8 permite acentos; viewport usa a largura real da janela em celulares. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Descrição da página para buscas e cor sugerida para a interface do navegador. -->
+    <meta
+      name="description"
+      content="Projeto de apoio ao trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais, com propostas ilustrativas e regras transparentes."
+    />
+    <meta name="theme-color" content="#26533E" />
+    <!-- Título da aba e, no link seguinte, ícone local da folha. -->
+    <title>Catálogo de espécies — ybyrá</title>
+    <link rel="icon" href="assets/marca/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/marca/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="assets/marca/favicon-16.png" sizes="16x16" type="image/png" />
+    <link rel="shortcut icon" href="assets/marca/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="assets/marca/site.webmanifest" />
+    <!-- Estilos comuns primeiro, depois regras específicas dos filtros e cartões. -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/especies.css" />
+    <link rel="stylesheet" href="css/orientacao.css" />
+    <link rel="stylesheet" href="css/ecologico.css" />
+    <!-- O módulo espera a leitura do HTML e pode importar as ferramentas de utils.js. -->
+    <script type="module" src="js/especies.js"></script>
+    <link rel="stylesheet" href="css/experiencia.css" />
     <script type="module" src="js/interacoes.js"></script>
-</head>
-    <body>
-        <!-- Atalho para teclado; o # indica o id do destino dentro desta página. -->
-        <a class="pular" href="#conteudo">Pular para o conteúdo</a>
-        <!-- Marca e menu comuns às cinco páginas; SVG desenha a folha com coordenadas. -->
-        <header class="cabecalho">
-    <div class="container cabecalho-interno">
-        <a class="marca" href="index.html"><img class="marca-logo" src="assets/marca/logo-negativa.svg" alt="ybyrá — Sistema agroflorestal" width="180" height="95"></a>
-        <nav aria-label="Navegação principal"><a href="index.html">Início</a><a href="analise.html">Criar SAF</a><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a></nav>
-        <div class="cabecalho-ferramentas"><button class="ajuda-cabecalho" type="button" data-abrir-guia>Como usar</button><a class="conta-atalho" href="conta.html"><svg width="22" height="24" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M3 24v-4c0-7 18-7 18 0v4Z"/></svg><span>Entrar</span></a></div>
-    </div>
-</header>
-        <main class="container" id="conteudo">
-            <!-- A lista depende do carregamento de JSON pelo JS; avisamos se ele estiver desativado. -->
-            <noscript>
-                <p class="erro">
-                    Ative o JavaScript para carregar o catálogo, os cenários e as análises.
-                </p>
-            </noscript>
-            <div class="pagina-titulo">
-                <h1>
-                    Encontre sua próxima planta.
-                </h1>
-                <p>
-                    Busque, filtre e descubra a função de cada espécie.
-                </p>
-            </div>
-            <aside class="nota-curadoria" aria-label="Contribuição do parceiro">
-                <strong>Pesquisa com o Grupo Taiobas do Matão USP</strong>
-                <p>Nosso parceiro providenciou o banco de sementes de 2021, que ampliou a pesquisa do ybyrá com frutíferas, hortaliças e árvores de restauração.</p>
-                <a href="#catalogo">Explorar as plantas no catálogo →</a> · <a href="historia.html#parceiros">Conheça o parceiro</a>
-            </aside>
-            <!-- Cada id abaixo é consultado por especies.js para acompanhar as escolhas. -->
-            <details class="painel-extra"><summary>O que significam estrato e função?</summary><p><strong>Estrato</strong> é a camada que a planta ocupa, das mais baixas às copas mais altas. <strong>Função</strong> é seu papel no SAF, como produzir alimentos, proteger o solo ou fornecer biomassa.</p></details>
-            <details class="painel-extra consulta-interacoes" id="interacoes">
-                <summary>Consultar a relação entre duas plantas <span id="total-relacoes"></span></summary>
-                <p>Veja o que foi documentado, em qual contexto e quais cuidados o manejo exige. Um consórcio registrado não comprova benefício para todo local.</p>
-                <div class="consulta-seletores">
-                    <div class="campo"><label for="relacao-a">Primeira planta</label><select id="relacao-a" aria-controls="consulta-relacao"></select></div>
-                    <div class="campo"><label for="relacao-b">Segunda planta</label><select id="relacao-b" aria-controls="consulta-relacao"></select></div>
-                </div>
-                <div id="consulta-relacao" role="status" aria-live="polite" aria-atomic="true"></div>
-            </details>
-            <div class="campo"><label for="filtro-escopo">Uso no sistema</label><select id="filtro-escopo"><option value="">Todos os registros</option><option value="MODELO">Disponíveis nas propostas</option><option value="COMPLEMENTAR">Diversificação e restauração</option><option value="IDENTIFICACAO">Aguardam identificação</option><option value="HISTORICO">Somente registro histórico</option></select></div>
-            <div class="filtros">
-                <div class="campo busca">
-                    <label for="busca">
-                        Buscar espécie ou função
-                    </label>
-                    <!-- for liga o label ao input. search sinaliza que o campo serve a uma pesquisa. -->
-                    <input id="busca" type="search" placeholder="Ex.: guandu, Cajanus, cobertura…" autocomplete="off">
-                </div>
-                <div class="campo">
-                    <label for="filtro-estrato">
-                        Estrato
-                    </label>
-                    <!-- value vazio aceita todos; os demais valores são códigos usados no JSON. -->
-                    <select id="filtro-estrato">
-                        <option value="">
-                            Todos os estratos
-                        </option>
-                        <option value="EMERGENTE">
-                            Emergente
-                        </option>
-                        <option value="ALTO">
-                            Alto
-                        </option>
-                        <option value="MEDIO">
-                            Médio
-                        </option>
-                        <option value="BAIXO">
-                            Baixo
-                        </option>
-                        <option value="COBERTURA">
-                            Cobertura
-                        </option>
-                    </select>
-                </div>
-                <div class="campo">
-                    <label for="filtro-funcao">
-                        Papel
-                    </label>
-                    <!-- O papel é a função da planta no modelo, diferente do estrato, que é sua camada. -->
-                    <select id="filtro-funcao">
-                        <option value="">
-                            Todas as funções
-                        </option>
-                        <option value="COBERTURA">
-                            Cobertura
-                        </option>
-                        <option value="ADUBACAO_VERDE">
-                            Adubação verde
-                        </option>
-                        <option value="CULTURA_CURTA">
-                            Cultura de ciclo curto
-                        </option>
-                        <option value="SUPORTE">
-                            Suporte e biomassa
-                        </option>
-                        <option value="FRUTIFERA">
-                            Frutífera
-                        </option>
-                        <option value="ARBOREA">
-                            Arbórea
-                        </option>
-                        <option value="PRODUTIVA">
-                            Produção alimentar
-                        </option>
-                        <option value="PERENE">
-                            Perene
-                        </option>
-                    </select>
-                </div>
-                <!-- button não envia formulário: o evento de clique apenas limpa os filtros. -->
-                <button id="limpar" class="botao secundario" type="button">
-                    Limpar filtros
-                </button>
-            </div>
-            <div class="catalogo-nota">
-                <!-- A contagem muda a cada pesquisa; role status ajuda a anunciar a atualização. -->
-                <p id="contagem" role="status">
-                    Carregando catálogo…
-                </p>
-                <span>79 registros · cultivo, manejo e fontes</span>
-            </div>
-            <!-- Um erro de carregamento ficará visível aqui, sem apagar as opções dos filtros. -->
-            <p id="erro" class="erro" role="alert" tabindex="-1" hidden>
-            </p>
-            <!-- O JavaScript preenche esta seção com um article por espécie encontrada. -->
-            <section id="catalogo" class="catalogo" aria-label="Espécies do catálogo">
-            </section>
-            <section class="proximo-passo"><div><h2>Quer ver estas plantas juntas?</h2><p>Crie uma proposta para explorar as espécies e suas fases.</p></div><a class="botao" href="analise.html?cenario=solo-a">Experimentar um exemplo →</a></section>
-            <!-- O aviso evita confundir um cadastro educativo com validação científica de adaptação. -->
-            <aside class="aviso">
-                As referências de cultivo mostram unidades, fontes e contexto. Valores sem evidência permanecem ausentes. Papéis, estratos e sucessão são simplificados para demonstração; não confirmam adaptação regional. <a href="sobre.html">Fontes e metodologia →</a>
-            </aside>
-        </main>
-        <!-- Identificação final e link para consultar as referências utilizadas. -->
-        <footer class="rodape">
-    <div class="container">
-        <div class="rodape-superior">
-            <a class="marca" href="index.html"><img class="marca-logo" src="assets/marca/logo-negativa.svg" alt="ybyrá — Sistema agroflorestal" width="180" height="95"></a>
-            <div class="rodape-proposito"><h2>Ideias que criam raízes.</h2><p>Uma ideia dos Jumpers. Robótica, pesquisa e agrofloresta.</p></div>
-            <nav aria-label="Navegação do rodapé"><a href="index.html">Início</a><a href="analise.html">Criar SAF</a><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a></nav>
+  </head>
+  <body>
+    <!-- Atalho para teclado; o # indica o id do destino dentro desta página. -->
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+    <!-- Marca e menu comuns às cinco páginas; SVG desenha a folha com coordenadas. -->
+    <header class="cabecalho">
+      <div class="container cabecalho-interno">
+        <a class="marca" href="index.html"
+          ><img
+            class="marca-logo"
+            src="assets/marca/logo-negativa.svg"
+            alt="ybyrá — Sistema agroflorestal"
+            width="180"
+            height="95"
+        /></a>
+        <nav aria-label="Navegação principal">
+          <a href="index.html">Início</a><a href="analise.html">Criar SAF</a
+          ><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a>
+        </nav>
+        <div class="cabecalho-ferramentas">
+          <button class="ajuda-cabecalho" type="button" data-abrir-guia>Como usar</button
+          ><a class="conta-atalho" href="conta.html"
+            ><svg
+              width="22"
+              height="24"
+              viewBox="0 0 24 26"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="7" r="4" />
+              <path d="M3 24v-4c0-7 18-7 18 0v4Z" /></svg
+            ><span>Entrar</span></a
+          >
         </div>
-        <div class="rede-projeto marcas-rodape" aria-label="SESI, FIESP, FIRST LEGO League e Taiobas do Matão">
-    <div class="marca-instituicao"><img class="logo-sesi" src="assets/instituicoes/sesi.png" alt="SESI" width="1352" height="436" loading="lazy"></div>
-    <div class="marca-instituicao"><img class="logo-fiesp" src="assets/instituicoes/fiesp.png" alt="FIESP" width="372" height="93" loading="lazy"></div>
-    <div class="marca-instituicao"><div class="logo-fll-moldura"><img src="assets/instituicoes/fll.png" alt="FIRST LEGO League" width="1024" height="1024" loading="lazy"></div></div>
-    <div class="marca-instituicao"><div class="logo-taiobas" role="img" aria-label="Taiobas do Matão"><img src="assets/instituicoes/taiobas-simbolo.jpeg" alt="" width="693" height="693" loading="lazy"><span aria-hidden="true">Taiobas<small>do Matão</small></span></div></div>
-</div>
-<div class="rodape-base"><p>ybyrá · Sistemas agroflorestais · FIRST LEGO League</p><div class="rodape-links"><a href="sobre.html">Metodologia e fontes</a><a href="conta.html">Minha conta</a><button class="ajuda-rodape" type="button" data-abrir-guia>Como usar</button></div></div>
-    </div>
-</footer>
-    </body>
+      </div>
+    </header>
+    <main class="container" id="conteudo">
+      <!-- A lista depende do carregamento de JSON pelo JS; avisamos se ele estiver desativado. -->
+      <noscript>
+        <p class="erro">Ative o JavaScript para carregar o catálogo, os cenários e as análises.</p>
+      </noscript>
+      <div class="pagina-titulo">
+        <h1>Encontre sua próxima planta.</h1>
+        <p>Busque, filtre e descubra a função de cada espécie.</p>
+      </div>
+      <aside class="nota-curadoria" aria-label="Contribuição do parceiro">
+        <strong>Pesquisa com o Grupo Taiobas do Matão USP</strong>
+        <p>
+          Nosso parceiro providenciou o banco de sementes de 2021, que ampliou a pesquisa do ybyrá
+          com frutíferas, hortaliças e árvores de restauração.
+        </p>
+        <a href="#catalogo">Explorar as plantas no catálogo →</a> ·
+        <a href="historia.html#parceiros">Conheça o parceiro</a>
+      </aside>
+      <!-- Cada id abaixo é consultado por especies.js para acompanhar as escolhas. -->
+      <details class="painel-extra">
+        <summary>O que significam estrato e função?</summary>
+        <p>
+          <strong>Estrato</strong> é a camada que a planta ocupa, das mais baixas às copas mais
+          altas. <strong>Função</strong> é seu papel no SAF, como produzir alimentos, proteger o
+          solo ou fornecer biomassa.
+        </p>
+      </details>
+      <details class="painel-extra consulta-interacoes" id="interacoes">
+        <summary>Consultar a relação entre duas plantas <span id="total-relacoes"></span></summary>
+        <p>
+          Veja o que foi documentado, em qual contexto e quais cuidados o manejo exige. Um consórcio
+          registrado não comprova benefício para todo local.
+        </p>
+        <div class="consulta-seletores">
+          <div class="campo">
+            <label for="relacao-a">Primeira planta</label
+            ><select id="relacao-a" aria-controls="consulta-relacao"></select>
+          </div>
+          <div class="campo">
+            <label for="relacao-b">Segunda planta</label
+            ><select id="relacao-b" aria-controls="consulta-relacao"></select>
+          </div>
+        </div>
+        <div id="consulta-relacao" role="status" aria-live="polite" aria-atomic="true"></div>
+      </details>
+      <div class="campo">
+        <label for="filtro-escopo">Uso no sistema</label
+        ><select id="filtro-escopo">
+          <option value="">Todos os registros</option>
+          <option value="MODELO">Disponíveis nas propostas</option>
+          <option value="COMPLEMENTAR">Diversificação e restauração</option>
+          <option value="IDENTIFICACAO">Aguardam identificação</option>
+          <option value="HISTORICO">Somente registro histórico</option>
+        </select>
+      </div>
+      <div class="filtros">
+        <div class="campo busca">
+          <label for="busca"> Buscar espécie ou função </label>
+          <!-- for liga o label ao input. search sinaliza que o campo serve a uma pesquisa. -->
+          <input
+            id="busca"
+            type="search"
+            placeholder="Ex.: guandu, Cajanus, cobertura…"
+            autocomplete="off"
+          />
+        </div>
+        <div class="campo">
+          <label for="filtro-estrato"> Estrato </label>
+          <!-- value vazio aceita todos; os demais valores são códigos usados no JSON. -->
+          <select id="filtro-estrato">
+            <option value="">Todos os estratos</option>
+            <option value="EMERGENTE">Emergente</option>
+            <option value="ALTO">Alto</option>
+            <option value="MEDIO">Médio</option>
+            <option value="BAIXO">Baixo</option>
+            <option value="COBERTURA">Cobertura</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="filtro-funcao"> Papel </label>
+          <!-- O papel é a função da planta no modelo, diferente do estrato, que é sua camada. -->
+          <select id="filtro-funcao">
+            <option value="">Todas as funções</option>
+            <option value="COBERTURA">Cobertura</option>
+            <option value="ADUBACAO_VERDE">Adubação verde</option>
+            <option value="CULTURA_CURTA">Cultura de ciclo curto</option>
+            <option value="SUPORTE">Suporte e biomassa</option>
+            <option value="FRUTIFERA">Frutífera</option>
+            <option value="ARBOREA">Arbórea</option>
+            <option value="PRODUTIVA">Produção alimentar</option>
+            <option value="PERENE">Perene</option>
+          </select>
+        </div>
+        <!-- button não envia formulário: o evento de clique apenas limpa os filtros. -->
+        <button id="limpar" class="botao secundario" type="button">Limpar filtros</button>
+      </div>
+      <div class="catalogo-nota">
+        <!-- A contagem muda a cada pesquisa; role status ajuda a anunciar a atualização. -->
+        <p id="contagem" role="status">Carregando catálogo…</p>
+        <span>79 registros · cultivo, manejo e fontes</span>
+      </div>
+      <!-- Um erro de carregamento ficará visível aqui, sem apagar as opções dos filtros. -->
+      <p id="erro" class="erro" role="alert" tabindex="-1" hidden></p>
+      <!-- O JavaScript preenche esta seção com um article por espécie encontrada. -->
+      <section id="catalogo" class="catalogo" aria-label="Espécies do catálogo"></section>
+      <section class="proximo-passo">
+        <div>
+          <h2>Quer ver estas plantas juntas?</h2>
+          <p>Crie uma proposta para explorar as espécies e suas fases.</p>
+        </div>
+        <a class="botao" href="analise.html?cenario=solo-a">Experimentar um exemplo →</a>
+      </section>
+      <!-- O aviso evita confundir um cadastro educativo com validação científica de adaptação. -->
+      <aside class="aviso">
+        As referências de cultivo mostram unidades, fontes e contexto. Valores sem evidência
+        permanecem ausentes. Papéis, estratos e sucessão são simplificados para demonstração; não
+        confirmam adaptação regional. <a href="sobre.html">Fontes e metodologia →</a>
+      </aside>
+    </main>
+    <!-- Identificação final e link para consultar as referências utilizadas. -->
+    <footer class="rodape">
+      <div class="container">
+        <div class="rodape-superior">
+          <a class="marca" href="index.html"
+            ><img
+              class="marca-logo"
+              src="assets/marca/logo-negativa.svg"
+              alt="ybyrá — Sistema agroflorestal"
+              width="180"
+              height="95"
+          /></a>
+          <div class="rodape-proposito">
+            <h2>Ideias que criam raízes.</h2>
+            <p>Uma ideia dos Jumpers. Robótica, pesquisa e agrofloresta.</p>
+          </div>
+          <nav aria-label="Navegação do rodapé">
+            <a href="index.html">Início</a><a href="analise.html">Criar SAF</a
+            ><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a>
+          </nav>
+        </div>
+        <div
+          class="rede-projeto marcas-rodape"
+          aria-label="SESI, FIESP, FIRST LEGO League e Taiobas do Matão"
+        >
+          <div class="marca-instituicao">
+            <img
+              class="logo-sesi"
+              src="assets/instituicoes/sesi.png"
+              alt="SESI"
+              width="1352"
+              height="436"
+              loading="lazy"
+            />
+          </div>
+          <div class="marca-instituicao">
+            <img
+              class="logo-fiesp"
+              src="assets/instituicoes/fiesp.png"
+              alt="FIESP"
+              width="372"
+              height="93"
+              loading="lazy"
+            />
+          </div>
+          <div class="marca-instituicao">
+            <div class="logo-fll-moldura">
+              <img
+                src="assets/instituicoes/fll.png"
+                alt="FIRST LEGO League"
+                width="1024"
+                height="1024"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="marca-instituicao">
+            <div class="logo-taiobas" role="img" aria-label="Taiobas do Matão">
+              <img
+                src="assets/instituicoes/taiobas-simbolo.jpeg"
+                alt=""
+                width="693"
+                height="693"
+                loading="lazy"
+              /><span aria-hidden="true">Taiobas<small>do Matão</small></span>
+            </div>
+          </div>
+        </div>
+        <div class="rodape-base">
+          <p>ybyrá · Sistemas agroflorestais · FIRST LEGO League</p>
+          <div class="rodape-links">
+            <a href="sobre.html">Metodologia e fontes</a><a href="conta.html">Minha conta</a
+            ><button class="ajuda-rodape" type="button" data-abrir-guia>Como usar</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

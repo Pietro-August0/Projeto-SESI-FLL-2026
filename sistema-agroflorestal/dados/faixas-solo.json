@@ -1,191 +1,142 @@
 {
-    "demonstrativo": true,
-    "nota": "Limiares pedagógicos, sem interpretação laboratorial. N/P/K são unidades arbitrárias de demonstração; não converter laudos sem definir método e unidade.",
-    "necessidadesBase": [
-        "COBERTURA_SOLO",
-        "DIVERSIDADE"
-    ],
-    "pesos": {
-        "ph": 25,
-        "temperatura": 20,
-        "umidade": 15,
-        "necessidade": 15,
-        "estrato": 10,
-        "sucessao": 10,
-        "diversidade": 5
+  "demonstrativo": true,
+  "nota": "Limiares pedagógicos, sem interpretação laboratorial. N/P/K são unidades arbitrárias de demonstração; não converter laudos sem definir método e unidade.",
+  "necessidadesBase": ["COBERTURA_SOLO", "DIVERSIDADE"],
+  "pesos": {
+    "ph": 25,
+    "temperatura": 20,
+    "umidade": 15,
+    "necessidade": 15,
+    "estrato": 10,
+    "sucessao": 10,
+    "diversidade": 5
+  },
+  "parametros": {
+    "ph": {
+      "rotulo": "pH",
+      "unidade": "",
+      "minAdequado": 5.5,
+      "maxAdequado": 7,
+      "statusAlto": "ALTO",
+      "necessidades": {
+        "BAIXO": ["AVALIACAO_PH"],
+        "ALTO": ["AVALIACAO_PH"],
+        "ATENCAO": ["AVALIACAO_PH"]
+      },
+      "explicacoes": {
+        "BAIXO": "Abaixo da faixa de referência desta demonstração.",
+        "ADEQUADO": "Dentro da faixa de referência desta demonstração.",
+        "ALTO": "Acima da faixa de referência desta demonstração.",
+        "ATENCAO": "Fora da faixa demonstrativa; requer avaliação específica."
+      }
     },
-    "parametros": {
-        "ph": {
-            "rotulo": "pH",
-            "unidade": "",
-            "minAdequado": 5.5,
-            "maxAdequado": 7,
-            "statusAlto": "ALTO",
-            "necessidades": {
-                "BAIXO": [
-                    "AVALIACAO_PH"
-                ],
-                "ALTO": [
-                    "AVALIACAO_PH"
-                ],
-                "ATENCAO": [
-                    "AVALIACAO_PH"
-                ]
-            },
-            "explicacoes": {
-                "BAIXO": "Abaixo da faixa de referência desta demonstração.",
-                "ADEQUADO": "Dentro da faixa de referência desta demonstração.",
-                "ALTO": "Acima da faixa de referência desta demonstração.",
-                "ATENCAO": "Fora da faixa demonstrativa; requer avaliação específica."
-            }
-        },
-        "umidade": {
-            "rotulo": "Umidade",
-            "unidade": "%",
-            "minAdequado": 35,
-            "maxAdequado": 75,
-            "statusAlto": "ALTO",
-            "necessidades": {
-                "BAIXO": [
-                    "COBERTURA_SOLO",
-                    "AVALIACAO_AGUA"
-                ],
-                "ALTO": [
-                    "AVALIACAO_AGUA"
-                ],
-                "ATENCAO": [
-                    "AVALIACAO_AGUA"
-                ]
-            },
-            "explicacoes": {
-                "BAIXO": "Abaixo da faixa de referência desta demonstração.",
-                "ADEQUADO": "Dentro da faixa de referência desta demonstração.",
-                "ALTO": "Acima da faixa de referência desta demonstração.",
-                "ATENCAO": "Fora da faixa demonstrativa; requer avaliação específica."
-            }
-        },
-        "temperatura": {
-            "rotulo": "Temperatura",
-            "unidade": "°C",
-            "minAdequado": 18,
-            "maxAdequado": 32,
-            "statusAlto": "ALTO",
-            "necessidades": {
-                "BAIXO": [
-                    "AVALIACAO_TEMPERATURA"
-                ],
-                "ALTO": [
-                    "COBERTURA_SOLO",
-                    "AVALIACAO_TEMPERATURA"
-                ],
-                "ATENCAO": [
-                    "COBERTURA_SOLO",
-                    "AVALIACAO_TEMPERATURA"
-                ]
-            },
-            "explicacoes": {
-                "BAIXO": "Abaixo da faixa de referência desta demonstração.",
-                "ADEQUADO": "Dentro da faixa de referência desta demonstração.",
-                "ALTO": "Acima da faixa de referência desta demonstração.",
-                "ATENCAO": "Fora da faixa demonstrativa; requer avaliação específica."
-            }
-        },
-        "nitrogenio": {
-            "rotulo": "Nitrogênio",
-            "unidade": "unid. demo",
-            "minAdequado": 30,
-            "maxAdequado": 80,
-            "statusAlto": "ALTO",
-            "necessidades": {
-                "BAIXO": [
-                    "FIXACAO_NITROGENIO",
-                    "BIOMASSA"
-                ],
-                "ALTO": [
-                    "AVALIACAO_NUTRIENTES"
-                ],
-                "ATENCAO": [
-                    "AVALIACAO_NUTRIENTES"
-                ]
-            },
-            "explicacoes": {
-                "BAIXO": "Abaixo da faixa de referência desta demonstração.",
-                "ADEQUADO": "Dentro da faixa de referência desta demonstração.",
-                "ALTO": "Acima da faixa de referência desta demonstração.",
-                "ATENCAO": "Fora da faixa demonstrativa; requer avaliação específica."
-            }
-        },
-        "fosforo": {
-            "rotulo": "Fósforo",
-            "unidade": "unid. demo",
-            "minAdequado": 15,
-            "maxAdequado": 50,
-            "statusAlto": "ALTO",
-            "necessidades": {
-                "BAIXO": [
-                    "BIOMASSA",
-                    "AVALIACAO_NUTRIENTES"
-                ],
-                "ALTO": [
-                    "AVALIACAO_NUTRIENTES"
-                ],
-                "ATENCAO": [
-                    "AVALIACAO_NUTRIENTES"
-                ]
-            },
-            "explicacoes": {
-                "BAIXO": "Abaixo da faixa de referência desta demonstração.",
-                "ADEQUADO": "Dentro da faixa de referência desta demonstração.",
-                "ALTO": "Acima da faixa de referência desta demonstração.",
-                "ATENCAO": "Fora da faixa demonstrativa; requer avaliação específica."
-            }
-        },
-        "potassio": {
-            "rotulo": "Potássio",
-            "unidade": "unid. demo",
-            "minAdequado": 80,
-            "maxAdequado": 200,
-            "statusAlto": "ALTO",
-            "necessidades": {
-                "BAIXO": [
-                    "BIOMASSA",
-                    "AVALIACAO_NUTRIENTES"
-                ],
-                "ALTO": [
-                    "AVALIACAO_NUTRIENTES"
-                ],
-                "ATENCAO": [
-                    "AVALIACAO_NUTRIENTES"
-                ]
-            },
-            "explicacoes": {
-                "BAIXO": "Abaixo da faixa de referência desta demonstração.",
-                "ADEQUADO": "Dentro da faixa de referência desta demonstração.",
-                "ALTO": "Acima da faixa de referência desta demonstração.",
-                "ATENCAO": "Fora da faixa demonstrativa; requer avaliação específica."
-            }
-        },
-        "condutividade": {
-            "rotulo": "Condutividade",
-            "unidade": "dS/m",
-            "minAdequado": 0,
-            "maxAdequado": 2,
-            "statusAlto": "ATENCAO",
-            "necessidades": {
-                "BAIXO": [],
-                "ALTO": [
-                    "AVALIACAO_SALINIDADE"
-                ],
-                "ATENCAO": [
-                    "AVALIACAO_SALINIDADE"
-                ]
-            },
-            "explicacoes": {
-                "BAIXO": "Abaixo da faixa de referência desta demonstração.",
-                "ADEQUADO": "Dentro da faixa de referência desta demonstração.",
-                "ALTO": "Acima da faixa de referência desta demonstração.",
-                "ATENCAO": "Fora da faixa demonstrativa; requer avaliação específica."
-            }
-        }
+    "umidade": {
+      "rotulo": "Umidade",
+      "unidade": "%",
+      "minAdequado": 35,
+      "maxAdequado": 75,
+      "statusAlto": "ALTO",
+      "necessidades": {
+        "BAIXO": ["COBERTURA_SOLO", "AVALIACAO_AGUA"],
+        "ALTO": ["AVALIACAO_AGUA"],
+        "ATENCAO": ["AVALIACAO_AGUA"]
+      },
+      "explicacoes": {
+        "BAIXO": "Abaixo da faixa de referência desta demonstração.",
+        "ADEQUADO": "Dentro da faixa de referência desta demonstração.",
+        "ALTO": "Acima da faixa de referência desta demonstração.",
+        "ATENCAO": "Fora da faixa demonstrativa; requer avaliação específica."
+      }
+    },
+    "temperatura": {
+      "rotulo": "Temperatura",
+      "unidade": "°C",
+      "minAdequado": 18,
+      "maxAdequado": 32,
+      "statusAlto": "ALTO",
+      "necessidades": {
+        "BAIXO": ["AVALIACAO_TEMPERATURA"],
+        "ALTO": ["COBERTURA_SOLO", "AVALIACAO_TEMPERATURA"],
+        "ATENCAO": ["COBERTURA_SOLO", "AVALIACAO_TEMPERATURA"]
+      },
+      "explicacoes": {
+        "BAIXO": "Abaixo da faixa de referência desta demonstração.",
+        "ADEQUADO": "Dentro da faixa de referência desta demonstração.",
+        "ALTO": "Acima da faixa de referência desta demonstração.",
+        "ATENCAO": "Fora da faixa demonstrativa; requer avaliação específica."
+      }
+    },
+    "nitrogenio": {
+      "rotulo": "Nitrogênio",
+      "unidade": "unid. demo",
+      "minAdequado": 30,
+      "maxAdequado": 80,
+      "statusAlto": "ALTO",
+      "necessidades": {
+        "BAIXO": ["FIXACAO_NITROGENIO", "BIOMASSA"],
+        "ALTO": ["AVALIACAO_NUTRIENTES"],
+        "ATENCAO": ["AVALIACAO_NUTRIENTES"]
+      },
+      "explicacoes": {
+        "BAIXO": "Abaixo da faixa de referência desta demonstração.",
+        "ADEQUADO": "Dentro da faixa de referência desta demonstração.",
+        "ALTO": "Acima da faixa de referência desta demonstração.",
+        "ATENCAO": "Fora da faixa demonstrativa; requer avaliação específica."
+      }
+    },
+    "fosforo": {
+      "rotulo": "Fósforo",
+      "unidade": "unid. demo",
+      "minAdequado": 15,
+      "maxAdequado": 50,
+      "statusAlto": "ALTO",
+      "necessidades": {
+        "BAIXO": ["BIOMASSA", "AVALIACAO_NUTRIENTES"],
+        "ALTO": ["AVALIACAO_NUTRIENTES"],
+        "ATENCAO": ["AVALIACAO_NUTRIENTES"]
+      },
+      "explicacoes": {
+        "BAIXO": "Abaixo da faixa de referência desta demonstração.",
+        "ADEQUADO": "Dentro da faixa de referência desta demonstração.",
+        "ALTO": "Acima da faixa de referência desta demonstração.",
+        "ATENCAO": "Fora da faixa demonstrativa; requer avaliação específica."
+      }
+    },
+    "potassio": {
+      "rotulo": "Potássio",
+      "unidade": "unid. demo",
+      "minAdequado": 80,
+      "maxAdequado": 200,
+      "statusAlto": "ALTO",
+      "necessidades": {
+        "BAIXO": ["BIOMASSA", "AVALIACAO_NUTRIENTES"],
+        "ALTO": ["AVALIACAO_NUTRIENTES"],
+        "ATENCAO": ["AVALIACAO_NUTRIENTES"]
+      },
+      "explicacoes": {
+        "BAIXO": "Abaixo da faixa de referência desta demonstração.",
+        "ADEQUADO": "Dentro da faixa de referência desta demonstração.",
+        "ALTO": "Acima da faixa de referência desta demonstração.",
+        "ATENCAO": "Fora da faixa demonstrativa; requer avaliação específica."
+      }
+    },
+    "condutividade": {
+      "rotulo": "Condutividade",
+      "unidade": "dS/m",
+      "minAdequado": 0,
+      "maxAdequado": 2,
+      "statusAlto": "ATENCAO",
+      "necessidades": {
+        "BAIXO": [],
+        "ALTO": ["AVALIACAO_SALINIDADE"],
+        "ATENCAO": ["AVALIACAO_SALINIDADE"]
+      },
+      "explicacoes": {
+        "BAIXO": "Abaixo da faixa de referência desta demonstração.",
+        "ADEQUADO": "Dentro da faixa de referência desta demonstração.",
+        "ALTO": "Acima da faixa de referência desta demonstração.",
+        "ATENCAO": "Fora da faixa demonstrativa; requer avaliação específica."
+      }
     }
+  }
 }

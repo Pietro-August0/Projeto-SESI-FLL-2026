@@ -1,48 +1,388 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light">
-<title>Confirme seu cadastro no ybyrá</title>
-<style>@media only screen and (max-width:620px){.email-corpo{padding:28px 22px!important}.email-titulo{font-size:31px!important}.email-codigo{font-size:29px!important;letter-spacing:3px!important}.email-margem{padding:16px 8px!important}}</style>
-</head>
-<body style="margin:0;padding:0;background-color:#f1f5f0;color:#39434a;font-family:Arial,Helvetica,sans-serif;">
-<div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;overflow:hidden;mso-hide:all;">Falta um passo para começar: confirme seu e-mail com o código do ybyrá.</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f1f5f0;"><tr><td class="email-margem" align="center" style="padding:36px 16px;">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;">
-<tr><td style="padding:0 8px 14px;color:#69796d;font-size:10px;letter-spacing:2px;text-align:center;">IDEIAS QUE CRIAM RAÍZES</td></tr>
-<tr><td style="background-color:#26533e;border-radius:20px 20px 0 0;padding:24px 36px 28px;">
-<img src="{{ .SiteURL }}/assets/marca/logo-email.png" alt="ybyrá" width="180" height="95" style="display:block;width:180px;height:95px;border:0;">
-<p style="margin:12px 0 0;color:#c7e7d2;font-size:10px;line-height:18px;font-weight:bold;letter-spacing:2px;">CONFIRMAÇÃO DE CADASTRO</p>
-</td></tr>
-<tr><td class="email-corpo" style="padding:36px 40px 38px;background-color:#ffffff;">
-<p style="margin:0 0 12px;color:#8e699c;font-size:12px;font-weight:bold;letter-spacing:1px;">BOAS-VINDAS AO YBYRÁ</p>
-<h1 class="email-titulo" style="margin:0 0 18px;font-family:Georgia,'Times New Roman',serif;font-size:38px;line-height:1.15;font-weight:normal;color:#26533e;">Sua próxima ideia<br>começa aqui.</h1>
-<p style="margin:0 0 12px;font-size:15px;line-height:25px;color:#5b6860;">Está quase tudo pronto para explorar plantas e cultivar suas propostas de agrofloresta.</p>
-<p style="margin:0 0 26px;font-size:14px;line-height:23px;color:#5b6860;">Confirme o cadastro de <strong style="color:#39434a;word-break:break-all;">{{ .Email }}</strong> com o código abaixo.</p>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #c9ddcf;border-radius:14px;background-color:#f0f7f1;"><tr><td align="center" style="padding:22px 12px 20px;">
-<p style="margin:0 0 12px;color:#53705b;font-size:10px;line-height:16px;font-weight:bold;letter-spacing:1.5px;">SEU CÓDIGO DE CONFIRMAÇÃO</p>
-<strong class="email-codigo" dir="ltr" style="display:block;font-family:Consolas,'Courier New',monospace;font-size:34px;line-height:44px;font-weight:bold;letter-spacing:5px;color:#26533e;user-select:all;-webkit-user-select:all;">{{ .Token }}</strong>
-<p style="margin:10px 0 0;font-size:11px;line-height:18px;color:#687b6c;">Uso único · Se o código expirar, peça um novo no site.</p>
-</td></tr></table>
-<p style="margin:12px 0 26px;font-size:12px;line-height:20px;color:#728076;text-align:center;">No celular, toque e segure o código para copiar.<br>No computador, selecione o código e copie.</p>
-<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td align="center" bgcolor="#26533e" style="border-radius:8px;"><a href="{{ .SiteURL }}/conta.html?etapa=confirmar" style="display:block;padding:17px 18px;font-size:14px;line-height:20px;font-weight:bold;color:#ffffff;text-decoration:none;border:1px solid #26533e;border-radius:8px;">Abrir o ybyrá e confirmar cadastro →</a></td></tr></table>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;">
-<tr><td width="30" valign="top" style="padding:0 0 12px;color:#8e699c;font-size:12px;font-weight:bold;line-height:21px;">01</td><td style="padding:0 0 12px;font-size:12px;line-height:21px;color:#5b6860;">Abra <strong>Confirmar e-mail</strong> na página de conta.</td></tr>
-<tr><td width="30" valign="top" style="padding:0 0 12px;color:#8e699c;font-size:12px;font-weight:bold;line-height:21px;">02</td><td style="padding:0 0 12px;font-size:12px;line-height:21px;color:#5b6860;">Informe seu e-mail, cole o código e escolha <strong>Confirmar cadastro</strong>.</td></tr>
-<tr><td width="30" valign="top" style="color:#8e699c;font-size:12px;font-weight:bold;line-height:21px;">03</td><td style="font-size:12px;line-height:21px;color:#5b6860;">Depois, entre com seu e-mail e senha. Sua ideia já pode criar raízes.</td></tr>
-</table>
-<p style="margin:28px 0 0;padding-top:20px;border-top:1px solid #e7ece6;font-size:11px;line-height:19px;color:#7a857d;">Não solicitou esse cadastro? Pode ignorar esta mensagem. Sua conta só será ativada depois da confirmação do e-mail.</p>
-</td></tr>
-<tr><td style="padding:22px 24px 24px;background-color:#fafbf8;border-top:1px solid #e7ece6;border-radius:0 0 20px 20px;">
-<p style="margin:0 0 12px;font-size:9px;line-height:16px;letter-spacing:1.2px;color:#748177;text-align:center;">EDUCAÇÃO, PESQUISA E IDEIAS QUE CRESCEM JUNTAS</p>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-<td width="25%" align="center" valign="middle"><img src="{{ .SiteURL }}/assets/instituicoes/sesi.png" alt="SESI" width="78" height="25" style="display:block;border:0;width:78px;height:25px;"></td>
-<td width="25%" align="center" valign="middle"><img src="{{ .SiteURL }}/assets/instituicoes/fiesp.png" alt="FIESP" width="80" height="20" style="display:block;border:0;width:80px;height:20px;"></td>
-<td width="25%" align="center" valign="middle"><img src="{{ .SiteURL }}/assets/instituicoes/fll.png" alt="FIRST LEGO League" width="82" height="82" style="display:block;border:0;width:82px;height:82px;"></td>
-<td width="25%" align="center" valign="middle"><img src="{{ .SiteURL }}/assets/instituicoes/taiobas-simbolo.jpeg" alt="Taiobas do Matão" width="40" height="40" style="display:block;border:0;width:40px;height:40px;"><span style="display:block;margin-top:5px;font-size:9px;line-height:13px;color:#5b6860;">Parceiro de pesquisa<br>Taiobas do Matão</span></td>
-</tr></table>
-</td></tr>
-<tr><td align="center" style="padding:20px 18px 0;font-size:11px;line-height:19px;color:#728076;">ybyrá · Um projeto da equipe para a FIRST LEGO League<br><a href="{{ .SiteURL }}/conta.html?etapa=confirmar" style="color:#53705b;text-decoration:underline;">{{ .SiteURL }}</a></td></tr>
-</table>
-</td></tr></table>
-</body></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Confirme seu cadastro no ybyrá</title>
+    <style>
+      @media only screen and (max-width: 620px) {
+        .email-corpo {
+          padding: 28px 22px !important;
+        }
+        .email-titulo {
+          font-size: 31px !important;
+        }
+        .email-codigo {
+          font-size: 29px !important;
+          letter-spacing: 3px !important;
+        }
+        .email-margem {
+          padding: 16px 8px !important;
+        }
+      }
+    </style>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-color: #f1f5f0;
+      color: #39434a;
+      font-family: Arial, Helvetica, sans-serif;
+    "
+  >
+    <div
+      style="
+        display: none;
+        font-size: 1px;
+        line-height: 1px;
+        max-height: 0;
+        max-width: 0;
+        overflow: hidden;
+        mso-hide: all;
+      "
+    >
+      Falta um passo para começar: confirme seu e-mail com o código do ybyrá.
+    </div>
+    <table
+      role="presentation"
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="background-color: #f1f5f0"
+    >
+      <tr>
+        <td class="email-margem" align="center" style="padding: 36px 16px">
+          <table
+            role="presentation"
+            width="600"
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            style="width: 100%; max-width: 600px"
+          >
+            <tr>
+              <td
+                style="
+                  padding: 0 8px 14px;
+                  color: #69796d;
+                  font-size: 10px;
+                  letter-spacing: 2px;
+                  text-align: center;
+                "
+              >
+                IDEIAS QUE CRIAM RAÍZES
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  background-color: #26533e;
+                  border-radius: 20px 20px 0 0;
+                  padding: 24px 36px 28px;
+                "
+              >
+                <img
+                  src="{{ .SiteURL }}/assets/marca/logo-email.png"
+                  alt="ybyrá"
+                  width="180"
+                  height="95"
+                  style="display: block; width: 180px; height: 95px; border: 0"
+                />
+                <p
+                  style="
+                    margin: 12px 0 0;
+                    color: #c7e7d2;
+                    font-size: 10px;
+                    line-height: 18px;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                  "
+                >
+                  CONFIRMAÇÃO DE CADASTRO
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="email-corpo" style="padding: 36px 40px 38px; background-color: #ffffff">
+                <p
+                  style="
+                    margin: 0 0 12px;
+                    color: #8e699c;
+                    font-size: 12px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                  "
+                >
+                  BOAS-VINDAS AO YBYRÁ
+                </p>
+                <h1
+                  class="email-titulo"
+                  style="
+                    margin: 0 0 18px;
+                    font-family: Georgia, 'Times New Roman', serif;
+                    font-size: 38px;
+                    line-height: 1.15;
+                    font-weight: normal;
+                    color: #26533e;
+                  "
+                >
+                  Sua próxima ideia<br />começa aqui.
+                </h1>
+                <p style="margin: 0 0 12px; font-size: 15px; line-height: 25px; color: #5b6860">
+                  Está quase tudo pronto para explorar plantas e cultivar suas propostas de
+                  agrofloresta.
+                </p>
+                <p style="margin: 0 0 26px; font-size: 14px; line-height: 23px; color: #5b6860">
+                  Confirme o cadastro de
+                  <strong style="color: #39434a; word-break: break-all">{{ .Email }}</strong> com o
+                  código abaixo.
+                </p>
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="border: 1px solid #c9ddcf; border-radius: 14px; background-color: #f0f7f1"
+                >
+                  <tr>
+                    <td align="center" style="padding: 22px 12px 20px">
+                      <p
+                        style="
+                          margin: 0 0 12px;
+                          color: #53705b;
+                          font-size: 10px;
+                          line-height: 16px;
+                          font-weight: bold;
+                          letter-spacing: 1.5px;
+                        "
+                      >
+                        SEU CÓDIGO DE CONFIRMAÇÃO
+                      </p>
+                      <strong
+                        class="email-codigo"
+                        dir="ltr"
+                        style="
+                          display: block;
+                          font-family: Consolas, 'Courier New', monospace;
+                          font-size: 34px;
+                          line-height: 44px;
+                          font-weight: bold;
+                          letter-spacing: 5px;
+                          color: #26533e;
+                          user-select: all;
+                          -webkit-user-select: all;
+                        "
+                        >{{ .Token }}</strong
+                      >
+                      <p
+                        style="margin: 10px 0 0; font-size: 11px; line-height: 18px; color: #687b6c"
+                      >
+                        Uso único · Se o código expirar, peça um novo no site.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+                <p
+                  style="
+                    margin: 12px 0 26px;
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: #728076;
+                    text-align: center;
+                  "
+                >
+                  No celular, toque e segure o código para copiar.<br />No computador, selecione o
+                  código e copie.
+                </p>
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <td align="center" bgcolor="#26533e" style="border-radius: 8px">
+                      <a
+                        href="{{ .SiteURL }}/conta.html?etapa=confirmar"
+                        style="
+                          display: block;
+                          padding: 17px 18px;
+                          font-size: 14px;
+                          line-height: 20px;
+                          font-weight: bold;
+                          color: #ffffff;
+                          text-decoration: none;
+                          border: 1px solid #26533e;
+                          border-radius: 8px;
+                        "
+                        >Abrir o ybyrá e confirmar cadastro →</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="margin-top: 24px"
+                >
+                  <tr>
+                    <td
+                      width="30"
+                      valign="top"
+                      style="
+                        padding: 0 0 12px;
+                        color: #8e699c;
+                        font-size: 12px;
+                        font-weight: bold;
+                        line-height: 21px;
+                      "
+                    >
+                      01
+                    </td>
+                    <td
+                      style="padding: 0 0 12px; font-size: 12px; line-height: 21px; color: #5b6860"
+                    >
+                      Abra <strong>Confirmar e-mail</strong> na página de conta.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      width="30"
+                      valign="top"
+                      style="
+                        padding: 0 0 12px;
+                        color: #8e699c;
+                        font-size: 12px;
+                        font-weight: bold;
+                        line-height: 21px;
+                      "
+                    >
+                      02
+                    </td>
+                    <td
+                      style="padding: 0 0 12px; font-size: 12px; line-height: 21px; color: #5b6860"
+                    >
+                      Informe seu e-mail, cole o código e escolha
+                      <strong>Confirmar cadastro</strong>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      width="30"
+                      valign="top"
+                      style="color: #8e699c; font-size: 12px; font-weight: bold; line-height: 21px"
+                    >
+                      03
+                    </td>
+                    <td style="font-size: 12px; line-height: 21px; color: #5b6860">
+                      Depois, entre com seu e-mail e senha. Sua ideia já pode criar raízes.
+                    </td>
+                  </tr>
+                </table>
+                <p
+                  style="
+                    margin: 28px 0 0;
+                    padding-top: 20px;
+                    border-top: 1px solid #e7ece6;
+                    font-size: 11px;
+                    line-height: 19px;
+                    color: #7a857d;
+                  "
+                >
+                  Não solicitou esse cadastro? Pode ignorar esta mensagem. Sua conta só será ativada
+                  depois da confirmação do e-mail.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  padding: 22px 24px 24px;
+                  background-color: #fafbf8;
+                  border-top: 1px solid #e7ece6;
+                  border-radius: 0 0 20px 20px;
+                "
+              >
+                <p
+                  style="
+                    margin: 0 0 12px;
+                    font-size: 9px;
+                    line-height: 16px;
+                    letter-spacing: 1.2px;
+                    color: #748177;
+                    text-align: center;
+                  "
+                >
+                  EDUCAÇÃO, PESQUISA E IDEIAS QUE CRESCEM JUNTAS
+                </p>
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td width="25%" align="center" valign="middle">
+                      <img
+                        src="{{ .SiteURL }}/assets/instituicoes/sesi.png"
+                        alt="SESI"
+                        width="78"
+                        height="25"
+                        style="display: block; border: 0; width: 78px; height: 25px"
+                      />
+                    </td>
+                    <td width="25%" align="center" valign="middle">
+                      <img
+                        src="{{ .SiteURL }}/assets/instituicoes/fiesp.png"
+                        alt="FIESP"
+                        width="80"
+                        height="20"
+                        style="display: block; border: 0; width: 80px; height: 20px"
+                      />
+                    </td>
+                    <td width="25%" align="center" valign="middle">
+                      <img
+                        src="{{ .SiteURL }}/assets/instituicoes/fll.png"
+                        alt="FIRST LEGO League"
+                        width="82"
+                        height="82"
+                        style="display: block; border: 0; width: 82px; height: 82px"
+                      />
+                    </td>
+                    <td width="25%" align="center" valign="middle">
+                      <img
+                        src="{{ .SiteURL }}/assets/instituicoes/taiobas-simbolo.jpeg"
+                        alt="Taiobas do Matão"
+                        width="40"
+                        height="40"
+                        style="display: block; border: 0; width: 40px; height: 40px"
+                      /><span
+                        style="
+                          display: block;
+                          margin-top: 5px;
+                          font-size: 9px;
+                          line-height: 13px;
+                          color: #5b6860;
+                        "
+                        >Parceiro de pesquisa<br />Taiobas do Matão</span
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td
+                align="center"
+                style="padding: 20px 18px 0; font-size: 11px; line-height: 19px; color: #728076"
+              >
+                ybyrá · Um projeto da equipe para a FIRST LEGO League<br /><a
+                  href="{{ .SiteURL }}/conta.html?etapa=confirmar"
+                  style="color: #53705b; text-decoration: underline"
+                  >{{ .SiteURL }}</a
+                >
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -6,24 +6,24 @@ A identidade usa a logo enviada pela equipe: escrita desenhada, flor de manacá-
 
 ## Versões e aplicações
 
-| Arquivo | Uso |
-| --- | --- |
-| [Logo positiva](../sistema-agroflorestal/assets/marca/logo-positiva.svg) | Letras e ramos verdes em fundos claros. |
-| [Logo negativa](../sistema-agroflorestal/assets/marca/logo-negativa.svg) | Letras e ramos brancos em fundos escuros; cabeçalhos e rodapés. |
-| [Logo monocromática](../sistema-agroflorestal/assets/marca/logo-monocromatica.svg) | Aplicações em uma cor. |
-| [Flor](../sistema-agroflorestal/assets/marca/flor.svg) e [flor negativa](../sistema-agroflorestal/assets/marca/flor-negativa.svg) | Símbolo isolado em espaços pequenos. |
-| [Ramos verdes](../sistema-agroflorestal/assets/marca/raizes.svg) e [brancos](../sistema-agroflorestal/assets/marca/raizes-negativa.svg) | Ornamentos extraídos do ramo lateral da própria logo. |
-| [Ramo inferior](../sistema-agroflorestal/assets/marca/ramo-inferior.svg) | Detalhe extraído da base da assinatura. |
+| Arquivo                                                                                                                                 | Uso                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| [Logo positiva](../sistema-agroflorestal/assets/marca/logo-positiva.svg)                                                                | Letras e ramos verdes em fundos claros.                         |
+| [Logo negativa](../sistema-agroflorestal/assets/marca/logo-negativa.svg)                                                                | Letras e ramos brancos em fundos escuros; cabeçalhos e rodapés. |
+| [Logo monocromática](../sistema-agroflorestal/assets/marca/logo-monocromatica.svg)                                                      | Aplicações em uma cor.                                          |
+| [Flor](../sistema-agroflorestal/assets/marca/flor.svg) e [flor negativa](../sistema-agroflorestal/assets/marca/flor-negativa.svg)       | Símbolo isolado em espaços pequenos.                            |
+| [Ramos verdes](../sistema-agroflorestal/assets/marca/raizes.svg) e [brancos](../sistema-agroflorestal/assets/marca/raizes-negativa.svg) | Ornamentos extraídos do ramo lateral da própria logo.           |
+| [Ramo inferior](../sistema-agroflorestal/assets/marca/ramo-inferior.svg)                                                                | Detalhe extraído da base da assinatura.                         |
 
 Os elementos chamados de raízes na aplicação reproduzem os ramos com folhas da ilustração. Mantenha a proporção original, espaço livre ao redor e contraste com o fundo. Não separe a flor das letras na assinatura completa nem altere as posições de suas pétalas. Os SVGs têm fundo transparente.
 
 ## Cores
 
-| Aplicação | Cor |
-| --- | --- |
-| Fundo e letras verdes da marca | `#26533E` |
-| Pétalas da marca | `#A76FBD` |
-| Letras da versão negativa | `#FFFFFF` |
+| Aplicação                         | Cor                                                   |
+| --------------------------------- | ----------------------------------------------------- |
+| Fundo e letras verdes da marca    | `#26533E`                                             |
+| Pétalas da marca                  | `#A76FBD`                                             |
+| Letras da versão negativa         | `#FFFFFF`                                             |
 | Paleta escolhida para a interface | `#8E699C`, `#D543F9`, `#39434A`, `#72FFB0`, `#2F905D` |
 
 O verde e o roxo da marca foram amostrados da imagem enviada. A paleta da interface permanece nos botões, estados e destaques.

@@ -1,486 +1,492 @@
 /* A cena mantém as plantas legíveis: no celular, só a paisagem permite deslizar. */
 .crescimento {
-    min-width: 0;
-    margin: 30px 0;
+  min-width: 0;
+  margin: 30px 0;
 }
 
 .crescimento-titulo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 16px;
 }
 
 .crescimento-titulo h2 {
-    font: 600 22px 'Segoe UI', sans-serif;
-    letter-spacing: -.5px;
-    margin: 0;
+  font:
+    600 22px 'Segoe UI',
+    sans-serif;
+  letter-spacing: -0.5px;
+  margin: 0;
 }
 
 .crescimento-sobretitulo {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--verde);
-    margin: 0 0 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--verde);
+  margin: 0 0 6px;
 }
 
 .crescimento-selo {
-    padding: 5px 10px;
-    border: 1px solid var(--borda);
-    border-radius: 20px;
-    font-size: 10px;
-    white-space: nowrap;
-    color: var(--muted);
+  padding: 5px 10px;
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  font-size: 10px;
+  white-space: nowrap;
+  color: var(--muted);
 }
 
 .crescimento-figura {
-    margin: 0;
-    border: 1px solid var(--borda);
-    border-radius: 14px;
-    background: #EDF4EC;
-    overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  background: #edf4ec;
+  overflow: hidden;
 }
 
 .crescimento-panorama {
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scrollbar-width: thin;
-    scrollbar-color: #8E699C #EAF1E6;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #8e699c #eaf1e6;
 }
 
 .crescimento-cena {
-    display: block;
-    width: 100%;
-    height: auto;
-    min-width: 720px;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 720px;
 }
 
 .crescimento-figura figcaption {
-    background: var(--superficie);
-    padding: 9px 14px;
-    color: var(--muted);
-    font-size: 11px;
-    border-top: 1px solid var(--borda);
+  background: var(--superficie);
+  padding: 9px 14px;
+  color: var(--muted);
+  font-size: 11px;
+  border-top: 1px solid var(--borda);
 }
 
 .crescimento-dica-pan {
-    display: none;
+  display: none;
 }
 
 .raiz-desenho {
-    fill: none;
-    stroke: #856445;
-    stroke-width: 1.5;
-    stroke-linecap: round;
+  fill: none;
+  stroke: #856445;
+  stroke-width: 1.5;
+  stroke-linecap: round;
 }
 
 .solo-rotulo {
-    fill: #655137;
-    font: 12px 'Segoe UI', sans-serif;
+  fill: #655137;
+  font:
+    12px 'Segoe UI',
+    sans-serif;
 }
 
 .planta-area {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .planta-numero text {
-    font: 600 12px 'Segoe UI', sans-serif;
+  font:
+    600 12px 'Segoe UI',
+    sans-serif;
 }
 
 .planta-destaque {
-    transition: opacity .15s;
+  transition: opacity 0.15s;
 }
 
 .planta-selecionada .planta-destaque {
-    opacity: .09;
+  opacity: 0.09;
 }
 
 .planta-selecionada .planta-numero circle {
-    stroke-width: 3px;
+  stroke-width: 3px;
 }
 
 .planta-secundaria .planta-desenho {
-    filter: saturate(.55);
+  filter: saturate(0.55);
 }
 
 .crescimento-controles {
-    display: flex;
-    gap: 14px;
-    align-items: stretch;
-    margin-top: 16px;
+  display: flex;
+  gap: 14px;
+  align-items: stretch;
+  margin-top: 16px;
 }
 
 .crescimento-etapas {
-    display: flex;
-    flex: 1;
-    gap: 6px;
+  display: flex;
+  flex: 1;
+  gap: 6px;
 }
 
 .crescimento-etapas button,
 .crescimento-transporte button {
-    border: 1px solid var(--borda);
-    border-radius: 8px;
-    padding: 11px 12px;
-    background: var(--superficie);
-    color: var(--texto);
-    font-size: 12px;
-    font-weight: 600;
-    min-height: 44px;
-    cursor: pointer;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 11px 12px;
+  background: var(--superficie);
+  color: var(--texto);
+  font-size: 12px;
+  font-weight: 600;
+  min-height: 44px;
+  cursor: pointer;
 }
 
 .crescimento-etapas button {
-    flex: 1;
+  flex: 1;
 }
 
 .crescimento-etapas button span {
-    display: block;
-    font-size: 10px;
-    opacity: .65;
+  display: block;
+  font-size: 10px;
+  opacity: 0.65;
 }
 
-.crescimento-etapas button[aria-pressed=true] {
-    background: var(--lilas-suave);
-    border-color: var(--roxo);
-    color: #654475;
+.crescimento-etapas button[aria-pressed='true'] {
+  background: var(--lilas-suave);
+  border-color: var(--roxo);
+  color: #654475;
 }
 
 .crescimento-transporte {
-    display: flex;
-    gap: 6px;
+  display: flex;
+  gap: 6px;
 }
 
 .crescimento-transporte .crescimento-reproduzir {
-    background: var(--acao);
-    color: white;
-    border-color: var(--acao);
-    min-width: 140px;
+  background: var(--acao);
+  color: white;
+  border-color: var(--acao);
+  min-width: 140px;
 }
 
 .crescimento-transporte .crescimento-reiniciar {
-    font-size: 22px;
-    min-width: 44px;
-    padding: 5px 10px;
+  font-size: 22px;
+  min-width: 44px;
+  padding: 5px 10px;
 }
 
 .crescimento-linha {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin: 18px 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 18px 0 8px;
 }
 
 .crescimento-linha label {
-    font-size: 12px;
-    color: var(--muted);
-    white-space: nowrap;
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
 }
 
 .crescimento-linha input {
-    width: 100%;
-    min-width: 0;
-    accent-color: var(--roxo);
-    cursor: pointer;
-    min-height: 44px;
-    padding: 0;
+  width: 100%;
+  min-width: 0;
+  accent-color: var(--roxo);
+  cursor: pointer;
+  min-height: 44px;
+  padding: 0;
 }
 
 .crescimento-opcoes {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
 }
 
 .crescimento-raizes {
-    display: inline-flex;
-    gap: 8px;
-    align-items: center;
-    font-size: 12px;
-    white-space: nowrap;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  white-space: nowrap;
 }
 
 .crescimento-raizes input {
-    accent-color: var(--acao);
-    width: 18px;
-    height: 18px;
-    min-height: 0;
-    padding: 0;
-    margin: 0;
+  accent-color: var(--acao);
+  width: 18px;
+  height: 18px;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .crescimento-velocidade {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    font-size: 12px;
-    color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  color: var(--muted);
 }
 
 .crescimento-velocidade select {
-    min-height: 36px;
-    padding: 4px 8px;
-    width: 75px;
-    font-size: 12px;
+  min-height: 36px;
+  padding: 4px 8px;
+  width: 75px;
+  font-size: 12px;
 }
 
 .crescimento-leitura {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 5px 16px;
-    padding-top: 16px;
-    border-top: 1px solid var(--borda);
-    font-size: 14px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 5px 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--borda);
+  font-size: 14px;
 }
 
 .crescimento-leitura span {
-    color: var(--muted);
-    font-size: 12px;
+  color: var(--muted);
+  font-size: 12px;
 }
 
 .crescimento-leitura p {
-    grid-column: 1 / -1;
-    color: var(--muted);
-    margin: 4px 0 0;
-    font-size: 13px;
+  grid-column: 1 / -1;
+  color: var(--muted);
+  margin: 4px 0 0;
+  font-size: 13px;
 }
 
 .crescimento-instrucao {
-    font-size: 12px;
-    color: var(--muted);
-    margin: 20px 0 10px;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 20px 0 10px;
 }
 
 .crescimento-legenda {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 8px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .crescimento-legenda li {
-    min-width: 0;
+  min-width: 0;
 }
 
 .crescimento-legenda button {
-    display: flex;
-    gap: 9px;
-    align-items: center;
-    text-align: left;
-    width: 100%;
-    min-height: 55px;
-    padding: 9px 11px;
-    border: 1px solid var(--borda);
-    border-radius: 8px;
-    background: var(--superficie);
-    color: var(--texto);
-    cursor: pointer;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  min-height: 55px;
+  padding: 9px 11px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: var(--superficie);
+  color: var(--texto);
+  cursor: pointer;
 }
 
-.crescimento-legenda button[aria-pressed=true] {
-    border-color: var(--cor-especie);
-    background: #EEF5EB;
-    box-shadow: inset 0 0 0 1px var(--cor-especie);
+.crescimento-legenda button[aria-pressed='true'] {
+  border-color: var(--cor-especie);
+  background: #eef5eb;
+  box-shadow: inset 0 0 0 1px var(--cor-especie);
 }
 
 .legenda-numero {
-    flex: 0 0 24px;
-    height: 24px;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    color: var(--cor-especie);
-    background: #EEF3E8;
-    font-size: 11px;
-    font-weight: 700;
+  flex: 0 0 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--cor-especie);
+  background: #eef3e8;
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .crescimento-legenda strong,
 .crescimento-legenda small {
-    display: block;
+  display: block;
 }
 
 .crescimento-legenda strong {
-    font-size: 12px;
-    font-weight: 600;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .crescimento-legenda small {
-    color: var(--muted);
-    font-size: 10px;
-    margin-top: 2px;
+  color: var(--muted);
+  font-size: 10px;
+  margin-top: 2px;
 }
 
 .crescimento-legenda .ciclo-encerrado {
-    opacity: .65;
+  opacity: 0.65;
 }
 
 .crescimento-inspecao {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    justify-content: space-between;
-    padding: 18px;
-    margin-top: 12px;
-    background: #EEF5EB;
-    border: 1px solid #C8D8C6;
-    border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 18px;
+  margin-top: 12px;
+  background: #eef5eb;
+  border: 1px solid #c8d8c6;
+  border-radius: 10px;
 }
 
 .crescimento-inspecao[hidden] {
-    display: none;
+  display: none;
 }
 
 .crescimento-inspecao h3 {
-    margin: 6px 0 0;
-    font-size: 20px;
+  margin: 6px 0 0;
+  font-size: 20px;
 }
 
 .crescimento-inspecao p {
-    font-size: 13px;
-    margin: 6px 0;
+  font-size: 13px;
+  margin: 6px 0;
 }
 
 .crescimento-inspecao a {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .crescimento-inspecao-etiqueta {
-    font-size: 11px;
-    color: var(--verde);
+  font-size: 11px;
+  color: var(--verde);
 }
 
 .crescimento-fechar {
-    min-width: 36px;
-    min-height: 36px;
-    border: 0;
-    border-radius: 50%;
-    background: var(--superficie);
-    font-size: 24px;
-    color: var(--texto);
-    cursor: pointer;
+  min-width: 36px;
+  min-height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--superficie);
+  font-size: 24px;
+  color: var(--texto);
+  cursor: pointer;
 }
 
 .crescimento-nota {
-    font-size: 11px;
-    color: var(--muted);
-    margin: 16px 0 0;
+  font-size: 11px;
+  color: var(--muted);
+  margin: 16px 0 0;
 }
 
 .sem-raizes .grupo-raizes {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 #crescimento-inicio {
-    margin: 0;
+  margin: 0;
 }
 
 .crescimento-compacto .crescimento-cena {
-    min-width: 0;
+  min-width: 0;
 }
 
 .crescimento-compacto .crescimento-sobretitulo,
 .crescimento-compacto .crescimento-selo,
 .crescimento-compacto .crescimento-instrucao {
-    display: none;
+  display: none;
 }
 
 .crescimento-compacto .crescimento-legenda {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .crescimento-compacto .crescimento-legenda small {
-    display: none;
+  display: none;
 }
 
 .crescimento-compacto .crescimento-legenda button {
-    min-height: 40px;
-    padding: 6px;
+  min-height: 40px;
+  padding: 6px;
 }
 
 .crescimento-compacto .crescimento-controles {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .crescimento-compacto .crescimento-etapas {
-    flex-basis: 100%;
+  flex-basis: 100%;
 }
 
 .crescimento-compacto .crescimento-transporte {
-    flex: 1;
+  flex: 1;
 }
 
 .crescimento-compacto .crescimento-reproduzir {
-    flex: 1;
+  flex: 1;
 }
 
 #crescimento-resultado {
-    max-width: 1000px;
-    margin-inline: auto;
+  max-width: 1000px;
+  margin-inline: auto;
 }
 
 @media (max-width: 740px) {
-    .crescimento-dica-pan {
-        display: inline;
-    }
+  .crescimento-dica-pan {
+    display: inline;
+  }
 
-    .crescimento-controles {
-        flex-wrap: wrap;
-    }
+  .crescimento-controles {
+    flex-wrap: wrap;
+  }
 
-    .crescimento-etapas {
-        flex-basis: 100%;
-    }
+  .crescimento-etapas {
+    flex-basis: 100%;
+  }
 
-    .crescimento-etapas button {
-        padding: 10px 6px;
-        font-size: 11px;
-    }
+  .crescimento-etapas button {
+    padding: 10px 6px;
+    font-size: 11px;
+  }
 
-    .crescimento-transporte {
-        width: 100%;
-    }
+  .crescimento-transporte {
+    width: 100%;
+  }
 
-    .crescimento-transporte .crescimento-reproduzir {
-        flex: 1;
-    }
+  .crescimento-transporte .crescimento-reproduzir {
+    flex: 1;
+  }
 
-    .crescimento-titulo {
-        align-items: start;
-    }
+  .crescimento-titulo {
+    align-items: start;
+  }
 
-    .crescimento-selo {
-        display: none;
-    }
+  .crescimento-selo {
+    display: none;
+  }
 
-    .crescimento-leitura {
-        grid-template-columns: 1fr;
-    }
+  .crescimento-leitura {
+    grid-template-columns: 1fr;
+  }
 
-    .crescimento-linha {
-        gap: 10px;
-    }
+  .crescimento-linha {
+    gap: 10px;
+  }
 
-    .crescimento-linha label {
-        font-size: 11px;
-    }
+  .crescimento-linha label {
+    font-size: 11px;
+  }
 
-    .crescimento-legenda {
-        grid-template-columns: 1fr;
-    }
+  .crescimento-legenda {
+    grid-template-columns: 1fr;
+  }
 
-    .crescimento-compacto .crescimento-legenda strong {
-        font-size: 11px;
-    }
+  .crescimento-compacto .crescimento-legenda strong {
+    font-size: 11px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .planta-destaque {
-        transition: none;
-    }
+  .planta-destaque {
+    transition: none;
+  }
 }

@@ -4,7 +4,6 @@
 
 [Identidade visual](IDENTIDADE-VISUAL.md) · [Apresentação do projeto](../README.md)
 
-
 Aplicação de apoio ao trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais. Usa HTML, CSS e JavaScript, com um servidor Python para contas e
 sessões. As páginas ficam em `sistema-agroflorestal/`. Não é preciso instalar pacotes.
 

@@ -1,0 +1,8 @@
+node_modules/
+frontend/node_modules/
+sistema-agroflorestal/ui/
+.dados-locais/
+.vercel/
+__pycache__/
+**/package-lock.json
+**/*.svg

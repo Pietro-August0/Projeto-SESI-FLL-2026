@@ -9,7 +9,7 @@
     "fonteInstitucional": "usp-taiobas"
   },
   "documento": {
-    "arquivo": "BANCO DE SEMENTES TAIOBAS 2021.docx",
+    "arquivo": "docs/fontes/banco-sementes-taiobas-2021.docx",
     "anoInventario": 2021,
     "anoObservacaoSolo": 2022,
     "nota": "Inventário histórico de nomes. Não informa quantidades, datas de coleta, lotes, viabilidade, disponibilidade atual nem confirmação botânica dos exemplares."
@@ -431,9 +431,7 @@
       "cultivo": "Avaliar clima quente e proteção contra frio; usar área drenada e espaço para a copa. As condições da Flórida descritas pela UF/IFAS exigem ajuste local.",
       "propagacao": "A UF/IFAS recomenda semear logo após extrair do fruto: sementes de abiu perdem viabilidade em poucos dias. Usar substrato limpo e drenado e registrar a matriz.",
       "cuidados": "Não confundir com Chrysophyllum cainito, também chamado caimito. Medir sobrevivência e crescimento antes de definir seu lugar no SAF.",
-      "fontes": [
-        "abiu"
-      ],
+      "fontes": ["abiu"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Abiúzeiro",
@@ -450,9 +448,7 @@
       "cultivo": "O comunicado da Embrapa descreve canteiros, adubação orgânica e irrigação ao longo do ciclo; ajustar ao solo, à chuva e ao acesso à água.",
       "propagacao": "Propagação vegetativa por rizomas sadios. A secagem da parte aérea é um indicador de colheita descrito na referência.",
       "cuidados": "A lâmina diária e o ciclo de um protocolo experimental não são universais. Não confundir com açafrão de Crocus sativus.",
-      "fontes": [
-        "curcuma"
-      ],
+      "fontes": ["curcuma"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Açafrão/ Cúrcuma",
@@ -469,9 +465,7 @@
       "cultivo": "Se for Morus nigra, a USP indica sol pleno, solo fértil, profundo e drenado, com regas no estabelecimento.",
       "propagacao": "Confirmar se o material é árvore ou arbusto e registrar matriz, folhas e frutos antes de definir a multiplicação.",
       "cuidados": "Não transferir exigências de amoreira para outra planta chamada amora. Evitar classificar automaticamente como nativa.",
-      "fontes": [
-        "amora"
-      ],
+      "fontes": ["amora"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Amora",
@@ -488,10 +482,7 @@
       "cultivo": "Reservar espaço para porte arbóreo e verificar a identidade antes de escolher estrato ou espaçamento.",
       "propagacao": "Comparar frutos, folhas e casca com a referência; vincular coleta à matriz identificada.",
       "cuidados": "Não cadastrar como fixadora de nitrogênio apenas por pertencer a Fabaceae. Pode duplicar pau-jacaré; não mesclar lotes sem confirmação.",
-      "fontes": [
-        "angico",
-        "jacare"
-      ],
+      "fontes": ["angico", "jacare"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Angico-branco",
@@ -508,9 +499,7 @@
       "cultivo": "Conferir espécie e ambiente de origem antes de definir exigências de cultivo. Não atribuir uma faixa de solo a todo o gênero.",
       "propagacao": "Guardar registro da matriz e frutos maduros; determinar a espécie antes de adotar protocolo de sementes.",
       "cuidados": "A grafia cattleianum aparece em fontes históricas. Registrar a identificação aceita após revisão do material, sem presumir cultivar.",
-      "fontes": [
-        "aracas"
-      ],
+      "fontes": ["aracas"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Araçá-amarelo",
@@ -527,9 +516,7 @@
       "cultivo": "O nome pode representar plantas de Cerrado com exigências distintas. Não definir irrigação, estrato ou porte a partir dele.",
       "propagacao": "Fotografar hábito, folha, flor e fruto e solicitar identificação antes de planejar multiplicação.",
       "cuidados": "Preservar este acesso separado de araçá-amarelo. Não transformar ocorrência no Cerrado em tolerância a qualquer solo seco.",
-      "fontes": [
-        "aracas"
-      ],
+      "fontes": ["aracas"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Araçá-do-campo",
@@ -546,9 +533,7 @@
       "cultivo": "A fonte consultada não estabelece protocolo agronômico; luz, água e solo permanecem sem faixa validada nesta ficha.",
       "propagacao": "Solicitar confirmação da matriz e dados de coleta. Selecionar protocolo de produção de mudas após a identificação.",
       "cuidados": "A cor do fruto não confirma espécie. Não importar manejo de outros araçás como se fosse evidência desta planta.",
-      "fontes": [
-        "araca-roxo"
-      ],
+      "fontes": ["araca-roxo"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Araçá-roxo",
@@ -565,9 +550,7 @@
       "cultivo": "Verificar identidade, clima e espaço de longo prazo antes de plantar. Um estudo de armazenamento não demonstra aptidão de cultivo.",
       "propagacao": "A Embrapa estudou conservação em embalagens e ambientes controlados. A data da coleta e o teste de germinação são essenciais.",
       "cuidados": "Não considerar pinhões de 2021 viáveis hoje apenas porque constam na lista. Não generalizar resultados de conservação experimental.",
-      "fontes": [
-        "araucaria"
-      ],
+      "fontes": ["araucaria"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Araucária",
@@ -584,9 +567,7 @@
       "cultivo": "Avaliar espaço da copa e condições locais; a ampla ocorrência descrita não é uma garantia de adaptação regional.",
       "propagacao": "Usar frutos e folhas para conferir a identidade e registrar a matriz antes de multiplicar.",
       "cuidados": "A USP registra alergia em algumas pessoas pelo contato com folhas ou flores. Não confundir com outras aroeiras nem recomendar usos medicinais.",
-      "fontes": [
-        "aroeira"
-      ],
+      "fontes": ["aroeira"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Aroeira-pimenta",
@@ -654,9 +635,7 @@
       "cultivo": "Usar solo bem drenado e avaliar compactação; leiras ou canteiros ajudam a formação e a colheita das raízes.",
       "propagacao": "Priorizar ramas de boa sanidade e identidade conhecida. Registrar cultivar e procedência, pois influenciam ciclo e produção.",
       "cuidados": "Crescimento abundante de ramas não garante produção de raízes. Evitar encharcamento e competição das ramas com mudas jovens.",
-      "fontes": [
-        "batata"
-      ],
+      "fontes": ["batata"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Batata-Doce",
@@ -673,9 +652,7 @@
       "cultivo": "A referência situa o cultivo em ambientes tropicais úmidos. Avaliar frio, água, drenagem e espaço de copa antes da implantação local.",
       "propagacao": "Propagação principalmente por sementes retiradas de frutos maduros e limpas. A UF/IFAS relata germinação em três a cinco semanas sob condições quentes de viveiro; plantas de semente variam nas características dos frutos.",
       "cuidados": "Não confundir com outras anonáceas nem garantir características varietais por sementes. A referência da Flórida exige adaptação ao contexto brasileiro.",
-      "fontes": [
-        "biriba"
-      ],
+      "fontes": ["biriba"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Biribá",
@@ -692,9 +669,7 @@
       "cultivo": "A referência registra origem no Sudeste, mas não fornece faixa de pH, irrigação ou adubação. Esses campos ficam sem números.",
       "propagacao": "Conferir pelos do fruto, folhas e material da matriz; revisar a nomenclatura com especialista antes de produzir mudas.",
       "cuidados": "O nome cabeludinha e a nomenclatura histórica não bastam para fechar a identidade. Não apresentar Plinia glomerata como confirmação do lote.",
-      "fontes": [
-        "cabeludinha"
-      ],
+      "fontes": ["cabeludinha"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Cabeludinha",
@@ -711,10 +686,7 @@
       "cultivo": "Solo, porte, luz e função no SAF dependem da espécie e permanecem por confirmar.",
       "propagacao": "Reunir folhas compostas completas, flores, frutos e procedência da matriz; pedir determinação botânica.",
       "cuidados": "Não converter automaticamente em Cupania vernalis nem recomendar alimentação animal. A ESALQ registra risco de ingestão para um dos táxons associados.",
-      "fontes": [
-        "camboata",
-        "restauracao"
-      ],
+      "fontes": ["camboata", "restauracao"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Camboatá",
@@ -731,10 +703,7 @@
       "cultivo": "A classificação ecológica consultada se refere ao Paraná. Avaliar luz, estabelecimento e crescimento no local do projeto.",
       "propagacao": "Identificar matriz; observar maturação dos frutos antes da dispersão para planejar a coleta.",
       "cuidados": "Também recebe nomes como sangra-d’água. Não mesclar com Croton espontâneo ou sangra-d’água sem conferir o material; não inferir uso alimentar.",
-      "fontes": [
-        "capixingui",
-        "restauracao"
-      ],
+      "fontes": ["capixingui", "restauracao"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Capixingui",
@@ -751,9 +720,7 @@
       "cultivo": "Para M. umbellata há descrição de ambientes parcialmente sombreados e também sol. É necessário identificar o acesso antes de aplicar esse manejo.",
       "propagacao": "Comparar folhas, frutos e porte com material de referência e registrar a matriz.",
       "cuidados": "Não confundir capororoca, capororocão e outras Myrsine. Protocolos de dormência ou armazenamento são específicos da espécie.",
-      "fontes": [
-        "capororoca"
-      ],
+      "fontes": ["capororoca"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Capororoca",
@@ -770,10 +737,7 @@
       "cultivo": "As espécies têm portes e ambientes diferentes; não definir tolerância a alagamento a partir do nome comum.",
       "propagacao": "Conferir flor, cápsula, semente e procedência antes de adotar um protocolo.",
       "cuidados": "Não liberar consumo de sementes de um acesso sem identificação. Manter separadas as hipóteses e não atribuir uma espécie à lista original.",
-      "fontes": [
-        "castanha",
-        "castanha-ambigua"
-      ],
+      "fontes": ["castanha", "castanha-ambigua"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Castanha-do- Maranhão",
@@ -790,9 +754,7 @@
       "cultivo": "A monografia indica solo fértil e bem drenado; registra tolerância à sombra e plantio a pleno sol. Ajustar à fase e ao local.",
       "propagacao": "Despolpar frutos maduros e semear prontamente em recipientes individuais; sementes recalcitrantes, com curta viabilidade em armazenamento.",
       "cuidados": "Não conservar como semente seca de longa duração. O nome pitanga-preta também aparece para esta espécie; conferir possíveis duplicações.",
-      "fontes": [
-        "cereja"
-      ],
+      "fontes": ["cereja"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Cereja-do- Rio-Grande",
@@ -809,9 +771,7 @@
       "cultivo": "Luz, água, nutrição e compatibilidade com porta-enxerto exigem identificação do material e avaliação sanitária.",
       "propagacao": "Registrar se é semente, porta-enxerto ou muda enxertada, além de matriz e procedência.",
       "cuidados": "Não fundir com mexerica por pertencer ao mesmo gênero. Não escolher cultivar ou recomendar adubação com base neste registro.",
-      "fontes": [
-        "mexerica"
-      ],
+      "fontes": ["mexerica"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Citrus indet",
@@ -828,10 +788,7 @@
       "cultivo": "Necessidades e uso em restauração variam entre espécies; manter sem faixa de solo ou água.",
       "propagacao": "Registrar local, folhas, estruturas reprodutivas e coleta da matriz para identificação.",
       "cuidados": "Pode coincidir com outros registros da lista, mas não deve ser fundido por suposição. Não atribuir comestibilidade ou propriedades medicinais.",
-      "fontes": [
-        "capixingui",
-        "sangra-ambigua"
-      ],
+      "fontes": ["capixingui", "sangra-ambigua"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Croton espontâneo",
@@ -848,10 +805,7 @@
       "cultivo": "A identificação determina se precisa de espaço para árvore ou de suporte para trepadeira.",
       "propagacao": "Conferir hábito, flores e frutos; manter lote separado até identificação.",
       "cuidados": "Pode ser duplicação de pau-jangada se for Apeiba tibourbou. Não atribuir automaticamente o crescimento e o manejo de uma à outra.",
-      "fontes": [
-        "escova",
-        "jangada"
-      ],
+      "fontes": ["escova", "jangada"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Escova-de-macaco",
@@ -868,10 +822,7 @@
       "cultivo": "O IFES recomenda plantio misto ao sol para S. macranthera. Isso não valida o acesso do banco nem outras Senna.",
       "propagacao": "Identificar flores, folhas e vagens antes de selecionar tratamento de sementes; dormência tegumentar está documentada para S. occidentalis.",
       "cuidados": "Não classificar como adubo verde fixador de N ou alimento pela família Fabaceae. Exige identificação antes de qualquer uso.",
-      "fontes": [
-        "fedegoso",
-        "fedegoso-arvore"
-      ],
+      "fontes": ["fedegoso", "fedegoso-arvore"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Fedegoso",
@@ -905,10 +856,7 @@
       "cultivo": "A referência registra adaptação a ambientes de sub-bosque e abertos; umidade constante favorece frutificação no contexto descrito.",
       "propagacao": "Confirmar flores, frutos e matriz; não adotar protocolo de outra solanácea por semelhança.",
       "cuidados": "Manter o foco em fauna e restauração. Não liberar consumo a partir do nome comum nem confundir com aroeira chamada fruta-de-sabiá.",
-      "fontes": [
-        "sabia",
-        "aroeira"
-      ],
+      "fontes": ["sabia", "aroeira"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Fruto-do-sabiá",
@@ -925,9 +873,7 @@
       "cultivo": "Sem exigências de cultivo atribuídas até identificação.",
       "propagacao": "Solicitar ao parceiro identificação da matriz, fotos reprodutivas e procedência; guardar etiqueta e histórico do acesso.",
       "cuidados": "Não trocar por fumo-bravo nem atribuir Solanum ou Nicotiana por semelhança de nome.",
-      "fontes": [
-        "fumo"
-      ],
+      "fontes": ["fumo"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Fumeirinho",
@@ -944,9 +890,7 @@
       "cultivo": "Não inferir exigências ou posição no SAF a partir do nome; requer determinação do acesso.",
       "propagacao": "Registrar ramos, folhas, flores e frutos da matriz e encaminhar para identificação.",
       "cuidados": "Não é indicação de fumo cultivado e não permite recomendar consumo dos frutos. Não fundir com fumeirinho.",
-      "fontes": [
-        "fumo"
-      ],
+      "fontes": ["fumo"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Fumo bravo",
@@ -963,9 +907,7 @@
       "cultivo": "Avaliar drenagem e qualidade da água de irrigação; planejar rotação e monitoramento de doenças.",
       "propagacao": "Usar rizomas sadios de origem conhecida. Amarelecimento, redução da planta e murcha são indicadores de colheita descritos.",
       "cuidados": "O ciclo varia entre regiões. Rizomas úmidos favorecem problemas na conservação; não confundir tempo de colheita com prazo fixo do SAF.",
-      "fontes": [
-        "gengibre"
-      ],
+      "fontes": ["gengibre"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Gengibre",
@@ -982,9 +924,7 @@
       "cultivo": "A ESALQ registra preferência por ambientes de maior umidade do solo. Essa observação não representa tolerância a alagamento.",
       "propagacao": "Conferir matriz, cor e características dos frutos, que variam; registrar a origem do material antes da multiplicação.",
       "cuidados": "Não prometer época única de colheita fora da região da referência nem confundir frutos escuros com outra espécie.",
-      "fontes": [
-        "grumixama"
-      ],
+      "fontes": ["grumixama"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Grumixama",
@@ -1001,9 +941,7 @@
       "cultivo": "A ampla distribuição informada não define faixa de cultivo. Solo, água e tolerância à sombra devem ser avaliados no local.",
       "propagacao": "Conferir folha com pontos translúcidos, margem e fruto; usar material da matriz identificada.",
       "cuidados": "A própria fonte alerta para outras Casearia com nomes semelhantes. Usos medicinais populares não entram como recomendação do sistema.",
-      "fontes": [
-        "guacatonga"
-      ],
+      "fontes": ["guacatonga"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Guaçatonga",
@@ -1020,9 +958,7 @@
       "cultivo": "Exigências de solo, luz e água dependem da espécie, sem faixa atribuída aqui.",
       "propagacao": "Coletar evidências da casca, folhas, flores e frutos e consultar identificação botânica.",
       "cuidados": "Não cadastrar todos os guamirins como Myrcia arborescens. Pode coincidir com Myrtaceae indet., mas os acessos ficam separados.",
-      "fontes": [
-        "guamirim"
-      ],
+      "fontes": ["guamirim"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Guamirim",
@@ -1039,9 +975,7 @@
       "cultivo": "A Embrapa considera inadequados solos rasos, muito secos ou de baixa fertilidade. Reservar espaço para porte elevado.",
       "propagacao": "Sementes têm tegumento duro e dormência. Selecionar método de superação e teste de germinação com responsável técnico.",
       "cuidados": "Não copiar o perfil de paricá nem atribuir fixação de N por pertencer a Fabaceae. Avaliar distância de estruturas e competição da copa.",
-      "fontes": [
-        "guapuruvu"
-      ],
+      "fontes": ["guapuruvu"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Guapuruvu",
@@ -1075,9 +1009,7 @@
       "cultivo": "A identificação e o manejo da copa devem preceder a escolha de espaçamento e de culturas sob a árvore.",
       "propagacao": "Registrar matriz, fruto e origem e verificar protocolo específico de sementes antes de formar lotes.",
       "cuidados": "O nome popular não confirma a planta de 2021. Não atribuir dose de N, benefício ao vizinho ou compatibilidade universal sem evidência local.",
-      "fontes": [
-        "inga"
-      ],
+      "fontes": ["inga"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Ingá-de-metro",
@@ -1094,9 +1026,7 @@
       "cultivo": "Identificar se há trepadeira ou planta de folhas peltadas antes de definir tutoramento, água e solo.",
       "propagacao": "Registrar órgão de propagação e cultivar após identificar a espécie; não usar um único protocolo para os dois grupos.",
       "cuidados": "Não recomendar consumo de uma planta desconhecida nem confundir com taioba. A identificação muda inclusive a arquitetura do plantio.",
-      "fontes": [
-        "hortalicas"
-      ],
+      "fontes": ["hortalicas"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Inhame",
@@ -1113,9 +1043,7 @@
       "cultivo": "Confirmar a matriz e o ambiente de implantação; distribuição em vários biomas não equivale a aptidão de cada terreno.",
       "propagacao": "Registrar frutos e sementes com identificação; exigir protocolo específico de produção de mudas.",
       "cuidados": "Não atribuir manejo de Handroanthus ou Tabebuia por semelhança do nome ipê. Não incorporar usos medicinais populares.",
-      "fontes": [
-        "ipe"
-      ],
+      "fontes": ["ipe"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Ipê-verde",
@@ -1132,10 +1060,7 @@
       "cultivo": "A referência do JBRJ registra ambientes florestais da Mata Atlântica; não fornece protocolo de cultivo para este lote.",
       "propagacao": "Conferir a matriz com especialista e registrar qual determinação foi adotada e por quê.",
       "cuidados": "Não resolver a divergência só pelo nome comum e não prometer precocidade de jabuticaba híbrida a uma planta obtida por semente.",
-      "fontes": [
-        "jabuticaba",
-        "jabuticaba-bag"
-      ],
+      "fontes": ["jabuticaba", "jabuticaba-bag"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Jabuticaba de Cabinho",
@@ -1152,9 +1077,7 @@
       "cultivo": "A monografia registra solos úmidos de planícies e encostas e maior vigor em terras férteis; alerta para baixas temperaturas.",
       "propagacao": "Obter sementes de frutos maduros de matriz identificada. A referência relata formação de mudas em cerca de quatro meses, dependente das condições.",
       "cuidados": "Planejar a copa e conferir manejo local. Não aplicar práticas destrutivas de extração do tronco nem inferir manejo de mamoeiro.",
-      "fontes": [
-        "jaracatia"
-      ],
+      "fontes": ["jaracatia"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Jaracatiá",
@@ -1171,10 +1094,7 @@
       "cultivo": "Para H. courbaril, melhor crescimento é associado a solos profundos, férteis, úmidos e drenados; ocorrência em solo pobre não garante bom desempenho.",
       "propagacao": "Confirmar folha bifoliolada, fruto e matriz antes de escolher protocolo de sementes.",
       "cuidados": "Não confundir com H. stigonocarpa ou outros jatobás. Reservar espaço de longo prazo e não inferir fixação de N pela família.",
-      "fontes": [
-        "jatoba",
-        "jatoba-cultivo"
-      ],
+      "fontes": ["jatoba", "jatoba-cultivo"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Jatobá",
@@ -1191,10 +1111,7 @@
       "cultivo": "Avaliar disponibilidade de água e condição física do solo; ocorrência em várzea não é uma recomendação para qualquer alagamento.",
       "propagacao": "A Embrapa descreve retirada da polpa, lavagem, secagem breve à sombra e descarte de sementes malformadas ou doentes para formar plantas doadoras.",
       "cuidados": "O protocolo de laboratório não equivale a produção no campo. Identificar origem e acompanhar sobrevivência das mudas.",
-      "fontes": [
-        "jenipapo",
-        "jenipapo-sementes"
-      ],
+      "fontes": ["jenipapo", "jenipapo-sementes"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Jenipapo",
@@ -1211,9 +1128,7 @@
       "cultivo": "Sem faixas de luz, solo ou água atribuídas até confirmação.",
       "propagacao": "Solicitar folhas, flores, frutos e procedência da matriz; confrontar com a coleção do parceiro.",
       "cuidados": "Não converter em Citrus apenas por conter laranjinha no nome. Manter separado de mexerica e Citrus indet.",
-      "fontes": [
-        "laranjinha"
-      ],
+      "fontes": ["laranjinha"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Laranjinha do Mato",
@@ -1264,10 +1179,7 @@
       "cultivo": "Porte e ambiente variam entre as possibilidades; luz, solo e água permanecem sem perfil atribuído.",
       "propagacao": "Comparar folhas simples ou compostas, acúleos, látex, flores e frutos com identificação especializada.",
       "cuidados": "Não cadastrar como Brosimum automaticamente nem liberar uso alimentar ou medicinal. Há possibilidades de famílias diferentes.",
-      "fontes": [
-        "mamica",
-        "mama-cadela"
-      ],
+      "fontes": ["mamica", "mama-cadela"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Mamica-de -cadela",
@@ -1284,9 +1196,7 @@
       "cultivo": "A referência consultada não estabelece manejo específico para este SAF; avaliar com responsável técnico antes de qualquer plantio.",
       "propagacao": "Usar apenas material identificado e manter sementes etiquetadas e fora de atividades de degustação.",
       "cuidados": "Sementes tóxicas pela presença de ricina. Não é alimento humano ou ração; não recomendar preparo doméstico ou uso em horta escolar acessível.",
-      "fontes": [
-        "mamona"
-      ],
+      "fontes": ["mamona"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Mamona",
@@ -1337,9 +1247,7 @@
       "cultivo": "Solo, água e nutrição devem considerar cultivar, porta-enxerto e região; esses dados não vieram no inventário.",
       "propagacao": "Registrar se o material é semente ou muda enxertada e conferir a identidade sanitária e varietal.",
       "cuidados": "Não duplicar como Citrus indet. sem confirmar a relação dos acessos. Não atribuir características de mexerica Rio a toda mexerica.",
-      "fontes": [
-        "mexerica"
-      ],
+      "fontes": ["mexerica"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Mexerica",
@@ -1356,9 +1264,7 @@
       "cultivo": "Prefere luz e sofre com competição; solos muito compactados e inundação podem prejudicar desenvolvimento. Há rebrota vigorosa da touça.",
       "propagacao": "Sementes ortodoxas apresentam dormência tegumentar. Registrar condições de conservação e testar o lote antes de semear em escala.",
       "cuidados": "O uso potencial em pastos não é aprovação de qualquer manejo animal. Escolher tratamento de dormência com técnico e acompanhar competição.",
-      "fontes": [
-        "mutambo"
-      ],
+      "fontes": ["mutambo"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Mutambo",
@@ -1392,10 +1298,7 @@
       "cultivo": "O manejo depende de acesso para colheita e condução; confirmar a planta antes de dimensionar o plantio.",
       "propagacao": "A Embrapa descreve propagação por sementes e, mais comumente, por estacas semilenhosas de 15 a 20 cm, em recipientes ou no local definitivo. Usar matriz sadia e acompanhar o enraizamento.",
       "cuidados": "O manual trata também de ora-pro-nóbis sem espinho como outra planta, Anredera cordifolia. Não confundir os materiais nem atribuir composição nutricional genérica.",
-      "fontes": [
-        "hortalicas",
-        "ora-pro-nobis"
-      ],
+      "fontes": ["hortalicas", "ora-pro-nobis"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Ora pro Nobis",
@@ -1412,9 +1315,7 @@
       "cultivo": "A Embrapa indica 50% de sombreamento no viveiro; esse valor não é uma regra para toda a vida no campo.",
       "propagacao": "Sementes recalcitrantes exigem conservação específica e armazenamento curto; selecionar sementes íntegras e sadias.",
       "cuidados": "Não reutilizar o manejo de açaí ou pupunha automaticamente. A ficha não autoriza extração de palmito nem comprova viabilidade de material antigo.",
-      "fontes": [
-        "jucara"
-      ],
+      "fontes": ["jucara"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Palmito-Juçara",
@@ -1431,10 +1332,7 @@
       "cultivo": "Avaliar a região e as condições do terreno; classificação pioneira não estabelece uma dose de adubo ou tolerância universal ao solo.",
       "propagacao": "A referência de coleta associa maturidade a frutos marrom-claros. Confirmar matriz e maturação antes de colher.",
       "cuidados": "Não inferir fixação biológica de N por pertencer a Fabaceae nem confundir com outras Senna chamadas fedegoso.",
-      "fontes": [
-        "cigarra",
-        "sucessao"
-      ],
+      "fontes": ["cigarra", "sucessao"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Pau-cigarra",
@@ -1451,9 +1349,7 @@
       "cultivo": "A ESALQ registra ocorrência com algum sombreamento em florestas alteradas. Ajustar espaço e luz à fase de implantação.",
       "propagacao": "A casca com cristas e os ramos com acúleos ajudam a conferir a matriz, mas requerem comparação botânica.",
       "cuidados": "Pode receber o nome angico-branco; verificar duplicação entre acessos. Não inferir fixação de N ou uso alimentar só pela classificação botânica.",
-      "fontes": [
-        "jacare"
-      ],
+      "fontes": ["jacare"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Pau-jacaré",
@@ -1470,9 +1366,7 @@
       "cultivo": "Verificar espaço de copa e condições regionais; a fonte consultada não fornece faixa de pH ou irrigação.",
       "propagacao": "Conferir os frutos em cápsula com espinhos moles, folhas e matriz antes de selecionar protocolo de sementes.",
       "cuidados": "Também chamada escova-de-macaco. Manter os acessos separados até o parceiro confirmar se são a mesma planta.",
-      "fontes": [
-        "jangada"
-      ],
+      "fontes": ["jangada"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Pau-jangada",
@@ -1489,9 +1383,7 @@
       "cultivo": "A referência da UFPE descreve adaptação a terrenos desnudos e baixa fertilidade; isso não dispensa avaliação do solo.",
       "propagacao": "Registrar matriz, coleta e teste de germinação; não assumir que todo lote antigo permanece viável.",
       "cuidados": "A função pioneira é contextual e não prova benefício para cada espécie vizinha. Sem perfil alimentar ou faixa numérica atribuídos.",
-      "fontes": [
-        "polvora"
-      ],
+      "fontes": ["polvora"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Pau-pólvora",
@@ -1508,9 +1400,7 @@
       "cultivo": "Prefere terrenos úmidos, inclusive com inundações periódicas de curta duração. A referência alerta para solo ácido com alumínio.",
       "propagacao": "Coletar frutos da matriz identificada, despolpar e acompanhar a formação das mudas com protocolo local.",
       "cuidados": "Não traduzir preferência por umidade em tolerância a alagamento permanente nem adotar pH de exclusão sem validação.",
-      "fontes": [
-        "viola"
-      ],
+      "fontes": ["viola"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Pau-viola",
@@ -1527,9 +1417,7 @@
       "cultivo": "Não atribuir ciclo, exigências ou grau de ardência antes de determinar espécie e cultivar.",
       "propagacao": "Registrar corola, anteras, número e posição das flores e frutos da matriz; identificar antes de multiplicar.",
       "cuidados": "Não confundir com Piper indet. ou pimenta-do-reino. Manter lotes separados e sem uso alimentar liberado por nome comum.",
-      "fontes": [
-        "pimenta"
-      ],
+      "fontes": ["pimenta"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Pimenta",
@@ -1546,9 +1434,7 @@
       "cultivo": "Não transferir tutoramento, nutrição ou sanidade da pimenta-do-reino ao acesso desconhecido.",
       "propagacao": "Registrar folhas e inflorescências, local e matriz; encaminhar à determinação botânica.",
       "cuidados": "Não presumir comestibilidade nem converter em Piper nigrum. A identificação é necessária antes de recomendar cultivo ou consumo.",
-      "fontes": [
-        "piper"
-      ],
+      "fontes": ["piper"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Piper indet",
@@ -1565,10 +1451,7 @@
       "cultivo": "O IF Baiano descreve melhor desenvolvimento em regiões quentes e úmidas e solo fértil com matéria orgânica; água é importante no estabelecimento.",
       "propagacao": "Retirar sementes de frutos maduros, despolpar e semear em recipientes para mudas, com identificação da matriz.",
       "cuidados": "Ajustar poda e espaço da copa; doses da cartilha não substituem análise de solo. Não atribuir a cor preta a espécie distinta sem identificação.",
-      "fontes": [
-        "pitanga",
-        "pitanga-cor"
-      ],
+      "fontes": ["pitanga", "pitanga-cor"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Pitanga",
@@ -1585,10 +1468,7 @@
       "cultivo": "O manejo depende de qual planta está no banco; não há perfil único para esta entrada.",
       "propagacao": "Conferir formato do fruto, folhas, flores e matriz; preservar o nome do acesso até a determinação.",
       "cuidados": "Pode ser forma de cor da pitanga ou duplicação de cereja-do-Rio-Grande. Não contar como espécie botânica adicional confirmada.",
-      "fontes": [
-        "pitanga-cor",
-        "cereja"
-      ],
+      "fontes": ["pitanga-cor", "cereja"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Pitanga preta",
@@ -1605,9 +1485,7 @@
       "cultivo": "Conferir a identidade e o ambiente de origem antes de definir água e solo; não extrapolar dados de outras Pleroma.",
       "propagacao": "Comparar folhas ásperas com nervuras curvas, flores e frutos com material de referência.",
       "cuidados": "Não tratar como manacá-da-serra pela semelhança das flores. Manter a hipótese e os campos agronômicos sem números não verificados.",
-      "fontes": [
-        "quaresmeira"
-      ],
+      "fontes": ["quaresmeira"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Quaresmeira",
@@ -1624,10 +1502,7 @@
       "cultivo": "Para C. urucurana há descrição de terrenos úmidos e brejosos; não transferir essa preferência a um Croton desconhecido.",
       "propagacao": "Documentar folhas, flores, cápsulas e matriz para determinação. A maturação pode dispersar sementes rapidamente.",
       "cuidados": "Pode sobrepor capixingui e Croton espontâneo. Não usar seiva ou extratos como tratamento; a lista não identifica o táxon.",
-      "fontes": [
-        "sangra",
-        "sangra-ambigua"
-      ],
+      "fontes": ["sangra", "sangra-ambigua"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Sangra-d'Água",
@@ -1644,9 +1519,7 @@
       "cultivo": "Confirmar espécie e variedade antes de planejar uso produtivo. Não aplicar manejo de taro ou inhame por semelhança.",
       "propagacao": "Usar matriz identificada de material alimentar conhecido e registrar origem dos propágulos.",
       "cuidados": "Não consumir crua: a referência registra irritação por oxalato de cálcio. Esta ficha não permite distinguir variedades comestíveis apenas por foto ou nome.",
-      "fontes": [
-        "taioba"
-      ],
+      "fontes": ["taioba"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Taioba",
@@ -1663,9 +1536,7 @@
       "cultivo": "Para A. triplinervia, a monografia prefere solo profundo, úmido e drenado no plantio; não é regra do gênero.",
       "propagacao": "Conferir folhas, frutos e matriz; planejar coleta e semeadura após determinação, pois a conservação pode ser limitante.",
       "cuidados": "Não fundir automaticamente com A. glandulosa ou transferir o protocolo entre espécies. Não considerar o nome confirmação botânica.",
-      "fontes": [
-        "tapia"
-      ],
+      "fontes": ["tapia"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Tapiá",
@@ -1682,9 +1553,7 @@
       "cultivo": "A Embrapa prioriza solo fértil, profundo e drenado e registra sensibilidade a geada. Ajustar nutrição pela análise de solo.",
       "propagacao": "Propagação por sementes ou estacas; exigir material com identidade botânica, origem conhecida e boa sanidade.",
       "cuidados": "Não converter o espaçamento ou o prazo de produção da ficha em regra universal. Uso condimentar não valida alegações medicinais.",
-      "fontes": [
-        "urucum"
-      ],
+      "fontes": ["urucum"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Urucum",
@@ -1701,9 +1570,7 @@
       "cultivo": "O guia não fornece faixa numérica de solo ou irrigação para este acesso. Acompanhar as mudas e a adaptação local.",
       "propagacao": "Sementes recalcitrantes perdem viabilidade rapidamente; priorizar semeadura após a coleta. A emergência descrita ocorre entre 30 e 45 dias.",
       "cuidados": "Não assumir viabilidade de sementes de 2021. O intervalo de emergência é referência de viveiro, não promessa para qualquer lote.",
-      "fontes": [
-        "uvaia"
-      ],
+      "fontes": ["uvaia"],
       "revisadoEm": "2026-10-29",
       "identidadeDoLoteConfirmada": false,
       "nomeOriginal": "Uvaia",

@@ -1,0 +1,4 @@
+* text=auto eol=lf
+
+# Saída do Vite: revisar as fontes, não reformatar bundles e licenças geradas.
+sistema-agroflorestal/ui/* linguist-generated=true whitespace=-blank-at-eol

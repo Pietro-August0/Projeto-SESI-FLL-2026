@@ -4,11 +4,11 @@ O site está publicado em [ybyra-sesi-fll.vercel.app](https://ybyra-sesi-fll.ver
 
 ## Serviços
 
-| Serviço | Função |
-| --- | --- |
-| Vercel | Executar a função Python e entregar as páginas protegidas. |
-| Supabase Free | PostgreSQL, cadastro, senhas, confirmação e sessões. |
-| Brevo Free | Entregar os e-mails transacionais por SMTP, até 300 envios/dia no plano consultado em 29/10/2026. |
+| Serviço       | Função                                                                                            |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Vercel        | Executar a função Python e entregar as páginas protegidas.                                        |
+| Supabase Free | PostgreSQL, cadastro, senhas, confirmação e sessões.                                              |
+| Brevo Free    | Entregar os e-mails transacionais por SMTP, até 300 envios/dia no plano consultado em 29/10/2026. |
 
 O limite da Brevo é compartilhado com os outros envios da conta. Planos gratuitos têm cotas e condições próprias; a gratuidade não inclui a compra de um domínio. O site pode usar o endereço gratuito da Vercel. Para o remetente de e-mail, a configuração recomendada é um domínio que a equipe controle e autentique na Brevo; `vercel.app` não permite configurar o DNS de um remetente próprio.
 
@@ -31,14 +31,14 @@ O banco contém as contas e seus perfis. As análises e propostas continuam no n
 3. Em **SMTP & API**, copie o login SMTP e gere uma **chave SMTP**. Essa chave é diferente da senha da conta e de uma chave da API.
 4. No Supabase, em **Authentication → Emails / SMTP settings**, habilite o SMTP personalizado e preencha:
 
-| Campo | Valor |
-| --- | --- |
-| Host | `smtp-relay.brevo.com` |
-| Porta | `587` |
-| Usuário | O login SMTP informado pela Brevo |
-| Senha | A chave SMTP gerada na Brevo |
-| E-mail remetente | O endereço validado na Brevo |
-| Nome remetente | `ybyrá` |
+| Campo            | Valor                             |
+| ---------------- | --------------------------------- |
+| Host             | `smtp-relay.brevo.com`            |
+| Porta            | `587`                             |
+| Usuário          | O login SMTP informado pela Brevo |
+| Senha            | A chave SMTP gerada na Brevo      |
+| E-mail remetente | O endereço validado na Brevo      |
+| Nome remetente   | `ybyrá`                           |
 
 5. Se o plano permitir, desative o rastreamento de cliques nesses e-mails. O plano gratuito consultado oferece apenas rastreamento anônimo, que também reescreve os links. Por isso o template inclui um código numérico para confirmar a conta sem depender do link reescrito. O projeto criado usa códigos de oito dígitos; a aplicação também aceita códigos de seis dígitos de outros projetos Supabase.
 6. Em **Authentication → Email Templates → Confirm signup**, copie o conteúdo de `supabase/templates/confirmacao.html` e use o assunto `Seu código de confirmação — ybyrá`.
@@ -52,11 +52,11 @@ O SMTP padrão do Supabase restringe destinatários a membros autorizados do pro
 1. Importe o repositório na Vercel. Use **Framework Preset: Other**, **Root Directory: raiz do repositório**, sem Build Command e sem Output Directory personalizados. Não use `sistema-agroflorestal` como raiz ou saída estática: a autorização é feita pela função Python.
 2. Em **Settings → Environment Variables**, configure:
 
-| Nome | Exemplo |
-| --- | --- |
-| `SUPABASE_URL` | `https://seu-projeto.supabase.co` |
-| `SUPABASE_PUBLISHABLE_KEY` | A chave publishable do projeto |
-| `YBYRA_ORIGEM` | `https://nome-do-site.vercel.app` |
+| Nome                       | Exemplo                           |
+| -------------------------- | --------------------------------- |
+| `SUPABASE_URL`             | `https://seu-projeto.supabase.co` |
+| `SUPABASE_PUBLISHABLE_KEY` | A chave publishable do projeto    |
+| `YBYRA_ORIGEM`             | `https://nome-do-site.vercel.app` |
 
 3. Use a URL pública exata, sem caminho e sem barra final. Configure as variáveis para **Production**. Se testar em **Preview**, use a origem exata daquela implantação e, de preferência, um projeto Supabase de teste separado.
 4. No Supabase, em **Authentication → URL Configuration**, defina **Site URL** com a mesma origem pública. O template de confirmação usa essa URL. Para testes locais, altere-a apenas no projeto de teste.

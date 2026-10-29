@@ -26,87 +26,87 @@ Não há espécie universalmente desnecessária em SAF. A seleção considera ob
 
 ## Situação por registro
 
-| Registro | Uso | Fotografia | Modelo | Justificativa |
-| --- | --- | --- | --- | --- |
-| Feijão-guandu | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Crotalária | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Feijão-de-porco | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Mucuna-preta | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Gliricídia | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Feijão-caupi | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Mandioca | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Milho | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Abacaxi | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Bananeira | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Mamoeiro | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Açaizeiro | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Cupuaçuzeiro | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Cacaueiro | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Pupunheira | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Andiroba | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Paricá | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Margaridão | MODELO | Sim | Existente | Participa do modelo demonstrativo; adequação local precisa ser avaliada. |
-| Abiúzeiro | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Açafrão/ Cúrcuma | MODELO | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Amora | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Angico-branco | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Araçá-amarelo | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Araçá-do-campo | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Araçá-roxo | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Araucária | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Aroeira-pimenta | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Batata-Doce | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Biribá | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Cabeludinha | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Camboatá | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Capixingui | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Capororoca | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Castanha-do-Maranhão | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Cereja-do-Rio-Grande | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Citrus indet | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Croton espontâneo | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Escova-de-macaco | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Fedegoso | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Fruto-do-sabiá | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Fumeirinho | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Fumo bravo | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Gengibre | MODELO | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Grumixama | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Guaçatonga | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Guamirim | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Guapuruvu | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Indeterminado | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Ingá-de-metro | MODELO | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Inhame | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Ipê-verde | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Jabuticaba de Cabinho | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Jaracatiá | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Jatobá | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Jenipapo | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Laranjinha do Mato | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Lauraceae indet. | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Mamica-de-cadela | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Mamona | HISTORICO | Não atribuída | Aguarda identificação ou seleção | Mamona tem uso industrial e sementes tóxicas; sem necessidade no foco alimentar e educativo atual. Registro do parceiro preservado. |
-| Mexerica | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Mutambo | MODELO | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Myrtaceae indet. | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Ora pro Nobis | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Palmito-Juçara | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Pau-cigarra | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Pau-jacaré | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Pau-jangada | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Pau-pólvora | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Pau-viola | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Pimenta | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Piper indet | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Pitanga | MODELO | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Pitanga preta | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Quaresmeira | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Sangra-d'Água | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Taioba | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Tapiá | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável. |
-| Urucum | MODELO | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
-| Uvaia | COMPLEMENTAR | Sim | Esquemático | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo. |
+| Registro              | Uso           | Fotografia    | Modelo                           | Justificativa                                                                                                                       |
+| --------------------- | ------------- | ------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Feijão-guandu         | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Crotalária            | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Feijão-de-porco       | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Mucuna-preta          | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Gliricídia            | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Feijão-caupi          | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Mandioca              | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Milho                 | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Abacaxi               | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Bananeira             | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Mamoeiro              | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Açaizeiro             | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Cupuaçuzeiro          | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Cacaueiro             | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Pupunheira            | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Andiroba              | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Paricá                | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Margaridão            | MODELO        | Sim           | Existente                        | Participa do modelo demonstrativo; adequação local precisa ser avaliada.                                                            |
+| Abiúzeiro             | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Açafrão/ Cúrcuma      | MODELO        | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Amora                 | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Angico-branco         | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Araçá-amarelo         | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Araçá-do-campo        | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Araçá-roxo            | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Araucária             | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Aroeira-pimenta       | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Batata-Doce           | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Biribá                | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Cabeludinha           | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Camboatá              | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Capixingui            | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Capororoca            | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Castanha-do-Maranhão  | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Cereja-do-Rio-Grande  | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Citrus indet          | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Croton espontâneo     | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Escova-de-macaco      | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Fedegoso              | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Fruto-do-sabiá        | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Fumeirinho            | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Fumo bravo            | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Gengibre              | MODELO        | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Grumixama             | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Guaçatonga            | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Guamirim              | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Guapuruvu             | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Indeterminado         | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Ingá-de-metro         | MODELO        | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Inhame                | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Ipê-verde             | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Jabuticaba de Cabinho | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Jaracatiá             | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Jatobá                | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Jenipapo              | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Laranjinha do Mato    | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Lauraceae indet.      | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Mamica-de-cadela      | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Mamona                | HISTORICO     | Não atribuída | Aguarda identificação ou seleção | Mamona tem uso industrial e sementes tóxicas; sem necessidade no foco alimentar e educativo atual. Registro do parceiro preservado. |
+| Mexerica              | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Mutambo               | MODELO        | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Myrtaceae indet.      | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Ora pro Nobis         | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Palmito-Juçara        | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Pau-cigarra           | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Pau-jacaré            | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Pau-jangada           | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Pau-pólvora           | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Pau-viola             | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Pimenta               | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Piper indet           | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Pitanga               | MODELO        | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Pitanga preta         | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Quaresmeira           | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Sangra-d'Água         | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Taioba                | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Tapiá                 | IDENTIFICACAO | Não atribuída | Aguarda identificação ou seleção | Nome ambíguo ou identificação incompleta; não representa cultivo selecionável.                                                      |
+| Urucum                | MODELO        | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
+| Uvaia                 | COMPLEMENTAR  | Sim           | Esquemático                      | Potencial de diversificação ou restauração; escolher conforme região, área, objetivo e manejo.                                      |
 
 ## Validação
 

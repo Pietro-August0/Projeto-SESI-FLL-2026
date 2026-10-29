@@ -2,20 +2,22 @@
 import { escapar, numero } from './utils.js';
 
 export const nomesRelacoes = {
-    FAVORAVEL_CONDICIONAL: 'Benefício condicionado ao manejo',
-    CONSORCIO_DOCUMENTADO: 'Consórcio documentado',
-    ATENCAO: 'Atenção ao manejo',
-    EVITAR: 'Evitar no contexto indicado',
-    DESCONHECIDA: 'Sem registro nesta curadoria'
+  FAVORAVEL_CONDICIONAL: 'Benefício condicionado ao manejo',
+  CONSORCIO_DOCUMENTADO: 'Consórcio documentado',
+  ATENCAO: 'Atenção ao manejo',
+  EVITAR: 'Evitar no contexto indicado',
+  DESCONHECIDA: 'Sem registro nesta curadoria',
 };
 
 export function linkFonte(fonte) {
-    return fonte ? `<a href="${escapar(fonte.url)}" target="_blank" rel="noopener noreferrer">${escapar(fonte.titulo)} ↗</a>` : '';
+  return fonte
+    ? `<a href="${escapar(fonte.url)}" target="_blank" rel="noopener noreferrer">${escapar(fonte.titulo)} ↗</a>`
+    : '';
 }
 
 export function apresentarInteracao(relacao, titulo = '') {
-    const status = nomesRelacoes[relacao.status] ? relacao.status : 'DESCONHECIDA';
-    return `<article class="evidencia evidencia-${status.toLowerCase()}">
+  const status = nomesRelacoes[relacao.status] ? relacao.status : 'DESCONHECIDA';
+  return `<article class="evidencia evidencia-${status.toLowerCase()}">
         ${titulo ? `<h4>${escapar(titulo)}</h4>` : ''}
         <strong>${nomesRelacoes[status]}</strong>
         <p>${escapar(relacao.motivo)}</p>
@@ -27,12 +29,18 @@ export function apresentarInteracao(relacao, titulo = '') {
 }
 
 export function apresentarFaixas(faixas, fontes) {
-    return faixas.map(f => {
-        const valor = f.min === f.max ? `≈ ${numero(f.min)}`
-            : f.min == null ? `Até ${numero(f.max)}`
-            : f.max == null ? `Referência mínima: ${numero(f.min)}`
-            : `${numero(f.min)} a ${numero(f.max)}`;
-        return `<li><strong>${escapar(f.parametro)}: ${valor} ${escapar(f.unidade)}</strong>
+  return faixas
+    .map((f) => {
+      const valor =
+        f.min === f.max
+          ? `≈ ${numero(f.min)}`
+          : f.min == null
+            ? `Até ${numero(f.max)}`
+            : f.max == null
+              ? `Referência mínima: ${numero(f.min)}`
+              : `${numero(f.min)} a ${numero(f.max)}`;
+      return `<li><strong>${escapar(f.parametro)}: ${valor} ${escapar(f.unidade)}</strong>
             <span>${escapar(f.tipo)}. ${escapar(f.contexto)}</span>${linkFonte(fontes[f.fonte])}</li>`;
-    }).join('');
+    })
+    .join('');
 }
