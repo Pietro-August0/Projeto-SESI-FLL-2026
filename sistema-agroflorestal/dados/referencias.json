@@ -1,0 +1,641 @@
+{
+  "guandu": {
+    "titulo": "Tropical Forages — Cajanus cajan",
+    "url": "https://www.tropicalforages.info/text/entities/cajanus_cajan.htm",
+    "trecho": "Ecology; Uses/applications",
+    "consultadoEm": "2026-10-22"
+  },
+  "crotalaria": {
+    "titulo": "Tropical Forages — Crotalaria juncea",
+    "url": "https://www.tropicalforages.info/pdf/crotalaria_juncea.pdf",
+    "trecho": "Ecology; Uses/applications",
+    "consultadoEm": "2026-10-22"
+  },
+  "canavalia": {
+    "titulo": "FAO EcoCrop — Canavalia ensiformis",
+    "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/dataSheet?id=609",
+    "trecho": "Ecology: Optimal e Absolute",
+    "consultadoEm": "2026-10-22"
+  },
+  "mucuna": {
+    "titulo": "Tropical Forages — Mucuna pruriens",
+    "url": "https://www.tropicalforages.info/text/entities/mucuna_pruriens.htm",
+    "trecho": "Ecology; Toxicity",
+    "consultadoEm": "2026-10-22"
+  },
+  "kew-mucuna": {
+    "titulo": "Kew POWO — Mucuna aterrima",
+    "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:509138-1",
+    "trecho": "Sinonímia com Mucuna pruriens var. utilis",
+    "consultadoEm": "2026-10-22"
+  },
+  "gliricidia": {
+    "titulo": "Tropical Forages — Gliricidia sepium",
+    "url": "https://www.tropicalforages.info/text/entities/gliricidia_sepium.htm",
+    "trecho": "Ecology; Defoliation; Toxicity",
+    "consultadoEm": "2026-10-22"
+  },
+  "caupi": {
+    "titulo": "Tropical Forages — Vigna unguiculata",
+    "url": "https://www.tropicalforages.info/text/entities/vigna_unguiculata.htm",
+    "trecho": "Ecology; Environment",
+    "consultadoEm": "2026-10-22"
+  },
+  "mandioca": {
+    "titulo": "Embrapa — O Trio da Produtividade na Cultura da Mandioca",
+    "url": "https://cnpma.embrapa.br/boaspraticas/download/Trio_Produtividade_Cultura_Mandioca.pdf",
+    "trecho": "Módulo técnico: clima, solos e conservação do solo",
+    "consultadoEm": "2026-10-22"
+  },
+  "milho": {
+    "titulo": "Embrapa — Cultivo do milho: condições climáticas",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/486917/1/Sistema-de-Producao-Cultivo-do-Milho.pdf",
+    "trecho": "Condições climáticas; germinação e floração",
+    "consultadoEm": "2026-10-22"
+  },
+  "abacaxi": {
+    "titulo": "Embrapa — Abacaxi: descrição do habitat",
+    "url": "https://ainfo.cnptia.embrapa.br/digital/bitstream/item/182432/1/7ddc230c2f7a-Abacaxi-03a.pdf",
+    "trecho": "Seção 2.5: solo e clima",
+    "consultadoEm": "2026-10-22"
+  },
+  "banana-mamao": {
+    "titulo": "Embrapa — Zoneamento agrícola para espécies frutíferas tropicais do Centro-Sul de Sergipe",
+    "url": "https://www.cpatc.embrapa.br/labgeo/BP_04.pdf",
+    "trecho": "Tabelas 1 e 2, página impressa 11",
+    "consultadoEm": "2026-10-22"
+  },
+  "mamao": {
+    "titulo": "Embrapa — Mamão: recomendações de calagem e adubação",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1134673/1/cap10-livro-RecomendacaoCalagemAdubacao-AnaLuciaBorges-AINFO.pdf",
+    "trecho": "Clima e solo",
+    "consultadoEm": "2026-10-22"
+  },
+  "acai": {
+    "titulo": "IDAM — Manejo do açaí (Euterpe oleracea)",
+    "url": "https://www.idam.am.gov.br/manejo-do-acai/",
+    "trecho": "Condições de clima e cultivo",
+    "consultadoEm": "2026-10-22"
+  },
+  "acai-plantio": {
+    "titulo": "Embrapa Ageitec — Açaí: plantio",
+    "url": "https://portaldxp-h.sede.embrapa.br/en/web/agencia-de-informacao-tecnologica/cultivos/acai/producao/plantio",
+    "trecho": "Estabelecimento de mudas em terra firme e sombreamento inicial",
+    "consultadoEm": "2026-10-22"
+  },
+  "cupuacu": {
+    "titulo": "Embrapa — Plantas para o Futuro: cupuaçu",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1144579/1/Plantas-para-o-Futuro-Norte-519-542.pdf",
+    "trecho": "Hábitat e sombreamento na implantação",
+    "consultadoEm": "2026-10-22"
+  },
+  "cacau": {
+    "titulo": "SENAR / MAPA-CEPLAC — Cacau: produção, manejo e colheita",
+    "url": "https://www.gov.br/agricultura/pt-br/assuntos/ceplac/arquivos/cartilhas-senar/215-cacau-producao-manejo-colheita.pdf",
+    "trecho": "Seções 4.1 e 4.2: sombreamento provisório e definitivo",
+    "consultadoEm": "2026-10-22"
+  },
+  "cacau-clima": {
+    "titulo": "Revista de Política Agrícola — Condições da cacauicultura",
+    "url": "https://rpa.sede.embrapa.br/RPA/article/download/1416/pdf/2912",
+    "trecho": "Página impressa 112: exigências fisiológicas e solos",
+    "consultadoEm": "2026-10-22"
+  },
+  "pupunha": {
+    "titulo": "Embrapa Florestas — Pupunha: perguntas e respostas",
+    "url": "https://www.embrapa.br/en/web/florestas/pupunha/perguntas-e-respostas",
+    "trecho": "Perguntas 6, 7, 8 e 12; cultivo para palmito",
+    "consultadoEm": "2026-10-22"
+  },
+  "pupunha-vento": {
+    "titulo": "Embrapa Florestas — Cultivo da pupunheira para produção de palmito",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1002146/1/2014ApostilaTTPupunha.pdf",
+    "trecho": "Página impressa 9: clima, solo e quebra-ventos",
+    "consultadoEm": "2026-10-22"
+  },
+  "andiroba": {
+    "titulo": "Embrapa — Espécies Arbóreas Brasileiras, volume 5: Andiroba",
+    "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140287/1/Especies-Arboreas-Brasileiras-vol-5-Andiroba.pdf",
+    "trecho": "Solos; clima; características silviculturais; SAFs",
+    "consultadoEm": "2026-10-22"
+  },
+  "parica": {
+    "titulo": "Embrapa — Espécies Arbóreas Brasileiras, volume 2: Paricá",
+    "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140876/1/Especies-Arboreas-Brasileiras-vol-2-Parica.pdf",
+    "trecho": "Clima; solos; associações simbióticas; SAFs",
+    "consultadoEm": "2026-10-22"
+  },
+  "margaridao": {
+    "titulo": "Tropical Forages — Tithonia diversifolia",
+    "url": "https://www.tropicalforages.info/text/entities/tithonia_diversifolia.htm",
+    "trecho": "Ecology; Companion species; Weed potential; Toxicity",
+    "consultadoEm": "2026-10-22"
+  },
+  "saf-parica": {
+    "titulo": "Embrapa — SAF com paricá, cupuaçu e banana em Dom Eliseu, PA",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/409311/1/Digitalizar0197.pdf",
+    "trecho": "Unidade de observação implantada em 2006; composição do sistema",
+    "consultadoEm": "2026-10-22"
+  },
+  "milho-caupi": {
+    "titulo": "Lima Filho — Respostas fisiológicas do milho e caupi à consorciação",
+    "url": "https://apct.sede.embrapa.br/pab/pt_BR/article/view/5875",
+    "trecho": "Resumo; experimento em Petrolina, PE",
+    "consultadoEm": "2026-10-22"
+  },
+  "gliricidia-caupi": {
+    "titulo": "Martins et al. (2015) — Nitrogênio fixado por caupi e gliricídia em SAF",
+    "url": "https://apct.sede.embrapa.br/pab/pt_BR/article/view/19971",
+    "trecho": "Resumo; quarto ciclo de cultivo no semiárido da Paraíba",
+    "consultadoEm": "2026-10-22"
+  },
+  "milho-mucuna": {
+    "titulo": "Embrapa — Consórcio de milho com mucuna",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/255547/1/CT200713.pdf",
+    "trecho": "Seção 3.1.1: semeadura diferida e competição",
+    "consultadoEm": "2026-10-22"
+  },
+  "milho-crotalaria": {
+    "titulo": "Kappes e Zancanaro — Consórcios de crotalárias com milho",
+    "url": "https://rbms.sede.embrapa.br/ojs/article/view/615",
+    "trecho": "Resumo; Itiquira, MT, safras 2012/13 e 2013/14",
+    "consultadoEm": "2026-10-22"
+  },
+  "abacaxi-mandioca": {
+    "titulo": "Embrapa — Produção orgânica de abacaxi e mandioca consorciados",
+    "url": "https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/999737/producao-organica-de-abacaxi-e-mandioca-consorciados",
+    "trecho": "Resumo; cultivo orgânico em Rio Branco, AC",
+    "consultadoEm": "2026-10-22"
+  },
+  "abacaxi-consorcio": {
+    "titulo": "MAPA — Ficha agroecológica: cultivo do abacaxi em consórcios",
+    "url": "https://www.gov.br/agricultura/pt-br/assuntos/sustentabilidade/organicos/fichas-agroecologicas/arquivos-producao-vegetal/10-cultivo-do-abacaxi-em-consorcios-1.pdf",
+    "trecho": "Consórcios com culturas de ciclo curto",
+    "consultadoEm": "2026-10-22"
+  },
+  "abacaxi-milho": {
+    "titulo": "EMATER-PA — Manual técnico: cultivo do abacaxi",
+    "url": "https://www.emater.pa.gov.br/storage/app/uploads/public/648/b27/807/648b27807eafd458945489.pdf",
+    "trecho": "Seção 8, página impressa 19: cuidados fitossanitários em consórcios",
+    "consultadoEm": "2026-10-22"
+  },
+  "taiobas-usp-taiobas": {
+    "titulo": "USP — Guia das Hortas, Horta Taiobas do Matão (IB)",
+    "url": "https://prip.usp.br/wp-content/uploads/sites/1632/2026/03/Guia-das-Hortas-web.pdf",
+    "escopo": "História e vínculo do coletivo com o Instituto de Biociências; não comprova estoque atual.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "História e vínculo do coletivo com o Instituto de Biociências; não comprova estoque atual."
+  },
+  "taiobas-abiu": {
+    "titulo": "UF/IFAS — Abiu Growing in the Florida Home Landscape",
+    "url": "https://ask.ifas.ufl.edu/publication/HS300",
+    "escopo": "Pouteria caimito; cultivo em clima tropical. Recomendações da Flórida exigem avaliação local.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Pouteria caimito; cultivo em clima tropical. Recomendações da Flórida exigem avaliação local."
+  },
+  "taiobas-biriba": {
+    "titulo": "UF/IFAS — Rollinia (Annona mucosa): Botany and Commercial Cultivation",
+    "url": "https://ask.ifas.ufl.edu/publication/HS1523",
+    "escopo": "Identidade e fruticultura tropical úmida; não comprova adaptação ao local do projeto.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Identidade e fruticultura tropical úmida; não comprova adaptação ao local do projeto."
+  },
+  "taiobas-curcuma": {
+    "titulo": "Embrapa — Cultivo de Curcuma longa",
+    "url": "https://www.infoteca.cnptia.embrapa.br/bitstream/doc/659093/1/cot142.pdf",
+    "escopo": "Propagação por rizomas, manejo e colheita; protocolo específico, sem extrapolação de irrigação.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Propagação por rizomas, manejo e colheita; protocolo específico, sem extrapolação de irrigação."
+  },
+  "taiobas-amora": {
+    "titulo": "USP — Amoreira, Morus nigra",
+    "url": "https://sites.usp.br/jardimdabotanicausprp/amoreira-morus-nigra/",
+    "escopo": "Morus nigra, porte, luz e solo; identificação do exemplar do banco não confirmada.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Morus nigra, porte, luz e solo; identificação do exemplar do banco não confirmada."
+  },
+  "taiobas-angico": {
+    "titulo": "USP ESALQ — Angico-branco",
+    "url": "https://www.esalq.usp.br/trilhas/medicina/am25.php",
+    "escopo": "Anadenanthera colubrina e ecologia; usos medicinais populares não adotados como recomendação.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Anadenanthera colubrina e ecologia; usos medicinais populares não adotados como recomendação."
+  },
+  "taiobas-aracas": {
+    "titulo": "Embrapa — Araçás do gênero Psidium",
+    "url": "https://www.infoteca.cnptia.embrapa.br/bitstream/doc/697560/1/doc266.pdf",
+    "escopo": "Distinção entre espécies de araçá e usos; o nome araçá-do-campo não identifica espécie.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Distinção entre espécies de araçá e usos; o nome araçá-do-campo não identifica espécie."
+  },
+  "taiobas-araca-roxo": {
+    "titulo": "Escola Bahiana — Mapeamento de espécies",
+    "url": "https://www.bahiana.edu.br/mapeamento-de-especies/",
+    "escopo": "Associação de araçá-roxo a Psidium myrtoides; sem protocolo agronômico.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Associação de araçá-roxo a Psidium myrtoides; sem protocolo agronômico."
+  },
+  "taiobas-aroeira": {
+    "titulo": "USP ESALQ — Aroeira-pimenteira",
+    "url": "https://www.esalq.usp.br/trilhas/medicina/am09.php",
+    "escopo": "Schinus terebinthifolius, morfologia, ocorrência e alergia por contato.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Schinus terebinthifolius, morfologia, ocorrência e alergia por contato."
+  },
+  "taiobas-araucaria": {
+    "titulo": "Embrapa — Armazenamento de sementes de pinheiro-do-paraná",
+    "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1092571/1/2018LivroIVEncontroBrasileirodeSilviculturafinal.pdf",
+    "escopo": "Resumo de Fowler, p. 219; conservação de sementes requer condições controladas.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Resumo de Fowler, p. 219; conservação de sementes requer condições controladas."
+  },
+  "taiobas-batata": {
+    "titulo": "Embrapa — Sistema de Produção de Batata-Doce",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1155447/1/Sistema-de-Producao-de-Batata-Doce.pdf",
+    "escopo": "Propagação, leiras, drenagem e sanidade das ramas.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Propagação, leiras, drenagem e sanidade das ramas."
+  },
+  "taiobas-cabeludinha": {
+    "titulo": "USP ESALQ — Cabeludinha",
+    "url": "https://www.esalq.usp.br/trilhas/fruti/fr08.htm",
+    "escopo": "Ficha sob o nome Plinia glomerata; nomenclatura histórica, frutos e morfologia.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Ficha sob o nome Plinia glomerata; nomenclatura histórica, frutos e morfologia."
+  },
+  "taiobas-camboata": {
+    "titulo": "USP ESALQ — Camboatá",
+    "url": "https://www.esalq.usp.br/d-plant/node/545",
+    "escopo": "Mostra outro uso do nome, para Guarea; impede identificação automática como Cupania.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Mostra outro uso do nome, para Guarea; impede identificação automática como Cupania."
+  },
+  "taiobas-capixingui": {
+    "titulo": "Embrapa — Capixingui, Croton floribundus",
+    "url": "https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/1139725/capixingui-croton-floribundus",
+    "escopo": "Identidade e nomes comuns, inclusive sobreposição com sangra-d’água.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Identidade e nomes comuns, inclusive sobreposição com sangra-d’água."
+  },
+  "taiobas-restauracao": {
+    "titulo": "Embrapa — Implantação e manejo de florestas em pequenas propriedades no Paraná",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/315298/1/doc167.pdf",
+    "escopo": "Tabela regional de espécies e grupos ecológicos; não constitui aptidão nacional.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Tabela regional de espécies e grupos ecológicos; não constitui aptidão nacional."
+  },
+  "taiobas-capororoca": {
+    "titulo": "Embrapa — Espécies vegetais de uso potencial em sistemas agroflorestais",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1133904/1/Cpact-Documento-501.pdf",
+    "escopo": "Myrsine umbellata: morfologia e luz; não identifica outras capororocas.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Myrsine umbellata: morfologia e luz; não identifica outras capororocas."
+  },
+  "taiobas-castanha": {
+    "titulo": "USP ESALQ — Castanha-do-Maranhão",
+    "url": "https://www.esalq.usp.br/trilhas/fruti/fr04.php",
+    "escopo": "Ficha de Bombacopsis glabra, com sinônimo Pachira glabra.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Ficha de Bombacopsis glabra, com sinônimo Pachira glabra."
+  },
+  "taiobas-castanha-ambigua": {
+    "titulo": "USP ESALQ — Dicionário Castanha-do-Maranhão",
+    "url": "https://www.esalq.usp.br/d-plant/node/996",
+    "escopo": "Nome também atribuído a Pachira aquatica e outras espécies; identificação pendente.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Nome também atribuído a Pachira aquatica e outras espécies; identificação pendente."
+  },
+  "taiobas-cereja": {
+    "titulo": "Embrapa — Cerejeira, Eugenia involucrata",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/578655/1/CT224.pdf",
+    "escopo": "p. 4–5: sementes recalcitrantes, drenagem, plantios e uso em faxinal; nome pitanga-preta.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "p. 4–5: sementes recalcitrantes, drenagem, plantios e uso em faxinal; nome pitanga-preta."
+  },
+  "taiobas-escova": {
+    "titulo": "Unicamp — Combretum fruticosum",
+    "url": "https://www.nipe.unicamp.br/cepil/projetos/laboratorio-vivo/combretum-fruticosum/",
+    "escopo": "Escova-de-macaco como trepadeira; atração de abelhas e beija-flores.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Escova-de-macaco como trepadeira; atração de abelhas e beija-flores."
+  },
+  "taiobas-jangada": {
+    "titulo": "USP — Projeto Árvores EEL, Escova-de-macaco",
+    "url": "https://www.hu.usp.br/wp-content/uploads/sites/433/2018/11/Placas.pdf",
+    "escopo": "Apeiba tibourbou: pioneira de crescimento rápido; possível duplicação com pau-jangada.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Apeiba tibourbou: pioneira de crescimento rápido; possível duplicação com pau-jangada."
+  },
+  "taiobas-fedegoso": {
+    "titulo": "Embrapa — Quebra da dormência tegumentar de sementes de fedegoso",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/290840",
+    "escopo": "Registro de Senna occidentalis; não permite identificar todo fedegoso.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Registro de Senna occidentalis; não permite identificar todo fedegoso."
+  },
+  "taiobas-fedegoso-arvore": {
+    "titulo": "IFES — Cartilha do Laboratório de Botânica",
+    "url": "https://alegre.ifes.edu.br/images/2023/noticias/Laboratorio-de-Botanica/Cartilha_Corrigida_compressed.pdf",
+    "escopo": "Senna macranthera também chamada fedegoso; plantio misto ao sol e interesse apícola.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Senna macranthera também chamada fedegoso; plantio misto ao sol e interesse apícola."
+  },
+  "taiobas-sabia": {
+    "titulo": "Sesc SP — Veredas de Mogi das Cruzes",
+    "url": "https://www.sescsp.org.br/wp-content/uploads/2021/12/MOGI-DAS-CRUZES.pdf",
+    "escopo": "p. 40: Iochroma arborescens, fruto-do-sabiá, alimentação de aves e restauro.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "p. 40: Iochroma arborescens, fruto-do-sabiá, alimentação de aves e restauro."
+  },
+  "taiobas-fumo": {
+    "titulo": "Embrapa — Fumo-bravo, Solanum bullatum",
+    "url": "https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/1136631/fumo-bravo-solanum-bullatum",
+    "escopo": "Uma das espécies associadas ao nome; não identifica fumeirinho.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Uma das espécies associadas ao nome; não identifica fumeirinho."
+  },
+  "taiobas-guacatonga": {
+    "titulo": "UFSC — Guaçatonga",
+    "url": "https://hortodidatico.ufsc.br/guacatonga/",
+    "escopo": "Casearia sylvestris e existência de outras Casearia com nomes semelhantes.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Casearia sylvestris e existência de outras Casearia com nomes semelhantes."
+  },
+  "taiobas-gengibre": {
+    "titulo": "Incaper — Gengibre, 101 culturas",
+    "url": "https://biblioteca.incaper.es.gov.br/digital/bitstream/123456789/4005/1/101culturas-gengibre.pdf",
+    "escopo": "Sanidade de rizomas, rotação, água de irrigação e colheita.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Sanidade de rizomas, rotação, água de irrigação e colheita."
+  },
+  "taiobas-guapuruvu": {
+    "titulo": "Embrapa — Guapuruvu, Circular Técnica 104",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/314147/1/circtec104.pdf",
+    "escopo": "Porte, solos, dormência e produção de mudas; distinto do paricá amazônico.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Porte, solos, dormência e produção de mudas; distinto do paricá amazônico."
+  },
+  "taiobas-grumixama": {
+    "titulo": "USP ESALQ — Grumixameira",
+    "url": "https://www.esalq.usp.br/trilhas/fruti/fr09.htm",
+    "escopo": "Eugenia brasiliensis, preferência por umidade e frutos para aves e pessoas.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Eugenia brasiliensis, preferência por umidade e frutos para aves e pessoas."
+  },
+  "taiobas-guamirim": {
+    "titulo": "Embrapa — Educação ambiental na trilha ecológica",
+    "url": "https://www.infoteca.cnptia.embrapa.br/bitstream/doc/314051/1/Doc147.pdf",
+    "escopo": "p. 25: guamirim-cascudo, Myrcia arborescens, e dispersão por aves; não identifica guamirim genérico.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "p. 25: guamirim-cascudo, Myrcia arborescens, e dispersão por aves; não identifica guamirim genérico."
+  },
+  "taiobas-inga": {
+    "titulo": "Embrapa — Ingá-cipó, Inga edulis",
+    "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140499/1/Especies-Arboreas-Brasileiras-vol-5-Inga-Cipo.pdf",
+    "escopo": "Nomes populares, incluindo ingá-de-metro; monografia da espécie.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Nomes populares, incluindo ingá-de-metro; monografia da espécie."
+  },
+  "taiobas-hortalicas": {
+    "titulo": "Embrapa — Manual de produção de hortaliças tradicionais",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/983087/1/MANUAL-DE-PRODUCAO-DE-HORTALICAS-TRADICIONAIS.pdf",
+    "escopo": "Capítulos inhame/cará, ora-pro-nóbis, taioba e taro; nomes históricos devem ser conferidos.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Capítulos inhame/cará, ora-pro-nóbis, taioba e taro; nomes históricos devem ser conferidos."
+  },
+  "taiobas-ipe": {
+    "titulo": "UENF — Ipê-verde",
+    "url": "https://uenf.br/projetos/arvoresdauenf/especie-2/ipe-verde/",
+    "escopo": "Cybistax antisyphilitica: identidade, distribuição e uso ornamental e em restauração.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Cybistax antisyphilitica: identidade, distribuição e uso ornamental e em restauração."
+  },
+  "taiobas-jabuticaba": {
+    "titulo": "JBRJ CNCFlora — Plinia peruviana",
+    "url": "https://proflora.jbrj.gov.br/html/Plinia%20peruviana_2020.html",
+    "escopo": "Jabuticaba-de-cabinho: frutos comestíveis e ambientes florestais.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Jabuticaba-de-cabinho: frutos comestíveis e ambientes florestais."
+  },
+  "taiobas-jabuticaba-bag": {
+    "titulo": "Embrapa Alelo — Acesso BRA 00180422-8",
+    "url": "https://av.cenargen.embrapa.br/avconsulta/Passaporte/detalhes.do?ida=202161",
+    "escopo": "Acesso nomeado jabuticaba-de-cabinho sob Plinia trunciflora; divergência preservada.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Acesso nomeado jabuticaba-de-cabinho sob Plinia trunciflora; divergência preservada."
+  },
+  "taiobas-jaracatia": {
+    "titulo": "Embrapa — Jaracatiá, Jacaratia spinosa",
+    "url": "https://ainfo.cnptia.embrapa.br/digital/bitstream/item/232466/1/Especies-Arboreas-Brasileiras-vol-2-Jaracatia.pdf",
+    "escopo": "Solos, sensibilidade a frio, plantio misto e sementes.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Solos, sensibilidade a frio, plantio misto e sementes."
+  },
+  "taiobas-jatoba": {
+    "titulo": "Embrapa — Jatobá, Hymenaea courbaril",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/408645/1/Jatoba-Hymenaea.pdf",
+    "escopo": "Ambiguidade de nomes, porte, polinização por morcegos e farinha da polpa.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Ambiguidade de nomes, porte, polinização por morcegos e farinha da polpa."
+  },
+  "taiobas-jatoba-cultivo": {
+    "titulo": "Embrapa — O jatobá: crescimento, potencialidades e usos",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/690505/1/doc03jatobahelio.pdf",
+    "escopo": "p. 10: preferência por solos profundos e drenados; clima de ocorrência não é limite de sensor.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "p. 10: preferência por solos profundos e drenados; clima de ocorrência não é limite de sensor."
+  },
+  "taiobas-jenipapo": {
+    "titulo": "USP ESALQ — Genipapo",
+    "url": "https://www.esalq.usp.br/trilhas/medicina/am15.php",
+    "escopo": "Genipa americana, ocorrência em várzeas e preferência por água no solo.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Genipa americana, ocorrência em várzeas e preferência por água no solo."
+  },
+  "taiobas-jenipapo-sementes": {
+    "titulo": "Embrapa — Propagação in vitro de jenipapeiro",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1059880/1/cot195.pdf",
+    "escopo": "Extração e seleção de sementes para formação de plantas doadoras; não generalizar o protocolo in vitro.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Extração e seleção de sementes para formação de plantas doadoras; não generalizar o protocolo in vitro."
+  },
+  "taiobas-jucara": {
+    "titulo": "Embrapa — Manual de viveiro e produção de mudas",
+    "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1042301/1/ManualdeViveiroeproducaodemudas.pdf",
+    "escopo": "p. 70: Euterpe edulis, sementes recalcitrantes e sombreamento no viveiro.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "p. 70: Euterpe edulis, sementes recalcitrantes e sombreamento no viveiro."
+  },
+  "taiobas-laranjinha": {
+    "titulo": "Unicamp — Pomar, Laranjinha-do-mato",
+    "url": "https://sites.google.com/unicamp.br/pomardaunicamp/laranjinha-do-mato",
+    "escopo": "Nome popular e necessidade de conferir identificação.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Nome popular e necessidade de conferir identificação."
+  },
+  "taiobas-mamica": {
+    "titulo": "USP ESALQ — Mamica-de-cadela",
+    "url": "https://www.esalq.usp.br/d-plant/node/3118",
+    "escopo": "Nome aplicado a Myrtaceae e Rutaceae; múltiplas possibilidades.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Nome aplicado a Myrtaceae e Rutaceae; múltiplas possibilidades."
+  },
+  "taiobas-mama-cadela": {
+    "titulo": "Embrapa — Mama-cadela, Brosimum gaudichaudii",
+    "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140523/1/Especies-Arboreas-Brasileiras-vol-5-Mama-Cadela.pdf",
+    "escopo": "Outro uso de mamica-de-cadela, para espécie de Moraceae.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Outro uso de mamica-de-cadela, para espécie de Moraceae."
+  },
+  "taiobas-mamona": {
+    "titulo": "Embrapa — Mamona",
+    "url": "https://www.embrapa.br/en/web/agencia-de-informacao-tecnologica/tematicas/agroenergia/biodiesel/materias-primas/mamona",
+    "escopo": "Ricinus communis, finalidade industrial e toxicidade das sementes.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Ricinus communis, finalidade industrial e toxicidade das sementes."
+  },
+  "taiobas-mexerica": {
+    "titulo": "CEAGESP — Tangerina, guia de variedades",
+    "url": "https://ceagesp.gov.br/hortiescolha/hortipedia/tangerina/",
+    "escopo": "Citrus reticulata e híbridos; não identifica cultivar pelo nome genérico.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Citrus reticulata e híbridos; não identifica cultivar pelo nome genérico."
+  },
+  "taiobas-mutambo": {
+    "titulo": "Embrapa — Mutamba, Circular Técnica 141",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/312825/1/Circular141.pdf",
+    "escopo": "p. 5–6: solo, dormência, armazenamento e manejo; p. 8: restauração.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "p. 5–6: solo, dormência, armazenamento e manejo; p. 8: restauração."
+  },
+  "taiobas-pimenta": {
+    "titulo": "Embrapa Hortaliças — Botânica das pimentas Capsicum",
+    "url": "https://www.embrapa.br/en/web/hortalicas/pimenta/botanica",
+    "escopo": "Caracteres para distinguir espécies domesticadas.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Caracteres para distinguir espécies domesticadas."
+  },
+  "taiobas-piper": {
+    "titulo": "Embrapa — Sistema produtivo de pimenta-do-reino",
+    "url": "https://ainfo.cnptia.embrapa.br/digital/bitstream/doc/1162373/1/Sistema-produtivo-pimenta-do-reino-2023.pdf",
+    "escopo": "Botânica de Piper nigrum; não extrapolar a Piper indeterminado.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Botânica de Piper nigrum; não extrapolar a Piper indeterminado."
+  },
+  "taiobas-pitanga": {
+    "titulo": "IF Baiano — Cartilha PLAME",
+    "url": "https://www.ifbaiano.edu.br/unidades/gmb/files/2021/04/Cartilha-PLAME-2.pdf",
+    "escopo": "p. 64: Eugenia uniflora, propagação por sementes, manejo da copa e água inicial.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "p. 64: Eugenia uniflora, propagação por sementes, manejo da copa e água inicial."
+  },
+  "taiobas-pitanga-cor": {
+    "titulo": "USP Scientia Agricola — Fenólicos e carotenoides totais em pitanga",
+    "url": "https://revistas.usp.br/sa/pt_BR/article/view/21751",
+    "escopo": "Variação de cor em Eugenia uniflora até quase negra; cor não confirma espécie.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Variação de cor em Eugenia uniflora até quase negra; cor não confirma espécie."
+  },
+  "taiobas-cigarra": {
+    "titulo": "Embrapa — Planejamento da coleta de sementes florestais nativas",
+    "url": "https://www.infoteca.cnptia.embrapa.br/bitstream/doc/293956/1/circtec126.pdf",
+    "escopo": "Tabela 2: Senna multijuga e maturação dos frutos.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Tabela 2: Senna multijuga e maturação dos frutos."
+  },
+  "taiobas-jacare": {
+    "titulo": "USP ESALQ — Pau-jacaré",
+    "url": "https://www.esalq.usp.br/trilhas/uteis/ut03.php",
+    "escopo": "Piptadenia gonoacantha, sucessão inicial, abelhas e recuperação.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Piptadenia gonoacantha, sucessão inicial, abelhas e recuperação."
+  },
+  "taiobas-polvora": {
+    "titulo": "UFPE — Dissertação sobre Trema micrantha",
+    "url": "https://repositorio.ufpe.br/bitstream/123456789/38433/1/DISSERTA%C3%87%C3%83O%20Cledson%20dos%20Santos%20Magalh%C3%A3es.pdf",
+    "escopo": "p. 30: nome pau-pólvora, ampla distribuição e colonização de áreas abertas.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "p. 30: nome pau-pólvora, ampla distribuição e colonização de áreas abertas."
+  },
+  "taiobas-viola": {
+    "titulo": "UFMG — Projeto Plantar",
+    "url": "https://www.ufmg.br/mhnjb/wp-content/uploads/2025/09/Projeto-Plantar-20251103.pdf",
+    "escopo": "p. 99: Citharexylum myrianthum, terrenos úmidos, aves, abelhas e matas ciliares.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "p. 99: Citharexylum myrianthum, terrenos úmidos, aves, abelhas e matas ciliares."
+  },
+  "taiobas-quaresmeira": {
+    "titulo": "UFRJ IlhaViva — Quaresmeira",
+    "url": "https://ilhaviva.eba.ufrj.br/quaresmeira/",
+    "escopo": "Pleroma granulosum: morfologia e polinização; o nome quaresmeira abrange outras espécies.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Pleroma granulosum: morfologia e polinização; o nome quaresmeira abrange outras espécies."
+  },
+  "taiobas-sangra": {
+    "titulo": "Prefeitura de Curitiba — Croton urucurana",
+    "url": "https://mig-imap.curitiba.pr.gov.br/conteudo/croton-croton-urucurana/1991",
+    "escopo": "Ambientes úmidos, dispersão e restauro ciliar.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Ambientes úmidos, dispersão e restauro ciliar."
+  },
+  "taiobas-sangra-ambigua": {
+    "titulo": "Epagri — Plantas bioativas, Sangue-de-dragão",
+    "url": "https://ciram.epagri.sc.gov.br/ciram_arquivos/site/base-pra/k.pdf",
+    "escopo": "Croton celtidifolius também recebe o nome sangra-d’água.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Croton celtidifolius também recebe o nome sangra-d’água."
+  },
+  "taiobas-taioba": {
+    "titulo": "Embrapa — Plantas medicinais e hortaliças tradicionais",
+    "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1080482/1/Plantasmedicinais.pdf",
+    "escopo": "Taioba: necessidade de preparo e risco de irritação pelo consumo cru; nomenclatura histórica.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Taioba: necessidade de preparo e risco de irritação pelo consumo cru; nomenclatura histórica."
+  },
+  "taiobas-tapia": {
+    "titulo": "Embrapa — Tapiá, Alchornea triplinervia",
+    "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140120/1/Especies-Arboreas-Brasileiras-vol-1-Tapia.pdf",
+    "escopo": "Solo, sementes e nomenclatura; não identifica outros Alchornea do banco.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Solo, sementes e nomenclatura; não identifica outros Alchornea do banco."
+  },
+  "taiobas-urucum": {
+    "titulo": "Embrapa — Urucum, plantas condimentares",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/783869/1/FOL101.pdf",
+    "escopo": "Bixa orellana: propagação, drenagem, sensibilidade a geada e material identificado.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Bixa orellana: propagação, drenagem, sensibilidade a geada e material identificado."
+  },
+  "taiobas-uvaia": {
+    "titulo": "Embrapa — Guia de mudas de espécies florestais",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1157385/1/Guia-de-mudas-Livro-Cpact.pdf",
+    "escopo": "p. 111: Eugenia pyriformis, sementes recalcitrantes, emergência e usos em SAF.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "p. 111: Eugenia pyriformis, sementes recalcitrantes, emergência e usos em SAF."
+  },
+  "taiobas-ora-pro-nobis": {
+    "titulo": "Embrapa — Ora-pro-nóbis",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1071168/1/forapronobis.pdf",
+    "escopo": "Propagação de Pereskia aculeata por estacas semilenhosas e cultivo.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Propagação de Pereskia aculeata por estacas semilenhosas e cultivo."
+  },
+  "taiobas-sucessao": {
+    "titulo": "Embrapa — Programa Mata Ciliar no Paraná",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/878572/1/Doc.196ProgramaMataCiliar.pdf",
+    "escopo": "Tabela regional: Senna multijuga como pioneira; classificação não equivale a aptidão nacional.",
+    "consultadoEm": "2026-10-29",
+    "trecho": "Tabela regional: Senna multijuga como pioneira; classificação não equivale a aptidão nacional."
+  },
+  "taiobas-documento": {
+    "titulo": "Inventário de 2021 — Grupo Taiobas do Matão USP",
+    "url": "historia.html#parceiros",
+    "trecho": "Documento providenciado pelo parceiro; identificação do acesso ainda não resolvida."
+  },
+  "planejamento-embrapa": {
+    "titulo": "Embrapa Ater+ — Escolha das espécies em SAFs",
+    "url": "https://www.atermaisdigital.cnptia.embrapa.br/web/saf/escolha-das-especies",
+    "trecho": "Exemplo contextual de estratos, ciclos e escolha em função do local e dos recursos. Classificação do modelo não representa medida botânica universal.",
+    "consultadoEm": "2026-10-29"
+  }
+}

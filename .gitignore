@@ -1,3 +1,10 @@
 .dados-locais/
 __pycache__/
 *.pyc
+.env
+.env.*
+!.env.example
+.vercel/
+
+node_modules/
+frontend/.vite/

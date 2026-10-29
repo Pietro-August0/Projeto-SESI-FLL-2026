@@ -1,66 +1,395 @@
 /* Hierarquia e orientação: primeiro a tarefa, depois as explicações opcionais. */
-.percurso { display: block; padding: 28px 0 4px; }
-.percurso ol { display: flex; justify-content: center; gap: 0; list-style: none; padding: 0; margin: 0; }
-.percurso li { display: flex; align-items: center; font-size: 12px; color: var(--muted); }
-.percurso li:not(:last-child)::after { content: ''; height: 1px; width: clamp(24px, 6vw, 90px); margin: 0 16px; background: var(--borda); }
-.percurso li > span, .percurso li > a { display: inline-flex; align-items: center; gap: 8px; padding: 0; border: 0; font-size: inherit; text-decoration: none; color: inherit; }
-.percurso b { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: #E9EFEC; font-weight: 600; }
-.percurso [aria-current=step] { color: #704B80; font-weight: 600; }
-.percurso [aria-current=step] b { color: white; background: var(--roxo); }
-.guia-dialogo { width: min(520px, calc(100% - 32px)); padding: 30px; border: 1px solid var(--borda); border-radius: 16px; color: var(--texto); background: var(--superficie); box-shadow: 0 24px 100px #20372B30; }
-.guia-dialogo::backdrop { background: #25332E85; }
-.guia-topo { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 12px; color: var(--muted); }
-.guia-topo button { border: 0; background: transparent; padding: 8px; color: var(--verde); }
-.guia-contagem { color: #704B80; font-size: 12px; margin-top: 30px; }
-.guia-dialogo h2 { font-size: 31px; }
-.guia-dialogo #guia-texto { color: var(--muted); font-size: 15px; line-height: 1.8; }
-.guia-acoes { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-.ajuda-link { border: 0; background: transparent; color: var(--verde); padding: 4px 0; text-decoration: underline; text-underline-offset: 4px; font-size: 13px; cursor: pointer; }
-.escolha-exemplo { border: 1px solid var(--borda); border-radius: 8px; padding: 0 20px; margin-bottom: 24px; background: var(--superficie); }
-.escolha-exemplo summary { font-size: 14px; }
-.escolha-exemplo .cenarios { padding-bottom: 20px; }
-.escolha-exemplo > p { font-size: 13px; color: var(--muted); }
-.rodape-links { display: flex; gap: 20px; flex-wrap: wrap; font-size: 12px; }
-.proximo-passo { display: flex; justify-content: space-between; align-items: center; gap: 24px; border-top: 1px solid var(--borda); margin-top: 32px; padding-top: 24px; }
-.proximo-passo h2 { font-size: 24px; margin-bottom: 6px; }
-.proximo-passo p { font-size: 14px; margin: 0; color: var(--muted); }
-.painel-extra { border: 1px solid var(--borda); border-radius: 8px; margin: 20px 0; padding: 0 20px; background: var(--superficie); }
-.painel-extra > summary { font-size: 15px; }
-.painel-extra[open] { padding-bottom: 20px; }
-.orientacao-curta { color: var(--muted); font-size: 14px; max-width: 760px; }
-.resultado-atalhos { display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 13px; padding: 12px 0 20px; }
-.analise-layout { grid-template-columns: minmax(0, 1fr) 270px; gap: 40px; }
-.analise-layout .dicas { background: transparent; border-left: 1px solid var(--borda); border-radius: 0; padding: 8px 0 8px 28px; }
-.analise-layout .dicas h2 { font-size: 25px; }
-.analise-layout .dicas ol { padding-left: 20px; font-size: 14px; color: var(--muted); line-height: 2; }
-.formulario-guiado { border: 1px solid var(--borda); border-radius: 10px; padding: 28px; background: var(--superficie); }
-.formulario-progresso { margin-bottom: 28px; font-size: 13px; }
-.formulario-progresso p { margin-bottom: 10px; }
-.formulario-progresso progress { display: block; width: 100%; height: 6px; accent-color: var(--roxo); border: 0; border-radius: 5px; overflow: hidden; }
-.formulario-progresso progress::-webkit-progress-bar { background: #E5EAE8; }
-.formulario-progresso progress::-webkit-progress-value { background: var(--roxo); }
-.formulario-guiado fieldset { margin-bottom: 0; padding-bottom: 24px; border-bottom: 0; }
-.formulario-guiado legend { font: 30px Georgia, serif; letter-spacing: -.6px; }
-.formulario-guiado legend > span { display: none; }
-.formulario-guiado .campo small.ajuda-campo { display: block; margin-top: 6px; font-size: 11px; color: var(--muted); }
-.formulario-acoes { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-top: 22px; border-top: 1px solid var(--borda); }
-.formulario-acoes > span { margin-left: auto; font-size: 12px; color: var(--muted); }
-.revisao-dados { margin-top: 20px; padding: 18px; border-radius: 6px; background: var(--sage); font-size: 13px; }
-.revisao-dados p { margin: 6px 0 0; }
-.mensagem-status:empty { display: none; }
-.mensagem-status:not(:empty) { background: var(--sage); border-left: 3px solid var(--folha); padding: 14px 18px; margin-bottom: 22px; }
-.analise-titulo { text-align: center; border-bottom: 0; padding-bottom: 16px; }
-.analise-titulo .voltar { display: none; }
-@media (max-width: 800px) { .analise-layout { grid-template-columns: 1fr; gap: 24px; } .analise-layout .dicas { border-left: 0; padding: 0; } }
+.percurso {
+    display: block;
+    padding: 28px 0 4px;
+}
+
+.percurso ol {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.percurso li {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.percurso li:not(:last-child)::after {
+    content: '';
+    height: 1px;
+    width: clamp(24px, 6vw, 90px);
+    margin: 0 16px;
+    background: var(--borda);
+}
+
+.percurso li>span,
+.percurso li>a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    border: 0;
+    font-size: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+.percurso b {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #E9EFEC;
+    font-weight: 600;
+}
+
+.percurso [aria-current=step] {
+    color: #704B80;
+    font-weight: 600;
+}
+
+.percurso [aria-current=step] b {
+    color: white;
+    background: var(--roxo);
+}
+
+.guia-dialogo {
+    width: min(520px, calc(100% - 32px));
+    padding: 30px;
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    color: var(--texto);
+    background: var(--superficie);
+    box-shadow: 0 24px 100px #20372B30;
+}
+
+.guia-dialogo::backdrop {
+    background: #25332E85;
+}
+
+.guia-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.guia-topo button {
+    border: 0;
+    background: transparent;
+    padding: 8px;
+    color: var(--verde);
+}
+
+.guia-contagem {
+    color: #704B80;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+.guia-dialogo h2 {
+    font-size: 31px;
+}
+
+.guia-dialogo #guia-texto {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.guia-acoes {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.ajuda-link {
+    border: 0;
+    background: transparent;
+    color: var(--verde);
+    padding: 4px 0;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.escolha-exemplo {
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 0 20px;
+    margin-bottom: 24px;
+    background: var(--superficie);
+}
+
+.escolha-exemplo summary {
+    font-size: 14px;
+}
+
+.escolha-exemplo .cenarios {
+    padding-bottom: 20px;
+}
+
+.escolha-exemplo>p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.rodape-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+.proximo-passo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    border-top: 1px solid var(--borda);
+    margin-top: 32px;
+    padding-top: 24px;
+}
+
+.proximo-passo h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.proximo-passo p {
+    font-size: 14px;
+    margin: 0;
+    color: var(--muted);
+}
+
+.painel-extra {
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 0 20px;
+    background: var(--superficie);
+}
+
+.painel-extra>summary {
+    font-size: 15px;
+}
+
+.painel-extra[open] {
+    padding-bottom: 20px;
+}
+
+.orientacao-curta {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 760px;
+}
+
+.resultado-atalhos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    font-size: 13px;
+    padding: 12px 0 20px;
+}
+
+.analise-layout {
+    grid-template-columns: minmax(0, 1fr) 270px;
+    gap: 40px;
+}
+
+.analise-layout .dicas {
+    background: transparent;
+    border-left: 1px solid var(--borda);
+    border-radius: 0;
+    padding: 8px 0 8px 28px;
+}
+
+.analise-layout .dicas h2 {
+    font-size: 25px;
+}
+
+.analise-layout .dicas ol {
+    padding-left: 20px;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 2;
+}
+
+.formulario-guiado {
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    padding: 28px;
+    background: var(--superficie);
+}
+
+.formulario-progresso {
+    margin-bottom: 28px;
+    font-size: 13px;
+}
+
+.formulario-progresso p {
+    margin-bottom: 10px;
+}
+
+.formulario-progresso progress {
+    display: block;
+    width: 100%;
+    height: 6px;
+    accent-color: var(--roxo);
+    border: 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.formulario-progresso progress::-webkit-progress-bar {
+    background: #E5EAE8;
+}
+
+.formulario-progresso progress::-webkit-progress-value {
+    background: var(--roxo);
+}
+
+.formulario-guiado fieldset {
+    margin-bottom: 0;
+    padding-bottom: 24px;
+    border-bottom: 0;
+}
+
+.formulario-guiado legend {
+    font: 30px Georgia, serif;
+    letter-spacing: -.6px;
+}
+
+.formulario-guiado legend>span {
+    display: none;
+}
+
+.formulario-guiado .campo small.ajuda-campo {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.formulario-acoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding-top: 22px;
+    border-top: 1px solid var(--borda);
+}
+
+.formulario-acoes>span {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.revisao-dados {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 6px;
+    background: var(--sage);
+    font-size: 13px;
+}
+
+.revisao-dados p {
+    margin: 6px 0 0;
+}
+
+.mensagem-status:empty {
+    display: none;
+}
+
+.mensagem-status:not(:empty) {
+    background: var(--sage);
+    border-left: 3px solid var(--folha);
+    padding: 14px 18px;
+    margin-bottom: 22px;
+}
+
+.analise-titulo {
+    text-align: center;
+    border-bottom: 0;
+    padding-bottom: 16px;
+}
+
+.analise-titulo .voltar {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .analise-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .analise-layout .dicas {
+        border-left: 0;
+        padding: 0;
+    }
+}
+
 @media (max-width: 600px) {
-    .percurso { padding-top: 22px; }
-    .percurso li { font-size: 10px; }
-    .percurso li:not(:last-child)::after { width: 16px; margin: 0 7px; }
-    .percurso li > span, .percurso li > a { flex-direction: column; gap: 5px; text-align: center; }
-    .formulario-guiado, .guia-dialogo { padding: 20px; }
-    .formulario-acoes { flex-wrap: wrap; }
-    .formulario-acoes > span { width: 100%; order: -1; }
-    .formulario-acoes .botao { width: auto; flex: 1; padding: 10px 14px; }
-    .proximo-passo { align-items: flex-start; flex-direction: column; }
-    .painel-extra { padding-inline: 14px; }
+    .percurso {
+        padding-top: 22px;
+    }
+
+    .percurso li {
+        font-size: 10px;
+    }
+
+    .percurso li:not(:last-child)::after {
+        width: 16px;
+        margin: 0 7px;
+    }
+
+    .percurso li>span,
+    .percurso li>a {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .formulario-guiado,
+    .guia-dialogo {
+        padding: 20px;
+    }
+
+    .formulario-acoes {
+        flex-wrap: wrap;
+    }
+
+    .formulario-acoes>span {
+        width: 100%;
+        order: -1;
+    }
+
+    .formulario-acoes .botao {
+        width: auto;
+        flex: 1;
+        padding: 10px 14px;
+    }
+
+    .proximo-passo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .painel-extra {
+        padding-inline: 14px;
+    }
 }

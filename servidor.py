@@ -140,7 +140,7 @@ class Requisicao(BaseHTTPRequestHandler):
     def do_GET(self):
         rota = unquote(urlsplit(self.path).path)
         if rota == '/api/sessao':
-            self.json(200, {'usuario': self.usuario()})
+            self.json(200, {'usuario': self.usuario(), 'verificacao_email': getattr(self, 'verificacao_email', False)})
             return
         if rota.startswith('/api/'):
             self.json(404, {'erro': 'Endereço não encontrado.'})
@@ -148,7 +148,7 @@ class Requisicao(BaseHTTPRequestHandler):
         if rota == '/':
             rota = '/index.html'
         arquivo = (PUBLICO / rota.lstrip('/')).resolve()
-        permitidas = {'.html', '.css', '.js', '.json', '.svg', '.jpg', '.jpeg', '.png', '.webp'}
+        permitidas = {'.html', '.css', '.js', '.json', '.svg', '.jpg', '.jpeg', '.png', '.webp', '.ico', '.webmanifest'}
         if not arquivo.is_relative_to(PUBLICO.resolve()) or arquivo.suffix.lower() not in permitidas or not arquivo.is_file():
             self.json(404, {'erro': 'Arquivo não encontrado.'})
             return
@@ -163,7 +163,7 @@ class Requisicao(BaseHTTPRequestHandler):
                 self.json(401, {'erro': 'Entre na sua conta para continuar.'})
             return
         corpo = arquivo.read_bytes()
-        tipo = {'.js': 'text/javascript', '.svg': 'image/svg+xml'}.get(arquivo.suffix, mimetypes.guess_type(str(arquivo))[0] or 'application/octet-stream')
+        tipo = {'.js': 'text/javascript', '.svg': 'image/svg+xml', '.ico': 'image/x-icon', '.webmanifest': 'application/manifest+json'}.get(arquivo.suffix, mimetypes.guess_type(str(arquivo))[0] or 'application/octet-stream')
         self.cabecalhos(200, tipo, len(corpo))
         if self.command != 'HEAD':
             self.wfile.write(corpo)
@@ -219,8 +219,8 @@ class Requisicao(BaseHTTPRequestHandler):
             self.json(400, {'erro': 'Confira o e-mail e a senha informados.'})
             return
         if rota == '/api/cadastrar':
-            if len(senha) < 8:
-                self.json(400, {'erro': 'Use uma senha com pelo menos 8 caracteres.'})
+            if len(senha) < 12:
+                self.json(400, {'erro': 'Use uma senha com pelo menos 12 caracteres.'})
                 return
             sal = secrets.token_hex(16)
             resumo = hash_senha(senha, sal)
@@ -247,8 +247,14 @@ def main():
     argumentos = argparse.ArgumentParser(description='ybyrá: servidor local com login obrigatório')
     argumentos.add_argument('--port', type=int, default=8765)
     argumentos.add_argument('--banco', type=Path, default=RAIZ / '.dados-locais' / 'ybyra.sqlite3')
+    argumentos.add_argument('--producao', action='store_true', help='Testa localmente a integração Supabase, sem SQLite')
     opcoes = argumentos.parse_args()
-    servidor = Servidor(('127.0.0.1', opcoes.port), opcoes.banco.resolve())
+    if opcoes.producao:
+        from auth_producao import RequisicaoProducao, configuracao
+        configuracao()
+        servidor = ThreadingHTTPServer(('127.0.0.1', opcoes.port), RequisicaoProducao)
+    else:
+        servidor = Servidor(('127.0.0.1', opcoes.port), opcoes.banco.resolve())
     print(f'ybyrá disponível em http://127.0.0.1:{servidor.server_port}', flush=True)
     try:
         servidor.serve_forever()

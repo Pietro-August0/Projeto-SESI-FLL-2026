@@ -6,6 +6,7 @@ import { carregarJSON, lerAnalise, objetivos, rotulos, estratos, escapar, numero
 import { diagnosticar } from './diagnostico.js';
 import { montarSAFs } from './saf.js';
 import { iniciarCrescimento } from './crescimento.js';
+import { apresentarInteracao } from './conteudo-catalogo.js';
 let encerrarCrescimento = () => {};
 // O HTML inicial contém esse espaço vazio; os cartões serão acrescentados nele.
 const alvo = document.querySelector('#resultado');
@@ -59,6 +60,7 @@ function exibirProposta(saf) {
                 <span class="pontos">${e.pontuacao} pontos de ordenação</span>
                 </summary>
                 <div class="detalhe">
+                <p><a href="especies.html#${e.id}">Ver ficha de cultivo, imagem e interações →</a></p>
                 <p>Função consolidada na fase: ${rotulos[e.faseEntrada]}. Mudas perenes podem ser plantadas na implantação.</p>
                 <ul>${e.justificativas.map(j => `<li>${escapar(j)}</li>`).join('')}</ul>
                 <p class="muted">Pontos são pesos de regras demonstrativas, sem porcentagem de precisão científica.</p>
@@ -68,9 +70,10 @@ function exibirProposta(saf) {
                 <details class="relacoes">
                 <summary>Interações entre as espécies</summary>
                 <div class="detalhe">
-                <p>Sem registro significa DESCONHECIDA. A seleção não comprova compatibilidade entre pares. Relações EVITAR cadastradas são excluídas.</p>
-                <ul>${saf.interacoes.map(r => `<li>
-                <strong>${escapar(r.especieA)} + ${escapar(r.especieB)}</strong>: ${r.status} — ${escapar(r.motivo)}${r.fonte ? ` <a href="${escapar(r.fonte.url)}" target="_blank" rel="noopener noreferrer">Fonte ↗</a>` : ''}</li>`).join('')}</ul>
+                <p>Os registros distinguem consórcios documentados, benefícios condicionais e cuidados. Não comprovam compatibilidade universal. Sem registro significa que o par ainda não foi documentado nesta curadoria.</p>
+                ${saf.interacoes.filter(r => r.status !== 'DESCONHECIDA').map(r => apresentarInteracao(r, `${r.especieA} + ${r.especieB}`)).join('') || '<p>Nenhum par desta proposta possui registro nesta curadoria.</p>'}
+                <p><a href="especies.html#interacoes">Consultar outras combinações no catálogo →</a></p>
+                <details><summary>Pares ainda sem registro (${saf.interacoes.filter(r => r.status === 'DESCONHECIDA').length})</summary><ul>${saf.interacoes.filter(r => r.status === 'DESCONHECIDA').map(r => `<li>${escapar(r.especieA)} + ${escapar(r.especieB)}: sem registro.</li>`).join('') || '<li>Todos os pares desta proposta têm registro na curadoria.</li>'}</ul></details>
                 </div>
                 </details>`;
     encerrarCrescimento = iniciarCrescimento(document.querySelector('#crescimento-resultado'), saf);

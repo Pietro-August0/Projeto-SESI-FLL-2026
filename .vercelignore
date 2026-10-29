@@ -1,0 +1,8 @@
+.git
+.dados-locais
+.env*
+__pycache__
+**/__pycache__
+tests
+docs
+*.docx

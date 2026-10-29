@@ -11,11 +11,13 @@ let usuarioAtual;
 try {
     usuarioAtual = await exigirSessao();
 } catch (erro) {
+    if (!location.pathname.endsWith('/conta.html')) {
     const aviso = document.createElement('p');
     aviso.className = 'erro';
-    aviso.textContent = 'Inicie o projeto com python servidor.py e abra http://127.0.0.1:8765 para usar o login.';
+    aviso.textContent = 'Não foi possível verificar sua conta. Atualize a página e tente novamente.';
     document.querySelector('main').replaceChildren(aviso);
     throw erro;
+    }
 }
 
 export const objetivos = {

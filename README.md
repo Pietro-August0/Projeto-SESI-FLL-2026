@@ -43,7 +43,9 @@ flowchart LR
     D --> F[Catálogo e referências]
 ```
 
-A representação das fases nasceu de um protótipo criado por um integrante da equipe. Ela ajuda a visualizar a organização do sistema, sem prever tempo de crescimento, produtividade ou recuperação de nutrientes.
+A representação das fases nasceu de um protótipo criado por um integrante da equipe. A cena agora usa desenhos próprios para as 18 espécies, com folhas, ramos, frutos e raízes característicos. É possível selecionar cada planta, percorrer as fases, reproduzir, pausar, recomeçar, ajustar a velocidade e ocultar as raízes. Culturas iniciais encerram seu ciclo no arranjo, enquanto coberturas de ciclo curto são representadas por novas plantas a cada renovação.
+
+A sequência ajuda a visualizar a organização do sistema, sem prever tempo real de crescimento, produtividade ou recuperação de nutrientes. As formas são estilizadas e os ritmos são parâmetros de ilustração.
 
 ## A experiência em imagens
 
@@ -68,7 +70,7 @@ Capturas reais da aplicação local. As telas protegidas foram registradas com u
 
 ## Uma identidade construída com o time
 
-O nome **ybyrá** foi escolhido pela equipe pela associação com árvore em tupi-guarani. A marca combina o nome com uma flor estilizada de **manacá-da-serra**. As folhas, a fotografia de natureza e os detalhes roxos e verdes conectam a interface ao tema do projeto.
+O nome **ybyrá** foi escolhido pela equipe pela associação com árvore em tupi-guarani. A logo oficial enviada pela equipe combina a escrita desenhada de **ybyrá**, a flor de **manacá-da-serra** e ramos com folhas que envolvem as letras. O desenho foi preservado em versões vetoriais para fundos claros e escuros; os mesmos ramos aparecem no cabeçalho, no rodapé e nas peças de apresentação.
 
 | Roxo | Magenta | Cinza | Menta | Verde |
 | :---: | :---: | :---: | :---: | :---: |
@@ -76,7 +78,9 @@ O nome **ybyrá** foi escolhido pela equipe pela associação com árvore em tup
 
 As ideias do time aparecem na navegação, no catálogo com imagens, na representação do SAF crescendo e na página que apresenta o projeto. O cabeçalho e o rodapé foram inspirados no modelo visual enviado por uma aluna.
 
-[Conheça a marca vetorial](sistema-agroflorestal/assets/logo-ybyra.svg) · [Veja a página do projeto](sistema-agroflorestal/historia.html)
+A marca usa verde `#26533E` e roxo `#A76FBD`, extraídos da ilustração. A paleta acima continua nos controles e destaques da interface.
+
+[Manual e arquivos da identidade](docs/IDENTIDADE-VISUAL.md) · [Logo para fundo claro](sistema-agroflorestal/assets/marca/logo-positiva.svg) · [Logo para fundo escuro](sistema-agroflorestal/assets/marca/logo-negativa.svg) · [Veja a página do projeto](sistema-agroflorestal/historia.html)
 
 ## Como funciona
 
@@ -87,14 +91,14 @@ As ideias do time aparecem na navegação, no catálogo com imagens, na represen
 | Acesso | Python, biblioteca padrão | Cadastro, login, sessões e proteção das páginas e dados. |
 | Contas | SQLite | E-mail, hashes de senha e sessões em banco local. |
 
-A análise é processada no navegador. O servidor cuida do acesso e entrega os arquivos protegidos. Não há dependência de serviços externos para gerar propostas; algumas fotos do catálogo e os links de referência exigem internet.
+A análise é processada no navegador. O servidor cuida do acesso e entrega os arquivos protegidos. Não há dependência de serviços externos para gerar propostas; as imagens do catálogo são locais e os links de referência exigem internet.
 
 ### O que já está disponível
 
 - Cadastro, login, logout e navegação protegida por sessão.
 - Formulário em etapas, cenários demonstrativos e guia de uso.
 - Propostas com justificativas e representação ilustrativa das fases.
-- Catálogo de 18 espécies com busca, fichas e referências.
+- Catálogo de 18 espécies com imagens locais, 43 referências numéricas de cultivo e consulta a 20 pares de interação, com fontes e contexto.
 - Identidade ybyrá, layout responsivo e página da equipe.
 
 **Ainda não implementados:** perfil editável, modos de tema e histórico de projetos por usuário. A análise atual fica no navegador e é removida ao entrar ou sair da conta; ela não funciona como histórico permanente.
@@ -103,9 +107,19 @@ A análise é processada no navegador. O servidor cuida do acesso e entrega os a
 
 Os cenários e limiares de solo são demonstrativos. N, P e K usam unidades arbitrárias, sem equivalência com um laudo de laboratório. Dados desconhecidos permanecem ausentes; a falta de um registro não comprova compatibilidade entre espécies. As propostas não definem espaçamento, densidade ou manejo e não confirmam adequação regional.
 
-A curadoria reúne referências da Embrapa, acessíveis na [metodologia e fontes](sistema-agroflorestal/sobre.html). As fontes sustentam os conceitos e funções indicados; não validam automaticamente as regras numéricas do protótipo.
+A curadoria reúne 30 fontes técnicas e científicas, incluindo Embrapa, FAO e Tropical Forages, acessíveis nas fichas e na [metodologia e fontes](sistema-agroflorestal/sobre.html). As 43 referências numéricas distinguem condições ótimas, ocorrência natural e limites descritos. Temperatura do ar, chuva e umidade atmosférica não são convertidas em medidas do solo nem usadas como exclusões automáticas.
+
+[Veja os critérios, as lacunas e as fontes da pesquisa ampliada](docs/PESQUISA-CATALOGO.md).
 
 ## Executar localmente
+
+### Publicação na Vercel
+
+**Site publicado:** [ybyra-sesi-fll.vercel.app](https://ybyra-sesi-fll.vercel.app). O cadastro exige confirmação pelo código enviado ao e-mail.
+
+A integração de produção usa **Supabase (PostgreSQL + autenticação)** e **Brevo (SMTP)** para cadastro com confirmação por e-mail. O código inclui o esquema SQL, o template de confirmação, login por cookie HttpOnly e reenvio do e-mail. Os serviços foram configurados e validados na publicação acima. Para reproduzir a configuração, siga o [guia de produção](docs/PRODUCAO.md); o repositório não cria serviços remotos automaticamente.
+
+### Protótipo local
 
 **Requisito:** Python 3.10 ou mais recente. Não é necessário instalar pacotes Python ou usar Node.js.
 
@@ -145,6 +159,14 @@ Projeto-SESI-FLL-2026/
 
 ## Autoria e referências visuais
 
-O ybyrá incorpora ideias, desenhos e protótipos enviados pela equipe para complementar seu trabalho na FIRST LEGO League. As fotografias da equipe foram fornecidas pelo próprio time. A imagem de natureza da tela de entrada foi gerada e é identificada como ilustrativa. As fotos externas do catálogo têm créditos nas fichas.
+O ybyrá incorpora ideias, desenhos e protótipos enviados pela equipe para complementar seu trabalho na FIRST LEGO League. As fotografias da equipe foram fornecidas pelo próprio time. A imagem de natureza da tela de entrada foi gerada e é identificada como ilustrativa. As imagens licenciadas do catálogo são locais e têm créditos nas fichas; o paricá aparece em uma fotografia da árvore viva em floração, com autoria e licença indicadas.
+
+[Créditos de todas as imagens botânicas](docs/CREDITOS-IMAGENS.md).
 
 [Créditos e referências completos](docs/GUIA-TECNICO.md#identidade-imagens-e-autoria) · [Projeto de referência para a apresentação deste README: Vaggu](https://github.com/Pietro-August0/Vaggu)
+
+### Cadastro em produção
+
+Na Vercel, o cadastro exige senha com pelo menos 12 caracteres e confirmação do e-mail. A tela oferece orientação de senha, confirmação da senha e uma aba separada para inserir, colar ou copiar o código, com reenvio após intervalo. Após confirmar, a pessoa entra com e-mail e senha. Não há segundo fator adicional. A versão local SQLite continua sem envio de e-mail.
+
+A página **Sobre nós** apresenta os Jumpers, o texto fornecido pela equipe e nove imagens adicionais em um álbum compacto, preservando a resolução das miniaturas recebidas.

@@ -1,8 +1,12 @@
 /* A sessão é validada pelo servidor. O cookie HttpOnly não é acessível ao JavaScript. */
-export async function consultarSessao() {
+export async function consultarAcesso() {
     const resposta = await fetch('/api/sessao', { credentials: 'same-origin', cache: 'no-store' });
-    if (!resposta.ok) throw new Error('Não foi possível verificar sua conta. Abra o projeto usando python servidor.py.');
-    return (await resposta.json()).usuario;
+    if (!resposta.ok) throw new Error('Não foi possível verificar sua conta. Tente novamente em alguns minutos.');
+    return resposta.json();
+}
+
+export async function consultarSessao() {
+    return (await consultarAcesso()).usuario;
 }
 
 export function destinoAposLogin() {
@@ -21,7 +25,12 @@ export async function enviarConta(acao, dados = {}) {
         body: JSON.stringify(dados), signal: AbortSignal.timeout(15000)
     });
     const resultado = await resposta.json();
-    if (!resposta.ok) throw new Error(resultado.erro || 'Não foi possível concluir. Tente novamente.');
+    if (!resposta.ok) {
+        const erro = new Error(resultado.erro || 'Não foi possível concluir. Tente novamente.');
+        erro.status = resposta.status;
+        erro.verificacaoPendente = Boolean(resultado.verificacao_pendente);
+        throw erro;
+    }
     return resultado;
 }
 

@@ -58,10 +58,10 @@ function construir(modelo, catalogo, dados, diagnostico, pesos, interacoes, desl
         desenvolvimento: [],
         estabelecido: []
     };
-    // Todas entram na implantação; as de ciclo curto não passam à fase de desenvolvimento.
+    // Ciclos curtos encerram sua participação; coberturas continuam por renovação.
     escolhidas.forEach(e => {
         fases.implantacao.push(e.id); // Perenes são implantadas como mudas; sua função se consolida depois.
-        if (e.ciclo !== 'CURTO') {
+        if (e.ciclo !== 'CURTO' || e.estrato === 'COBERTURA') {
             fases.desenvolvimento.push(e.id);
         }
         // Cobertura é mantida como função do sistema, com renovação e manejo quando preciso.
@@ -74,9 +74,9 @@ function construir(modelo, catalogo, dados, diagnostico, pesos, interacoes, desl
     for (let i = 0; i < escolhidas.length; i++) {
         for (let j = i + 1; j < escolhidas.length; j++) {
             relacoes.push({
+                ...consultarInteracao(escolhidas[i].id, escolhidas[j].id, interacoes),
                 especieA: escolhidas[i].nome,
-                especieB: escolhidas[j].nome,
-                ...consultarInteracao(escolhidas[i].id, escolhidas[j].id, interacoes)
+                especieB: escolhidas[j].nome
             });
         }
     }

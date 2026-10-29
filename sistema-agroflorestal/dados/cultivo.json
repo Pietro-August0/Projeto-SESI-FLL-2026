@@ -1,0 +1,1605 @@
+[
+  {
+    "id": "feijao-guandu",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Leguminosa usada para grãos, adubação verde, biomassa e proteção do solo. A fixação de N depende da simbiose e das condições de cultivo.",
+    "luminosidade": "Prefere pleno sol; luz é especialmente importante na formação de vagens.",
+    "solo": "Diversas texturas, com boa drenagem.",
+    "agua": "Tolera seca; evitar encharcamento.",
+    "manejo": "Podas e destinação da biomassa precisam acompanhar o objetivo. N fixado pode ser exportado nos grãos.",
+    "nutricao": "Fixar N não elimina a necessidade de avaliar P, K e os demais nutrientes.",
+    "fontes": [
+      "guandu"
+    ],
+    "faixas": [
+      {
+        "parametro": "pH do solo",
+        "min": 5,
+        "max": 7,
+        "unidade": "pH",
+        "tipo": "Preferencial",
+        "contexto": "Faixa preferida; tolerância descrita de 4,5 a 8,4. Método analítico não especificado na ficha.",
+        "fonte": "guandu"
+      },
+      {
+        "parametro": "Temperatura do ar",
+        "min": 18,
+        "max": 30,
+        "unidade": "°C",
+        "tipo": "Cultivo usual",
+        "contexto": "Faixa usual de cultivo, não limite de sobrevivência.",
+        "fonte": "guandu"
+      },
+      {
+        "parametro": "Chuva anual",
+        "min": 600,
+        "max": 1000,
+        "unidade": "mm/ano",
+        "tipo": "Preferencial",
+        "contexto": "Melhor desempenho referido com boa drenagem; não é umidade percentual do solo.",
+        "fonte": "guandu"
+      }
+    ]
+  },
+  {
+    "id": "crotalaria",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Leguminosa de crescimento rápido para adubação verde e cobertura, também cultivada para fibra.",
+    "luminosidade": "Sol; não há tolerância à sombra estabelecida na ficha.",
+    "solo": "Prefere solos leves e drenados; sensível à salinidade e ao alagamento prolongado.",
+    "agua": "Tolera seca e ambientes quentes.",
+    "manejo": "Planejar corte e semeadura para evitar competição com a cultura principal. Não tratar a espécie como alimento humano.",
+    "nutricao": "Adubação verde fornece resíduos; não substitui diagnóstico de fertilidade.",
+    "fontes": [
+      "crotalaria"
+    ],
+    "faixas": [
+      {
+        "parametro": "pH do solo",
+        "min": 5,
+        "max": 7.5,
+        "unidade": "pH",
+        "tipo": "Adaptação descrita",
+        "contexto": "Faixa relatada na ficha; não corresponde a recomendação de calagem.",
+        "fonte": "crotalaria"
+      }
+    ]
+  },
+  {
+    "id": "feijao-de-porco",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Leguminosa usada como cobertura e adubo verde. A ficha da FAO diferencia condições ótimas de limites absolutos.",
+    "luminosidade": "Alta luminosidade; a ficha também registra tolerância a sombra leve.",
+    "solo": "Diversas texturas; drenagem e adaptação local devem ser verificadas.",
+    "agua": "A FAO registra uma faixa ampla de chuva; distribuição das chuvas continua relevante.",
+    "manejo": "Usar material identificado. O cadastro prioriza adubação verde, sem recomendar consumo de sementes.",
+    "nutricao": "A classe de fertilidade da FAO não fornece doses de N, P ou K.",
+    "fontes": [
+      "canavalia"
+    ],
+    "faixas": [
+      {
+        "parametro": "pH do solo",
+        "min": 5,
+        "max": 6,
+        "unidade": "pH",
+        "tipo": "Ótima (FAO)",
+        "contexto": "Limites absolutos na ficha: 4,3 a 8; não usar a faixa ótima como exclusão automática.",
+        "fonte": "canavalia"
+      },
+      {
+        "parametro": "Temperatura do ar",
+        "min": 20,
+        "max": 28,
+        "unidade": "°C",
+        "tipo": "Ótima (FAO)",
+        "contexto": "Limites absolutos: 14 a 36 °C.",
+        "fonte": "canavalia"
+      },
+      {
+        "parametro": "Chuva anual",
+        "min": 800,
+        "max": 2000,
+        "unidade": "mm/ano",
+        "tipo": "Ótima (FAO)",
+        "contexto": "Limites absolutos: 600 a 4.300 mm/ano.",
+        "fonte": "canavalia"
+      }
+    ]
+  },
+  {
+    "id": "mucuna",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Trepadeira vigorosa usada como adubo verde e cobertura. Os dados gerais da espécie não identificam uma cultivar específica.",
+    "luminosidade": "Crescimento vigoroso; controlar o avanço sobre outras plantas.",
+    "solo": "De arenosos a argilosos, desde que drenados.",
+    "agua": "Prefere clima quente e úmido; não tolera encharcamento.",
+    "manejo": "A biomassa pode dificultar a colheita de culturas associadas. Sementes sem tratamento contêm compostos antinutricionais; não são indicadas aqui para consumo.",
+    "nutricao": "Fixação de N e liberação de nutrientes dependem do manejo dos resíduos.",
+    "fontes": [
+      "mucuna",
+      "kew-mucuna"
+    ],
+    "faixas": [
+      {
+        "parametro": "Temperatura do ar",
+        "min": 19,
+        "max": 27,
+        "unidade": "°C",
+        "tipo": "Ótima descrita",
+        "contexto": "Referência geral de Mucuna pruriens, sem validação por cultivar.",
+        "fonte": "mucuna"
+      },
+      {
+        "parametro": "Chuva anual",
+        "min": 1000,
+        "max": 2500,
+        "unidade": "mm/ano",
+        "tipo": "Preferencial",
+        "contexto": "Não é umidade do solo; a ficha relata cultivo fora desta faixa.",
+        "fonte": "mucuna"
+      }
+    ],
+    "taxonomia": "Mucuna aterrima é tratada pelo Kew como sinônimo de Mucuna pruriens var. utilis. O nome usado nas referências brasileiras foi preservado."
+  },
+  {
+    "id": "gliricidia",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Árvore de suporte que tolera podas e fornece biomassa. Pode fixar N em simbiose, mas essa contribuição não é garantida em todo consórcio.",
+    "luminosidade": "Pouca tolerância à sombra.",
+    "solo": "Solos drenados; alagamento e alta saturação por alumínio prejudicam o estabelecimento.",
+    "agua": "Tolera seca e pode perder folhas no período seco.",
+    "manejo": "Manejar a copa para limitar competição por luz. Não tratar folhas ou casca como alimento humano.",
+    "nutricao": "A fixação de N depende do ambiente e do cultivo associado; não equivale a uma dose de adubo.",
+    "fontes": [
+      "gliricidia",
+      "gliricidia-caupi"
+    ],
+    "faixas": [
+      {
+        "parametro": "Temperatura média anual do ar",
+        "min": 21,
+        "max": 29,
+        "unidade": "°C",
+        "tipo": "Ocorrência natural",
+        "contexto": "Intervalo observado na distribuição nativa, não tolerância extrema.",
+        "fonte": "gliricidia"
+      },
+      {
+        "parametro": "Chuva anual",
+        "min": 650,
+        "max": 3500,
+        "unidade": "mm/ano",
+        "tipo": "Adaptação descrita",
+        "contexto": "Refere-se ao regime anual de chuva.",
+        "fonte": "gliricidia"
+      }
+    ]
+  },
+  {
+    "id": "caupi",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Leguminosa para grãos, cobertura e adubação verde; pode compor consórcios com cereais.",
+    "luminosidade": "Tolera sombreamento moderado, mas o arranjo altera a competição.",
+    "solo": "Prefere solos leves e drenados; sensível ao excesso de água e à salinidade.",
+    "agua": "Moderadamente tolerante à seca; evitar inundação prolongada.",
+    "manejo": "Escolher cultivar e arranjo segundo o objetivo; a produção em consórcio difere da produção em cultivo solteiro.",
+    "nutricao": "A simbiose pode fornecer N; respostas a P, K e outros nutrientes dependem do solo.",
+    "fontes": [
+      "caupi"
+    ],
+    "faixas": [
+      {
+        "parametro": "Temperatura do ar",
+        "min": 25,
+        "max": 35,
+        "unidade": "°C",
+        "tipo": "Ótima descrita",
+        "contexto": "Sensível a geadas; crescimento cai com o frio.",
+        "fonte": "caupi"
+      },
+      {
+        "parametro": "Chuva anual",
+        "min": 650,
+        "max": 2000,
+        "unidade": "mm/ano",
+        "tipo": "Adaptação descrita",
+        "contexto": "A aptidão varia com uso e cultivar; não é necessidade de irrigação.",
+        "fonte": "caupi"
+      }
+    ]
+  },
+  {
+    "id": "mandioca",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Cultura de raízes que pode ser intercalada com milho ou caupi. A cobertura inicial lenta exige atenção à erosão.",
+    "luminosidade": "Planejar o consórcio para preservar a luz necessária às culturas.",
+    "solo": "Profundos e soltos, preferencialmente arenosos ou de textura média, com boa drenagem.",
+    "agua": "A referência descreve boa resposta a chuvas distribuídas e tolerância a períodos secos.",
+    "manejo": "Selecionar manivas sadias e manejar cobertura; consórcios em fileiras duplas são uma possibilidade técnica.",
+    "nutricao": "A colheita exporta nutrientes; a aparente rusticidade não elimina reposição e análise do solo.",
+    "fontes": [
+      "mandioca"
+    ],
+    "faixas": [
+      {
+        "parametro": "pH do solo",
+        "min": 5.5,
+        "max": 7,
+        "unidade": "pH",
+        "tipo": "Favorável na referência",
+        "contexto": "Material voltado ao contexto do Baixo Tocantins; outras recomendações podem divergir.",
+        "fonte": "mandioca"
+      },
+      {
+        "parametro": "Temperatura média anual do ar",
+        "min": 20,
+        "max": 27,
+        "unidade": "°C",
+        "tipo": "Favorável na referência",
+        "contexto": "Não equivale à temperatura instantânea do solo.",
+        "fonte": "mandioca"
+      },
+      {
+        "parametro": "Chuva anual",
+        "min": 1000,
+        "max": 1500,
+        "unidade": "mm/ano",
+        "tipo": "Favorável na referência",
+        "contexto": "Chuvas bem distribuídas; há cultivo em condições distintas.",
+        "fonte": "mandioca"
+      }
+    ]
+  },
+  {
+    "id": "milho",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Cereal usado na fase inicial de arranjos diversificados. As necessidades de temperatura mudam entre germinação, floração e enchimento de grãos.",
+    "luminosidade": "Preservar acesso à luz; avaliar competição com árvores e adubos verdes.",
+    "solo": "A indicação de correção e fertilização depende da análise da área.",
+    "agua": "Déficit hídrico e calor na fase reprodutiva podem afetar a produção.",
+    "manejo": "O estádio da cultura importa: uma leitura isolada não descreve o ambiente de todo o ciclo.",
+    "nutricao": "Doses dependem de análise, produtividade esperada e sistema; valores arbitrários do protótipo não servem para adubação.",
+    "fontes": [
+      "milho"
+    ],
+    "faixas": [
+      {
+        "parametro": "Temperatura do ar",
+        "min": 24,
+        "max": 30,
+        "unidade": "°C",
+        "tipo": "Ideal: emergência à floração",
+        "contexto": "Refere-se à fase de desenvolvimento indicada na publicação.",
+        "fonte": "milho"
+      },
+      {
+        "parametro": "Temperatura do solo",
+        "min": 25,
+        "max": 30,
+        "unidade": "°C",
+        "tipo": "Ideal: germinação",
+        "contexto": "Refere-se apenas à germinação; não é um limite para a planta adulta.",
+        "fonte": "milho"
+      }
+    ]
+  },
+  {
+    "id": "abacaxi",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Frutífera de porte baixo que pode participar de consórcios. Luz e drenagem são importantes para desenvolvimento e qualidade dos frutos.",
+    "luminosidade": "Exigente em luz; o sombreamento deve ser planejado conforme a fase.",
+    "solo": "Textura média ou arenosa, com boa aeração e drenagem.",
+    "agua": "Muito sensível ao encharcamento; avaliar irrigação em períodos secos prolongados.",
+    "manejo": "Escolher mudas sadias e considerar doenças compartilhadas antes de combinar culturas.",
+    "nutricao": "É exigente em nutrientes; recomendações dependem do laudo e da cultivar.",
+    "fontes": [
+      "abacaxi"
+    ],
+    "faixas": [
+      {
+        "parametro": "pH do solo",
+        "min": 4.5,
+        "max": 5.5,
+        "unidade": "pH",
+        "tipo": "Preferencial na referência",
+        "contexto": "Não é uma dose de corretivo nem limite absoluto.",
+        "fonte": "abacaxi"
+      },
+      {
+        "parametro": "Temperatura do ar",
+        "min": 21,
+        "max": 32,
+        "unidade": "°C",
+        "tipo": "Ótima descrita",
+        "contexto": "Crescimento e qualidade dos frutos; não medir como temperatura do solo.",
+        "fonte": "abacaxi"
+      },
+      {
+        "parametro": "Chuva durante o ciclo",
+        "min": 1200,
+        "max": 1500,
+        "unidade": "mm/ciclo",
+        "tipo": "Referência de cultivo",
+        "contexto": "A fonte se refere ao ciclo, não a uma porcentagem de umidade nem necessariamente a um ano.",
+        "fonte": "abacaxi"
+      }
+    ]
+  },
+  {
+    "id": "banana",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Grupo de frutíferas que também pode oferecer sombra provisória no estabelecimento de outras culturas. Cultivares têm comportamentos distintos.",
+    "luminosidade": "Planejar luz e sombreamento no conjunto do SAF.",
+    "solo": "Profundos, bem drenados, de textura areno-argilosa a argilo-arenosa.",
+    "agua": "Boa oferta de água com drenagem; chuva anual não substitui balanço hídrico.",
+    "manejo": "Considerar cultivar, sanidade das mudas e manejo da touceira; o grupo Musa spp. não representa uma única variedade.",
+    "nutricao": "Necessidades devem ser definidas com análise de solo e objetivo de produção.",
+    "fontes": [
+      "banana-mamao",
+      "cacau"
+    ],
+    "faixas": [
+      {
+        "parametro": "pH do solo",
+        "min": 5.8,
+        "max": 6.5,
+        "unidade": "pH",
+        "tipo": "Referência de zoneamento",
+        "contexto": "Compilação usada no estudo do Centro-Sul de Sergipe; não é aptidão nacional.",
+        "fonte": "banana-mamao"
+      },
+      {
+        "parametro": "Temperatura do ar",
+        "min": 22,
+        "max": 31,
+        "unidade": "°C",
+        "tipo": "Preferencial no zoneamento",
+        "contexto": "Contexto do estudo regional de Sergipe.",
+        "fonte": "banana-mamao"
+      },
+      {
+        "parametro": "Chuva anual",
+        "min": 1200,
+        "max": 1800,
+        "unidade": "mm/ano",
+        "tipo": "Preferencial no zoneamento",
+        "contexto": "Distribuição e duração da estação seca precisam ser avaliadas.",
+        "fonte": "banana-mamao"
+      }
+    ]
+  },
+  {
+    "id": "mamao",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Frutífera tropical para locais com boa insolação. O desenvolvimento é prejudicado por drenagem deficiente.",
+    "luminosidade": "Grande insolação.",
+    "solo": "Textura areno-argilosa, profundo e bem drenado.",
+    "agua": "A referência indica chuva bem distribuída; água acumulada junto às raízes é desfavorável.",
+    "manejo": "Selecionar material de plantio adequado e evitar baixadas sujeitas a encharcamento.",
+    "nutricao": "A demanda varia com solo, grupo de cultivares e produção; não há dose universal de NPK.",
+    "fontes": [
+      "mamao"
+    ],
+    "faixas": [
+      {
+        "parametro": "pH do solo",
+        "min": 5.5,
+        "max": 6.7,
+        "unidade": "pH",
+        "tipo": "Adequado na referência",
+        "contexto": "Não constitui recomendação automática de calagem.",
+        "fonte": "mamao"
+      },
+      {
+        "parametro": "Temperatura do ar",
+        "min": 22,
+        "max": 26,
+        "unidade": "°C",
+        "tipo": "Favorável na referência",
+        "contexto": "Há referências com intervalos distintos; observar o contexto.",
+        "fonte": "mamao"
+      },
+      {
+        "parametro": "Chuva anual",
+        "min": 1800,
+        "max": 2000,
+        "unidade": "mm/ano",
+        "tipo": "Ideal na referência",
+        "contexto": "Chuvas bem distribuídas.",
+        "fonte": "mamao"
+      }
+    ]
+  },
+  {
+    "id": "acai",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Palmeira amazônica para produção de frutos. O cultivo em terra firme precisa de planejamento hídrico próprio.",
+    "luminosidade": "Mudas em terra firme se beneficiam de proteção inicial da radiação excessiva.",
+    "solo": "Adequação depende do ambiente de cultivo; não generalizar a condição de várzea para toda área.",
+    "agua": "Clima úmido; garantir suprimento hídrico na implantação.",
+    "manejo": "Usar cobertura morta e manejar a proteção das mudas conforme o ambiente.",
+    "nutricao": "Análise do solo e sistema de produção devem orientar a nutrição.",
+    "fontes": [
+      "acai",
+      "acai-plantio"
+    ],
+    "faixas": [
+      {
+        "parametro": "Temperatura média mensal do ar",
+        "min": 18,
+        "max": null,
+        "unidade": "°C",
+        "tipo": "Condição favorável descrita",
+        "contexto": "O IDAM indica média mensal superior a 18 °C; não há máximo confirmado nesta fonte.",
+        "fonte": "acai"
+      },
+      {
+        "parametro": "Chuva anual",
+        "min": 2300,
+        "max": null,
+        "unidade": "mm/ano",
+        "tipo": "Condição ótima descrita",
+        "contexto": "O IDAM indica volume superior a 2.300 mm; isso não define necessidade universal de irrigação.",
+        "fonte": "acai"
+      }
+    ]
+  },
+  {
+    "id": "cupuacu",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Frutífera amazônica de sub-bosque. O sombreamento parcial ajuda na implantação, com ajuste gradual de luz ao longo do cultivo.",
+    "luminosidade": "Sombra parcial na implantação; a fonte descreve redução progressiva da sombra.",
+    "solo": "Ocorre em terra firme e várzea alta; o ambiente local precisa ser considerado.",
+    "agua": "Distribuição da chuva importa para o estabelecimento.",
+    "manejo": "O manejo da luz muda com a idade; ocorrência natural não define uma faixa de cultivo garantida.",
+    "nutricao": "Doses e exigências específicas dependem de avaliação do plantio.",
+    "fontes": [
+      "cupuacu"
+    ],
+    "faixas": [
+      {
+        "parametro": "Temperatura média anual do ar",
+        "min": 21.6,
+        "max": 27.5,
+        "unidade": "°C",
+        "tipo": "Ocorrência natural",
+        "contexto": "Condições das áreas de ocorrência, não limites absolutos de cultivo.",
+        "fonte": "cupuacu"
+      },
+      {
+        "parametro": "Umidade relativa do ar",
+        "min": 77,
+        "max": 88,
+        "unidade": "% UR",
+        "tipo": "Ocorrência natural",
+        "contexto": "É umidade do ar; não comparar com o sensor de umidade do solo.",
+        "fonte": "cupuacu"
+      },
+      {
+        "parametro": "Chuva anual",
+        "min": 1900,
+        "max": 3100,
+        "unidade": "mm/ano",
+        "tipo": "Ocorrência natural",
+        "contexto": "Não representa prescrição de irrigação.",
+        "fonte": "cupuacu"
+      }
+    ]
+  },
+  {
+    "id": "cacau",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Árvore tropical cultivada pelas sementes. Pode ser implantada com sombra provisória e árvores de sombreamento manejadas.",
+    "luminosidade": "A referência descreve sombra provisória e definitiva; a intensidade exige manejo.",
+    "solo": "Profundos, com drenagem de boa a moderada.",
+    "agua": "Chuvas distribuídas ao longo do ano; estiagens requerem avaliação local.",
+    "manejo": "Banana e gliricídia são citadas para sombra provisória; planejar o ajuste das copas.",
+    "nutricao": "Avaliar fertilidade, clone e manejo antes de definir adubação.",
+    "fontes": [
+      "cacau",
+      "cacau-clima"
+    ],
+    "faixas": [
+      {
+        "parametro": "pH do solo",
+        "min": 5.5,
+        "max": 6.5,
+        "unidade": "pH",
+        "tipo": "Desejável na referência",
+        "contexto": "Não representa tolerância extrema da espécie.",
+        "fonte": "cacau-clima"
+      },
+      {
+        "parametro": "Temperatura média anual do ar",
+        "min": 21,
+        "max": null,
+        "unidade": "°C",
+        "tipo": "Condição descrita",
+        "contexto": "A fonte indica média superior a 21 °C, sem máximo definido.",
+        "fonte": "cacau-clima"
+      },
+      {
+        "parametro": "Chuva anual",
+        "min": 1500,
+        "max": null,
+        "unidade": "mm/ano",
+        "tipo": "Mínimo descrito",
+        "contexto": "A fonte exige distribuição ao longo do ano.",
+        "fonte": "cacau-clima"
+      }
+    ]
+  },
+  {
+    "id": "pupunha",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Palmeira com uso alimentar. As referências consultadas tratam principalmente da produção de palmito.",
+    "luminosidade": "Plantio de campo em área aberta e com alta incidência de luz, no sistema descrito.",
+    "solo": "Profundos e drenados; não tolera encharcamento.",
+    "agua": "Prefere clima superúmido; em regiões menos chuvosas é necessário avaliar irrigação.",
+    "manejo": "Não tolera geadas. Bananeiras podem compor quebra-ventos em locais expostos.",
+    "nutricao": "Correção e adubação dependem de análise, incluindo N, P, K e boro.",
+    "fontes": [
+      "pupunha",
+      "pupunha-vento"
+    ],
+    "faixas": [
+      {
+        "parametro": "Temperatura média do ar",
+        "min": 21,
+        "max": 21,
+        "unidade": "°C",
+        "tipo": "Valor aproximado",
+        "contexto": "Cerca de 21 °C na referência de cultivo para palmito; não é uma faixa de tolerância.",
+        "fonte": "pupunha"
+      },
+      {
+        "parametro": "Umidade relativa do ar",
+        "min": 80,
+        "max": 90,
+        "unidade": "% UR",
+        "tipo": "Preferencial na referência",
+        "contexto": "Umidade atmosférica, não umidade do solo.",
+        "fonte": "pupunha"
+      },
+      {
+        "parametro": "Chuva anual",
+        "min": 2000,
+        "max": null,
+        "unidade": "mm/ano",
+        "tipo": "Preferencial na referência",
+        "contexto": "Superior a 2.000 mm/ano; referência também considera a chuva do mês mais seco.",
+        "fonte": "pupunha"
+      }
+    ]
+  },
+  {
+    "id": "andiroba",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Árvore amazônica de longa permanência, com sementes usadas para óleo e presença registrada em SAFs de várzea com açaizeiro.",
+    "luminosidade": "A resposta à abertura varia entre estudos de plantio.",
+    "solo": "Ocorre em solos úmidos; a referência registra sensibilidade a solos arenosos e pobres.",
+    "agua": "O clima de ocorrência é amplo; não usar uma condição local como limite universal.",
+    "manejo": "Monitorar broca-de-ponteiros; a composição e o local alteram o desenvolvimento.",
+    "nutricao": "Condições edáficas e manejo precisam ser avaliados no plantio.",
+    "fontes": [
+      "andiroba"
+    ],
+    "faixas": [
+      {
+        "parametro": "Temperatura média anual do ar",
+        "min": 20.5,
+        "max": 27,
+        "unidade": "°C",
+        "tipo": "Ocorrência natural",
+        "contexto": "Extremos das localidades descritas; não são limites fisiológicos.",
+        "fonte": "andiroba"
+      },
+      {
+        "parametro": "Chuva anual",
+        "min": 1300,
+        "max": 3500,
+        "unidade": "mm/ano",
+        "tipo": "Ocorrência natural",
+        "contexto": "A distribuição anual varia entre as áreas.",
+        "fonte": "andiroba"
+      }
+    ]
+  },
+  {
+    "id": "parica",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Árvore amazônica heliófila usada em arranjos agroflorestais. Apesar de pertencer às leguminosas, não é fixadora de nitrogênio.",
+    "luminosidade": "Pleno sol; sensível a baixas temperaturas.",
+    "solo": "Ocorre em condições edáficas distintas; ocorrência em solo ácido não define faixa ótima.",
+    "agua": "Planejar o cultivo segundo o clima e o manejo da área.",
+    "manejo": "É sensível ao vento. Há relatos de consórcio com milho e sombreamento de cacau.",
+    "nutricao": "A fonte registra associação com micorrizas, que não equivale à fixação de N.",
+    "fontes": [
+      "parica"
+    ],
+    "faixas": [
+      {
+        "parametro": "Temperatura média anual do ar",
+        "min": 24.8,
+        "max": 26.6,
+        "unidade": "°C",
+        "tipo": "Ocorrência natural",
+        "contexto": "Intervalo entre localidades descritas pela Embrapa, não tolerância térmica.",
+        "fonte": "parica"
+      }
+    ],
+    "taxonomia": "A publicação usa Schizolobium amazonicum; o catálogo mantém Schizolobium parahyba var. amazonicum. Não confundir automaticamente com o guapuruvu da variedade parahyba."
+  },
+  {
+    "id": "margaridao",
+    "revisadoEm": "2026-10-22",
+    "resumo": "Arbusto produtor de biomassa, usado em adubação verde, cercas e controle de erosão. As flores oferecem recurso para abelhas.",
+    "luminosidade": "Prefere pleno sol.",
+    "solo": "Drenados; há tolerância relatada a solos ácidos e de baixa fertilidade.",
+    "agua": "Prefere chuva regular; moderadamente resistente à seca.",
+    "manejo": "Controlar disseminação por sementes e ramos. Há registros de invasividade e de efeitos alelopáticos em alguns contextos.",
+    "nutricao": "Recicla nutrientes; absorção de P não cria fósforo novo nem substitui correção de deficiências.",
+    "fontes": [
+      "margaridao"
+    ],
+    "faixas": [
+      {
+        "parametro": "Temperatura diurna do ar",
+        "min": 15,
+        "max": 31,
+        "unidade": "°C",
+        "tipo": "Melhor crescimento descrito",
+        "contexto": "A ficha descreve tolerância de 12 a 38 °C; não é temperatura do solo.",
+        "fonte": "margaridao"
+      },
+      {
+        "parametro": "Chuva anual",
+        "min": 1000,
+        "max": 2000,
+        "unidade": "mm/ano",
+        "tipo": "Preferencial",
+        "contexto": "Há tolerância fora desta faixa.",
+        "fonte": "margaridao"
+      }
+    ]
+  },
+  {
+    "id": "abiuzeiro",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Frutífera tropical de polpa comestível; amplia a diversidade alimentar. A referência trata de abiu e não comprova a identidade do exemplar de 2021.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Avaliar clima quente e proteção contra frio; usar área drenada e espaço para a copa. As condições da Flórida descritas pela UF/IFAS exigem ajuste local.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "A UF/IFAS recomenda semear logo após extrair do fruto: sementes de abiu perdem viabilidade em poucos dias. Usar substrato limpo e drenado e registrar a matriz. Não confundir com Chrysophyllum cainito, também chamado caimito. Medir sobrevivência e crescimento antes de definir seu lugar no SAF.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-abiu"
+    ],
+    "faixas": [],
+    "taxonomia": "Pouteria caimito"
+  },
+  {
+    "id": "acafrao-curcuma",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Herbácea produtora de rizomas usados como condimento e corante. Pode diversificar a produção nas faixas baixas do sistema.",
+    "luminosidade": "O comunicado da Embrapa descreve canteiros, adubação orgânica e irrigação ao longo do ciclo; ajustar ao solo, à chuva e ao acesso à água.",
+    "solo": "O comunicado da Embrapa descreve canteiros, adubação orgânica e irrigação ao longo do ciclo; ajustar ao solo, à chuva e ao acesso à água.",
+    "agua": "O comunicado da Embrapa descreve canteiros, adubação orgânica e irrigação ao longo do ciclo; ajustar ao solo, à chuva e ao acesso à água.",
+    "manejo": "Propagação vegetativa por rizomas sadios. A secagem da parte aérea é um indicador de colheita descrito na referência. A lâmina diária e o ciclo de um protocolo experimental não são universais. Não confundir com açafrão de Crocus sativus.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-curcuma",
+      "planejamento-embrapa"
+    ],
+    "faixas": [],
+    "taxonomia": "Curcuma longa"
+  },
+  {
+    "id": "amora",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A ficha da USP descreve amoreira arbórea; o nome amora isolado não confirma esse material. A contribuição alimentar depende da identificação.",
+    "luminosidade": "Se for Morus nigra, a USP indica sol pleno, solo fértil, profundo e drenado, com regas no estabelecimento.",
+    "solo": "Se for Morus nigra, a USP indica sol pleno, solo fértil, profundo e drenado, com regas no estabelecimento.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Confirmar se o material é árvore ou arbusto e registrar matriz, folhas e frutos antes de definir a multiplicação. Não transferir exigências de amoreira para outra planta chamada amora. Evitar classificar automaticamente como nativa.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-amora"
+    ],
+    "faixas": [],
+    "taxonomia": "Morus nigra como hipótese; espécie não determinada"
+  },
+  {
+    "id": "angico-branco",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A ESALQ descreve uma árvore decídua de vegetação secundária. Há potencial para estrutura arbórea, mas angico-branco também é nome de pau-jacaré.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Comparar frutos, folhas e casca com a referência; vincular coleta à matriz identificada. Não cadastrar como fixadora de nitrogênio apenas por pertencer a Fabaceae. Pode duplicar pau-jacaré; não mesclar lotes sem confirmação.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-angico",
+      "taiobas-jacare"
+    ],
+    "faixas": [],
+    "taxonomia": "Anadenanthera colubrina como hipótese"
+  },
+  {
+    "id": "araca-amarelo",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Araçás oferecem diversidade de frutos. O estudo da Embrapa diferencia espécies do gênero; a cor amarela do fruto é uma pista, não um diagnóstico botânico.",
+    "luminosidade": "Conferir espécie e ambiente de origem antes de definir exigências de cultivo. Não atribuir uma faixa de solo a todo o gênero.",
+    "solo": "Conferir espécie e ambiente de origem antes de definir exigências de cultivo. Não atribuir uma faixa de solo a todo o gênero.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Guardar registro da matriz e frutos maduros; determinar a espécie antes de adotar protocolo de sementes. A grafia cattleianum aparece em fontes históricas. Registrar a identificação aceita após revisão do material, sem presumir cultivar.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-aracas"
+    ],
+    "faixas": [],
+    "taxonomia": "Psidium cattleianum como hipótese"
+  },
+  {
+    "id": "araca-do-campo",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A Embrapa registra o mesmo nome para P. laruotteanum e P. cinereum, entre outros usos. São portes e ambientes diferentes.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "O nome pode representar plantas de Cerrado com exigências distintas. Não definir irrigação, estrato ou porte a partir dele.",
+    "manejo": "Fotografar hábito, folha, flor e fruto e solicitar identificação antes de planejar multiplicação. Preservar este acesso separado de araçá-amarelo. Não transformar ocorrência no Cerrado em tolerância a qualquer solo seco.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-aracas"
+    ],
+    "faixas": [],
+    "taxonomia": "Psidium spp.; espécie não determinada"
+  },
+  {
+    "id": "araca-roxo",
+    "revisadoEm": "2026-10-29",
+    "resumo": "O mapeamento botânico da Escola Bahiana associa araçá-roxo a Psidium myrtoides. É uma referência de identificação para ampliar a pesquisa de frutíferas.",
+    "luminosidade": "A fonte consultada não estabelece protocolo agronômico; luz, água e solo permanecem sem faixa validada nesta ficha.",
+    "solo": "A fonte consultada não estabelece protocolo agronômico; luz, água e solo permanecem sem faixa validada nesta ficha.",
+    "agua": "A fonte consultada não estabelece protocolo agronômico; luz, água e solo permanecem sem faixa validada nesta ficha.",
+    "manejo": "Solicitar confirmação da matriz e dados de coleta. Selecionar protocolo de produção de mudas após a identificação. A cor do fruto não confirma espécie. Não importar manejo de outros araçás como se fosse evidência desta planta.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-araca-roxo"
+    ],
+    "faixas": [],
+    "taxonomia": "Psidium myrtoides como hipótese"
+  },
+  {
+    "id": "araucaria",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Conífera produtora de pinhões; a conservação de sementes é um tema relevante para o projeto. O inventário não documenta espécie nem lote.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "A Embrapa estudou conservação em embalagens e ambientes controlados. A data da coleta e o teste de germinação são essenciais. Não considerar pinhões de 2021 viáveis hoje apenas porque constam na lista. Não generalizar resultados de conservação experimental.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-araucaria"
+    ],
+    "faixas": [],
+    "taxonomia": "Araucaria angustifolia como referência"
+  },
+  {
+    "id": "aroeira-pimenta",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Árvore com frutos avermelhados e ocorrência em vegetação secundária e margens de rios. Pode ampliar a diversidade arbórea e as observações de fauna.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Usar frutos e folhas para conferir a identidade e registrar a matriz antes de multiplicar. A USP registra alergia em algumas pessoas pelo contato com folhas ou flores. Não confundir com outras aroeiras nem recomendar usos medicinais.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-aroeira"
+    ],
+    "faixas": [],
+    "taxonomia": "Schinus terebinthifolius"
+  },
+  {
+    "id": "batata-doce",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Cultura de raízes tuberosas com propagação por ramas. Pode diversificar alimentos e ocupar temporariamente a camada baixa.",
+    "luminosidade": "Usar solo bem drenado e avaliar compactação; leiras ou canteiros ajudam a formação e a colheita das raízes.",
+    "solo": "Usar solo bem drenado e avaliar compactação; leiras ou canteiros ajudam a formação e a colheita das raízes.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Priorizar ramas de boa sanidade e identidade conhecida. Registrar cultivar e procedência, pois influenciam ciclo e produção. Crescimento abundante de ramas não garante produção de raízes. Evitar encharcamento e competição das ramas com mudas jovens.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-batata"
+    ],
+    "faixas": [],
+    "taxonomia": "Ipomoea batatas"
+  },
+  {
+    "id": "biriba",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Frutífera tropical de crescimento rápido com polpa consumida fresca e processada. A UF/IFAS a descreve também pelo nome rollinia.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "A referência situa o cultivo em ambientes tropicais úmidos. Avaliar frio, água, drenagem e espaço de copa antes da implantação local.",
+    "agua": "A referência situa o cultivo em ambientes tropicais úmidos. Avaliar frio, água, drenagem e espaço de copa antes da implantação local.",
+    "manejo": "Propagação principalmente por sementes retiradas de frutos maduros e limpas. A UF/IFAS relata germinação em três a cinco semanas sob condições quentes de viveiro; plantas de semente variam nas características dos frutos. Não confundir com outras anonáceas nem garantir características varietais por sementes. A referência da Flórida exige adaptação ao contexto brasileiro.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-biriba"
+    ],
+    "faixas": [],
+    "taxonomia": "Annona mucosa"
+  },
+  {
+    "id": "cabeludinha",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Frutífera descrita com bagas amarelas pubescentes e poucas sementes grandes; potencial alimentar e ornamental.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "A referência registra origem no Sudeste, mas não fornece faixa de pH, irrigação ou adubação. Esses campos ficam sem números.",
+    "manejo": "Conferir pelos do fruto, folhas e material da matriz; revisar a nomenclatura com especialista antes de produzir mudas. O nome cabeludinha e a nomenclatura histórica não bastam para fechar a identidade. Não apresentar Plinia glomerata como confirmação do lote.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-cabeludinha"
+    ],
+    "faixas": [],
+    "taxonomia": "Plinia glomerata na ficha histórica da ESALQ"
+  },
+  {
+    "id": "camboata",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A pesquisa encontrou camboatá aplicado a Guarea e a outras árvores. O registro da lista é insuficiente para escolher um táxon.",
+    "luminosidade": "Solo, porte, luz e função no SAF dependem da espécie e permanecem por confirmar.",
+    "solo": "Solo, porte, luz e função no SAF dependem da espécie e permanecem por confirmar.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Reunir folhas compostas completas, flores, frutos e procedência da matriz; pedir determinação botânica. Não converter automaticamente em Cupania vernalis nem recomendar alimentação animal. A ESALQ registra risco de ingestão para um dos táxons associados.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-camboata",
+      "taiobas-restauracao"
+    ],
+    "faixas": [],
+    "taxonomia": "Espécie não determinada"
+  },
+  {
+    "id": "capixingui",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Árvore nativa registrada em grupo pioneiro na referência regional da Embrapa. Pode contribuir para o recobrimento inicial e a estrutura do sistema.",
+    "luminosidade": "A classificação ecológica consultada se refere ao Paraná. Avaliar luz, estabelecimento e crescimento no local do projeto.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Identificar matriz; observar maturação dos frutos antes da dispersão para planejar a coleta. Também recebe nomes como sangra-d’água. Não mesclar com Croton espontâneo ou sangra-d’água sem conferir o material; não inferir uso alimentar.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-capixingui",
+      "taiobas-restauracao"
+    ],
+    "faixas": [],
+    "taxonomia": "Croton floribundus"
+  },
+  {
+    "id": "capororoca",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Myrsine umbellata é uma das árvores chamadas capororoca; suas condições não representam todo o gênero.",
+    "luminosidade": "Para M. umbellata há descrição de ambientes parcialmente sombreados e também sol. É necessário identificar o acesso antes de aplicar esse manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Comparar folhas, frutos e porte com material de referência e registrar a matriz. Não confundir capororoca, capororocão e outras Myrsine. Protocolos de dormência ou armazenamento são específicos da espécie.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-capororoca"
+    ],
+    "faixas": [],
+    "taxonomia": "Myrsine spp.; espécie não determinada"
+  },
+  {
+    "id": "castanha-do-maranhao",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A ESALQ descreve Pachira glabra sob nome histórico Bombacopsis glabra, mas o dicionário também associa o nome a P. aquatica e outras Pachira.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "As espécies têm portes e ambientes diferentes; não definir tolerância a alagamento a partir do nome comum.",
+    "manejo": "Conferir flor, cápsula, semente e procedência antes de adotar um protocolo. Não liberar consumo de sementes de um acesso sem identificação. Manter separadas as hipóteses e não atribuir uma espécie à lista original.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-castanha",
+      "taiobas-castanha-ambigua"
+    ],
+    "faixas": [],
+    "taxonomia": "Pachira spp.; espécie não determinada"
+  },
+  {
+    "id": "cereja-do-rio-grande",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Frutífera nativa de uso alimentar, visitada por abelhas e aves. A Embrapa documenta uso tradicional em sistema de faxinal.",
+    "luminosidade": "A monografia indica solo fértil e bem drenado; registra tolerância à sombra e plantio a pleno sol. Ajustar à fase e ao local.",
+    "solo": "A monografia indica solo fértil e bem drenado; registra tolerância à sombra e plantio a pleno sol. Ajustar à fase e ao local.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Despolpar frutos maduros e semear prontamente em recipientes individuais; sementes recalcitrantes, com curta viabilidade em armazenamento. Não conservar como semente seca de longa duração. O nome pitanga-preta também aparece para esta espécie; conferir possíveis duplicações.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-cereja"
+    ],
+    "faixas": [],
+    "taxonomia": "Eugenia involucrata"
+  },
+  {
+    "id": "citrus-indet",
+    "revisadoEm": "2026-10-29",
+    "resumo": "O documento informa apenas o gênero. Não há evidência de que seja laranja, limão, mexerica ou um híbrido específico.",
+    "luminosidade": "Luz, água, nutrição e compatibilidade com porta-enxerto exigem identificação do material e avaliação sanitária.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Luz, água, nutrição e compatibilidade com porta-enxerto exigem identificação do material e avaliação sanitária.",
+    "manejo": "Registrar se é semente, porta-enxerto ou muda enxertada, além de matriz e procedência. Não fundir com mexerica por pertencer ao mesmo gênero. Não escolher cultivar ou recomendar adubação com base neste registro.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-mexerica"
+    ],
+    "faixas": [],
+    "taxonomia": "Citrus sp.; espécie não determinada"
+  },
+  {
+    "id": "croton-espontaneo",
+    "revisadoEm": "2026-10-29",
+    "resumo": "O nome sugere um indivíduo espontâneo do gênero Croton. Não comprova capixingui ou sangra-d’água.",
+    "luminosidade": "Necessidades e uso em restauração variam entre espécies; manter sem faixa de solo ou água.",
+    "solo": "Necessidades e uso em restauração variam entre espécies; manter sem faixa de solo ou água.",
+    "agua": "Necessidades e uso em restauração variam entre espécies; manter sem faixa de solo ou água.",
+    "manejo": "Registrar local, folhas, estruturas reprodutivas e coleta da matriz para identificação. Pode coincidir com outros registros da lista, mas não deve ser fundido por suposição. Não atribuir comestibilidade ou propriedades medicinais.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-capixingui",
+      "taiobas-sangra-ambigua"
+    ],
+    "faixas": [],
+    "taxonomia": "Croton sp.; espécie não determinada"
+  },
+  {
+    "id": "escova-de-macaco",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A USP usa o nome para Apeiba, árvore pioneira; a Unicamp para Combretum, trepadeira atrativa a polinizadores. São estruturas diferentes no SAF.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Conferir hábito, flores e frutos; manter lote separado até identificação. Pode ser duplicação de pau-jangada se for Apeiba tibourbou. Não atribuir automaticamente o crescimento e o manejo de uma à outra.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-escova",
+      "taiobas-jangada"
+    ],
+    "faixas": [],
+    "taxonomia": "Apeiba tibourbou ou Combretum fruticosum, entre possibilidades"
+  },
+  {
+    "id": "fedegoso",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A pesquisa documenta Senna occidentalis e S. macranthera com esse nome; não são intercambiáveis no planejamento.",
+    "luminosidade": "O IFES recomenda plantio misto ao sol para S. macranthera. Isso não valida o acesso do banco nem outras Senna.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Identificar flores, folhas e vagens antes de selecionar tratamento de sementes; dormência tegumentar está documentada para S. occidentalis. Não classificar como adubo verde fixador de N ou alimento pela família Fabaceae. Exige identificação antes de qualquer uso.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-fedegoso",
+      "taiobas-fedegoso-arvore"
+    ],
+    "faixas": [],
+    "taxonomia": "Senna spp.; espécie não determinada"
+  },
+  {
+    "id": "fruto-do-sabia",
+    "revisadoEm": "2026-10-29",
+    "resumo": "O Sesc descreve arbusto com frutos procurados por aves e interesse para restauro. Pode apoiar observações de dispersão no projeto.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Confirmar flores, frutos e matriz; não adotar protocolo de outra solanácea por semelhança. Manter o foco em fauna e restauração. Não liberar consumo a partir do nome comum nem confundir com aroeira chamada fruta-de-sabiá.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-sabia",
+      "taiobas-aroeira"
+    ],
+    "faixas": [],
+    "taxonomia": "Iochroma arborescens como hipótese"
+  },
+  {
+    "id": "fumeirinho",
+    "revisadoEm": "2026-10-29",
+    "resumo": "O nome foi preservado exatamente como registro do banco. A pesquisa não resolveu uma correspondência botânica confiável para este acesso.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Solicitar ao parceiro identificação da matriz, fotos reprodutivas e procedência; guardar etiqueta e histórico do acesso. Não trocar por fumo-bravo nem atribuir Solanum ou Nicotiana por semelhança de nome.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-fumo"
+    ],
+    "faixas": [],
+    "taxonomia": "Não determinado"
+  },
+  {
+    "id": "fumo-bravo",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A Embrapa descreve S. bullatum sob fumo-bravo. O inventário sem caracteres botânicos não confirma essa espécie.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Registrar ramos, folhas, flores e frutos da matriz e encaminhar para identificação. Não é indicação de fumo cultivado e não permite recomendar consumo dos frutos. Não fundir com fumeirinho.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-fumo"
+    ],
+    "faixas": [],
+    "taxonomia": "Solanum bullatum como uma possibilidade"
+  },
+  {
+    "id": "gengibre",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Cultura de rizomas que diversifica condimentos e produção nos estratos baixos. O manual do Incaper destaca sanidade na cadeia de produção.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Avaliar drenagem e qualidade da água de irrigação; planejar rotação e monitoramento de doenças.",
+    "agua": "Avaliar drenagem e qualidade da água de irrigação; planejar rotação e monitoramento de doenças.",
+    "manejo": "Usar rizomas sadios de origem conhecida. Amarelecimento, redução da planta e murcha são indicadores de colheita descritos. O ciclo varia entre regiões. Rizomas úmidos favorecem problemas na conservação; não confundir tempo de colheita com prazo fixo do SAF.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-gengibre",
+      "planejamento-embrapa"
+    ],
+    "faixas": [],
+    "taxonomia": "Zingiber officinale"
+  },
+  {
+    "id": "grumixama",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Frutífera da Mata Atlântica com frutos usados frescos e processados e procurados por pássaros. Pode unir produção e diversidade de fauna.",
+    "luminosidade": "A ESALQ registra preferência por ambientes de maior umidade do solo. Essa observação não representa tolerância a alagamento.",
+    "solo": "A ESALQ registra preferência por ambientes de maior umidade do solo. Essa observação não representa tolerância a alagamento.",
+    "agua": "A ESALQ registra preferência por ambientes de maior umidade do solo. Essa observação não representa tolerância a alagamento.",
+    "manejo": "Conferir matriz, cor e características dos frutos, que variam; registrar a origem do material antes da multiplicação. Não prometer época única de colheita fora da região da referência nem confundir frutos escuros com outra espécie.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-grumixama"
+    ],
+    "faixas": [],
+    "taxonomia": "Eugenia brasiliensis"
+  },
+  {
+    "id": "guacatonga",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A UFSC descreve árvore com flores pequenas e sementes envoltas por massa avermelhada. Amplia a pesquisa de diversidade arbórea.",
+    "luminosidade": "A ampla distribuição informada não define faixa de cultivo. Solo, água e tolerância à sombra devem ser avaliados no local.",
+    "solo": "A ampla distribuição informada não define faixa de cultivo. Solo, água e tolerância à sombra devem ser avaliados no local.",
+    "agua": "A ampla distribuição informada não define faixa de cultivo. Solo, água e tolerância à sombra devem ser avaliados no local.",
+    "manejo": "Conferir folha com pontos translúcidos, margem e fruto; usar material da matriz identificada. A própria fonte alerta para outras Casearia com nomes semelhantes. Usos medicinais populares não entram como recomendação do sistema.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-guacatonga"
+    ],
+    "faixas": [],
+    "taxonomia": "Casearia sylvestris como hipótese"
+  },
+  {
+    "id": "guamirim",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A Embrapa descreve guamirim-cascudo como Myrcia arborescens e registra frutos dispersos por aves; o nome genérico guamirim não fecha a identificação.",
+    "luminosidade": "Exigências de solo, luz e água dependem da espécie, sem faixa atribuída aqui.",
+    "solo": "Exigências de solo, luz e água dependem da espécie, sem faixa atribuída aqui.",
+    "agua": "Exigências de solo, luz e água dependem da espécie, sem faixa atribuída aqui.",
+    "manejo": "Coletar evidências da casca, folhas, flores e frutos e consultar identificação botânica. Não cadastrar todos os guamirins como Myrcia arborescens. Pode coincidir com Myrtaceae indet., mas os acessos ficam separados.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-guamirim"
+    ],
+    "faixas": [],
+    "taxonomia": "Myrtaceae; espécie não determinada"
+  },
+  {
+    "id": "guapuruvu",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Árvore de crescimento rápido e copa ampla; pode fornecer estrutura e biomassa. É distinta do paricá amazônico já cadastrado.",
+    "luminosidade": "A Embrapa considera inadequados solos rasos, muito secos ou de baixa fertilidade. Reservar espaço para porte elevado.",
+    "solo": "A Embrapa considera inadequados solos rasos, muito secos ou de baixa fertilidade. Reservar espaço para porte elevado.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Sementes têm tegumento duro e dormência. Selecionar método de superação e teste de germinação com responsável técnico. Não copiar o perfil de paricá nem atribuir fixação de N por pertencer a Fabaceae. Avaliar distância de estruturas e competição da copa.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-guapuruvu"
+    ],
+    "faixas": [],
+    "taxonomia": "Schizolobium parahyba"
+  },
+  {
+    "id": "indeterminado",
+    "revisadoEm": "2026-10-29",
+    "resumo": "O inventário não informa nome, gênero ou família. O registro documenta uma lacuna e não uma espécie nova confirmada.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Solicitar número do acesso, etiqueta original, origem e material botânico para determinação. Não inferir função ecológica, consumo, porte, dormência ou disponibilidade atual. Manter fora das propostas automáticas.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-documento"
+    ],
+    "faixas": [],
+    "taxonomia": "Não determinado"
+  },
+  {
+    "id": "inga-de-metro",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A monografia da Embrapa associa ingá-de-metro a Inga edulis, também chamado ingá-cipó. Amplia o conjunto de árvores frutíferas a investigar.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Registrar matriz, fruto e origem e verificar protocolo específico de sementes antes de formar lotes. O nome popular não confirma a planta de 2021. Não atribuir dose de N, benefício ao vizinho ou compatibilidade universal sem evidência local.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-inga",
+      "planejamento-embrapa"
+    ],
+    "faixas": [],
+    "taxonomia": "Inga edulis"
+  },
+  {
+    "id": "inhame",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A Embrapa distingue inhame/cará de taro, embora o nome inhame seja usado regionalmente para ambos.",
+    "luminosidade": "Identificar se há trepadeira ou planta de folhas peltadas antes de definir tutoramento, água e solo.",
+    "solo": "Identificar se há trepadeira ou planta de folhas peltadas antes de definir tutoramento, água e solo.",
+    "agua": "Identificar se há trepadeira ou planta de folhas peltadas antes de definir tutoramento, água e solo.",
+    "manejo": "Registrar órgão de propagação e cultivar após identificar a espécie; não usar um único protocolo para os dois grupos. Não recomendar consumo de uma planta desconhecida nem confundir com taioba. A identificação muda inclusive a arquitetura do plantio.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-hortalicas"
+    ],
+    "faixas": [],
+    "taxonomia": "Dioscorea spp. ou Colocasia esculenta"
+  },
+  {
+    "id": "ipe-verde",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A UENF registra árvore de Bignoniaceae com uso ornamental e em recuperação de áreas. Acrescenta diversidade ao estudo de restauração.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Confirmar a matriz e o ambiente de implantação; distribuição em vários biomas não equivale a aptidão de cada terreno.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Registrar frutos e sementes com identificação; exigir protocolo específico de produção de mudas. Não atribuir manejo de Handroanthus ou Tabebuia por semelhança do nome ipê. Não incorporar usos medicinais populares.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-ipe"
+    ],
+    "faixas": [],
+    "taxonomia": "Cybistax antisyphilitica"
+  },
+  {
+    "id": "jabuticaba-de-cabinho",
+    "revisadoEm": "2026-10-29",
+    "resumo": "O JBRJ associa o nome a P. peruviana; um acesso da Embrapa usa P. trunciflora. A divergência foi preservada.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Conferir a matriz com especialista e registrar qual determinação foi adotada e por quê. Não resolver a divergência só pelo nome comum e não prometer precocidade de jabuticaba híbrida a uma planta obtida por semente.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-jabuticaba",
+      "taiobas-jabuticaba-bag"
+    ],
+    "faixas": [],
+    "taxonomia": "Plinia peruviana / Plinia trunciflora nas fontes"
+  },
+  {
+    "id": "jaracatia",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Árvore nativa de crescimento moderado. A Embrapa recomenda plantio misto, útil ao estudo de diversidade estrutural.",
+    "luminosidade": "A monografia registra solos úmidos de planícies e encostas e maior vigor em terras férteis; alerta para baixas temperaturas.",
+    "solo": "A monografia registra solos úmidos de planícies e encostas e maior vigor em terras férteis; alerta para baixas temperaturas.",
+    "agua": "A monografia registra solos úmidos de planícies e encostas e maior vigor em terras férteis; alerta para baixas temperaturas.",
+    "manejo": "Obter sementes de frutos maduros de matriz identificada. A referência relata formação de mudas em cerca de quatro meses, dependente das condições. Planejar a copa e conferir manejo local. Não aplicar práticas destrutivas de extração do tronco nem inferir manejo de mamoeiro.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-jaracatia"
+    ],
+    "faixas": [],
+    "taxonomia": "Jacaratia spinosa"
+  },
+  {
+    "id": "jatoba",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A Embrapa alerta que jatobá é usado para várias Hymenaea. Para H. courbaril, descreve grande porte, polinização por morcegos e uso alimentar da polpa.",
+    "luminosidade": "Para H. courbaril, melhor crescimento é associado a solos profundos, férteis, úmidos e drenados; ocorrência em solo pobre não garante bom desempenho.",
+    "solo": "Para H. courbaril, melhor crescimento é associado a solos profundos, férteis, úmidos e drenados; ocorrência em solo pobre não garante bom desempenho.",
+    "agua": "Para H. courbaril, melhor crescimento é associado a solos profundos, férteis, úmidos e drenados; ocorrência em solo pobre não garante bom desempenho.",
+    "manejo": "Confirmar folha bifoliolada, fruto e matriz antes de escolher protocolo de sementes. Não confundir com H. stigonocarpa ou outros jatobás. Reservar espaço de longo prazo e não inferir fixação de N pela família.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-jatoba",
+      "taiobas-jatoba-cultivo"
+    ],
+    "faixas": [],
+    "taxonomia": "Hymenaea courbaril como hipótese"
+  },
+  {
+    "id": "jenipapo",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Árvore frutífera cuja referência da USP destaca ocorrência em várzeas úmidas e ambientes com água abundante no solo.",
+    "luminosidade": "Avaliar disponibilidade de água e condição física do solo; ocorrência em várzea não é uma recomendação para qualquer alagamento.",
+    "solo": "Avaliar disponibilidade de água e condição física do solo; ocorrência em várzea não é uma recomendação para qualquer alagamento.",
+    "agua": "Avaliar disponibilidade de água e condição física do solo; ocorrência em várzea não é uma recomendação para qualquer alagamento.",
+    "manejo": "A Embrapa descreve retirada da polpa, lavagem, secagem breve à sombra e descarte de sementes malformadas ou doentes para formar plantas doadoras. O protocolo de laboratório não equivale a produção no campo. Identificar origem e acompanhar sobrevivência das mudas.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-jenipapo",
+      "taiobas-jenipapo-sementes"
+    ],
+    "faixas": [],
+    "taxonomia": "Genipa americana"
+  },
+  {
+    "id": "laranjinha-do-mato",
+    "revisadoEm": "2026-10-29",
+    "resumo": "O nome aparece em referências de frutíferas nativas, mas não identifica de forma suficiente o material fornecido na lista.",
+    "luminosidade": "Sem faixas de luz, solo ou água atribuídas até confirmação.",
+    "solo": "Sem faixas de luz, solo ou água atribuídas até confirmação.",
+    "agua": "Sem faixas de luz, solo ou água atribuídas até confirmação.",
+    "manejo": "Solicitar folhas, flores, frutos e procedência da matriz; confrontar com a coleção do parceiro. Não converter em Citrus apenas por conter laranjinha no nome. Manter separado de mexerica e Citrus indet.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-laranjinha"
+    ],
+    "faixas": [],
+    "taxonomia": "Não determinado"
+  },
+  {
+    "id": "lauraceae-indet",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A família está registrada, mas não há espécie identificada. A informação é útil para orientar determinação botânica, não para atribuir manejo.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Solicitar material fértil e determinação por especialista, com vínculo entre amostra e matriz. Não transformar em abacateiro, canela ou outra Lauraceae conhecida por suposição. Manter o registro original.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-documento"
+    ],
+    "faixas": [],
+    "taxonomia": "Lauraceae; gênero e espécie não determinados"
+  },
+  {
+    "id": "mamica-de-cadela",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A ESALQ registra o nome para Myrtaceae e Rutaceae; a Embrapa também o registra para Brosimum gaudichaudii, Moraceae.",
+    "luminosidade": "Porte e ambiente variam entre as possibilidades; luz, solo e água permanecem sem perfil atribuído.",
+    "solo": "Porte e ambiente variam entre as possibilidades; luz, solo e água permanecem sem perfil atribuído.",
+    "agua": "Porte e ambiente variam entre as possibilidades; luz, solo e água permanecem sem perfil atribuído.",
+    "manejo": "Comparar folhas simples ou compostas, acúleos, látex, flores e frutos com identificação especializada. Não cadastrar como Brosimum automaticamente nem liberar uso alimentar ou medicinal. Há possibilidades de famílias diferentes.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-mamica",
+      "taiobas-mama-cadela"
+    ],
+    "faixas": [],
+    "taxonomia": "Espécie não determinada"
+  },
+  {
+    "id": "mamona",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A Embrapa descreve planta arbustiva cultivada para óleo industrial. Tem valor educativo para distinguir recurso vegetal de planta alimentar.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Usar apenas material identificado e manter sementes etiquetadas e fora de atividades de degustação. Sementes tóxicas pela presença de ricina. Não é alimento humano ou ração; não recomendar preparo doméstico ou uso em horta escolar acessível.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-mamona"
+    ],
+    "faixas": [],
+    "taxonomia": "Ricinus communis"
+  },
+  {
+    "id": "mexerica",
+    "revisadoEm": "2026-10-29",
+    "resumo": "O guia da CEAGESP diferencia grupos de tangerinas e híbridos. Mexerica não identifica uma única cultivar do banco.",
+    "luminosidade": "Solo, água e nutrição devem considerar cultivar, porta-enxerto e região; esses dados não vieram no inventário.",
+    "solo": "Solo, água e nutrição devem considerar cultivar, porta-enxerto e região; esses dados não vieram no inventário.",
+    "agua": "Solo, água e nutrição devem considerar cultivar, porta-enxerto e região; esses dados não vieram no inventário.",
+    "manejo": "Registrar se o material é semente ou muda enxertada e conferir a identidade sanitária e varietal. Não duplicar como Citrus indet. sem confirmar a relação dos acessos. Não atribuir características de mexerica Rio a toda mexerica.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-mexerica"
+    ],
+    "faixas": [],
+    "taxonomia": "Citrus reticulata e possíveis híbridos; cultivar não determinada"
+  },
+  {
+    "id": "mutambo",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Árvore de crescimento rápido com potencial para restauração e sistemas agrossilvipastoris descrito pela Embrapa.",
+    "luminosidade": "Prefere luz e sofre com competição; solos muito compactados e inundação podem prejudicar desenvolvimento. Há rebrota vigorosa da touça.",
+    "solo": "Prefere luz e sofre com competição; solos muito compactados e inundação podem prejudicar desenvolvimento. Há rebrota vigorosa da touça.",
+    "agua": "Prefere luz e sofre com competição; solos muito compactados e inundação podem prejudicar desenvolvimento. Há rebrota vigorosa da touça.",
+    "manejo": "Sementes ortodoxas apresentam dormência tegumentar. Registrar condições de conservação e testar o lote antes de semear em escala. O uso potencial em pastos não é aprovação de qualquer manejo animal. Escolher tratamento de dormência com técnico e acompanhar competição.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-mutambo",
+      "planejamento-embrapa"
+    ],
+    "faixas": [],
+    "taxonomia": "Guazuma ulmifolia"
+  },
+  {
+    "id": "myrtaceae-indet",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A família aparece no inventário, mas isso não confirma uma das frutíferas listadas. O acesso fica preservado para investigação.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Obter folhas, flores, frutos e amostra vinculada à matriz; determinar espécie antes de selecionar protocolo. Não presumir comestibilidade e não fundir com guamirim, araçás, pitangas ou jabuticaba por pertencerem à mesma família.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-documento"
+    ],
+    "faixas": [],
+    "taxonomia": "Myrtaceae; gênero e espécie não determinados"
+  },
+  {
+    "id": "ora-pro-nobis",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Hortaliça folhosa descrita no manual da Embrapa; pode ampliar a produção de folhas do sistema.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "A Embrapa descreve propagação por sementes e, mais comumente, por estacas semilenhosas de 15 a 20 cm, em recipientes ou no local definitivo. Usar matriz sadia e acompanhar o enraizamento. O manual trata também de ora-pro-nóbis sem espinho como outra planta, Anredera cordifolia. Não confundir os materiais nem atribuir composição nutricional genérica.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-hortalicas",
+      "taiobas-ora-pro-nobis"
+    ],
+    "faixas": [],
+    "taxonomia": "Pereskia aculeata como referência"
+  },
+  {
+    "id": "palmito-jucara",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Palmeira distinta do açaizeiro Euterpe oleracea já cadastrado. Acrescenta uma referência para diversidade de palmeiras e conservação de sementes.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Sementes recalcitrantes exigem conservação específica e armazenamento curto; selecionar sementes íntegras e sadias. Não reutilizar o manejo de açaí ou pupunha automaticamente. A ficha não autoriza extração de palmito nem comprova viabilidade de material antigo.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-jucara"
+    ],
+    "faixas": [],
+    "taxonomia": "Euterpe edulis"
+  },
+  {
+    "id": "pau-cigarra",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A Embrapa registra Senna multijuga como árvore pioneira no contexto regional de restauração. Pode diversificar a fase inicial do plantio.",
+    "luminosidade": "Avaliar a região e as condições do terreno; classificação pioneira não estabelece uma dose de adubo ou tolerância universal ao solo.",
+    "solo": "Avaliar a região e as condições do terreno; classificação pioneira não estabelece uma dose de adubo ou tolerância universal ao solo.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "A referência de coleta associa maturidade a frutos marrom-claros. Confirmar matriz e maturação antes de colher. Não inferir fixação biológica de N por pertencer a Fabaceae nem confundir com outras Senna chamadas fedegoso.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-cigarra",
+      "taiobas-sucessao"
+    ],
+    "faixas": [],
+    "taxonomia": "Senna multijuga"
+  },
+  {
+    "id": "pau-jacare",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Árvore secundária inicial procurada por abelhas durante a floração e usada em recuperação de áreas degradadas.",
+    "luminosidade": "A ESALQ registra ocorrência com algum sombreamento em florestas alteradas. Ajustar espaço e luz à fase de implantação.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "A casca com cristas e os ramos com acúleos ajudam a conferir a matriz, mas requerem comparação botânica. Pode receber o nome angico-branco; verificar duplicação entre acessos. Não inferir fixação de N ou uso alimentar só pela classificação botânica.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-jacare"
+    ],
+    "faixas": [],
+    "taxonomia": "Piptadenia gonoacantha"
+  },
+  {
+    "id": "pau-jangada",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Árvore pioneira de crescimento rápido descrita no projeto da USP. Pode contribuir para a pesquisa de recobrimento de áreas.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Verificar espaço de copa e condições regionais; a fonte consultada não fornece faixa de pH ou irrigação.",
+    "manejo": "Conferir os frutos em cápsula com espinhos moles, folhas e matriz antes de selecionar protocolo de sementes. Também chamada escova-de-macaco. Manter os acessos separados até o parceiro confirmar se são a mesma planta.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-jangada"
+    ],
+    "faixas": [],
+    "taxonomia": "Apeiba tibourbou como referência"
+  },
+  {
+    "id": "pau-polvora",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Árvore colonizadora de áreas abertas com ocorrência ampla e potencial para estudar sucessão e recuperação de cobertura.",
+    "luminosidade": "A referência da UFPE descreve adaptação a terrenos desnudos e baixa fertilidade; isso não dispensa avaliação do solo.",
+    "solo": "A referência da UFPE descreve adaptação a terrenos desnudos e baixa fertilidade; isso não dispensa avaliação do solo.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Registrar matriz, coleta e teste de germinação; não assumir que todo lote antigo permanece viável. A função pioneira é contextual e não prova benefício para cada espécie vizinha. Sem perfil alimentar ou faixa numérica atribuídos.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-polvora"
+    ],
+    "faixas": [],
+    "taxonomia": "Trema micrantha"
+  },
+  {
+    "id": "pau-viola",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A UFMG registra flores melíferas, frutos para aves e uso em restauração ciliar. Pode ampliar diversidade de fauna e estrutura.",
+    "luminosidade": "Prefere terrenos úmidos, inclusive com inundações periódicas de curta duração. A referência alerta para solo ácido com alumínio.",
+    "solo": "Prefere terrenos úmidos, inclusive com inundações periódicas de curta duração. A referência alerta para solo ácido com alumínio.",
+    "agua": "Prefere terrenos úmidos, inclusive com inundações periódicas de curta duração. A referência alerta para solo ácido com alumínio.",
+    "manejo": "Coletar frutos da matriz identificada, despolpar e acompanhar a formação das mudas com protocolo local. Não traduzir preferência por umidade em tolerância a alagamento permanente nem adotar pH de exclusão sem validação.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-viola"
+    ],
+    "faixas": [],
+    "taxonomia": "Citharexylum myrianthum"
+  },
+  {
+    "id": "pimenta",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A Embrapa distingue espécies de Capsicum por caracteres de flores e frutos. O nome isolado não define o acesso.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Registrar corola, anteras, número e posição das flores e frutos da matriz; identificar antes de multiplicar. Não confundir com Piper indet. ou pimenta-do-reino. Manter lotes separados e sem uso alimentar liberado por nome comum.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-pimenta"
+    ],
+    "faixas": [],
+    "taxonomia": "Capsicum spp. como hipótese; espécie não determinada"
+  },
+  {
+    "id": "piper-indet",
+    "revisadoEm": "2026-10-29",
+    "resumo": "O documento informa gênero. A referência da Embrapa para Piper nigrum serve para mostrar que uma pimenta específica não representa todos os Piper.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Registrar folhas e inflorescências, local e matriz; encaminhar à determinação botânica. Não presumir comestibilidade nem converter em Piper nigrum. A identificação é necessária antes de recomendar cultivo ou consumo.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-piper"
+    ],
+    "faixas": [],
+    "taxonomia": "Piper sp.; espécie não determinada"
+  },
+  {
+    "id": "pitanga",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Frutífera nativa, perene e ramificada, com produção de frutos e possibilidade de condução da copa.",
+    "luminosidade": "O IF Baiano descreve melhor desenvolvimento em regiões quentes e úmidas e solo fértil com matéria orgânica; água é importante no estabelecimento.",
+    "solo": "O IF Baiano descreve melhor desenvolvimento em regiões quentes e úmidas e solo fértil com matéria orgânica; água é importante no estabelecimento.",
+    "agua": "O IF Baiano descreve melhor desenvolvimento em regiões quentes e úmidas e solo fértil com matéria orgânica; água é importante no estabelecimento.",
+    "manejo": "Retirar sementes de frutos maduros, despolpar e semear em recipientes para mudas, com identificação da matriz. Ajustar poda e espaço da copa; doses da cartilha não substituem análise de solo. Não atribuir a cor preta a espécie distinta sem identificação.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-pitanga",
+      "taiobas-pitanga-cor",
+      "planejamento-embrapa"
+    ],
+    "faixas": [],
+    "taxonomia": "Eugenia uniflora"
+  },
+  {
+    "id": "pitanga-preta",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Um estudo da USP registra pitangas de cor quase negra em E. uniflora; a Embrapa registra pitanga-preta como nome de E. involucrata.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Conferir formato do fruto, folhas, flores e matriz; preservar o nome do acesso até a determinação. Pode ser forma de cor da pitanga ou duplicação de cereja-do-Rio-Grande. Não contar como espécie botânica adicional confirmada.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-pitanga-cor",
+      "taiobas-cereja"
+    ],
+    "faixas": [],
+    "taxonomia": "Eugenia uniflora ou Eugenia involucrata como possibilidades"
+  },
+  {
+    "id": "quaresmeira",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A UFRJ descreve árvore ou arbusto de flores ornamentais polinizadas por insetos. O nome quaresmeira não garante essa espécie.",
+    "luminosidade": "Conferir a identidade e o ambiente de origem antes de definir água e solo; não extrapolar dados de outras Pleroma.",
+    "solo": "Conferir a identidade e o ambiente de origem antes de definir água e solo; não extrapolar dados de outras Pleroma.",
+    "agua": "Conferir a identidade e o ambiente de origem antes de definir água e solo; não extrapolar dados de outras Pleroma.",
+    "manejo": "Comparar folhas ásperas com nervuras curvas, flores e frutos com material de referência. Não tratar como manacá-da-serra pela semelhança das flores. Manter a hipótese e os campos agronômicos sem números não verificados.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-quaresmeira"
+    ],
+    "faixas": [],
+    "taxonomia": "Pleroma granulosum como hipótese"
+  },
+  {
+    "id": "sangra-d-agua",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Curitiba registra C. urucurana para matas ciliares; a Epagri registra o mesmo nome para C. celtidifolius.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Para C. urucurana há descrição de terrenos úmidos e brejosos; não transferir essa preferência a um Croton desconhecido.",
+    "agua": "Para C. urucurana há descrição de terrenos úmidos e brejosos; não transferir essa preferência a um Croton desconhecido.",
+    "manejo": "Documentar folhas, flores, cápsulas e matriz para determinação. A maturação pode dispersar sementes rapidamente. Pode sobrepor capixingui e Croton espontâneo. Não usar seiva ou extratos como tratamento; a lista não identifica o táxon.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-sangra",
+      "taiobas-sangra-ambigua"
+    ],
+    "faixas": [],
+    "taxonomia": "Croton urucurana ou outros Croton"
+  },
+  {
+    "id": "taioba",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Hortaliça folhosa citada em materiais da Embrapa sob nomenclatura histórica X. sagittifolium; a identidade do acesso precisa ser conferida.",
+    "luminosidade": "Não há requisito de luminosidade confirmado nas fontes desta ficha; verificar espécie, fase e manejo.",
+    "solo": "Não há descrição suficiente de solo validada para este acesso nas fontes consultadas.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Usar matriz identificada de material alimentar conhecido e registrar origem dos propágulos. Não consumir crua: a referência registra irritação por oxalato de cálcio. Esta ficha não permite distinguir variedades comestíveis apenas por foto ou nome.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-taioba"
+    ],
+    "faixas": [],
+    "taxonomia": "Xanthosoma spp.; material comestível a confirmar"
+  },
+  {
+    "id": "tapia",
+    "revisadoEm": "2026-10-29",
+    "resumo": "A Embrapa descreve A. triplinervia, mas tapiá também aparece para outros Alchornea. O inventário não fornece a espécie.",
+    "luminosidade": "Para A. triplinervia, a monografia prefere solo profundo, úmido e drenado no plantio; não é regra do gênero.",
+    "solo": "Para A. triplinervia, a monografia prefere solo profundo, úmido e drenado no plantio; não é regra do gênero.",
+    "agua": "Para A. triplinervia, a monografia prefere solo profundo, úmido e drenado no plantio; não é regra do gênero.",
+    "manejo": "Conferir folhas, frutos e matriz; planejar coleta e semeadura após determinação, pois a conservação pode ser limitante. Não fundir automaticamente com A. glandulosa ou transferir o protocolo entre espécies. Não considerar o nome confirmação botânica.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-tapia"
+    ],
+    "faixas": [],
+    "taxonomia": "Alchornea spp.; espécie não determinada"
+  },
+  {
+    "id": "urucum",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Arbusto produtor de sementes usadas para corante e condimento. Acrescenta uma função produtiva ao estudo do SAF.",
+    "luminosidade": "A Embrapa prioriza solo fértil, profundo e drenado e registra sensibilidade a geada. Ajustar nutrição pela análise de solo.",
+    "solo": "A Embrapa prioriza solo fértil, profundo e drenado e registra sensibilidade a geada. Ajustar nutrição pela análise de solo.",
+    "agua": "Não há exigência hídrica quantitativa validada para este acesso; não inferir umidade do solo a partir do clima.",
+    "manejo": "Propagação por sementes ou estacas; exigir material com identidade botânica, origem conhecida e boa sanidade. Não converter o espaçamento ou o prazo de produção da ficha em regra universal. Uso condimentar não valida alegações medicinais.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-urucum",
+      "planejamento-embrapa"
+    ],
+    "faixas": [],
+    "taxonomia": "Bixa orellana"
+  },
+  {
+    "id": "uvaia",
+    "revisadoEm": "2026-10-29",
+    "resumo": "Frutífera nativa com usos alimentares, apícolas, de restauração e SAF registrados no guia da Embrapa.",
+    "luminosidade": "O guia não fornece faixa numérica de solo ou irrigação para este acesso. Acompanhar as mudas e a adaptação local.",
+    "solo": "O guia não fornece faixa numérica de solo ou irrigação para este acesso. Acompanhar as mudas e a adaptação local.",
+    "agua": "O guia não fornece faixa numérica de solo ou irrigação para este acesso. Acompanhar as mudas e a adaptação local.",
+    "manejo": "Sementes recalcitrantes perdem viabilidade rapidamente; priorizar semeadura após a coleta. A emergência descrita ocorre entre 30 e 45 dias. Não assumir viabilidade de sementes de 2021. O intervalo de emergência é referência de viveiro, não promessa para qualquer lote.",
+    "nutricao": "Não há dose de adubação validada para este acesso no sistema; requer análise de solo e orientação local.",
+    "fontes": [
+      "taiobas-uvaia"
+    ],
+    "faixas": [],
+    "taxonomia": "Eugenia pyriformis"
+  }
+]

@@ -1,0 +1,183 @@
+# Pesquisa do banco Taiobas
+
+Revisão: 29/10/2026.
+
+O banco providenciado pelo parceiro Grupo Taiobas do Matão USP ajuda a ampliar a diversidade estudada pelo ybyrá: frutíferas nativas, hortaliças, condimentos e árvores de restauração. O crédito ao fornecimento e à parceria foi informado pela equipe; o Guia das Hortas da USP fundamenta o contexto institucional do coletivo, sem representar endosso da USP ao algoritmo.
+
+## Conferência com o sistema
+
+As 69 células do inventário foram conferidas individualmente contra o DOCX. Quebras de linha e hífens foram normalizados apenas para correspondência; nomeOriginal e ordemNoDocumento preservam a origem.
+
+- 8 registros já representados por seis fichas: abacaxi, guandu, mandioca, mamão, margaridão e Musa spp. As três bananas são nomes de variedades, sem criar três espécies.
+- 32 novas fichas bibliográficas de referência. A identificação do exemplar de 2021 não foi confirmada por exame botânico.
+- 29 acessos com identificação incompleta ou ambígua. A pesquisa registra hipóteses e como resolver a dúvida, sem inventar protocolo de cultivo.
+
+## Integração e limites
+
+O inventário completo e suas novas fichas estão na página Plantas, em Banco de sementes Taiobas, com busca por nomes comuns e científicos e filtro de situação. Os registros do banco permanecem separados de especies.json: nenhum acesso desconhecido, hipótese botânica ou planta sem parâmetros do modelo entra nas propostas automáticas. A relação entre a ficha existente e o inventário está em especieId.
+
+O documento não informa estoque atual, lotes, data de coleta, viabilidade ou forma do propágulo. “Banco de sementes” é o título do inventário, não confirmação de sementes sexuais para cada cultura. Não se garante disponibilidade ou aptidão regional. Fotografias e logos não foram inventadas. A área textual de parceiros já está na página do projeto e o campo logo permanece nulo.
+
+O relato local de solo de 2022 foi registrado como observação histórica, sem transformá-lo em diagnóstico ou limites do sensor. Textura arenosa não comprova Cerrado; ausência de argila não caracteriza todo solo tropical; “terra preta” não substitui classificação ou análise de carbono.
+
+## Registro de todos os acessos
+
+| Ordem no documento | Nome preservado | Situação | Referência botânica | Fontes |
+| --- | --- | --- | --- | --- |
+| 1 | Abacaxi | CATALOGO | Ananas comosus | Ficha existente: abacaxi |
+| 2 | Abiúzeiro | PESQUISADO | Pouteria caimito | [abiu](https://ask.ifas.ufl.edu/publication/HS300) |
+| 3 | Açafrão/ Cúrcuma | PESQUISADO | Curcuma longa | [curcuma](https://www.infoteca.cnptia.embrapa.br/bitstream/doc/659093/1/cot142.pdf) |
+| 4 | Amora | PENDENTE | Morus nigra como hipótese; espécie não determinada | [amora](https://sites.usp.br/jardimdabotanicausprp/amoreira-morus-nigra/) |
+| 5 | Angico-branco | PENDENTE | Anadenanthera colubrina como hipótese | [angico](https://www.esalq.usp.br/trilhas/medicina/am25.php), [jacare](https://www.esalq.usp.br/trilhas/uteis/ut03.php) |
+| 6 | Araçá-amarelo | PESQUISADO | Psidium cattleianum como hipótese | [aracas](https://www.infoteca.cnptia.embrapa.br/bitstream/doc/697560/1/doc266.pdf) |
+| 7 | Araçá-do-campo | PENDENTE | Psidium spp.; espécie não determinada | [aracas](https://www.infoteca.cnptia.embrapa.br/bitstream/doc/697560/1/doc266.pdf) |
+| 8 | Araçá-roxo | PESQUISADO | Psidium myrtoides como hipótese | [araca-roxo](https://www.bahiana.edu.br/mapeamento-de-especies/) |
+| 9 | Aroeira-pimenta | PESQUISADO | Schinus terebinthifolius | [aroeira](https://www.esalq.usp.br/trilhas/medicina/am09.php) |
+| 10 | Araucária | PESQUISADO | Araucaria angustifolia como referência | [araucaria](https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1092571/1/2018LivroIVEncontroBrasileirodeSilviculturafinal.pdf) |
+| 11 | Batata-Doce | PESQUISADO | Ipomoea batatas | [batata](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1155447/1/Sistema-de-Producao-de-Batata-Doce.pdf) |
+| 12 | Biribá | PESQUISADO | Annona mucosa | [biriba](https://ask.ifas.ufl.edu/publication/HS1523) |
+| 13 | Banana Nanica | CATALOGO | Musa spp. | Ficha existente: banana |
+| 14 | Banana Prata | CATALOGO | Musa spp. | Ficha existente: banana |
+| 15 | Banana São Tomé | CATALOGO | Musa spp. | Ficha existente: banana |
+| 16 | Cabeludinha | PENDENTE | Plinia glomerata na ficha histórica da ESALQ | [cabeludinha](https://www.esalq.usp.br/trilhas/fruti/fr08.htm) |
+| 17 | Camboatá | PENDENTE | Espécie não determinada | [camboata](https://www.esalq.usp.br/d-plant/node/545), [restauracao](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/315298/1/doc167.pdf) |
+| 18 | Capixingui | PESQUISADO | Croton floribundus | [capixingui](https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/1139725/capixingui-croton-floribundus), [restauracao](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/315298/1/doc167.pdf) |
+| 19 | Capororoca | PENDENTE | Myrsine spp.; espécie não determinada | [capororoca](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1133904/1/Cpact-Documento-501.pdf) |
+| 20 | Castanha-do- Maranhão | PENDENTE | Pachira spp.; espécie não determinada | [castanha](https://www.esalq.usp.br/trilhas/fruti/fr04.php), [castanha-ambigua](https://www.esalq.usp.br/d-plant/node/996) |
+| 21 | Cereja-do- Rio-Grande | PESQUISADO | Eugenia involucrata | [cereja](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/578655/1/CT224.pdf) |
+| 22 | Citrus indet | PENDENTE | Citrus sp.; espécie não determinada | [mexerica](https://ceagesp.gov.br/hortiescolha/hortipedia/tangerina/) |
+| 23 | Croton espontâneo | PENDENTE | Croton sp.; espécie não determinada | [capixingui](https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/1139725/capixingui-croton-floribundus), [sangra-ambigua](https://ciram.epagri.sc.gov.br/ciram_arquivos/site/base-pra/k.pdf) |
+| 24 | Escova-de-macaco | PENDENTE | Apeiba tibourbou ou Combretum fruticosum, entre possibilidades | [escova](https://www.nipe.unicamp.br/cepil/projetos/laboratorio-vivo/combretum-fruticosum/), [jangada](https://www.hu.usp.br/wp-content/uploads/sites/433/2018/11/Placas.pdf) |
+| 25 | Fedegoso | PENDENTE | Senna spp.; espécie não determinada | [fedegoso](https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/290840), [fedegoso-arvore](https://alegre.ifes.edu.br/images/2023/noticias/Laboratorio-de-Botanica/Cartilha_Corrigida_compressed.pdf) |
+| 26 | Feijão-guandu | CATALOGO | Cajanus cajan | Ficha existente: feijao-guandu |
+| 27 | Fruto-do-sabiá | PESQUISADO | Iochroma arborescens como hipótese | [sabia](https://www.sescsp.org.br/wp-content/uploads/2021/12/MOGI-DAS-CRUZES.pdf), [aroeira](https://www.esalq.usp.br/trilhas/medicina/am09.php) |
+| 28 | Fumo bravo | PENDENTE | Solanum bullatum como uma possibilidade | [fumo](https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/1136631/fumo-bravo-solanum-bullatum) |
+| 29 | Fumeirinho | PENDENTE | Não determinado | [fumo](https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/1136631/fumo-bravo-solanum-bullatum) |
+| 30 | Guaçatonga | PESQUISADO | Casearia sylvestris como hipótese | [guacatonga](https://hortodidatico.ufsc.br/guacatonga/) |
+| 31 | Gengibre | PESQUISADO | Zingiber officinale | [gengibre](https://biblioteca.incaper.es.gov.br/digital/bitstream/123456789/4005/1/101culturas-gengibre.pdf) |
+| 32 | Guapuruvu | PESQUISADO | Schizolobium parahyba | [guapuruvu](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/314147/1/circtec104.pdf) |
+| 33 | Grumixama | PESQUISADO | Eugenia brasiliensis | [grumixama](https://www.esalq.usp.br/trilhas/fruti/fr09.htm) |
+| 34 | Guamirim | PENDENTE | Myrtaceae; espécie não determinada | [guamirim](https://www.infoteca.cnptia.embrapa.br/bitstream/doc/314051/1/Doc147.pdf) |
+| 35 | Indeterminado | PENDENTE | Não determinado | Documento original; identificação não resolvida |
+| 36 | Ingá-de-metro | PESQUISADO | Inga edulis | [inga](https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140499/1/Especies-Arboreas-Brasileiras-vol-5-Inga-Cipo.pdf) |
+| 37 | Inhame | PENDENTE | Dioscorea spp. ou Colocasia esculenta | [hortalicas](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/983087/1/MANUAL-DE-PRODUCAO-DE-HORTALICAS-TRADICIONAIS.pdf) |
+| 38 | Ipê-verde | PESQUISADO | Cybistax antisyphilitica | [ipe](https://uenf.br/projetos/arvoresdauenf/especie-2/ipe-verde/) |
+| 39 | Jabuticaba de Cabinho | PENDENTE | Plinia peruviana / Plinia trunciflora nas fontes | [jabuticaba](https://proflora.jbrj.gov.br/html/Plinia%20peruviana_2020.html), [jabuticaba-bag](https://av.cenargen.embrapa.br/avconsulta/Passaporte/detalhes.do?ida=202161) |
+| 40 | Jaracatiá | PESQUISADO | Jacaratia spinosa | [jaracatia](https://ainfo.cnptia.embrapa.br/digital/bitstream/item/232466/1/Especies-Arboreas-Brasileiras-vol-2-Jaracatia.pdf) |
+| 41 | Jatobá | PENDENTE | Hymenaea courbaril como hipótese | [jatoba](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/408645/1/Jatoba-Hymenaea.pdf), [jatoba-cultivo](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/690505/1/doc03jatobahelio.pdf) |
+| 42 | Jenipapo | PESQUISADO | Genipa americana | [jenipapo](https://www.esalq.usp.br/trilhas/medicina/am15.php), [jenipapo-sementes](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1059880/1/cot195.pdf) |
+| 43 | Palmito-Juçara | PESQUISADO | Euterpe edulis | [jucara](https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1042301/1/ManualdeViveiroeproducaodemudas.pdf) |
+| 44 | Laranjinha do Mato | PENDENTE | Não determinado | [laranjinha](https://sites.google.com/unicamp.br/pomardaunicamp/laranjinha-do-mato) |
+| 45 | Lauraceae indet. | PENDENTE | Lauraceae; gênero e espécie não determinados | Documento original; identificação não resolvida |
+| 46 | Mandioca | CATALOGO | Manihot esculenta | Ficha existente: mandioca |
+| 47 | Mamão | CATALOGO | Carica papaya | Ficha existente: mamao |
+| 48 | Margaridão | CATALOGO | Tithonia diversifolia | Ficha existente: margaridao |
+| 49 | Mamica-de -cadela | PENDENTE | Espécie não determinada | [mamica](https://www.esalq.usp.br/d-plant/node/3118), [mama-cadela](https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140523/1/Especies-Arboreas-Brasileiras-vol-5-Mama-Cadela.pdf) |
+| 50 | Mamona | PESQUISADO | Ricinus communis | [mamona](https://www.embrapa.br/en/web/agencia-de-informacao-tecnologica/tematicas/agroenergia/biodiesel/materias-primas/mamona) |
+| 51 | Mexerica | PESQUISADO | Citrus reticulata e possíveis híbridos; cultivar não determinada | [mexerica](https://ceagesp.gov.br/hortiescolha/hortipedia/tangerina/) |
+| 52 | Mutambo | PESQUISADO | Guazuma ulmifolia | [mutambo](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/312825/1/Circular141.pdf) |
+| 53 | Myrtaceae indet. | PENDENTE | Myrtaceae; gênero e espécie não determinados | Documento original; identificação não resolvida |
+| 54 | Ora pro Nobis | PESQUISADO | Pereskia aculeata como referência | [hortalicas](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/983087/1/MANUAL-DE-PRODUCAO-DE-HORTALICAS-TRADICIONAIS.pdf), [ora-pro-nobis](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1071168/1/forapronobis.pdf) |
+| 55 | Pimenta | PENDENTE | Capsicum spp. como hipótese; espécie não determinada | [pimenta](https://www.embrapa.br/en/web/hortalicas/pimenta/botanica) |
+| 56 | Piper indet | PENDENTE | Piper sp.; espécie não determinada | [piper](https://ainfo.cnptia.embrapa.br/digital/bitstream/doc/1162373/1/Sistema-produtivo-pimenta-do-reino-2023.pdf) |
+| 57 | Pitanga | PESQUISADO | Eugenia uniflora | [pitanga](https://www.ifbaiano.edu.br/unidades/gmb/files/2021/04/Cartilha-PLAME-2.pdf), [pitanga-cor](https://revistas.usp.br/sa/pt_BR/article/view/21751) |
+| 58 | Pitanga preta | PENDENTE | Eugenia uniflora ou Eugenia involucrata como possibilidades | [pitanga-cor](https://revistas.usp.br/sa/pt_BR/article/view/21751), [cereja](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/578655/1/CT224.pdf) |
+| 59 | Pau-cigarra | PESQUISADO | Senna multijuga | [cigarra](https://www.infoteca.cnptia.embrapa.br/bitstream/doc/293956/1/circtec126.pdf), [sucessao](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/878572/1/Doc.196ProgramaMataCiliar.pdf) |
+| 60 | Pau-jacaré | PESQUISADO | Piptadenia gonoacantha | [jacare](https://www.esalq.usp.br/trilhas/uteis/ut03.php) |
+| 61 | Pau-jangada | PESQUISADO | Apeiba tibourbou como referência | [jangada](https://www.hu.usp.br/wp-content/uploads/sites/433/2018/11/Placas.pdf) |
+| 62 | Pau-pólvora | PESQUISADO | Trema micrantha | [polvora](https://repositorio.ufpe.br/bitstream/123456789/38433/1/DISSERTA%C3%87%C3%83O%20Cledson%20dos%20Santos%20Magalh%C3%A3es.pdf) |
+| 63 | Pau-viola | PESQUISADO | Citharexylum myrianthum | [viola](https://www.ufmg.br/mhnjb/wp-content/uploads/2025/09/Projeto-Plantar-20251103.pdf) |
+| 64 | Quaresmeira | PENDENTE | Pleroma granulosum como hipótese | [quaresmeira](https://ilhaviva.eba.ufrj.br/quaresmeira/) |
+| 65 | Sangra-d'Água | PENDENTE | Croton urucurana ou outros Croton | [sangra](https://mig-imap.curitiba.pr.gov.br/conteudo/croton-croton-urucurana/1991), [sangra-ambigua](https://ciram.epagri.sc.gov.br/ciram_arquivos/site/base-pra/k.pdf) |
+| 66 | Taioba | PENDENTE | Xanthosoma spp.; material comestível a confirmar | [taioba](https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1080482/1/Plantasmedicinais.pdf) |
+| 67 | Tapiá | PENDENTE | Alchornea spp.; espécie não determinada | [tapia](https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140120/1/Especies-Arboreas-Brasileiras-vol-1-Tapia.pdf) |
+| 68 | Urucum | PESQUISADO | Bixa orellana | [urucum](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/783869/1/FOL101.pdf) |
+| 69 | Uvaia | PESQUISADO | Eugenia pyriformis | [uvaia](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1157385/1/Guia-de-mudas-Livro-Cpact.pdf) |
+
+## Rastreabilidade das fontes
+
+Cada ficha contém resumo, contexto de cultivo, propagação/conservação, cuidados, fontes e data de revisão. Abaixo estão somente as fontes efetivamente vinculadas às fichas ou ao contexto do parceiro. Referências de ocorrência, taxonomia, viveiro e cultivo foram distinguidas; resultados regionais não foram promovidos a limites universais.
+
+- [UF/IFAS — Abiu Growing in the Florida Home Landscape](https://ask.ifas.ufl.edu/publication/HS300): Pouteria caimito; cultivo em clima tropical. Recomendações da Flórida exigem avaliação local.
+- [Embrapa — Cultivo de Curcuma longa](https://www.infoteca.cnptia.embrapa.br/bitstream/doc/659093/1/cot142.pdf): Propagação por rizomas, manejo e colheita; protocolo específico, sem extrapolação de irrigação.
+- [USP — Amoreira, Morus nigra](https://sites.usp.br/jardimdabotanicausprp/amoreira-morus-nigra/): Morus nigra, porte, luz e solo; identificação do exemplar do banco não confirmada.
+- [USP ESALQ — Angico-branco](https://www.esalq.usp.br/trilhas/medicina/am25.php): Anadenanthera colubrina e ecologia; usos medicinais populares não adotados como recomendação.
+- [USP ESALQ — Pau-jacaré](https://www.esalq.usp.br/trilhas/uteis/ut03.php): Piptadenia gonoacantha, sucessão inicial, abelhas e recuperação.
+- [Embrapa — Araçás do gênero Psidium](https://www.infoteca.cnptia.embrapa.br/bitstream/doc/697560/1/doc266.pdf): Distinção entre espécies de araçá e usos; o nome araçá-do-campo não identifica espécie.
+- [Escola Bahiana — Mapeamento de espécies](https://www.bahiana.edu.br/mapeamento-de-especies/): Associação de araçá-roxo a Psidium myrtoides; sem protocolo agronômico.
+- [Embrapa — Armazenamento de sementes de pinheiro-do-paraná](https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1092571/1/2018LivroIVEncontroBrasileirodeSilviculturafinal.pdf): Resumo de Fowler, p. 219; conservação de sementes requer condições controladas.
+- [USP ESALQ — Aroeira-pimenteira](https://www.esalq.usp.br/trilhas/medicina/am09.php): Schinus terebinthifolius, morfologia, ocorrência e alergia por contato.
+- [Embrapa — Sistema de Produção de Batata-Doce](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1155447/1/Sistema-de-Producao-de-Batata-Doce.pdf): Propagação, leiras, drenagem e sanidade das ramas.
+- [UF/IFAS — Rollinia (Annona mucosa): Botany and Commercial Cultivation](https://ask.ifas.ufl.edu/publication/HS1523): Identidade e fruticultura tropical úmida; não comprova adaptação ao local do projeto.
+- [USP ESALQ — Cabeludinha](https://www.esalq.usp.br/trilhas/fruti/fr08.htm): Ficha sob o nome Plinia glomerata; nomenclatura histórica, frutos e morfologia.
+- [USP ESALQ — Camboatá](https://www.esalq.usp.br/d-plant/node/545): Mostra outro uso do nome, para Guarea; impede identificação automática como Cupania.
+- [Embrapa — Implantação e manejo de florestas em pequenas propriedades no Paraná](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/315298/1/doc167.pdf): Tabela regional de espécies e grupos ecológicos; não constitui aptidão nacional.
+- [Embrapa — Capixingui, Croton floribundus](https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/1139725/capixingui-croton-floribundus): Identidade e nomes comuns, inclusive sobreposição com sangra-d’água.
+- [Embrapa — Espécies vegetais de uso potencial em sistemas agroflorestais](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1133904/1/Cpact-Documento-501.pdf): Myrsine umbellata: morfologia e luz; não identifica outras capororocas.
+- [USP ESALQ — Castanha-do-Maranhão](https://www.esalq.usp.br/trilhas/fruti/fr04.php): Ficha de Bombacopsis glabra, com sinônimo Pachira glabra.
+- [USP ESALQ — Dicionário Castanha-do-Maranhão](https://www.esalq.usp.br/d-plant/node/996): Nome também atribuído a Pachira aquatica e outras espécies; identificação pendente.
+- [Embrapa — Cerejeira, Eugenia involucrata](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/578655/1/CT224.pdf): p. 4–5: sementes recalcitrantes, drenagem, plantios e uso em faxinal; nome pitanga-preta.
+- [CEAGESP — Tangerina, guia de variedades](https://ceagesp.gov.br/hortiescolha/hortipedia/tangerina/): Citrus reticulata e híbridos; não identifica cultivar pelo nome genérico.
+- [Epagri — Plantas bioativas, Sangue-de-dragão](https://ciram.epagri.sc.gov.br/ciram_arquivos/site/base-pra/k.pdf): Croton celtidifolius também recebe o nome sangra-d’água.
+- [Unicamp — Combretum fruticosum](https://www.nipe.unicamp.br/cepil/projetos/laboratorio-vivo/combretum-fruticosum/): Escova-de-macaco como trepadeira; atração de abelhas e beija-flores.
+- [USP — Projeto Árvores EEL, Escova-de-macaco](https://www.hu.usp.br/wp-content/uploads/sites/433/2018/11/Placas.pdf): Apeiba tibourbou: pioneira de crescimento rápido; possível duplicação com pau-jangada.
+- [Embrapa — Quebra da dormência tegumentar de sementes de fedegoso](https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/290840): Registro de Senna occidentalis; não permite identificar todo fedegoso.
+- [IFES — Cartilha do Laboratório de Botânica](https://alegre.ifes.edu.br/images/2023/noticias/Laboratorio-de-Botanica/Cartilha_Corrigida_compressed.pdf): Senna macranthera também chamada fedegoso; plantio misto ao sol e interesse apícola.
+- [Sesc SP — Veredas de Mogi das Cruzes](https://www.sescsp.org.br/wp-content/uploads/2021/12/MOGI-DAS-CRUZES.pdf): p. 40: Iochroma arborescens, fruto-do-sabiá, alimentação de aves e restauro.
+- [Embrapa — Fumo-bravo, Solanum bullatum](https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/1136631/fumo-bravo-solanum-bullatum): Uma das espécies associadas ao nome; não identifica fumeirinho.
+- [Incaper — Gengibre, 101 culturas](https://biblioteca.incaper.es.gov.br/digital/bitstream/123456789/4005/1/101culturas-gengibre.pdf): Sanidade de rizomas, rotação, água de irrigação e colheita.
+- [USP ESALQ — Grumixameira](https://www.esalq.usp.br/trilhas/fruti/fr09.htm): Eugenia brasiliensis, preferência por umidade e frutos para aves e pessoas.
+- [UFSC — Guaçatonga](https://hortodidatico.ufsc.br/guacatonga/): Casearia sylvestris e existência de outras Casearia com nomes semelhantes.
+- [Embrapa — Educação ambiental na trilha ecológica](https://www.infoteca.cnptia.embrapa.br/bitstream/doc/314051/1/Doc147.pdf): p. 25: guamirim-cascudo, Myrcia arborescens, e dispersão por aves; não identifica guamirim genérico.
+- [Embrapa — Guapuruvu, Circular Técnica 104](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/314147/1/circtec104.pdf): Porte, solos, dormência e produção de mudas; distinto do paricá amazônico.
+- [Embrapa — Ingá-cipó, Inga edulis](https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140499/1/Especies-Arboreas-Brasileiras-vol-5-Inga-Cipo.pdf): Nomes populares, incluindo ingá-de-metro; monografia da espécie.
+- [Embrapa — Manual de produção de hortaliças tradicionais](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/983087/1/MANUAL-DE-PRODUCAO-DE-HORTALICAS-TRADICIONAIS.pdf): Capítulos inhame/cará, ora-pro-nóbis, taioba e taro; nomes históricos devem ser conferidos.
+- [UENF — Ipê-verde](https://uenf.br/projetos/arvoresdauenf/especie-2/ipe-verde/): Cybistax antisyphilitica: identidade, distribuição e uso ornamental e em restauração.
+- [JBRJ CNCFlora — Plinia peruviana](https://proflora.jbrj.gov.br/html/Plinia%20peruviana_2020.html): Jabuticaba-de-cabinho: frutos comestíveis e ambientes florestais.
+- [Embrapa Alelo — Acesso BRA 00180422-8](https://av.cenargen.embrapa.br/avconsulta/Passaporte/detalhes.do?ida=202161): Acesso nomeado jabuticaba-de-cabinho sob Plinia trunciflora; divergência preservada.
+- [Embrapa — Jaracatiá, Jacaratia spinosa](https://ainfo.cnptia.embrapa.br/digital/bitstream/item/232466/1/Especies-Arboreas-Brasileiras-vol-2-Jaracatia.pdf): Solos, sensibilidade a frio, plantio misto e sementes.
+- [Embrapa — Jatobá, Hymenaea courbaril](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/408645/1/Jatoba-Hymenaea.pdf): Ambiguidade de nomes, porte, polinização por morcegos e farinha da polpa.
+- [Embrapa — O jatobá: crescimento, potencialidades e usos](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/690505/1/doc03jatobahelio.pdf): p. 10: preferência por solos profundos e drenados; clima de ocorrência não é limite de sensor.
+- [USP ESALQ — Genipapo](https://www.esalq.usp.br/trilhas/medicina/am15.php): Genipa americana, ocorrência em várzeas e preferência por água no solo.
+- [Embrapa — Propagação in vitro de jenipapeiro](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1059880/1/cot195.pdf): Extração e seleção de sementes para formação de plantas doadoras; não generalizar o protocolo in vitro.
+- [Unicamp — Pomar, Laranjinha-do-mato](https://sites.google.com/unicamp.br/pomardaunicamp/laranjinha-do-mato): Nome popular e necessidade de conferir identificação.
+- [USP ESALQ — Mamica-de-cadela](https://www.esalq.usp.br/d-plant/node/3118): Nome aplicado a Myrtaceae e Rutaceae; múltiplas possibilidades.
+- [Embrapa — Mama-cadela, Brosimum gaudichaudii](https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140523/1/Especies-Arboreas-Brasileiras-vol-5-Mama-Cadela.pdf): Outro uso de mamica-de-cadela, para espécie de Moraceae.
+- [Embrapa — Mamona](https://www.embrapa.br/en/web/agencia-de-informacao-tecnologica/tematicas/agroenergia/biodiesel/materias-primas/mamona): Ricinus communis, finalidade industrial e toxicidade das sementes.
+- [Embrapa — Mutamba, Circular Técnica 141](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/312825/1/Circular141.pdf): p. 5–6: solo, dormência, armazenamento e manejo; p. 8: restauração.
+- [Embrapa — Ora-pro-nóbis](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1071168/1/forapronobis.pdf): Propagação de Pereskia aculeata por estacas semilenhosas e cultivo.
+- [Embrapa — Manual de viveiro e produção de mudas](https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1042301/1/ManualdeViveiroeproducaodemudas.pdf): p. 70: Euterpe edulis, sementes recalcitrantes e sombreamento no viveiro.
+- [Embrapa — Planejamento da coleta de sementes florestais nativas](https://www.infoteca.cnptia.embrapa.br/bitstream/doc/293956/1/circtec126.pdf): Tabela 2: Senna multijuga e maturação dos frutos.
+- [Embrapa — Programa Mata Ciliar no Paraná](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/878572/1/Doc.196ProgramaMataCiliar.pdf): Tabela regional: Senna multijuga como pioneira; classificação não equivale a aptidão nacional.
+- [UFPE — Dissertação sobre Trema micrantha](https://repositorio.ufpe.br/bitstream/123456789/38433/1/DISSERTA%C3%87%C3%83O%20Cledson%20dos%20Santos%20Magalh%C3%A3es.pdf): p. 30: nome pau-pólvora, ampla distribuição e colonização de áreas abertas.
+- [UFMG — Projeto Plantar](https://www.ufmg.br/mhnjb/wp-content/uploads/2025/09/Projeto-Plantar-20251103.pdf): p. 99: Citharexylum myrianthum, terrenos úmidos, aves, abelhas e matas ciliares.
+- [Embrapa Hortaliças — Botânica das pimentas Capsicum](https://www.embrapa.br/en/web/hortalicas/pimenta/botanica): Caracteres para distinguir espécies domesticadas.
+- [Embrapa — Sistema produtivo de pimenta-do-reino](https://ainfo.cnptia.embrapa.br/digital/bitstream/doc/1162373/1/Sistema-produtivo-pimenta-do-reino-2023.pdf): Botânica de Piper nigrum; não extrapolar a Piper indeterminado.
+- [IF Baiano — Cartilha PLAME](https://www.ifbaiano.edu.br/unidades/gmb/files/2021/04/Cartilha-PLAME-2.pdf): p. 64: Eugenia uniflora, propagação por sementes, manejo da copa e água inicial.
+- [USP Scientia Agricola — Fenólicos e carotenoides totais em pitanga](https://revistas.usp.br/sa/pt_BR/article/view/21751): Variação de cor em Eugenia uniflora até quase negra; cor não confirma espécie.
+- [UFRJ IlhaViva — Quaresmeira](https://ilhaviva.eba.ufrj.br/quaresmeira/): Pleroma granulosum: morfologia e polinização; o nome quaresmeira abrange outras espécies.
+- [Prefeitura de Curitiba — Croton urucurana](https://mig-imap.curitiba.pr.gov.br/conteudo/croton-croton-urucurana/1991): Ambientes úmidos, dispersão e restauro ciliar.
+- [Embrapa — Plantas medicinais e hortaliças tradicionais](https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1080482/1/Plantasmedicinais.pdf): Taioba: necessidade de preparo e risco de irritação pelo consumo cru; nomenclatura histórica.
+- [Embrapa — Tapiá, Alchornea triplinervia](https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140120/1/Especies-Arboreas-Brasileiras-vol-1-Tapia.pdf): Solo, sementes e nomenclatura; não identifica outros Alchornea do banco.
+- [Embrapa — Urucum, plantas condimentares](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/783869/1/FOL101.pdf): Bixa orellana: propagação, drenagem, sensibilidade a geada e material identificado.
+- [Embrapa — Guia de mudas de espécies florestais](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1157385/1/Guia-de-mudas-Livro-Cpact.pdf): p. 111: Eugenia pyriformis, sementes recalcitrantes, emergência e usos em SAF.
+- [USP — Guia das Hortas, Horta Taiobas do Matão (IB)](https://prip.usp.br/wp-content/uploads/sites/1632/2026/03/Guia-das-Hortas-web.pdf): História e vínculo do coletivo com o Instituto de Biociências; não comprova estoque atual.
+
+## Próximas validações com o parceiro
+
+Confirmar matrizes e nomes ambíguos; registrar espécie determinada, forma do propágulo, local e data da coleta, quantidade, condições de conservação e resultado do teste de germinação. Verificar possíveis duplicações: escova-de-macaco/pau-jangada, pitanga preta/pitanga/cereja, angico-branco/pau-jacaré e os registros de Croton. Solicitar logo oficial para ampliar a apresentação visual da parceria.
+
+## Verificação da integração
+
+- 18 testes Python de dados, rastreabilidade e servidor aprovados, incluindo conferência célula a célula das 69 entradas do DOCX.
+- 7 testes Node das animações existentes aprovados. Sintaxe do novo módulo verificada.
+- Browser plugin not available: usado Playwright com o Chrome local em modo headless, pois o executável Chromium do pacote Playwright não estava instalado. Nenhuma dependência foi instalada.
+- Navegador: página correta, conteúdo carregado, sem sobreposição de erro ou erros de console no fluxo normal. Testados 1365 × 900 e 390 × 844, sem transbordamento horizontal.
+- Busca uvaia: 1 resultado e ficha com fontes. Filtro pendente: 29 registros. Filtro já cadastrados: 8 registros. Link Banana Prata abre a ficha geral de banana. Link direto de uvaia abre a ficha.
+- Falha simulada de carregamento do banco: mensagem de erro visível e 18 cartões do catálogo original preservados. Crédito ao parceiro conferido na página do projeto.
+- Capturas de verificação guardadas fora do repositório, na pasta de visualizações desta conversa.
+- As referências bibliográficas não substituem a identificação botânica dos acessos, ensaio de germinação ou validação de campo. As propostas automáticas continuam usando as 18 fichas existentes.
+
+## Correção da integração
+
+As 61 novas entradas foram incorporadas a dados/especies.json e dados/cultivo.json, totalizando 79 registros no catálogo único. As fontes foram incorporadas a referencias.json. O inventário separado foi retirado da interface; sua cópia de rastreabilidade permanece apenas em docs/INVENTARIO-ORIGINAL-TAIOBAS.json. A busca principal encontra todas as plantas. Os oito registros já representados foram vinculados às seis fichas existentes, sem duplicá-las. Entradas sem parâmetros de estrato, sucessão ou identidade validada permanecem fora da seleção automática. Esta correção substitui a descrição anterior de integração.

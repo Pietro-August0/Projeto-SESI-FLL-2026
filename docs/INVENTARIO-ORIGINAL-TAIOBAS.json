@@ -1,0 +1,1720 @@
+{
+  "titulo": "Banco de sementes Taiobas 2021",
+  "parceiro": {
+    "nome": "Grupo Taiobas do Matão USP",
+    "vinculo": "Instituto de Biociências da Universidade de São Paulo",
+    "contribuicao": "Banco de sementes de 2021 providenciado pelo grupo parceiro à equipe do ybyrá.",
+    "origemCredito": "Parceria e fornecimento do documento informados pela equipe em 29/10/2026.",
+    "logo": null,
+    "fonteInstitucional": "usp-taiobas"
+  },
+  "documento": {
+    "arquivo": "BANCO DE SEMENTES TAIOBAS 2021.docx",
+    "anoInventario": 2021,
+    "anoObservacaoSolo": 2022,
+    "nota": "Inventário histórico de nomes. Não informa quantidades, datas de coleta, lotes, viabilidade, disponibilidade atual nem confirmação botânica dos exemplares."
+  },
+  "revisadoEm": "2026-10-29",
+  "politica": "As fichas novas são de consulta. A inclusão nas propostas automáticas requer identificação do material, avaliação regional e parâmetros de manejo. A lista de 2021 não garante sementes disponíveis hoje.",
+  "fontes": {
+    "usp-taiobas": {
+      "titulo": "USP — Guia das Hortas, Horta Taiobas do Matão (IB)",
+      "url": "https://prip.usp.br/wp-content/uploads/sites/1632/2026/03/Guia-das-Hortas-web.pdf",
+      "escopo": "História e vínculo do coletivo com o Instituto de Biociências; não comprova estoque atual.",
+      "consultadoEm": "2026-10-29"
+    },
+    "abiu": {
+      "titulo": "UF/IFAS — Abiu Growing in the Florida Home Landscape",
+      "url": "https://ask.ifas.ufl.edu/publication/HS300",
+      "escopo": "Pouteria caimito; cultivo em clima tropical. Recomendações da Flórida exigem avaliação local.",
+      "consultadoEm": "2026-10-29"
+    },
+    "biriba": {
+      "titulo": "UF/IFAS — Rollinia (Annona mucosa): Botany and Commercial Cultivation",
+      "url": "https://ask.ifas.ufl.edu/publication/HS1523",
+      "escopo": "Identidade e fruticultura tropical úmida; não comprova adaptação ao local do projeto.",
+      "consultadoEm": "2026-10-29"
+    },
+    "curcuma": {
+      "titulo": "Embrapa — Cultivo de Curcuma longa",
+      "url": "https://www.infoteca.cnptia.embrapa.br/bitstream/doc/659093/1/cot142.pdf",
+      "escopo": "Propagação por rizomas, manejo e colheita; protocolo específico, sem extrapolação de irrigação.",
+      "consultadoEm": "2026-10-29"
+    },
+    "amora": {
+      "titulo": "USP — Amoreira, Morus nigra",
+      "url": "https://sites.usp.br/jardimdabotanicausprp/amoreira-morus-nigra/",
+      "escopo": "Morus nigra, porte, luz e solo; identificação do exemplar do banco não confirmada.",
+      "consultadoEm": "2026-10-29"
+    },
+    "angico": {
+      "titulo": "USP ESALQ — Angico-branco",
+      "url": "https://www.esalq.usp.br/trilhas/medicina/am25.php",
+      "escopo": "Anadenanthera colubrina e ecologia; usos medicinais populares não adotados como recomendação.",
+      "consultadoEm": "2026-10-29"
+    },
+    "aracas": {
+      "titulo": "Embrapa — Araçás do gênero Psidium",
+      "url": "https://www.infoteca.cnptia.embrapa.br/bitstream/doc/697560/1/doc266.pdf",
+      "escopo": "Distinção entre espécies de araçá e usos; o nome araçá-do-campo não identifica espécie.",
+      "consultadoEm": "2026-10-29"
+    },
+    "araca-roxo": {
+      "titulo": "Escola Bahiana — Mapeamento de espécies",
+      "url": "https://www.bahiana.edu.br/mapeamento-de-especies/",
+      "escopo": "Associação de araçá-roxo a Psidium myrtoides; sem protocolo agronômico.",
+      "consultadoEm": "2026-10-29"
+    },
+    "aroeira": {
+      "titulo": "USP ESALQ — Aroeira-pimenteira",
+      "url": "https://www.esalq.usp.br/trilhas/medicina/am09.php",
+      "escopo": "Schinus terebinthifolius, morfologia, ocorrência e alergia por contato.",
+      "consultadoEm": "2026-10-29"
+    },
+    "araucaria": {
+      "titulo": "Embrapa — Armazenamento de sementes de pinheiro-do-paraná",
+      "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1092571/1/2018LivroIVEncontroBrasileirodeSilviculturafinal.pdf",
+      "escopo": "Resumo de Fowler, p. 219; conservação de sementes requer condições controladas.",
+      "consultadoEm": "2026-10-29"
+    },
+    "batata": {
+      "titulo": "Embrapa — Sistema de Produção de Batata-Doce",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1155447/1/Sistema-de-Producao-de-Batata-Doce.pdf",
+      "escopo": "Propagação, leiras, drenagem e sanidade das ramas.",
+      "consultadoEm": "2026-10-29"
+    },
+    "cabeludinha": {
+      "titulo": "USP ESALQ — Cabeludinha",
+      "url": "https://www.esalq.usp.br/trilhas/fruti/fr08.htm",
+      "escopo": "Ficha sob o nome Plinia glomerata; nomenclatura histórica, frutos e morfologia.",
+      "consultadoEm": "2026-10-29"
+    },
+    "camboata": {
+      "titulo": "USP ESALQ — Camboatá",
+      "url": "https://www.esalq.usp.br/d-plant/node/545",
+      "escopo": "Mostra outro uso do nome, para Guarea; impede identificação automática como Cupania.",
+      "consultadoEm": "2026-10-29"
+    },
+    "capixingui": {
+      "titulo": "Embrapa — Capixingui, Croton floribundus",
+      "url": "https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/1139725/capixingui-croton-floribundus",
+      "escopo": "Identidade e nomes comuns, inclusive sobreposição com sangra-d’água.",
+      "consultadoEm": "2026-10-29"
+    },
+    "restauracao": {
+      "titulo": "Embrapa — Implantação e manejo de florestas em pequenas propriedades no Paraná",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/315298/1/doc167.pdf",
+      "escopo": "Tabela regional de espécies e grupos ecológicos; não constitui aptidão nacional.",
+      "consultadoEm": "2026-10-29"
+    },
+    "capororoca": {
+      "titulo": "Embrapa — Espécies vegetais de uso potencial em sistemas agroflorestais",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1133904/1/Cpact-Documento-501.pdf",
+      "escopo": "Myrsine umbellata: morfologia e luz; não identifica outras capororocas.",
+      "consultadoEm": "2026-10-29"
+    },
+    "castanha": {
+      "titulo": "USP ESALQ — Castanha-do-Maranhão",
+      "url": "https://www.esalq.usp.br/trilhas/fruti/fr04.php",
+      "escopo": "Ficha de Bombacopsis glabra, com sinônimo Pachira glabra.",
+      "consultadoEm": "2026-10-29"
+    },
+    "castanha-ambigua": {
+      "titulo": "USP ESALQ — Dicionário Castanha-do-Maranhão",
+      "url": "https://www.esalq.usp.br/d-plant/node/996",
+      "escopo": "Nome também atribuído a Pachira aquatica e outras espécies; identificação pendente.",
+      "consultadoEm": "2026-10-29"
+    },
+    "cereja": {
+      "titulo": "Embrapa — Cerejeira, Eugenia involucrata",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/578655/1/CT224.pdf",
+      "escopo": "p. 4–5: sementes recalcitrantes, drenagem, plantios e uso em faxinal; nome pitanga-preta.",
+      "consultadoEm": "2026-10-29"
+    },
+    "escova": {
+      "titulo": "Unicamp — Combretum fruticosum",
+      "url": "https://www.nipe.unicamp.br/cepil/projetos/laboratorio-vivo/combretum-fruticosum/",
+      "escopo": "Escova-de-macaco como trepadeira; atração de abelhas e beija-flores.",
+      "consultadoEm": "2026-10-29"
+    },
+    "jangada": {
+      "titulo": "USP — Projeto Árvores EEL, Escova-de-macaco",
+      "url": "https://www.hu.usp.br/wp-content/uploads/sites/433/2018/11/Placas.pdf",
+      "escopo": "Apeiba tibourbou: pioneira de crescimento rápido; possível duplicação com pau-jangada.",
+      "consultadoEm": "2026-10-29"
+    },
+    "fedegoso": {
+      "titulo": "Embrapa — Quebra da dormência tegumentar de sementes de fedegoso",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/290840",
+      "escopo": "Registro de Senna occidentalis; não permite identificar todo fedegoso.",
+      "consultadoEm": "2026-10-29"
+    },
+    "fedegoso-arvore": {
+      "titulo": "IFES — Cartilha do Laboratório de Botânica",
+      "url": "https://alegre.ifes.edu.br/images/2023/noticias/Laboratorio-de-Botanica/Cartilha_Corrigida_compressed.pdf",
+      "escopo": "Senna macranthera também chamada fedegoso; plantio misto ao sol e interesse apícola.",
+      "consultadoEm": "2026-10-29"
+    },
+    "sabia": {
+      "titulo": "Sesc SP — Veredas de Mogi das Cruzes",
+      "url": "https://www.sescsp.org.br/wp-content/uploads/2021/12/MOGI-DAS-CRUZES.pdf",
+      "escopo": "p. 40: Iochroma arborescens, fruto-do-sabiá, alimentação de aves e restauro.",
+      "consultadoEm": "2026-10-29"
+    },
+    "fumo": {
+      "titulo": "Embrapa — Fumo-bravo, Solanum bullatum",
+      "url": "https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/1136631/fumo-bravo-solanum-bullatum",
+      "escopo": "Uma das espécies associadas ao nome; não identifica fumeirinho.",
+      "consultadoEm": "2026-10-29"
+    },
+    "guacatonga": {
+      "titulo": "UFSC — Guaçatonga",
+      "url": "https://hortodidatico.ufsc.br/guacatonga/",
+      "escopo": "Casearia sylvestris e existência de outras Casearia com nomes semelhantes.",
+      "consultadoEm": "2026-10-29"
+    },
+    "gengibre": {
+      "titulo": "Incaper — Gengibre, 101 culturas",
+      "url": "https://biblioteca.incaper.es.gov.br/digital/bitstream/123456789/4005/1/101culturas-gengibre.pdf",
+      "escopo": "Sanidade de rizomas, rotação, água de irrigação e colheita.",
+      "consultadoEm": "2026-10-29"
+    },
+    "guapuruvu": {
+      "titulo": "Embrapa — Guapuruvu, Circular Técnica 104",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/314147/1/circtec104.pdf",
+      "escopo": "Porte, solos, dormência e produção de mudas; distinto do paricá amazônico.",
+      "consultadoEm": "2026-10-29"
+    },
+    "grumixama": {
+      "titulo": "USP ESALQ — Grumixameira",
+      "url": "https://www.esalq.usp.br/trilhas/fruti/fr09.htm",
+      "escopo": "Eugenia brasiliensis, preferência por umidade e frutos para aves e pessoas.",
+      "consultadoEm": "2026-10-29"
+    },
+    "guamirim": {
+      "titulo": "Embrapa — Educação ambiental na trilha ecológica",
+      "url": "https://www.infoteca.cnptia.embrapa.br/bitstream/doc/314051/1/Doc147.pdf",
+      "escopo": "p. 25: guamirim-cascudo, Myrcia arborescens, e dispersão por aves; não identifica guamirim genérico.",
+      "consultadoEm": "2026-10-29"
+    },
+    "inga": {
+      "titulo": "Embrapa — Ingá-cipó, Inga edulis",
+      "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140499/1/Especies-Arboreas-Brasileiras-vol-5-Inga-Cipo.pdf",
+      "escopo": "Nomes populares, incluindo ingá-de-metro; monografia da espécie.",
+      "consultadoEm": "2026-10-29"
+    },
+    "hortalicas": {
+      "titulo": "Embrapa — Manual de produção de hortaliças tradicionais",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/983087/1/MANUAL-DE-PRODUCAO-DE-HORTALICAS-TRADICIONAIS.pdf",
+      "escopo": "Capítulos inhame/cará, ora-pro-nóbis, taioba e taro; nomes históricos devem ser conferidos.",
+      "consultadoEm": "2026-10-29"
+    },
+    "ipe": {
+      "titulo": "UENF — Ipê-verde",
+      "url": "https://uenf.br/projetos/arvoresdauenf/especie-2/ipe-verde/",
+      "escopo": "Cybistax antisyphilitica: identidade, distribuição e uso ornamental e em restauração.",
+      "consultadoEm": "2026-10-29"
+    },
+    "jabuticaba": {
+      "titulo": "JBRJ CNCFlora — Plinia peruviana",
+      "url": "https://proflora.jbrj.gov.br/html/Plinia%20peruviana_2020.html",
+      "escopo": "Jabuticaba-de-cabinho: frutos comestíveis e ambientes florestais.",
+      "consultadoEm": "2026-10-29"
+    },
+    "jabuticaba-bag": {
+      "titulo": "Embrapa Alelo — Acesso BRA 00180422-8",
+      "url": "https://av.cenargen.embrapa.br/avconsulta/Passaporte/detalhes.do?ida=202161",
+      "escopo": "Acesso nomeado jabuticaba-de-cabinho sob Plinia trunciflora; divergência preservada.",
+      "consultadoEm": "2026-10-29"
+    },
+    "jaracatia": {
+      "titulo": "Embrapa — Jaracatiá, Jacaratia spinosa",
+      "url": "https://ainfo.cnptia.embrapa.br/digital/bitstream/item/232466/1/Especies-Arboreas-Brasileiras-vol-2-Jaracatia.pdf",
+      "escopo": "Solos, sensibilidade a frio, plantio misto e sementes.",
+      "consultadoEm": "2026-10-29"
+    },
+    "jatoba": {
+      "titulo": "Embrapa — Jatobá, Hymenaea courbaril",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/408645/1/Jatoba-Hymenaea.pdf",
+      "escopo": "Ambiguidade de nomes, porte, polinização por morcegos e farinha da polpa.",
+      "consultadoEm": "2026-10-29"
+    },
+    "jatoba-cultivo": {
+      "titulo": "Embrapa — O jatobá: crescimento, potencialidades e usos",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/690505/1/doc03jatobahelio.pdf",
+      "escopo": "p. 10: preferência por solos profundos e drenados; clima de ocorrência não é limite de sensor.",
+      "consultadoEm": "2026-10-29"
+    },
+    "jenipapo": {
+      "titulo": "USP ESALQ — Genipapo",
+      "url": "https://www.esalq.usp.br/trilhas/medicina/am15.php",
+      "escopo": "Genipa americana, ocorrência em várzeas e preferência por água no solo.",
+      "consultadoEm": "2026-10-29"
+    },
+    "jenipapo-sementes": {
+      "titulo": "Embrapa — Propagação in vitro de jenipapeiro",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1059880/1/cot195.pdf",
+      "escopo": "Extração e seleção de sementes para formação de plantas doadoras; não generalizar o protocolo in vitro.",
+      "consultadoEm": "2026-10-29"
+    },
+    "jucara": {
+      "titulo": "Embrapa — Manual de viveiro e produção de mudas",
+      "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1042301/1/ManualdeViveiroeproducaodemudas.pdf",
+      "escopo": "p. 70: Euterpe edulis, sementes recalcitrantes e sombreamento no viveiro.",
+      "consultadoEm": "2026-10-29"
+    },
+    "laranjinha": {
+      "titulo": "Unicamp — Pomar, Laranjinha-do-mato",
+      "url": "https://sites.google.com/unicamp.br/pomardaunicamp/laranjinha-do-mato",
+      "escopo": "Nome popular e necessidade de conferir identificação.",
+      "consultadoEm": "2026-10-29"
+    },
+    "mamica": {
+      "titulo": "USP ESALQ — Mamica-de-cadela",
+      "url": "https://www.esalq.usp.br/d-plant/node/3118",
+      "escopo": "Nome aplicado a Myrtaceae e Rutaceae; múltiplas possibilidades.",
+      "consultadoEm": "2026-10-29"
+    },
+    "mama-cadela": {
+      "titulo": "Embrapa — Mama-cadela, Brosimum gaudichaudii",
+      "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140523/1/Especies-Arboreas-Brasileiras-vol-5-Mama-Cadela.pdf",
+      "escopo": "Outro uso de mamica-de-cadela, para espécie de Moraceae.",
+      "consultadoEm": "2026-10-29"
+    },
+    "mamona": {
+      "titulo": "Embrapa — Mamona",
+      "url": "https://www.embrapa.br/en/web/agencia-de-informacao-tecnologica/tematicas/agroenergia/biodiesel/materias-primas/mamona",
+      "escopo": "Ricinus communis, finalidade industrial e toxicidade das sementes.",
+      "consultadoEm": "2026-10-29"
+    },
+    "mexerica": {
+      "titulo": "CEAGESP — Tangerina, guia de variedades",
+      "url": "https://ceagesp.gov.br/hortiescolha/hortipedia/tangerina/",
+      "escopo": "Citrus reticulata e híbridos; não identifica cultivar pelo nome genérico.",
+      "consultadoEm": "2026-10-29"
+    },
+    "mutambo": {
+      "titulo": "Embrapa — Mutamba, Circular Técnica 141",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/312825/1/Circular141.pdf",
+      "escopo": "p. 5–6: solo, dormência, armazenamento e manejo; p. 8: restauração.",
+      "consultadoEm": "2026-10-29"
+    },
+    "pimenta": {
+      "titulo": "Embrapa Hortaliças — Botânica das pimentas Capsicum",
+      "url": "https://www.embrapa.br/en/web/hortalicas/pimenta/botanica",
+      "escopo": "Caracteres para distinguir espécies domesticadas.",
+      "consultadoEm": "2026-10-29"
+    },
+    "piper": {
+      "titulo": "Embrapa — Sistema produtivo de pimenta-do-reino",
+      "url": "https://ainfo.cnptia.embrapa.br/digital/bitstream/doc/1162373/1/Sistema-produtivo-pimenta-do-reino-2023.pdf",
+      "escopo": "Botânica de Piper nigrum; não extrapolar a Piper indeterminado.",
+      "consultadoEm": "2026-10-29"
+    },
+    "pitanga": {
+      "titulo": "IF Baiano — Cartilha PLAME",
+      "url": "https://www.ifbaiano.edu.br/unidades/gmb/files/2021/04/Cartilha-PLAME-2.pdf",
+      "escopo": "p. 64: Eugenia uniflora, propagação por sementes, manejo da copa e água inicial.",
+      "consultadoEm": "2026-10-29"
+    },
+    "pitanga-cor": {
+      "titulo": "USP Scientia Agricola — Fenólicos e carotenoides totais em pitanga",
+      "url": "https://revistas.usp.br/sa/pt_BR/article/view/21751",
+      "escopo": "Variação de cor em Eugenia uniflora até quase negra; cor não confirma espécie.",
+      "consultadoEm": "2026-10-29"
+    },
+    "cigarra": {
+      "titulo": "Embrapa — Planejamento da coleta de sementes florestais nativas",
+      "url": "https://www.infoteca.cnptia.embrapa.br/bitstream/doc/293956/1/circtec126.pdf",
+      "escopo": "Tabela 2: Senna multijuga e maturação dos frutos.",
+      "consultadoEm": "2026-10-29"
+    },
+    "jacare": {
+      "titulo": "USP ESALQ — Pau-jacaré",
+      "url": "https://www.esalq.usp.br/trilhas/uteis/ut03.php",
+      "escopo": "Piptadenia gonoacantha, sucessão inicial, abelhas e recuperação.",
+      "consultadoEm": "2026-10-29"
+    },
+    "polvora": {
+      "titulo": "UFPE — Dissertação sobre Trema micrantha",
+      "url": "https://repositorio.ufpe.br/bitstream/123456789/38433/1/DISSERTA%C3%87%C3%83O%20Cledson%20dos%20Santos%20Magalh%C3%A3es.pdf",
+      "escopo": "p. 30: nome pau-pólvora, ampla distribuição e colonização de áreas abertas.",
+      "consultadoEm": "2026-10-29"
+    },
+    "viola": {
+      "titulo": "UFMG — Projeto Plantar",
+      "url": "https://www.ufmg.br/mhnjb/wp-content/uploads/2025/09/Projeto-Plantar-20251103.pdf",
+      "escopo": "p. 99: Citharexylum myrianthum, terrenos úmidos, aves, abelhas e matas ciliares.",
+      "consultadoEm": "2026-10-29"
+    },
+    "quaresmeira": {
+      "titulo": "UFRJ IlhaViva — Quaresmeira",
+      "url": "https://ilhaviva.eba.ufrj.br/quaresmeira/",
+      "escopo": "Pleroma granulosum: morfologia e polinização; o nome quaresmeira abrange outras espécies.",
+      "consultadoEm": "2026-10-29"
+    },
+    "sangra": {
+      "titulo": "Prefeitura de Curitiba — Croton urucurana",
+      "url": "https://mig-imap.curitiba.pr.gov.br/conteudo/croton-croton-urucurana/1991",
+      "escopo": "Ambientes úmidos, dispersão e restauro ciliar.",
+      "consultadoEm": "2026-10-29"
+    },
+    "sangra-ambigua": {
+      "titulo": "Epagri — Plantas bioativas, Sangue-de-dragão",
+      "url": "https://ciram.epagri.sc.gov.br/ciram_arquivos/site/base-pra/k.pdf",
+      "escopo": "Croton celtidifolius também recebe o nome sangra-d’água.",
+      "consultadoEm": "2026-10-29"
+    },
+    "taioba": {
+      "titulo": "Embrapa — Plantas medicinais e hortaliças tradicionais",
+      "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1080482/1/Plantasmedicinais.pdf",
+      "escopo": "Taioba: necessidade de preparo e risco de irritação pelo consumo cru; nomenclatura histórica.",
+      "consultadoEm": "2026-10-29"
+    },
+    "tapia": {
+      "titulo": "Embrapa — Tapiá, Alchornea triplinervia",
+      "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140120/1/Especies-Arboreas-Brasileiras-vol-1-Tapia.pdf",
+      "escopo": "Solo, sementes e nomenclatura; não identifica outros Alchornea do banco.",
+      "consultadoEm": "2026-10-29"
+    },
+    "urucum": {
+      "titulo": "Embrapa — Urucum, plantas condimentares",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/783869/1/FOL101.pdf",
+      "escopo": "Bixa orellana: propagação, drenagem, sensibilidade a geada e material identificado.",
+      "consultadoEm": "2026-10-29"
+    },
+    "uvaia": {
+      "titulo": "Embrapa — Guia de mudas de espécies florestais",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1157385/1/Guia-de-mudas-Livro-Cpact.pdf",
+      "escopo": "p. 111: Eugenia pyriformis, sementes recalcitrantes, emergência e usos em SAF.",
+      "consultadoEm": "2026-10-29"
+    },
+    "ora-pro-nobis": {
+      "titulo": "Embrapa — Ora-pro-nóbis",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1071168/1/forapronobis.pdf",
+      "escopo": "Propagação de Pereskia aculeata por estacas semilenhosas e cultivo.",
+      "consultadoEm": "2026-10-29"
+    },
+    "sucessao": {
+      "titulo": "Embrapa — Programa Mata Ciliar no Paraná",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/878572/1/Doc.196ProgramaMataCiliar.pdf",
+      "escopo": "Tabela regional: Senna multijuga como pioneira; classificação não equivale a aptidão nacional.",
+      "consultadoEm": "2026-10-29"
+    }
+  },
+  "registros": [
+    {
+      "id": "abacaxi",
+      "nome": "Abacaxi",
+      "nomeCientifico": "Ananas comosus",
+      "status": "CATALOGO",
+      "grupo": "Já presentes no catálogo",
+      "especieId": "abacaxi",
+      "resumo": "A planta já possui ficha de cultivo e fontes no catálogo. O inventário acrescenta a proveniência do registro histórico.",
+      "cultivo": "Consultar a ficha existente e suas fontes. A presença no inventário não confirma aptidão local.",
+      "propagacao": "O documento não informa se havia sementes, mudas ou outro propágulo; registrar a forma e a origem do material atual.",
+      "cuidados": "Não interpretar a presença na lista como estoque disponível ou teste de viabilidade.",
+      "fontes": [],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Abacaxi",
+      "ordemNoDocumento": 1
+    },
+    {
+      "id": "abiuzeiro",
+      "nome": "Abiúzeiro",
+      "nomeCientifico": "Pouteria caimito",
+      "status": "PESQUISADO",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "Frutífera tropical de polpa comestível; amplia a diversidade alimentar. A referência trata de abiu e não comprova a identidade do exemplar de 2021.",
+      "cultivo": "Avaliar clima quente e proteção contra frio; usar área drenada e espaço para a copa. As condições da Flórida descritas pela UF/IFAS exigem ajuste local.",
+      "propagacao": "A UF/IFAS recomenda semear logo após extrair do fruto: sementes de abiu perdem viabilidade em poucos dias. Usar substrato limpo e drenado e registrar a matriz.",
+      "cuidados": "Não confundir com Chrysophyllum cainito, também chamado caimito. Medir sobrevivência e crescimento antes de definir seu lugar no SAF.",
+      "fontes": [
+        "abiu"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Abiúzeiro",
+      "ordemNoDocumento": 2
+    },
+    {
+      "id": "acafrao-curcuma",
+      "nome": "Açafrão/ Cúrcuma",
+      "nomeCientifico": "Curcuma longa",
+      "status": "PESQUISADO",
+      "grupo": "Hortaliças e condimentos",
+      "especieId": null,
+      "resumo": "Herbácea produtora de rizomas usados como condimento e corante. Pode diversificar a produção nas faixas baixas do sistema.",
+      "cultivo": "O comunicado da Embrapa descreve canteiros, adubação orgânica e irrigação ao longo do ciclo; ajustar ao solo, à chuva e ao acesso à água.",
+      "propagacao": "Propagação vegetativa por rizomas sadios. A secagem da parte aérea é um indicador de colheita descrito na referência.",
+      "cuidados": "A lâmina diária e o ciclo de um protocolo experimental não são universais. Não confundir com açafrão de Crocus sativus.",
+      "fontes": [
+        "curcuma"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Açafrão/ Cúrcuma",
+      "ordemNoDocumento": 3
+    },
+    {
+      "id": "amora",
+      "nome": "Amora",
+      "nomeCientifico": "Morus nigra como hipótese; espécie não determinada",
+      "status": "PENDENTE",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "A ficha da USP descreve amoreira arbórea; o nome amora isolado não confirma esse material. A contribuição alimentar depende da identificação.",
+      "cultivo": "Se for Morus nigra, a USP indica sol pleno, solo fértil, profundo e drenado, com regas no estabelecimento.",
+      "propagacao": "Confirmar se o material é árvore ou arbusto e registrar matriz, folhas e frutos antes de definir a multiplicação.",
+      "cuidados": "Não transferir exigências de amoreira para outra planta chamada amora. Evitar classificar automaticamente como nativa.",
+      "fontes": [
+        "amora"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Amora",
+      "ordemNoDocumento": 4
+    },
+    {
+      "id": "angico-branco",
+      "nome": "Angico-branco",
+      "nomeCientifico": "Anadenanthera colubrina como hipótese",
+      "status": "PENDENTE",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "A ESALQ descreve uma árvore decídua de vegetação secundária. Há potencial para estrutura arbórea, mas angico-branco também é nome de pau-jacaré.",
+      "cultivo": "Reservar espaço para porte arbóreo e verificar a identidade antes de escolher estrato ou espaçamento.",
+      "propagacao": "Comparar frutos, folhas e casca com a referência; vincular coleta à matriz identificada.",
+      "cuidados": "Não cadastrar como fixadora de nitrogênio apenas por pertencer a Fabaceae. Pode duplicar pau-jacaré; não mesclar lotes sem confirmação.",
+      "fontes": [
+        "angico",
+        "jacare"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Angico-branco",
+      "ordemNoDocumento": 5
+    },
+    {
+      "id": "araca-amarelo",
+      "nome": "Araçá-amarelo",
+      "nomeCientifico": "Psidium cattleianum como hipótese",
+      "status": "PESQUISADO",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "Araçás oferecem diversidade de frutos. O estudo da Embrapa diferencia espécies do gênero; a cor amarela do fruto é uma pista, não um diagnóstico botânico.",
+      "cultivo": "Conferir espécie e ambiente de origem antes de definir exigências de cultivo. Não atribuir uma faixa de solo a todo o gênero.",
+      "propagacao": "Guardar registro da matriz e frutos maduros; determinar a espécie antes de adotar protocolo de sementes.",
+      "cuidados": "A grafia cattleianum aparece em fontes históricas. Registrar a identificação aceita após revisão do material, sem presumir cultivar.",
+      "fontes": [
+        "aracas"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Araçá-amarelo",
+      "ordemNoDocumento": 6
+    },
+    {
+      "id": "araca-do-campo",
+      "nome": "Araçá-do-campo",
+      "nomeCientifico": "Psidium spp.; espécie não determinada",
+      "status": "PENDENTE",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "A Embrapa registra o mesmo nome para P. laruotteanum e P. cinereum, entre outros usos. São portes e ambientes diferentes.",
+      "cultivo": "O nome pode representar plantas de Cerrado com exigências distintas. Não definir irrigação, estrato ou porte a partir dele.",
+      "propagacao": "Fotografar hábito, folha, flor e fruto e solicitar identificação antes de planejar multiplicação.",
+      "cuidados": "Preservar este acesso separado de araçá-amarelo. Não transformar ocorrência no Cerrado em tolerância a qualquer solo seco.",
+      "fontes": [
+        "aracas"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Araçá-do-campo",
+      "ordemNoDocumento": 7
+    },
+    {
+      "id": "araca-roxo",
+      "nome": "Araçá-roxo",
+      "nomeCientifico": "Psidium myrtoides como hipótese",
+      "status": "PESQUISADO",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "O mapeamento botânico da Escola Bahiana associa araçá-roxo a Psidium myrtoides. É uma referência de identificação para ampliar a pesquisa de frutíferas.",
+      "cultivo": "A fonte consultada não estabelece protocolo agronômico; luz, água e solo permanecem sem faixa validada nesta ficha.",
+      "propagacao": "Solicitar confirmação da matriz e dados de coleta. Selecionar protocolo de produção de mudas após a identificação.",
+      "cuidados": "A cor do fruto não confirma espécie. Não importar manejo de outros araçás como se fosse evidência desta planta.",
+      "fontes": [
+        "araca-roxo"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Araçá-roxo",
+      "ordemNoDocumento": 8
+    },
+    {
+      "id": "araucaria",
+      "nome": "Araucária",
+      "nomeCientifico": "Araucaria angustifolia como referência",
+      "status": "PESQUISADO",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "Conífera produtora de pinhões; a conservação de sementes é um tema relevante para o projeto. O inventário não documenta espécie nem lote.",
+      "cultivo": "Verificar identidade, clima e espaço de longo prazo antes de plantar. Um estudo de armazenamento não demonstra aptidão de cultivo.",
+      "propagacao": "A Embrapa estudou conservação em embalagens e ambientes controlados. A data da coleta e o teste de germinação são essenciais.",
+      "cuidados": "Não considerar pinhões de 2021 viáveis hoje apenas porque constam na lista. Não generalizar resultados de conservação experimental.",
+      "fontes": [
+        "araucaria"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Araucária",
+      "ordemNoDocumento": 10
+    },
+    {
+      "id": "aroeira-pimenta",
+      "nome": "Aroeira-pimenta",
+      "nomeCientifico": "Schinus terebinthifolius",
+      "status": "PESQUISADO",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "Árvore com frutos avermelhados e ocorrência em vegetação secundária e margens de rios. Pode ampliar a diversidade arbórea e as observações de fauna.",
+      "cultivo": "Avaliar espaço da copa e condições locais; a ampla ocorrência descrita não é uma garantia de adaptação regional.",
+      "propagacao": "Usar frutos e folhas para conferir a identidade e registrar a matriz antes de multiplicar.",
+      "cuidados": "A USP registra alergia em algumas pessoas pelo contato com folhas ou flores. Não confundir com outras aroeiras nem recomendar usos medicinais.",
+      "fontes": [
+        "aroeira"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Aroeira-pimenta",
+      "ordemNoDocumento": 9
+    },
+    {
+      "id": "banana-nanica",
+      "nome": "Banana Nanica",
+      "nomeCientifico": "Musa spp.",
+      "status": "CATALOGO",
+      "grupo": "Variedades de bananeira",
+      "especieId": "banana",
+      "resumo": "O catálogo já inclui Musa spp.; o inventário acrescenta este nome de variedade, preservado sem criar outra espécie.",
+      "cultivo": "Consultar a ficha existente e suas fontes. A presença no inventário não confirma aptidão local.",
+      "propagacao": "O documento não informa se havia sementes, mudas ou outro propágulo; registrar a forma e a origem do material atual.",
+      "cuidados": "Manejo e sanidade dependem da cultivar. A ficha geral de bananeira não valida características específicas de Nanica, Prata ou São Tomé.",
+      "fontes": [],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Banana Nanica",
+      "ordemNoDocumento": 13
+    },
+    {
+      "id": "banana-prata",
+      "nome": "Banana Prata",
+      "nomeCientifico": "Musa spp.",
+      "status": "CATALOGO",
+      "grupo": "Variedades de bananeira",
+      "especieId": "banana",
+      "resumo": "O catálogo já inclui Musa spp.; o inventário acrescenta este nome de variedade, preservado sem criar outra espécie.",
+      "cultivo": "Consultar a ficha existente e suas fontes. A presença no inventário não confirma aptidão local.",
+      "propagacao": "O documento não informa se havia sementes, mudas ou outro propágulo; registrar a forma e a origem do material atual.",
+      "cuidados": "Manejo e sanidade dependem da cultivar. A ficha geral de bananeira não valida características específicas de Nanica, Prata ou São Tomé.",
+      "fontes": [],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Banana Prata",
+      "ordemNoDocumento": 14
+    },
+    {
+      "id": "banana-sao-tome",
+      "nome": "Banana São Tomé",
+      "nomeCientifico": "Musa spp.",
+      "status": "CATALOGO",
+      "grupo": "Variedades de bananeira",
+      "especieId": "banana",
+      "resumo": "O catálogo já inclui Musa spp.; o inventário acrescenta este nome de variedade, preservado sem criar outra espécie.",
+      "cultivo": "Consultar a ficha existente e suas fontes. A presença no inventário não confirma aptidão local.",
+      "propagacao": "O documento não informa se havia sementes, mudas ou outro propágulo; registrar a forma e a origem do material atual.",
+      "cuidados": "Manejo e sanidade dependem da cultivar. A ficha geral de bananeira não valida características específicas de Nanica, Prata ou São Tomé.",
+      "fontes": [],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Banana São Tomé",
+      "ordemNoDocumento": 15
+    },
+    {
+      "id": "batata-doce",
+      "nome": "Batata-Doce",
+      "nomeCientifico": "Ipomoea batatas",
+      "status": "PESQUISADO",
+      "grupo": "Hortaliças e condimentos",
+      "especieId": null,
+      "resumo": "Cultura de raízes tuberosas com propagação por ramas. Pode diversificar alimentos e ocupar temporariamente a camada baixa.",
+      "cultivo": "Usar solo bem drenado e avaliar compactação; leiras ou canteiros ajudam a formação e a colheita das raízes.",
+      "propagacao": "Priorizar ramas de boa sanidade e identidade conhecida. Registrar cultivar e procedência, pois influenciam ciclo e produção.",
+      "cuidados": "Crescimento abundante de ramas não garante produção de raízes. Evitar encharcamento e competição das ramas com mudas jovens.",
+      "fontes": [
+        "batata"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Batata-Doce",
+      "ordemNoDocumento": 11
+    },
+    {
+      "id": "biriba",
+      "nome": "Biribá",
+      "nomeCientifico": "Annona mucosa",
+      "status": "PESQUISADO",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "Frutífera tropical de crescimento rápido com polpa consumida fresca e processada. A UF/IFAS a descreve também pelo nome rollinia.",
+      "cultivo": "A referência situa o cultivo em ambientes tropicais úmidos. Avaliar frio, água, drenagem e espaço de copa antes da implantação local.",
+      "propagacao": "Propagação principalmente por sementes retiradas de frutos maduros e limpas. A UF/IFAS relata germinação em três a cinco semanas sob condições quentes de viveiro; plantas de semente variam nas características dos frutos.",
+      "cuidados": "Não confundir com outras anonáceas nem garantir características varietais por sementes. A referência da Flórida exige adaptação ao contexto brasileiro.",
+      "fontes": [
+        "biriba"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Biribá",
+      "ordemNoDocumento": 12
+    },
+    {
+      "id": "cabeludinha",
+      "nome": "Cabeludinha",
+      "nomeCientifico": "Plinia glomerata na ficha histórica da ESALQ",
+      "status": "PENDENTE",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "Frutífera descrita com bagas amarelas pubescentes e poucas sementes grandes; potencial alimentar e ornamental.",
+      "cultivo": "A referência registra origem no Sudeste, mas não fornece faixa de pH, irrigação ou adubação. Esses campos ficam sem números.",
+      "propagacao": "Conferir pelos do fruto, folhas e material da matriz; revisar a nomenclatura com especialista antes de produzir mudas.",
+      "cuidados": "O nome cabeludinha e a nomenclatura histórica não bastam para fechar a identidade. Não apresentar Plinia glomerata como confirmação do lote.",
+      "fontes": [
+        "cabeludinha"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Cabeludinha",
+      "ordemNoDocumento": 16
+    },
+    {
+      "id": "camboata",
+      "nome": "Camboatá",
+      "nomeCientifico": "Espécie não determinada",
+      "status": "PENDENTE",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "A pesquisa encontrou camboatá aplicado a Guarea e a outras árvores. O registro da lista é insuficiente para escolher um táxon.",
+      "cultivo": "Solo, porte, luz e função no SAF dependem da espécie e permanecem por confirmar.",
+      "propagacao": "Reunir folhas compostas completas, flores, frutos e procedência da matriz; pedir determinação botânica.",
+      "cuidados": "Não converter automaticamente em Cupania vernalis nem recomendar alimentação animal. A ESALQ registra risco de ingestão para um dos táxons associados.",
+      "fontes": [
+        "camboata",
+        "restauracao"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Camboatá",
+      "ordemNoDocumento": 17
+    },
+    {
+      "id": "capixingui",
+      "nome": "Capixingui",
+      "nomeCientifico": "Croton floribundus",
+      "status": "PESQUISADO",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "Árvore nativa registrada em grupo pioneiro na referência regional da Embrapa. Pode contribuir para o recobrimento inicial e a estrutura do sistema.",
+      "cultivo": "A classificação ecológica consultada se refere ao Paraná. Avaliar luz, estabelecimento e crescimento no local do projeto.",
+      "propagacao": "Identificar matriz; observar maturação dos frutos antes da dispersão para planejar a coleta.",
+      "cuidados": "Também recebe nomes como sangra-d’água. Não mesclar com Croton espontâneo ou sangra-d’água sem conferir o material; não inferir uso alimentar.",
+      "fontes": [
+        "capixingui",
+        "restauracao"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Capixingui",
+      "ordemNoDocumento": 18
+    },
+    {
+      "id": "capororoca",
+      "nome": "Capororoca",
+      "nomeCientifico": "Myrsine spp.; espécie não determinada",
+      "status": "PENDENTE",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "Myrsine umbellata é uma das árvores chamadas capororoca; suas condições não representam todo o gênero.",
+      "cultivo": "Para M. umbellata há descrição de ambientes parcialmente sombreados e também sol. É necessário identificar o acesso antes de aplicar esse manejo.",
+      "propagacao": "Comparar folhas, frutos e porte com material de referência e registrar a matriz.",
+      "cuidados": "Não confundir capororoca, capororocão e outras Myrsine. Protocolos de dormência ou armazenamento são específicos da espécie.",
+      "fontes": [
+        "capororoca"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Capororoca",
+      "ordemNoDocumento": 19
+    },
+    {
+      "id": "castanha-do-maranhao",
+      "nome": "Castanha-do-Maranhão",
+      "nomeCientifico": "Pachira spp.; espécie não determinada",
+      "status": "PENDENTE",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "A ESALQ descreve Pachira glabra sob nome histórico Bombacopsis glabra, mas o dicionário também associa o nome a P. aquatica e outras Pachira.",
+      "cultivo": "As espécies têm portes e ambientes diferentes; não definir tolerância a alagamento a partir do nome comum.",
+      "propagacao": "Conferir flor, cápsula, semente e procedência antes de adotar um protocolo.",
+      "cuidados": "Não liberar consumo de sementes de um acesso sem identificação. Manter separadas as hipóteses e não atribuir uma espécie à lista original.",
+      "fontes": [
+        "castanha",
+        "castanha-ambigua"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Castanha-do- Maranhão",
+      "ordemNoDocumento": 20
+    },
+    {
+      "id": "cereja-do-rio-grande",
+      "nome": "Cereja-do-Rio-Grande",
+      "nomeCientifico": "Eugenia involucrata",
+      "status": "PESQUISADO",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "Frutífera nativa de uso alimentar, visitada por abelhas e aves. A Embrapa documenta uso tradicional em sistema de faxinal.",
+      "cultivo": "A monografia indica solo fértil e bem drenado; registra tolerância à sombra e plantio a pleno sol. Ajustar à fase e ao local.",
+      "propagacao": "Despolpar frutos maduros e semear prontamente em recipientes individuais; sementes recalcitrantes, com curta viabilidade em armazenamento.",
+      "cuidados": "Não conservar como semente seca de longa duração. O nome pitanga-preta também aparece para esta espécie; conferir possíveis duplicações.",
+      "fontes": [
+        "cereja"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Cereja-do- Rio-Grande",
+      "ordemNoDocumento": 21
+    },
+    {
+      "id": "citrus-indet",
+      "nome": "Citrus indet",
+      "nomeCientifico": "Citrus sp.; espécie não determinada",
+      "status": "PENDENTE",
+      "grupo": "Identificação incompleta",
+      "especieId": null,
+      "resumo": "O documento informa apenas o gênero. Não há evidência de que seja laranja, limão, mexerica ou um híbrido específico.",
+      "cultivo": "Luz, água, nutrição e compatibilidade com porta-enxerto exigem identificação do material e avaliação sanitária.",
+      "propagacao": "Registrar se é semente, porta-enxerto ou muda enxertada, além de matriz e procedência.",
+      "cuidados": "Não fundir com mexerica por pertencer ao mesmo gênero. Não escolher cultivar ou recomendar adubação com base neste registro.",
+      "fontes": [
+        "mexerica"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Citrus indet",
+      "ordemNoDocumento": 22
+    },
+    {
+      "id": "croton-espontaneo",
+      "nome": "Croton espontâneo",
+      "nomeCientifico": "Croton sp.; espécie não determinada",
+      "status": "PENDENTE",
+      "grupo": "Identificação incompleta",
+      "especieId": null,
+      "resumo": "O nome sugere um indivíduo espontâneo do gênero Croton. Não comprova capixingui ou sangra-d’água.",
+      "cultivo": "Necessidades e uso em restauração variam entre espécies; manter sem faixa de solo ou água.",
+      "propagacao": "Registrar local, folhas, estruturas reprodutivas e coleta da matriz para identificação.",
+      "cuidados": "Pode coincidir com outros registros da lista, mas não deve ser fundido por suposição. Não atribuir comestibilidade ou propriedades medicinais.",
+      "fontes": [
+        "capixingui",
+        "sangra-ambigua"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Croton espontâneo",
+      "ordemNoDocumento": 23
+    },
+    {
+      "id": "escova-de-macaco",
+      "nome": "Escova-de-macaco",
+      "nomeCientifico": "Apeiba tibourbou ou Combretum fruticosum, entre possibilidades",
+      "status": "PENDENTE",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "A USP usa o nome para Apeiba, árvore pioneira; a Unicamp para Combretum, trepadeira atrativa a polinizadores. São estruturas diferentes no SAF.",
+      "cultivo": "A identificação determina se precisa de espaço para árvore ou de suporte para trepadeira.",
+      "propagacao": "Conferir hábito, flores e frutos; manter lote separado até identificação.",
+      "cuidados": "Pode ser duplicação de pau-jangada se for Apeiba tibourbou. Não atribuir automaticamente o crescimento e o manejo de uma à outra.",
+      "fontes": [
+        "escova",
+        "jangada"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Escova-de-macaco",
+      "ordemNoDocumento": 24
+    },
+    {
+      "id": "fedegoso",
+      "nome": "Fedegoso",
+      "nomeCientifico": "Senna spp.; espécie não determinada",
+      "status": "PENDENTE",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "A pesquisa documenta Senna occidentalis e S. macranthera com esse nome; não são intercambiáveis no planejamento.",
+      "cultivo": "O IFES recomenda plantio misto ao sol para S. macranthera. Isso não valida o acesso do banco nem outras Senna.",
+      "propagacao": "Identificar flores, folhas e vagens antes de selecionar tratamento de sementes; dormência tegumentar está documentada para S. occidentalis.",
+      "cuidados": "Não classificar como adubo verde fixador de N ou alimento pela família Fabaceae. Exige identificação antes de qualquer uso.",
+      "fontes": [
+        "fedegoso",
+        "fedegoso-arvore"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Fedegoso",
+      "ordemNoDocumento": 25
+    },
+    {
+      "id": "feijao-guandu",
+      "nome": "Feijão-guandu",
+      "nomeCientifico": "Cajanus cajan",
+      "status": "CATALOGO",
+      "grupo": "Já presentes no catálogo",
+      "especieId": "feijao-guandu",
+      "resumo": "A planta já possui ficha de cultivo e fontes no catálogo. O inventário acrescenta a proveniência do registro histórico.",
+      "cultivo": "Consultar a ficha existente e suas fontes. A presença no inventário não confirma aptidão local.",
+      "propagacao": "O documento não informa se havia sementes, mudas ou outro propágulo; registrar a forma e a origem do material atual.",
+      "cuidados": "Não interpretar a presença na lista como estoque disponível ou teste de viabilidade.",
+      "fontes": [],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Feijão-guandu",
+      "ordemNoDocumento": 26
+    },
+    {
+      "id": "fruto-do-sabia",
+      "nome": "Fruto-do-sabiá",
+      "nomeCientifico": "Iochroma arborescens como hipótese",
+      "status": "PESQUISADO",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "O Sesc descreve arbusto com frutos procurados por aves e interesse para restauro. Pode apoiar observações de dispersão no projeto.",
+      "cultivo": "A referência registra adaptação a ambientes de sub-bosque e abertos; umidade constante favorece frutificação no contexto descrito.",
+      "propagacao": "Confirmar flores, frutos e matriz; não adotar protocolo de outra solanácea por semelhança.",
+      "cuidados": "Manter o foco em fauna e restauração. Não liberar consumo a partir do nome comum nem confundir com aroeira chamada fruta-de-sabiá.",
+      "fontes": [
+        "sabia",
+        "aroeira"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Fruto-do-sabiá",
+      "ordemNoDocumento": 27
+    },
+    {
+      "id": "fumeirinho",
+      "nome": "Fumeirinho",
+      "nomeCientifico": "Não determinado",
+      "status": "PENDENTE",
+      "grupo": "Identificação incompleta",
+      "especieId": null,
+      "resumo": "O nome foi preservado exatamente como registro do banco. A pesquisa não resolveu uma correspondência botânica confiável para este acesso.",
+      "cultivo": "Sem exigências de cultivo atribuídas até identificação.",
+      "propagacao": "Solicitar ao parceiro identificação da matriz, fotos reprodutivas e procedência; guardar etiqueta e histórico do acesso.",
+      "cuidados": "Não trocar por fumo-bravo nem atribuir Solanum ou Nicotiana por semelhança de nome.",
+      "fontes": [
+        "fumo"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Fumeirinho",
+      "ordemNoDocumento": 29
+    },
+    {
+      "id": "fumo-bravo",
+      "nome": "Fumo bravo",
+      "nomeCientifico": "Solanum bullatum como uma possibilidade",
+      "status": "PENDENTE",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "A Embrapa descreve S. bullatum sob fumo-bravo. O inventário sem caracteres botânicos não confirma essa espécie.",
+      "cultivo": "Não inferir exigências ou posição no SAF a partir do nome; requer determinação do acesso.",
+      "propagacao": "Registrar ramos, folhas, flores e frutos da matriz e encaminhar para identificação.",
+      "cuidados": "Não é indicação de fumo cultivado e não permite recomendar consumo dos frutos. Não fundir com fumeirinho.",
+      "fontes": [
+        "fumo"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Fumo bravo",
+      "ordemNoDocumento": 28
+    },
+    {
+      "id": "gengibre",
+      "nome": "Gengibre",
+      "nomeCientifico": "Zingiber officinale",
+      "status": "PESQUISADO",
+      "grupo": "Hortaliças e condimentos",
+      "especieId": null,
+      "resumo": "Cultura de rizomas que diversifica condimentos e produção nos estratos baixos. O manual do Incaper destaca sanidade na cadeia de produção.",
+      "cultivo": "Avaliar drenagem e qualidade da água de irrigação; planejar rotação e monitoramento de doenças.",
+      "propagacao": "Usar rizomas sadios de origem conhecida. Amarelecimento, redução da planta e murcha são indicadores de colheita descritos.",
+      "cuidados": "O ciclo varia entre regiões. Rizomas úmidos favorecem problemas na conservação; não confundir tempo de colheita com prazo fixo do SAF.",
+      "fontes": [
+        "gengibre"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Gengibre",
+      "ordemNoDocumento": 31
+    },
+    {
+      "id": "grumixama",
+      "nome": "Grumixama",
+      "nomeCientifico": "Eugenia brasiliensis",
+      "status": "PESQUISADO",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "Frutífera da Mata Atlântica com frutos usados frescos e processados e procurados por pássaros. Pode unir produção e diversidade de fauna.",
+      "cultivo": "A ESALQ registra preferência por ambientes de maior umidade do solo. Essa observação não representa tolerância a alagamento.",
+      "propagacao": "Conferir matriz, cor e características dos frutos, que variam; registrar a origem do material antes da multiplicação.",
+      "cuidados": "Não prometer época única de colheita fora da região da referência nem confundir frutos escuros com outra espécie.",
+      "fontes": [
+        "grumixama"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Grumixama",
+      "ordemNoDocumento": 33
+    },
+    {
+      "id": "guacatonga",
+      "nome": "Guaçatonga",
+      "nomeCientifico": "Casearia sylvestris como hipótese",
+      "status": "PESQUISADO",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "A UFSC descreve árvore com flores pequenas e sementes envoltas por massa avermelhada. Amplia a pesquisa de diversidade arbórea.",
+      "cultivo": "A ampla distribuição informada não define faixa de cultivo. Solo, água e tolerância à sombra devem ser avaliados no local.",
+      "propagacao": "Conferir folha com pontos translúcidos, margem e fruto; usar material da matriz identificada.",
+      "cuidados": "A própria fonte alerta para outras Casearia com nomes semelhantes. Usos medicinais populares não entram como recomendação do sistema.",
+      "fontes": [
+        "guacatonga"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Guaçatonga",
+      "ordemNoDocumento": 30
+    },
+    {
+      "id": "guamirim",
+      "nome": "Guamirim",
+      "nomeCientifico": "Myrtaceae; espécie não determinada",
+      "status": "PENDENTE",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "A Embrapa descreve guamirim-cascudo como Myrcia arborescens e registra frutos dispersos por aves; o nome genérico guamirim não fecha a identificação.",
+      "cultivo": "Exigências de solo, luz e água dependem da espécie, sem faixa atribuída aqui.",
+      "propagacao": "Coletar evidências da casca, folhas, flores e frutos e consultar identificação botânica.",
+      "cuidados": "Não cadastrar todos os guamirins como Myrcia arborescens. Pode coincidir com Myrtaceae indet., mas os acessos ficam separados.",
+      "fontes": [
+        "guamirim"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Guamirim",
+      "ordemNoDocumento": 34
+    },
+    {
+      "id": "guapuruvu",
+      "nome": "Guapuruvu",
+      "nomeCientifico": "Schizolobium parahyba",
+      "status": "PESQUISADO",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "Árvore de crescimento rápido e copa ampla; pode fornecer estrutura e biomassa. É distinta do paricá amazônico já cadastrado.",
+      "cultivo": "A Embrapa considera inadequados solos rasos, muito secos ou de baixa fertilidade. Reservar espaço para porte elevado.",
+      "propagacao": "Sementes têm tegumento duro e dormência. Selecionar método de superação e teste de germinação com responsável técnico.",
+      "cuidados": "Não copiar o perfil de paricá nem atribuir fixação de N por pertencer a Fabaceae. Avaliar distância de estruturas e competição da copa.",
+      "fontes": [
+        "guapuruvu"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Guapuruvu",
+      "ordemNoDocumento": 32
+    },
+    {
+      "id": "indeterminado",
+      "nome": "Indeterminado",
+      "nomeCientifico": "Não determinado",
+      "status": "PENDENTE",
+      "grupo": "Identificação incompleta",
+      "especieId": null,
+      "resumo": "O inventário não informa nome, gênero ou família. O registro documenta uma lacuna e não uma espécie nova confirmada.",
+      "cultivo": "Não há condições de cultivo estabelecidas.",
+      "propagacao": "Solicitar número do acesso, etiqueta original, origem e material botânico para determinação.",
+      "cuidados": "Não inferir função ecológica, consumo, porte, dormência ou disponibilidade atual. Manter fora das propostas automáticas.",
+      "fontes": [],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Indeterminado",
+      "ordemNoDocumento": 35
+    },
+    {
+      "id": "inga-de-metro",
+      "nome": "Ingá-de-metro",
+      "nomeCientifico": "Inga edulis",
+      "status": "PESQUISADO",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "A monografia da Embrapa associa ingá-de-metro a Inga edulis, também chamado ingá-cipó. Amplia o conjunto de árvores frutíferas a investigar.",
+      "cultivo": "A identificação e o manejo da copa devem preceder a escolha de espaçamento e de culturas sob a árvore.",
+      "propagacao": "Registrar matriz, fruto e origem e verificar protocolo específico de sementes antes de formar lotes.",
+      "cuidados": "O nome popular não confirma a planta de 2021. Não atribuir dose de N, benefício ao vizinho ou compatibilidade universal sem evidência local.",
+      "fontes": [
+        "inga"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Ingá-de-metro",
+      "ordemNoDocumento": 36
+    },
+    {
+      "id": "inhame",
+      "nome": "Inhame",
+      "nomeCientifico": "Dioscorea spp. ou Colocasia esculenta",
+      "status": "PENDENTE",
+      "grupo": "Hortaliças e condimentos",
+      "especieId": null,
+      "resumo": "A Embrapa distingue inhame/cará de taro, embora o nome inhame seja usado regionalmente para ambos.",
+      "cultivo": "Identificar se há trepadeira ou planta de folhas peltadas antes de definir tutoramento, água e solo.",
+      "propagacao": "Registrar órgão de propagação e cultivar após identificar a espécie; não usar um único protocolo para os dois grupos.",
+      "cuidados": "Não recomendar consumo de uma planta desconhecida nem confundir com taioba. A identificação muda inclusive a arquitetura do plantio.",
+      "fontes": [
+        "hortalicas"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Inhame",
+      "ordemNoDocumento": 37
+    },
+    {
+      "id": "ipe-verde",
+      "nome": "Ipê-verde",
+      "nomeCientifico": "Cybistax antisyphilitica",
+      "status": "PESQUISADO",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "A UENF registra árvore de Bignoniaceae com uso ornamental e em recuperação de áreas. Acrescenta diversidade ao estudo de restauração.",
+      "cultivo": "Confirmar a matriz e o ambiente de implantação; distribuição em vários biomas não equivale a aptidão de cada terreno.",
+      "propagacao": "Registrar frutos e sementes com identificação; exigir protocolo específico de produção de mudas.",
+      "cuidados": "Não atribuir manejo de Handroanthus ou Tabebuia por semelhança do nome ipê. Não incorporar usos medicinais populares.",
+      "fontes": [
+        "ipe"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Ipê-verde",
+      "ordemNoDocumento": 38
+    },
+    {
+      "id": "jabuticaba-de-cabinho",
+      "nome": "Jabuticaba de Cabinho",
+      "nomeCientifico": "Plinia peruviana / Plinia trunciflora nas fontes",
+      "status": "PENDENTE",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "O JBRJ associa o nome a P. peruviana; um acesso da Embrapa usa P. trunciflora. A divergência foi preservada.",
+      "cultivo": "A referência do JBRJ registra ambientes florestais da Mata Atlântica; não fornece protocolo de cultivo para este lote.",
+      "propagacao": "Conferir a matriz com especialista e registrar qual determinação foi adotada e por quê.",
+      "cuidados": "Não resolver a divergência só pelo nome comum e não prometer precocidade de jabuticaba híbrida a uma planta obtida por semente.",
+      "fontes": [
+        "jabuticaba",
+        "jabuticaba-bag"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Jabuticaba de Cabinho",
+      "ordemNoDocumento": 39
+    },
+    {
+      "id": "jaracatia",
+      "nome": "Jaracatiá",
+      "nomeCientifico": "Jacaratia spinosa",
+      "status": "PESQUISADO",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "Árvore nativa de crescimento moderado. A Embrapa recomenda plantio misto, útil ao estudo de diversidade estrutural.",
+      "cultivo": "A monografia registra solos úmidos de planícies e encostas e maior vigor em terras férteis; alerta para baixas temperaturas.",
+      "propagacao": "Obter sementes de frutos maduros de matriz identificada. A referência relata formação de mudas em cerca de quatro meses, dependente das condições.",
+      "cuidados": "Planejar a copa e conferir manejo local. Não aplicar práticas destrutivas de extração do tronco nem inferir manejo de mamoeiro.",
+      "fontes": [
+        "jaracatia"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Jaracatiá",
+      "ordemNoDocumento": 40
+    },
+    {
+      "id": "jatoba",
+      "nome": "Jatobá",
+      "nomeCientifico": "Hymenaea courbaril como hipótese",
+      "status": "PENDENTE",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "A Embrapa alerta que jatobá é usado para várias Hymenaea. Para H. courbaril, descreve grande porte, polinização por morcegos e uso alimentar da polpa.",
+      "cultivo": "Para H. courbaril, melhor crescimento é associado a solos profundos, férteis, úmidos e drenados; ocorrência em solo pobre não garante bom desempenho.",
+      "propagacao": "Confirmar folha bifoliolada, fruto e matriz antes de escolher protocolo de sementes.",
+      "cuidados": "Não confundir com H. stigonocarpa ou outros jatobás. Reservar espaço de longo prazo e não inferir fixação de N pela família.",
+      "fontes": [
+        "jatoba",
+        "jatoba-cultivo"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Jatobá",
+      "ordemNoDocumento": 41
+    },
+    {
+      "id": "jenipapo",
+      "nome": "Jenipapo",
+      "nomeCientifico": "Genipa americana",
+      "status": "PESQUISADO",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "Árvore frutífera cuja referência da USP destaca ocorrência em várzeas úmidas e ambientes com água abundante no solo.",
+      "cultivo": "Avaliar disponibilidade de água e condição física do solo; ocorrência em várzea não é uma recomendação para qualquer alagamento.",
+      "propagacao": "A Embrapa descreve retirada da polpa, lavagem, secagem breve à sombra e descarte de sementes malformadas ou doentes para formar plantas doadoras.",
+      "cuidados": "O protocolo de laboratório não equivale a produção no campo. Identificar origem e acompanhar sobrevivência das mudas.",
+      "fontes": [
+        "jenipapo",
+        "jenipapo-sementes"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Jenipapo",
+      "ordemNoDocumento": 42
+    },
+    {
+      "id": "laranjinha-do-mato",
+      "nome": "Laranjinha do Mato",
+      "nomeCientifico": "Não determinado",
+      "status": "PENDENTE",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "O nome aparece em referências de frutíferas nativas, mas não identifica de forma suficiente o material fornecido na lista.",
+      "cultivo": "Sem faixas de luz, solo ou água atribuídas até confirmação.",
+      "propagacao": "Solicitar folhas, flores, frutos e procedência da matriz; confrontar com a coleção do parceiro.",
+      "cuidados": "Não converter em Citrus apenas por conter laranjinha no nome. Manter separado de mexerica e Citrus indet.",
+      "fontes": [
+        "laranjinha"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Laranjinha do Mato",
+      "ordemNoDocumento": 44
+    },
+    {
+      "id": "lauraceae-indet",
+      "nome": "Lauraceae indet.",
+      "nomeCientifico": "Lauraceae; gênero e espécie não determinados",
+      "status": "PENDENTE",
+      "grupo": "Identificação incompleta",
+      "especieId": null,
+      "resumo": "A família está registrada, mas não há espécie identificada. A informação é útil para orientar determinação botânica, não para atribuir manejo.",
+      "cultivo": "Sem faixa de cultivo ou função alimentar atribuída; a família não define um perfil agronômico único.",
+      "propagacao": "Solicitar material fértil e determinação por especialista, com vínculo entre amostra e matriz.",
+      "cuidados": "Não transformar em abacateiro, canela ou outra Lauraceae conhecida por suposição. Manter o registro original.",
+      "fontes": [],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Lauraceae indet.",
+      "ordemNoDocumento": 45
+    },
+    {
+      "id": "mamao",
+      "nome": "Mamão",
+      "nomeCientifico": "Carica papaya",
+      "status": "CATALOGO",
+      "grupo": "Já presentes no catálogo",
+      "especieId": "mamao",
+      "resumo": "A planta já possui ficha de cultivo e fontes no catálogo. O inventário acrescenta a proveniência do registro histórico.",
+      "cultivo": "Consultar a ficha existente e suas fontes. A presença no inventário não confirma aptidão local.",
+      "propagacao": "O documento não informa se havia sementes, mudas ou outro propágulo; registrar a forma e a origem do material atual.",
+      "cuidados": "Não interpretar a presença na lista como estoque disponível ou teste de viabilidade.",
+      "fontes": [],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Mamão",
+      "ordemNoDocumento": 47
+    },
+    {
+      "id": "mamica-de-cadela",
+      "nome": "Mamica-de-cadela",
+      "nomeCientifico": "Espécie não determinada",
+      "status": "PENDENTE",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "A ESALQ registra o nome para Myrtaceae e Rutaceae; a Embrapa também o registra para Brosimum gaudichaudii, Moraceae.",
+      "cultivo": "Porte e ambiente variam entre as possibilidades; luz, solo e água permanecem sem perfil atribuído.",
+      "propagacao": "Comparar folhas simples ou compostas, acúleos, látex, flores e frutos com identificação especializada.",
+      "cuidados": "Não cadastrar como Brosimum automaticamente nem liberar uso alimentar ou medicinal. Há possibilidades de famílias diferentes.",
+      "fontes": [
+        "mamica",
+        "mama-cadela"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Mamica-de -cadela",
+      "ordemNoDocumento": 49
+    },
+    {
+      "id": "mamona",
+      "nome": "Mamona",
+      "nomeCientifico": "Ricinus communis",
+      "status": "PESQUISADO",
+      "grupo": "Uso industrial",
+      "especieId": null,
+      "resumo": "A Embrapa descreve planta arbustiva cultivada para óleo industrial. Tem valor educativo para distinguir recurso vegetal de planta alimentar.",
+      "cultivo": "A referência consultada não estabelece manejo específico para este SAF; avaliar com responsável técnico antes de qualquer plantio.",
+      "propagacao": "Usar apenas material identificado e manter sementes etiquetadas e fora de atividades de degustação.",
+      "cuidados": "Sementes tóxicas pela presença de ricina. Não é alimento humano ou ração; não recomendar preparo doméstico ou uso em horta escolar acessível.",
+      "fontes": [
+        "mamona"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Mamona",
+      "ordemNoDocumento": 50
+    },
+    {
+      "id": "mandioca",
+      "nome": "Mandioca",
+      "nomeCientifico": "Manihot esculenta",
+      "status": "CATALOGO",
+      "grupo": "Já presentes no catálogo",
+      "especieId": "mandioca",
+      "resumo": "A planta já possui ficha de cultivo e fontes no catálogo. O inventário acrescenta a proveniência do registro histórico.",
+      "cultivo": "Consultar a ficha existente e suas fontes. A presença no inventário não confirma aptidão local.",
+      "propagacao": "O documento não informa se havia sementes, mudas ou outro propágulo; registrar a forma e a origem do material atual.",
+      "cuidados": "Não interpretar a presença na lista como estoque disponível ou teste de viabilidade.",
+      "fontes": [],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Mandioca",
+      "ordemNoDocumento": 46
+    },
+    {
+      "id": "margaridao",
+      "nome": "Margaridão",
+      "nomeCientifico": "Tithonia diversifolia",
+      "status": "CATALOGO",
+      "grupo": "Já presentes no catálogo",
+      "especieId": "margaridao",
+      "resumo": "A planta já possui ficha de cultivo e fontes no catálogo. O inventário acrescenta a proveniência do registro histórico.",
+      "cultivo": "Consultar a ficha existente e suas fontes. A presença no inventário não confirma aptidão local.",
+      "propagacao": "O documento não informa se havia sementes, mudas ou outro propágulo; registrar a forma e a origem do material atual.",
+      "cuidados": "Não interpretar a presença na lista como estoque disponível ou teste de viabilidade.",
+      "fontes": [],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Margaridão",
+      "ordemNoDocumento": 48
+    },
+    {
+      "id": "mexerica",
+      "nome": "Mexerica",
+      "nomeCientifico": "Citrus reticulata e possíveis híbridos; cultivar não determinada",
+      "status": "PESQUISADO",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "O guia da CEAGESP diferencia grupos de tangerinas e híbridos. Mexerica não identifica uma única cultivar do banco.",
+      "cultivo": "Solo, água e nutrição devem considerar cultivar, porta-enxerto e região; esses dados não vieram no inventário.",
+      "propagacao": "Registrar se o material é semente ou muda enxertada e conferir a identidade sanitária e varietal.",
+      "cuidados": "Não duplicar como Citrus indet. sem confirmar a relação dos acessos. Não atribuir características de mexerica Rio a toda mexerica.",
+      "fontes": [
+        "mexerica"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Mexerica",
+      "ordemNoDocumento": 51
+    },
+    {
+      "id": "mutambo",
+      "nome": "Mutambo",
+      "nomeCientifico": "Guazuma ulmifolia",
+      "status": "PESQUISADO",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "Árvore de crescimento rápido com potencial para restauração e sistemas agrossilvipastoris descrito pela Embrapa.",
+      "cultivo": "Prefere luz e sofre com competição; solos muito compactados e inundação podem prejudicar desenvolvimento. Há rebrota vigorosa da touça.",
+      "propagacao": "Sementes ortodoxas apresentam dormência tegumentar. Registrar condições de conservação e testar o lote antes de semear em escala.",
+      "cuidados": "O uso potencial em pastos não é aprovação de qualquer manejo animal. Escolher tratamento de dormência com técnico e acompanhar competição.",
+      "fontes": [
+        "mutambo"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Mutambo",
+      "ordemNoDocumento": 52
+    },
+    {
+      "id": "myrtaceae-indet",
+      "nome": "Myrtaceae indet.",
+      "nomeCientifico": "Myrtaceae; gênero e espécie não determinados",
+      "status": "PENDENTE",
+      "grupo": "Identificação incompleta",
+      "especieId": null,
+      "resumo": "A família aparece no inventário, mas isso não confirma uma das frutíferas listadas. O acesso fica preservado para investigação.",
+      "cultivo": "Sem perfil agronômico de espécie atribuído.",
+      "propagacao": "Obter folhas, flores, frutos e amostra vinculada à matriz; determinar espécie antes de selecionar protocolo.",
+      "cuidados": "Não presumir comestibilidade e não fundir com guamirim, araçás, pitangas ou jabuticaba por pertencerem à mesma família.",
+      "fontes": [],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Myrtaceae indet.",
+      "ordemNoDocumento": 53
+    },
+    {
+      "id": "ora-pro-nobis",
+      "nome": "Ora pro Nobis",
+      "nomeCientifico": "Pereskia aculeata como referência",
+      "status": "PESQUISADO",
+      "grupo": "Hortaliças e condimentos",
+      "especieId": null,
+      "resumo": "Hortaliça folhosa descrita no manual da Embrapa; pode ampliar a produção de folhas do sistema.",
+      "cultivo": "O manejo depende de acesso para colheita e condução; confirmar a planta antes de dimensionar o plantio.",
+      "propagacao": "A Embrapa descreve propagação por sementes e, mais comumente, por estacas semilenhosas de 15 a 20 cm, em recipientes ou no local definitivo. Usar matriz sadia e acompanhar o enraizamento.",
+      "cuidados": "O manual trata também de ora-pro-nóbis sem espinho como outra planta, Anredera cordifolia. Não confundir os materiais nem atribuir composição nutricional genérica.",
+      "fontes": [
+        "hortalicas",
+        "ora-pro-nobis"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Ora pro Nobis",
+      "ordemNoDocumento": 54
+    },
+    {
+      "id": "palmito-jucara",
+      "nome": "Palmito-Juçara",
+      "nomeCientifico": "Euterpe edulis",
+      "status": "PESQUISADO",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "Palmeira distinta do açaizeiro Euterpe oleracea já cadastrado. Acrescenta uma referência para diversidade de palmeiras e conservação de sementes.",
+      "cultivo": "A Embrapa indica 50% de sombreamento no viveiro; esse valor não é uma regra para toda a vida no campo.",
+      "propagacao": "Sementes recalcitrantes exigem conservação específica e armazenamento curto; selecionar sementes íntegras e sadias.",
+      "cuidados": "Não reutilizar o manejo de açaí ou pupunha automaticamente. A ficha não autoriza extração de palmito nem comprova viabilidade de material antigo.",
+      "fontes": [
+        "jucara"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Palmito-Juçara",
+      "ordemNoDocumento": 43
+    },
+    {
+      "id": "pau-cigarra",
+      "nome": "Pau-cigarra",
+      "nomeCientifico": "Senna multijuga",
+      "status": "PESQUISADO",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "A Embrapa registra Senna multijuga como árvore pioneira no contexto regional de restauração. Pode diversificar a fase inicial do plantio.",
+      "cultivo": "Avaliar a região e as condições do terreno; classificação pioneira não estabelece uma dose de adubo ou tolerância universal ao solo.",
+      "propagacao": "A referência de coleta associa maturidade a frutos marrom-claros. Confirmar matriz e maturação antes de colher.",
+      "cuidados": "Não inferir fixação biológica de N por pertencer a Fabaceae nem confundir com outras Senna chamadas fedegoso.",
+      "fontes": [
+        "cigarra",
+        "sucessao"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Pau-cigarra",
+      "ordemNoDocumento": 59
+    },
+    {
+      "id": "pau-jacare",
+      "nome": "Pau-jacaré",
+      "nomeCientifico": "Piptadenia gonoacantha",
+      "status": "PESQUISADO",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "Árvore secundária inicial procurada por abelhas durante a floração e usada em recuperação de áreas degradadas.",
+      "cultivo": "A ESALQ registra ocorrência com algum sombreamento em florestas alteradas. Ajustar espaço e luz à fase de implantação.",
+      "propagacao": "A casca com cristas e os ramos com acúleos ajudam a conferir a matriz, mas requerem comparação botânica.",
+      "cuidados": "Pode receber o nome angico-branco; verificar duplicação entre acessos. Não inferir fixação de N ou uso alimentar só pela classificação botânica.",
+      "fontes": [
+        "jacare"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Pau-jacaré",
+      "ordemNoDocumento": 60
+    },
+    {
+      "id": "pau-jangada",
+      "nome": "Pau-jangada",
+      "nomeCientifico": "Apeiba tibourbou como referência",
+      "status": "PESQUISADO",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "Árvore pioneira de crescimento rápido descrita no projeto da USP. Pode contribuir para a pesquisa de recobrimento de áreas.",
+      "cultivo": "Verificar espaço de copa e condições regionais; a fonte consultada não fornece faixa de pH ou irrigação.",
+      "propagacao": "Conferir os frutos em cápsula com espinhos moles, folhas e matriz antes de selecionar protocolo de sementes.",
+      "cuidados": "Também chamada escova-de-macaco. Manter os acessos separados até o parceiro confirmar se são a mesma planta.",
+      "fontes": [
+        "jangada"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Pau-jangada",
+      "ordemNoDocumento": 61
+    },
+    {
+      "id": "pau-polvora",
+      "nome": "Pau-pólvora",
+      "nomeCientifico": "Trema micrantha",
+      "status": "PESQUISADO",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "Árvore colonizadora de áreas abertas com ocorrência ampla e potencial para estudar sucessão e recuperação de cobertura.",
+      "cultivo": "A referência da UFPE descreve adaptação a terrenos desnudos e baixa fertilidade; isso não dispensa avaliação do solo.",
+      "propagacao": "Registrar matriz, coleta e teste de germinação; não assumir que todo lote antigo permanece viável.",
+      "cuidados": "A função pioneira é contextual e não prova benefício para cada espécie vizinha. Sem perfil alimentar ou faixa numérica atribuídos.",
+      "fontes": [
+        "polvora"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Pau-pólvora",
+      "ordemNoDocumento": 62
+    },
+    {
+      "id": "pau-viola",
+      "nome": "Pau-viola",
+      "nomeCientifico": "Citharexylum myrianthum",
+      "status": "PESQUISADO",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "A UFMG registra flores melíferas, frutos para aves e uso em restauração ciliar. Pode ampliar diversidade de fauna e estrutura.",
+      "cultivo": "Prefere terrenos úmidos, inclusive com inundações periódicas de curta duração. A referência alerta para solo ácido com alumínio.",
+      "propagacao": "Coletar frutos da matriz identificada, despolpar e acompanhar a formação das mudas com protocolo local.",
+      "cuidados": "Não traduzir preferência por umidade em tolerância a alagamento permanente nem adotar pH de exclusão sem validação.",
+      "fontes": [
+        "viola"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Pau-viola",
+      "ordemNoDocumento": 63
+    },
+    {
+      "id": "pimenta",
+      "nome": "Pimenta",
+      "nomeCientifico": "Capsicum spp. como hipótese; espécie não determinada",
+      "status": "PENDENTE",
+      "grupo": "Hortaliças e condimentos",
+      "especieId": null,
+      "resumo": "A Embrapa distingue espécies de Capsicum por caracteres de flores e frutos. O nome isolado não define o acesso.",
+      "cultivo": "Não atribuir ciclo, exigências ou grau de ardência antes de determinar espécie e cultivar.",
+      "propagacao": "Registrar corola, anteras, número e posição das flores e frutos da matriz; identificar antes de multiplicar.",
+      "cuidados": "Não confundir com Piper indet. ou pimenta-do-reino. Manter lotes separados e sem uso alimentar liberado por nome comum.",
+      "fontes": [
+        "pimenta"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Pimenta",
+      "ordemNoDocumento": 55
+    },
+    {
+      "id": "piper-indet",
+      "nome": "Piper indet",
+      "nomeCientifico": "Piper sp.; espécie não determinada",
+      "status": "PENDENTE",
+      "grupo": "Identificação incompleta",
+      "especieId": null,
+      "resumo": "O documento informa gênero. A referência da Embrapa para Piper nigrum serve para mostrar que uma pimenta específica não representa todos os Piper.",
+      "cultivo": "Não transferir tutoramento, nutrição ou sanidade da pimenta-do-reino ao acesso desconhecido.",
+      "propagacao": "Registrar folhas e inflorescências, local e matriz; encaminhar à determinação botânica.",
+      "cuidados": "Não presumir comestibilidade nem converter em Piper nigrum. A identificação é necessária antes de recomendar cultivo ou consumo.",
+      "fontes": [
+        "piper"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Piper indet",
+      "ordemNoDocumento": 56
+    },
+    {
+      "id": "pitanga",
+      "nome": "Pitanga",
+      "nomeCientifico": "Eugenia uniflora",
+      "status": "PESQUISADO",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "Frutífera nativa, perene e ramificada, com produção de frutos e possibilidade de condução da copa.",
+      "cultivo": "O IF Baiano descreve melhor desenvolvimento em regiões quentes e úmidas e solo fértil com matéria orgânica; água é importante no estabelecimento.",
+      "propagacao": "Retirar sementes de frutos maduros, despolpar e semear em recipientes para mudas, com identificação da matriz.",
+      "cuidados": "Ajustar poda e espaço da copa; doses da cartilha não substituem análise de solo. Não atribuir a cor preta a espécie distinta sem identificação.",
+      "fontes": [
+        "pitanga",
+        "pitanga-cor"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Pitanga",
+      "ordemNoDocumento": 57
+    },
+    {
+      "id": "pitanga-preta",
+      "nome": "Pitanga preta",
+      "nomeCientifico": "Eugenia uniflora ou Eugenia involucrata como possibilidades",
+      "status": "PENDENTE",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "Um estudo da USP registra pitangas de cor quase negra em E. uniflora; a Embrapa registra pitanga-preta como nome de E. involucrata.",
+      "cultivo": "O manejo depende de qual planta está no banco; não há perfil único para esta entrada.",
+      "propagacao": "Conferir formato do fruto, folhas, flores e matriz; preservar o nome do acesso até a determinação.",
+      "cuidados": "Pode ser forma de cor da pitanga ou duplicação de cereja-do-Rio-Grande. Não contar como espécie botânica adicional confirmada.",
+      "fontes": [
+        "pitanga-cor",
+        "cereja"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Pitanga preta",
+      "ordemNoDocumento": 58
+    },
+    {
+      "id": "quaresmeira",
+      "nome": "Quaresmeira",
+      "nomeCientifico": "Pleroma granulosum como hipótese",
+      "status": "PENDENTE",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "A UFRJ descreve árvore ou arbusto de flores ornamentais polinizadas por insetos. O nome quaresmeira não garante essa espécie.",
+      "cultivo": "Conferir a identidade e o ambiente de origem antes de definir água e solo; não extrapolar dados de outras Pleroma.",
+      "propagacao": "Comparar folhas ásperas com nervuras curvas, flores e frutos com material de referência.",
+      "cuidados": "Não tratar como manacá-da-serra pela semelhança das flores. Manter a hipótese e os campos agronômicos sem números não verificados.",
+      "fontes": [
+        "quaresmeira"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Quaresmeira",
+      "ordemNoDocumento": 64
+    },
+    {
+      "id": "sangra-d-agua",
+      "nome": "Sangra-d'Água",
+      "nomeCientifico": "Croton urucurana ou outros Croton",
+      "status": "PENDENTE",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "Curitiba registra C. urucurana para matas ciliares; a Epagri registra o mesmo nome para C. celtidifolius.",
+      "cultivo": "Para C. urucurana há descrição de terrenos úmidos e brejosos; não transferir essa preferência a um Croton desconhecido.",
+      "propagacao": "Documentar folhas, flores, cápsulas e matriz para determinação. A maturação pode dispersar sementes rapidamente.",
+      "cuidados": "Pode sobrepor capixingui e Croton espontâneo. Não usar seiva ou extratos como tratamento; a lista não identifica o táxon.",
+      "fontes": [
+        "sangra",
+        "sangra-ambigua"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Sangra-d'Água",
+      "ordemNoDocumento": 65
+    },
+    {
+      "id": "taioba",
+      "nome": "Taioba",
+      "nomeCientifico": "Xanthosoma spp.; material comestível a confirmar",
+      "status": "PENDENTE",
+      "grupo": "Hortaliças e condimentos",
+      "especieId": null,
+      "resumo": "Hortaliça folhosa citada em materiais da Embrapa sob nomenclatura histórica X. sagittifolium; a identidade do acesso precisa ser conferida.",
+      "cultivo": "Confirmar espécie e variedade antes de planejar uso produtivo. Não aplicar manejo de taro ou inhame por semelhança.",
+      "propagacao": "Usar matriz identificada de material alimentar conhecido e registrar origem dos propágulos.",
+      "cuidados": "Não consumir crua: a referência registra irritação por oxalato de cálcio. Esta ficha não permite distinguir variedades comestíveis apenas por foto ou nome.",
+      "fontes": [
+        "taioba"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Taioba",
+      "ordemNoDocumento": 66
+    },
+    {
+      "id": "tapia",
+      "nome": "Tapiá",
+      "nomeCientifico": "Alchornea spp.; espécie não determinada",
+      "status": "PENDENTE",
+      "grupo": "Árvores e restauração",
+      "especieId": null,
+      "resumo": "A Embrapa descreve A. triplinervia, mas tapiá também aparece para outros Alchornea. O inventário não fornece a espécie.",
+      "cultivo": "Para A. triplinervia, a monografia prefere solo profundo, úmido e drenado no plantio; não é regra do gênero.",
+      "propagacao": "Conferir folhas, frutos e matriz; planejar coleta e semeadura após determinação, pois a conservação pode ser limitante.",
+      "cuidados": "Não fundir automaticamente com A. glandulosa ou transferir o protocolo entre espécies. Não considerar o nome confirmação botânica.",
+      "fontes": [
+        "tapia"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Tapiá",
+      "ordemNoDocumento": 67
+    },
+    {
+      "id": "urucum",
+      "nome": "Urucum",
+      "nomeCientifico": "Bixa orellana",
+      "status": "PESQUISADO",
+      "grupo": "Hortaliças e condimentos",
+      "especieId": null,
+      "resumo": "Arbusto produtor de sementes usadas para corante e condimento. Acrescenta uma função produtiva ao estudo do SAF.",
+      "cultivo": "A Embrapa prioriza solo fértil, profundo e drenado e registra sensibilidade a geada. Ajustar nutrição pela análise de solo.",
+      "propagacao": "Propagação por sementes ou estacas; exigir material com identidade botânica, origem conhecida e boa sanidade.",
+      "cuidados": "Não converter o espaçamento ou o prazo de produção da ficha em regra universal. Uso condimentar não valida alegações medicinais.",
+      "fontes": [
+        "urucum"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Urucum",
+      "ordemNoDocumento": 68
+    },
+    {
+      "id": "uvaia",
+      "nome": "Uvaia",
+      "nomeCientifico": "Eugenia pyriformis",
+      "status": "PESQUISADO",
+      "grupo": "Frutíferas",
+      "especieId": null,
+      "resumo": "Frutífera nativa com usos alimentares, apícolas, de restauração e SAF registrados no guia da Embrapa.",
+      "cultivo": "O guia não fornece faixa numérica de solo ou irrigação para este acesso. Acompanhar as mudas e a adaptação local.",
+      "propagacao": "Sementes recalcitrantes perdem viabilidade rapidamente; priorizar semeadura após a coleta. A emergência descrita ocorre entre 30 e 45 dias.",
+      "cuidados": "Não assumir viabilidade de sementes de 2021. O intervalo de emergência é referência de viveiro, não promessa para qualquer lote.",
+      "fontes": [
+        "uvaia"
+      ],
+      "revisadoEm": "2026-10-29",
+      "identidadeDoLoteConfirmada": false,
+      "nomeOriginal": "Uvaia",
+      "ordemNoDocumento": 69
+    }
+  ],
+  "solo": {
+    "ano": 2022,
+    "titulo": "Observações de solo anexadas ao documento",
+    "relato": "O texto relata textura arenosa, observação de magnetita e biotita, variação de matéria orgânica entre canteiros e coesão média.",
+    "limites": "São observações locais sem laudo laboratorial, método, profundidade, unidades ou amostragem descritos. A frase sobre ausência de argila típica de solos tropicais não deve ser generalizada; textura arenosa e minerais isolados também não identificam um bioma. A expressão terra preta não comprova classificação de solo ou teor de carbono.",
+    "aplicacao": "Ajuda a formular perguntas sobre cobertura, infiltração e matéria orgânica. Para diagnóstico, coletar amostras representativas e analisar textura, pH, nutrientes e carbono com método e unidades. Nenhuma dessas observações foi convertida em limite do algoritmo."
+  }
+}

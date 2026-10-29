@@ -14,7 +14,7 @@ if (crescimentoInicio) {
             especies,
             fases: {
                 implantacao: ids,
-                desenvolvimento: especies.filter(e => e.ciclo !== 'CURTO').map(e => e.id),
+                desenvolvimento: especies.filter(e => e.ciclo !== 'CURTO' || e.estrato === 'COBERTURA').map(e => e.id),
                 estabelecido: especies.filter(e => e.ciclo === 'PERENE' || e.estrato === 'COBERTURA').map(e => e.id)
             }
         }, { compacto: true });

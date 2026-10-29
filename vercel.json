@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/site.py": {
+      "includeFiles": "{sistema-agroflorestal/**,servidor.py,auth_producao.py}",
+      "maxDuration": 30
+    }
+  },
+  "routes": [{ "src": "/(.*)", "dest": "/api/site" }]
+}

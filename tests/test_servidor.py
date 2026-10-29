@@ -53,6 +53,16 @@ class AutenticacaoTest(unittest.TestCase):
             self.assertEqual(self.requisitar(arquivo)[0], 401)
         self.assertEqual(self.requisitar('/conta.html')[0], 200)
 
+    def test_icones_e_manifesto_publicos(self):
+        for arquivo, tipo in (('favicon.ico', 'image/x-icon'), ('favicon.svg', 'image/svg+xml'), ('site.webmanifest', 'application/manifest+json')):
+            status, headers, corpo = self.requisitar('/assets/marca/' + arquivo)
+            self.assertEqual(status, 200)
+            self.assertEqual(headers['Content-Type'], tipo)
+            self.assertTrue(corpo)
+        manifesto = json.loads(self.requisitar('/assets/marca/site.webmanifest')[2])
+        for icone in manifesto['icons']:
+            self.assertEqual(self.requisitar('/assets/marca/' + icone['src'])[0], 200)
+
     def test_cadastro_hash_e_cookie_http_only(self):
         headers = self.cadastrar()
         self.assertIn('HttpOnly', headers['Set-Cookie'])
@@ -95,6 +105,12 @@ class AutenticacaoTest(unittest.TestCase):
         self.assertEqual(self.requisitar('/api/cadastrar', {'email': 'aluno@example.com', 'senha': '123'})[0], 400)
         self.cadastrar()
         self.assertEqual(self.requisitar('/api/cadastrar', {'email': 'ALUNO@EXAMPLE.COM', 'senha': 'OutraSenha123'})[0], 409)
+
+    def test_senhas_de_8_a_11_caracteres_nao_criam_conta_nova(self):
+        for senha in ('Antiga12', '12345678901'):
+            self.assertEqual(self.requisitar('/api/cadastrar', {'email': 'aluno@example.com', 'senha': senha})[0], 400)
+        with conectar(self.servidor.banco) as banco:
+            self.assertEqual(banco.execute('SELECT COUNT(*) FROM usuarios').fetchone()[0], 0)
 
     def test_limite_de_tentativas(self):
         for _ in range(15):

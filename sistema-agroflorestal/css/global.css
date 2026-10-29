@@ -7,103 +7,149 @@
 
 /* :root é a raiz do documento. As variáveis --nome podem ser usadas com var(--nome). */
 :root {
-    --fundo: #f8faf9;       /* Fundo principal, em tom claro. */
-    --superficie: #ffffff;  /* Fundo dos cartões e dos campos. */
-    --verde: #246F48;       /* Cor principal dos links e botões. */
-    --texto: #39434A;       /* Cor das letras. */
-    --muted: #59666E;       /* Cor dos textos secundários. */
-    --borda: #DCE5E1;       /* Cor dos contornos e divisórias. */
-    --sage: #E8F7EE;        /* Verde claro usado nos destaques. */
-    --ocre: #7D538C;        /* Tom de terra usado em números e foco. */
-    --folha: #2F905D;       /* Verde escolhido pela equipe. */
-    --roxo: #8E699C;        /* Manacá e identidade. */
-    --magenta: #D543F9;     /* Pequenos detalhes, sem uso em textos longos. */
-    --menta: #72FFB0;       /* Realces e detalhes naturais. */
-    --acao: #246F48;        /* Variante escura do verde para contraste com branco. */
+    --fundo: #f8faf9;
+    /* Fundo principal, em tom claro. */
+    --superficie: #ffffff;
+    /* Fundo dos cartões e dos campos. */
+    --verde: #246F48;
+    /* Cor principal dos links e botões. */
+    --texto: #39434A;
+    /* Cor das letras. */
+    --muted: #59666E;
+    /* Cor dos textos secundários. */
+    --borda: #DCE5E1;
+    /* Cor dos contornos e divisórias. */
+    --sage: #E8F7EE;
+    /* Verde claro usado nos destaques. */
+    --ocre: #7D538C;
+    /* Tom de terra usado em números e foco. */
+    --folha: #2F905D;
+    /* Verde escolhido pela equipe. */
+    --roxo: #8E699C;
+    /* Manacá e identidade. */
+    --magenta: #D543F9;
+    /* Pequenos detalhes, sem uso em textos longos. */
+    --menta: #72FFB0;
+    /* Realces e detalhes naturais. */
+    --acao: #246F48;
+    /* Variante escura do verde para contraste com branco. */
     --lilas-suave: #F1EBF5;
-    --raio: 7px;           /* Arredondamento compartilhado pelos cantos. */
-    font-family: 'Segoe UI', Arial, sans-serif; /* Usa a primeira fonte disponível. */
-    color: var(--texto);   /* Os descendentes herdam esta cor quando não têm outra. */
+    --raio: 7px;
+    /* Arredondamento compartilhado pelos cantos. */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    /* Usa a primeira fonte disponível. */
+    color: var(--texto);
+    /* Os descendentes herdam esta cor quando não têm outra. */
     background: var(--fundo);
-    font-size: 16px;       /* Tamanho básico das letras, em pixels CSS. */
-    line-height: 1.6;      /* Cada linha ocupa 1,6 vez o tamanho da fonte. */
+    font-size: 16px;
+    /* Tamanho básico das letras, em pixels CSS. */
+    line-height: 1.6;
+    /* Cada linha ocupa 1,6 vez o tamanho da fonte. */
 }
+
 /* * seleciona todos os elementos. border-box inclui padding e borda na largura declarada. */
 * {
     box-sizing: border-box;
 }
+
 /* Retira a margem que o navegador normalmente coloca ao redor do corpo da página. */
 body {
     margin: 0;
 }
+
 /* Todos os links usam verde e deixam o sublinhado um pouco afastado das letras. */
 a {
     color: var(--verde);
     text-underline-offset: 4px;
 }
+
 /* inherit faz os controles usarem a fonte do elemento pai, sem um estilo nativo diferente. */
-button, input, select {
+button,
+input,
+select {
     font: inherit;
 }
+
 /* A mãozinha do mouse indica que botões e seletores podem ser acionados. */
-button, select {
+button,
+select {
     cursor: pointer;
 }
+
 button {
     color: inherit;
 }
+
 /* A vírgula aplica a mesma regra a vários seletores. Aqui padronizamos o espaço entre textos. */
-h1, h2, h3, h4, h5, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
     margin: 0 0 16px;
 }
+
 /* Os títulos principais têm fonte com serifa; 400 é o peso normal, sem negrito. */
-h1, h2 {
+h1,
+h2 {
     font-family: Georgia, 'Times New Roman', serif;
     font-weight: 400;
     line-height: 1.15;
 }
+
 /* clamp limita o tamanho entre 36 e 54px; 4vw acompanha a largura da janela nesse intervalo. */
 h1 {
     font-size: clamp(36px, 4vw, 54px);
     letter-spacing: -1.8px;
 }
+
 /* Estes tamanhos distinguem os níveis de título; letter-spacing ajusta a distância entre letras. */
 h2 {
     font-size: 30px;
     letter-spacing: -.7px;
 }
+
 h3 {
     font-size: 19px;
     line-height: 1.4;
 }
+
 h4 {
     font-size: 20px;
     line-height: 1.4;
 }
+
 h5 {
     font-size: 18px;
 }
+
 small {
     font-size: 12px;
 }
+
 /* Respeita hidden mesmo quando outra regra tenta exibir o elemento com flex ou grid. */
 [hidden] {
     display: none !important;
 }
+
 /* Contorno visível para encontrar o controle atual ao navegar com o teclado. */
 :focus-visible {
     outline: 3px solid var(--ocre);
     outline-offset: 4px;
 }
+
 /* Limita a leitura a 1200px e reserva espaço nas laterais; auto centraliza horizontalmente. */
 .container {
     width: min(1200px, calc(100% - 80px));
     margin: 0 auto;
 }
+
 /* Linha que separa o cabeçalho do conteúdo. */
 .cabecalho {
     border-bottom: 1px solid var(--borda);
 }
+
 /* flex coloca marca, menu e ação na mesma linha; align-items centraliza na vertical. */
 .cabecalho-interno {
     min-height: 94px;
@@ -111,6 +157,7 @@ small {
     align-items: center;
     gap: 28px;
 }
+
 /* A marca reúne o desenho da folha e o nome, com um pequeno espaço entre eles. */
 .marca {
     display: flex;
@@ -120,6 +167,7 @@ small {
     font: 30px Georgia, serif;
     text-decoration: none;
 }
+
 /* O texto pequeno da marca ocupa sua própria linha e usa a fonte de interface. */
 .marca small {
     display: block;
@@ -128,12 +176,14 @@ small {
     letter-spacing: .4px;
     margin-top: 3px;
 }
+
 /* Espaça os links do menu sem acrescentar separadores ao HTML. */
 nav {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 /* A borda transparente reserva o espaço do destaque antes de uma página ficar ativa. */
 nav a {
     font-size: 14px;
@@ -141,49 +191,60 @@ nav a {
     padding: 34px 0;
     border-bottom: 2px solid transparent;
 }
+
 /* utils.js coloca aria-current no link da página aberta; aqui ele ganha cor e peso. */
 nav a[aria-current='page'] {
     border-color: var(--verde);
     font-weight: 600;
 }
+
 /* :hover vale enquanto o ponteiro está sobre o link. */
 nav a:hover {
     color: var(--ocre);
 }
+
 /* Estilo usado por botões e por links com aparência de botão. */
 .botao {
     border: 1px solid var(--verde);
     border-radius: var(--raio);
     background: var(--verde);
     color: white;
-    display: inline-flex; /* Alinha texto e seta sem ocupar automaticamente a linha inteira. */
+    display: inline-flex;
+    /* Alinha texto e seta sem ocupar automaticamente a linha inteira. */
     align-items: center;
     justify-content: center;
     gap: 18px;
-    min-height: 46px; /* Garante uma área confortável de clique. */
+    min-height: 46px;
+    /* Garante uma área confortável de clique. */
     padding: 11px 22px;
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
-    transition: background .15s, transform .15s; /* Suaviza as mudanças por 0,15 segundo. */
+    transition: background .15s, transform .15s;
+    /* Suaviza as mudanças por 0,15 segundo. */
 }
+
 /* Escurece e sobe um pixel ao passar o mouse. A transformação não muda o espaço do layout. */
 .botao:hover {
     background: #1C593A;
     transform: translateY(-1px);
 }
+
 /* Sem espaço entre as classes: o elemento precisa ter botao E secundario. */
 .botao.secundario {
     background: transparent;
     color: var(--verde);
 }
+
 .botao.secundario:hover {
     background: var(--sage);
 }
+
 /* A margem automática ocupa o espaço livre e leva esta ação para a direita. */
 .cabecalho-acao {
     margin-left: auto;
 }
+
 /* Este atalho fica fora da tela até receber foco, permitindo pular o menu com teclado. */
 .pular {
     position: absolute;
@@ -194,21 +255,25 @@ nav a:hover {
     background: var(--verde);
     color: white;
 }
+
 /* Ao receber foco, o atalho reaparece perto do topo. z-index o mantém sobre o cabeçalho. */
 .pular:focus {
     top: 10px;
 }
+
 /* Área de título e descrição, separada do restante por uma linha. */
 .pagina-titulo {
     padding: 42px 0 32px;
     border-bottom: 1px solid var(--borda);
     margin-bottom: 32px;
 }
+
 .pagina-titulo p {
     color: var(--muted);
     margin: 0;
     font-size: 17px;
 }
+
 /* Link pequeno de retorno, usado acima do título em algumas páginas. */
 .voltar {
     display: inline-block;
@@ -217,14 +282,18 @@ nav a:hover {
     color: var(--muted);
     text-decoration: none;
 }
+
 /* Duas classes compartilham a mesma cor para informações complementares. */
-.muted, .ajuda {
+.muted,
+.ajuda {
     color: var(--muted);
 }
+
 .ajuda {
     font-size: 13px;
     line-height: 1.6;
 }
+
 /* Título e legenda ficam em pontas opostas; gap preserva distância quando se aproximam. */
 .section-heading {
     display: flex;
@@ -233,18 +302,22 @@ nav a:hover {
     gap: 24px;
     margin-bottom: 24px;
 }
+
 .section-heading h2 {
     margin-bottom: 0;
 }
+
 .section-heading p {
     margin: 10px 0 0;
 }
+
 /* > alcança só o span filho direto, sem alterar spans dentro de outros grupos. */
-.section-heading > span {
+.section-heading>span {
     font-size: 12px;
     color: var(--muted);
     white-space: nowrap;
 }
+
 /* Avisos educativos usam uma borda lateral e fundo suave para se distinguirem dos textos. */
 .aviso {
     border-left: 3px solid #8E699C;
@@ -254,11 +327,13 @@ nav a:hover {
     font-size: 13px;
     line-height: 1.7;
 }
+
 .aviso a {
     display: inline-block;
     margin-left: 6px;
     font-weight: 600;
 }
+
 /* Erros usam outra paleta para diferenciar uma falha de um simples aviso informativo. */
 .erro {
     padding: 16px 20px;
@@ -267,31 +342,38 @@ nav a:hover {
     background: #fff0e9;
     color: #743522;
 }
+
 /* O rodapé tem espaço acima, uma divisória e conteúdo distribuído horizontalmente. */
 .rodape {
     border-top: 1px solid var(--borda);
     margin-top: 60px;
     padding: 30px 0;
 }
+
 .rodape-interno {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
+
 .rodape .marca {
     font-size: 26px;
 }
+
 .rodape-descricao {
     font: 12px 'Segoe UI', sans-serif;
     color: var(--muted);
 }
+
 /* :last-child seleciona o último filho; aqui alcança o link final do rodapé. */
-.rodape p, .rodape > div > a:last-child {
+.rodape p,
+.rodape>div>a:last-child {
     margin: 0;
     font-size: 12px;
     color: var(--muted);
 }
+
 /* Cada campo empilha rótulo e controle. min-width: 0 permite encolher dentro das grades. */
 .campo {
     display: flex;
@@ -299,17 +381,21 @@ nav a:hover {
     gap: 7px;
     min-width: 0;
 }
+
 /* Rótulos mais fortes ajudam a distinguir o nome do campo do valor que será digitado. */
 label {
     font-size: 14px;
     font-weight: 600;
 }
+
 label small {
     font-weight: 400;
     color: var(--muted);
 }
+
 /* :not exclui os radios: eles são pequenos círculos, não caixas de texto largas. */
-input:not([type='radio']), select {
+input:not([type='radio']),
+select {
     width: 100%;
     min-height: 46px;
     border: 1px solid #b6c2b2;
@@ -319,20 +405,25 @@ input:not([type='radio']), select {
     padding: 10px 12px;
     font-size: 15px;
 }
+
 /* ::placeholder escolhe somente o exemplo mostrado dentro de um campo vazio. */
 input::placeholder {
     color: #768174;
     opacity: 1;
 }
-input:hover, select:hover {
+
+input:hover,
+select:hover {
     border-color: var(--verde);
 }
+
 /* Grade de três exemplos; repeat(3, 1fr) divide o espaço em três colunas iguais. */
 .cenarios {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+
 /* Cada exemplo é um botão que empilha título, descrição e chamada de ação. */
 .cenario {
     display: flex;
@@ -346,23 +437,28 @@ input:hover, select:hover {
     font-size: 14px;
     transition: border-color .15s, background .15s;
 }
+
 .cenario:hover {
     border-color: var(--verde);
     background: #E8F7EE;
 }
+
 .cenario strong {
     font: 23px Georgia, serif;
     color: var(--verde);
 }
+
 /* Muda só a descrição: exclui o identificador do cenário e a chamada de ação. */
-.cenario > span:not(.cenario-letra):not(.cenario-link) {
+.cenario>span:not(.cenario-letra):not(.cenario-link) {
     color: var(--muted);
 }
+
 .cenario-letra {
     color: var(--ocre);
     font-size: 12px;
     font-weight: 600;
 }
+
 /* margin-top: auto empurra a chamada para o fim do cartão quando há espaço sobrando. */
 .cenario-link {
     display: flex;
@@ -375,69 +471,86 @@ input:hover, select:hover {
     font-weight: 600;
     color: var(--verde);
 }
+
 /* details/summary já abrem e fecham no navegador; o CSS apenas cuida da aparência. */
 details {
     border-bottom: 1px solid var(--borda);
 }
+
 summary {
     cursor: pointer;
     padding: 18px 0;
     font-size: 14px;
     font-weight: 600;
 }
+
 /* O navegador acrescenta open ao details expandido. */
 details[open] summary {
     color: var(--verde);
 }
+
 .detalhe {
     font-size: 14px;
     padding: 0 24px 24px;
 }
+
 /* Reserva espaço para orientar a pessoa quando não existem dados ou resultados. */
 .estado-vazio {
     padding: 50px 0;
 }
+
 .estado-vazio p {
     max-width: 560px;
 }
+
 /* Na página Sobre, o texto recebe o espaço restante e o quadro lateral mede 300px. */
 .metodologia {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 300px;
     gap: 80px;
 }
-.metodologia > section > h2 {
+
+.metodologia>section>h2 {
     margin-top: 42px;
 }
+
 /* O primeiro título já está no topo da seção, então não precisa do espaço dos seguintes. */
-.metodologia > section > h2:first-child {
+.metodologia>section>h2:first-child {
     margin-top: 0;
 }
+
 .metodologia p {
     color: var(--muted);
     font-size: 15px;
 }
+
 /* Recuo para os números das etapas; os textos recebem um pequeno espaço adicional. */
 .metodo-passos {
     padding-left: 22px;
 }
+
 .metodo-passos li {
     padding: 10px 0 10px 8px;
 }
+
 .metodo-passos p {
     margin: 6px 0 0;
 }
+
 /* Lista de referências; cada entrada separa o link da explicação e da próxima publicação. */
 .fontes {
     padding-left: 20px;
 }
+
 .fontes li {
     margin-bottom: 22px;
 }
+
 .fontes p {
     margin-top: 6px;
     font-size: 13px;
 }
+
 /* Quadro lateral de apoio; align-self impede que se estique até a altura da outra coluna. */
 .dicas {
     align-self: start;
@@ -445,121 +558,155 @@ details[open] summary {
     padding: 28px;
     border-radius: var(--raio);
 }
+
 .dicas h2 {
     font-size: 25px;
 }
+
 .dicas h3 {
     font-size: 16px;
 }
+
 .dicas p {
     font-size: 14px;
     color: var(--muted);
 }
+
 .dicas a {
     font-size: 13px;
 }
+
 /* Uma única borda superior desenha a divisória, substituindo o contorno padrão de hr. */
 hr {
     border: 0;
     border-top: 1px solid #DCE5E1;
     margin: 24px 0;
 }
+
 /* Até 1000px, reduzimos espaços e a coluna lateral para caber em janelas intermediárias. */
 @media (max-width: 1000px) {
     .container {
         width: calc(100% - 48px);
     }
+
     .cabecalho-interno {
         gap: 28px;
     }
+
     nav {
         gap: 20px;
     }
+
     .cabecalho-acao {
         padding: 10px 14px;
     }
+
     .rodape-interno {
         flex-wrap: wrap;
     }
+
     .metodologia {
         grid-template-columns: 1fr 260px;
         gap: 36px;
     }
 }
+
 /* Até 700px, menu, cartões e textos passam a ocupar mais linhas para caber no celular. */
 @media (max-width: 700px) {
     .container {
         width: calc(100% - 36px);
     }
+
     .cabecalho-interno {
         flex-wrap: wrap;
         padding-top: 18px;
         gap: 12px;
     }
+
     .marca {
         font-size: 27px;
     }
+
     .cabecalho-acao {
         min-height: 38px;
         font-size: 12px;
     }
+
     nav {
-        order: 3; /* O menu passa visualmente para depois da marca e do botão. */
+        order: 3;
+        /* O menu passa visualmente para depois da marca e do botão. */
         width: 100%;
         justify-content: space-between;
         gap: 12px;
     }
+
     nav a {
         padding: 12px 0;
         font-size: 13px;
     }
+
     h1 {
         letter-spacing: -1px;
     }
+
     h2 {
         font-size: 26px;
     }
+
     .pagina-titulo {
         padding: 30px 0 24px;
         margin-bottom: 24px;
     }
+
     .pagina-titulo p {
         font-size: 15px;
     }
+
     .section-heading {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
     }
+
     .cenarios {
         grid-template-columns: 1fr;
         gap: 12px;
     }
+
     .cenario {
         padding: 20px;
     }
+
     .aviso {
         margin: 28px 0;
         padding: 18px;
     }
+
     .rodape {
         margin-top: 36px;
     }
+
     .rodape-interno {
         align-items: flex-start;
         flex-direction: column;
     }
+
     .metodologia {
         grid-template-columns: 1fr;
         gap: 32px;
     }
+
     .detalhe {
         padding: 0 8px 20px;
     }
 }
+
 /* Respeita a preferência do sistema por menos movimento, desativando transições. */
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
         transition: none !important;
         animation: none !important;
         scroll-behavior: auto !important;
@@ -567,22 +714,120 @@ hr {
 }
 
 /* Conteúdo disponível a leitores de tela sem ocupar espaço visual. */
-.visualmente-oculto { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.visualmente-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
 @media (max-width: 1100px) {
-    .cabecalho-interno { flex-wrap: wrap; gap: 16px; padding-top: 16px; }
-    .cabecalho-interno nav { order: 3; width: 100%; justify-content: flex-start; flex-wrap: wrap; column-gap: 22px; row-gap: 0; }
-    .cabecalho-interno nav a { padding: 12px 0; }
+    .cabecalho-interno {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding-top: 16px;
+    }
+
+    .cabecalho-interno nav {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        column-gap: 22px;
+        row-gap: 0;
+    }
+
+    .cabecalho-interno nav a {
+        padding: 12px 0;
+    }
 }
 
 /* Identidade ybyrá: flor vetorial, acentos roxos e superfícies claras. */
-.marca { color: var(--texto); font-weight: 600; letter-spacing: -.8px; }
-.marca-flor { display: block; flex-shrink: 0; }
-.destaque-flor { color: var(--roxo); }
-nav a[aria-current='page'] { border-color: var(--roxo); color: #704B80; }
-nav a:hover { color: #704B80; }
-.botao { box-shadow: 0 2px 0 #00000008; }
-.botao.secundario { box-shadow: none; }
-.cenario-letra, .historia-etiqueta { color: #795287; }
-.cenario:hover { border-color: var(--folha); }
-.campo input:focus, .campo select:focus { border-color: var(--roxo); }
-::selection { background: var(--menta); color: var(--texto); }
+.marca {
+    color: var(--texto);
+    font-weight: 600;
+    letter-spacing: -.8px;
+}
+
+.marca-flor {
+    display: block;
+    flex-shrink: 0;
+}
+
+.destaque-flor {
+    color: var(--roxo);
+}
+
+nav a[aria-current='page'] {
+    border-color: var(--roxo);
+    color: #704B80;
+}
+
+nav a:hover {
+    color: #704B80;
+}
+
+.botao {
+    box-shadow: 0 2px 0 #00000008;
+}
+
+.botao.secundario {
+    box-shadow: none;
+}
+
+.cenario-letra,
+.historia-etiqueta {
+    color: #795287;
+}
+
+.cenario:hover {
+    border-color: var(--folha);
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: var(--roxo);
+}
+
+::selection {
+    background: var(--menta);
+    color: var(--texto);
+}
+
+/* Relações documentadas são apresentadas com seu contexto e nível de evidência. */
+.evidencia {
+    border: 1px solid var(--borda);
+    border-left: 3px solid #8E699C;
+    padding: 16px;
+    margin: 14px 0;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.evidencia h4 {
+    margin: 0 0 10px;
+    font-size: 17px;
+}
+
+.evidencia p,
+.evidencia a {
+    font-size: 13px;
+}
+
+.evidencia-atencao,
+.evidencia-evitar {
+    border-left-color: #9c661b;
+}
+
+.evidencia-favoravel_condicional {
+    border-left-color: #2F905D;
+}
+
+.evidencia-desconhecida {
+    border-left-color: #39434A;
+}

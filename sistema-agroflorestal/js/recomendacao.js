@@ -1,5 +1,5 @@
 /* recomendacao.js compara as espécies com a análise e explica sua pontuação.
- * Os pontos ordenam alternativas educativas; não representam precisão científica.
+ * Os pontos ordenam alternativas do protótipo; não representam precisão científica.
  */
 
 // Cada linha traz: campo da análise, limite mínimo, limite máximo, peso e nome legível.
@@ -18,6 +18,7 @@ const funcoes = {
 // Devolve uma cópia da espécie com pontos e motivos, ou null se ela for excluída.
 // contexto informa o que já foi escolhido no modelo; {} permite avaliar sem esse contexto.
 export function pontuarEspecie(especie, dados, diagnostico, pesos, contexto = {}) {
+    if (especie.recomendacaoAutomatica === false) return null;
     let pontuacao = 0;
     const justificativas = [];
     const ignorados = []; // Critérios sem informação não ganham pontos.
@@ -67,7 +68,7 @@ export function pontuarEspecie(especie, dados, diagnostico, pesos, contexto = {}
     // unshift coloca a função principal antes dos motivos acumulados com push.
     justificativas.unshift(especie.funcaoPrincipal);
     if (ignorados.length) {
-        justificativas.push(`Sem faixa confirmada para ${ignorados.join(', ')}; esses critérios não somam pontos nem confirmam adaptação.`);
+        justificativas.push(`Sem faixa validada para comparar ${ignorados.join(', ')} às medições de solo; esses critérios não somam pontos nem confirmam adaptação. Consulte as referências de cultivo na ficha da planta.`);
     }
     if (!especie.estados) {
         justificativas.push('Distribuição regional não validada; município e estado contextualizam a análise, sem confirmar aptidão local.');
