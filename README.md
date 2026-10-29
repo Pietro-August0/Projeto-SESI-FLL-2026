@@ -4,7 +4,7 @@
 
 **Robótica, pesquisa e agrofloresta. Uma ideia da equipe Jumpers, do SESI Cotia.**
 
-[Acessar o site](https://ybyra-sesi-fll.vercel.app) · [Executar localmente](#executar-localmente) · [Documentação](docs/README.md) · [Contribuir](CONTRIBUTING.md)
+[Acessar o site](https://ybyra-sesi-fll.vercel.app) · [Executar localmente](#executar-localmente) · [Guia técnico](docs/GUIA-TECNICO.md) · [Produção](docs/PRODUCAO.md)
 
 </div>
 
@@ -59,30 +59,19 @@ A composição do SAF acontece no navegador. O servidor controla o acesso. Não 
 Para alterar os componentes React, instale Node.js compatível com Vite 7 (20.19+ ou 22.12+) e execute:
 
 ```sh
-npm ci
 npm ci --prefix frontend
-npm run ui:check
-npm run ui:build
+npm run check --prefix frontend
+npm run build --prefix frontend
 ```
 
 Edite `frontend/src/`; o build atualiza `sistema-agroflorestal/ui/`. Os arquivos compilados são versionados para permitir executar o servidor sem Node.js.
 
 ```sh
-# Formatação de HTML, CSS, JS, TS, JSON e Markdown
-npm run format
-npm run format:check
-
-# Formatação Python — dependência apenas de desenvolvimento
-python -m pip install -r requirements-dev.txt
-python -m ruff format .
-python -m ruff format --check .
-
-# Testes de servidor, catálogo e representação das plantas
 python -m unittest discover -s tests -v
-npm test
+node --test tests/crescimento.test.mjs
 ```
 
-A suíte contém 38 testes Python e sete testes Node. Para alterações visuais, confira também navegação, formulário, login, carrossel e crescimento em computador e celular. Os [registros de validação](docs/README.md#validações) indicam os cenários já exercitados.
+A suíte contém 38 testes Python e sete testes Node. Para alterações visuais, confira também navegação, formulário, login, carrossel e crescimento em computador e celular. Os [registros de validação](docs/VALIDACAO-ACESSO.md) indicam os cenários já exercitados.
 
 ## Estrutura
 
@@ -111,4 +100,12 @@ Os Jumpers são uma equipe de robótica do SESI Cotia com 11 integrantes, uma me
 
 As fotografias da equipe foram fornecidas pelo time. A fotografia de floresta da abertura e as imagens do catálogo têm fontes e licenças registradas nos [créditos](docs/CREDITOS-IMAGENS.md). A imagem ilustrativa da tela de acesso é gerada e identificada como tal. As marcas das instituições são preservadas nos assets.
 
-[Arquitetura](docs/ARQUITETURA.md) · [Guia técnico](docs/GUIA-TECNICO.md) · [Identidade visual](docs/IDENTIDADE-VISUAL.md) · [Como contribuir](CONTRIBUTING.md)
+[Guia técnico](docs/GUIA-TECNICO.md) · [Identidade visual](docs/IDENTIDADE-VISUAL.md)
+
+## O que é necessário?
+
+Para executar localmente: Python, os arquivos do servidor e a pasta `sistema-agroflorestal/`. `frontend/` só é necessário para editar e recompilar os componentes. Node.js não é necessário para usar a interface já compilada.
+
+Para publicar: `api/`, `vercel.json`, `.python-version` e a configuração de produção. `supabase/` guarda o SQL e o modelo de e-mail. `docs/` e `tests/` são referências e verificações, não são carregados pelo site.
+
+`.dados-locais/` contém contas locais e `.vercel/` contém a ligação com a hospedagem; preserve essas pastas. `__pycache__`, `.ruff_cache` e dependências locais não são arquivos do site e são ignorados pelo Git.

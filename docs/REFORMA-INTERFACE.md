@@ -54,4 +54,4 @@ Validação local: Playwright/Chrome (Browser plugin não disponível), em 1440 
 
 Publicação deste ajuste confirmada: `dpl_2LtVhEjZXnHPrLBy8heMctpNb4db`. JavaScript, CSS e foto publicados conferidos por SHA-1; rotas protegidas mantidas. Rodapé também validado em 320 e 768 pixels.
 
-A organização posterior removeu as fontes intermediárias sem consumidores e moveu o inventário original. Consulte [Organização](ORGANIZACAO.md) para distinguir esses ajustes dos registros históricos acima.
+A organização posterior removeu as fontes intermediárias sem consumidores e moveu o inventário original. Consulte [Guia técnico](GUIA-TECNICO.md) para distinguir esses ajustes dos registros históricos acima.

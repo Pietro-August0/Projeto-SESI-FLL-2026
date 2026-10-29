@@ -1,8 +1,0 @@
-{
-  "tabWidth": 2,
-  "singleQuote": true,
-  "semi": true,
-  "printWidth": 100,
-  "endOfLine": "lf",
-  "proseWrap": "preserve"
-}

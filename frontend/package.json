@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "check": "tsc --noEmit",
-    "format": "npm --prefix .. run format"
+    "check": "tsc --noEmit"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

@@ -1,2 +1,0 @@
-# Apenas ferramentas de desenvolvimento; o servidor usa a biblioteca padrão.
-ruff==0.17.3
