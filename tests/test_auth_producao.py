@@ -12,6 +12,13 @@ from auth_producao import FalhaAuth, RequisicaoProducao, supabase
 
 
 class ProducaoTest(unittest.TestCase):
+    def test_landing_publica_nao_consulta_provedor(self):
+        for rota in ('/', '/index.html', '/historia.html', '/sobre.html', '/especies.html', '/explorar.html'):
+            status, _, corpo = self.requisitar(rota)
+            self.assertEqual(status, 200)
+            self.assertIn(b'<html', corpo)
+        self.auth.assert_not_called()
+
     def setUp(self):
         self.ambiente = patch.dict(
             os.environ,
@@ -68,7 +75,7 @@ class ProducaoTest(unittest.TestCase):
         self.auth.assert_called_with(
             "signup", {"email": "aluno@example.com", "password": "SenhaDeTeste123"}
         )
-        self.assertEqual(self.requisitar("/index.html")[0], 303)
+        self.assertEqual(self.requisitar("/analise.html")[0], 303)
         self.assertEqual(self.requisitar("/api/reenviar", {"email": "aluno@example.com"})[0], 202)
         self.auth.assert_called_with("resend", {"type": "signup", "email": "aluno@example.com"})
 
@@ -92,7 +99,7 @@ class ProducaoTest(unittest.TestCase):
             self.assertIn(atributo, headers["Set-Cookie"])
         self.cookie = headers["Set-Cookie"].split(";")[0]
         self.auth.return_value = self.usuario
-        self.assertEqual(self.requisitar("/index.html")[0], 200)
+        self.assertEqual(self.requisitar("/analise.html")[0], 200)
         self.assertEqual(self.requisitar("/dados/especies.json")[0], 200)
         self.auth.assert_called_with("user", token="jwt-teste")
         self.assertTrue(json.loads(self.requisitar("/api/sessao")[2])["verificacao_email"])
@@ -100,9 +107,9 @@ class ProducaoTest(unittest.TestCase):
     def test_usuario_nao_confirmado_e_token_expirado_nao_acessam(self):
         self.cookie = "ybyra_sessao=jwt-teste"
         self.auth.return_value = {**self.usuario, "email_confirmed_at": None}
-        self.assertEqual(self.requisitar("/dados/especies.json")[0], 401)
+        self.assertEqual(self.requisitar("/resultado.html")[0], 303)
         self.auth.side_effect = FalhaAuth(401)
-        self.assertEqual(self.requisitar("/index.html")[0], 303)
+        self.assertEqual(self.requisitar("/analise.html")[0], 303)
 
     def test_confirmacao_por_codigo_enviado_ao_email(self):
         self.auth.return_value = {"user": self.usuario}
@@ -298,7 +305,6 @@ class ProducaoTest(unittest.TestCase):
             "/.env",
             "/supabase/migrations/202610290001_contas.sql",
             "/sistema-agroflorestal/index.html",
-            "/assets/../dados/especies.json",
         ):
             self.assertIn(self.requisitar(caminho)[0], {401, 404})
 

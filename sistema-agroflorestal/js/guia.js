@@ -1,7 +1,7 @@
 /* Orientação compartilhada: um percurso visível e um guia que a pessoa abre quando quiser. */
 export function iniciarGuia(pagina, temAnalise) {
   const etapas = [
-    { arquivo: 'index.html', nome: 'Começar' },
+    { arquivo: 'explorar.html', nome: 'Começar' },
     { arquivo: 'analise.html', nome: 'Informar dados' },
     { arquivo: 'resultado.html', nome: 'Explorar SAF' },
   ];

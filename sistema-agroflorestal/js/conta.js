@@ -119,8 +119,8 @@ function mudarModo(novoModo, limparMensagem = true) {
       : 'Crie sua senha para começar.',
     confirmar: 'Agora só falta o código que chegou na sua caixa de entrada.',
   }[modo];
-  document.querySelectorAll('[data-modo]').forEach((botao) => {
-    const ativo = botao.dataset.modo === modo;
+  document.querySelectorAll('[role=tab][data-modo]').forEach((botao) => {
+    const ativo = botao.dataset.modo === (modo === 'confirmar' ? 'entrar' : modo);
     botao.setAttribute('aria-selected', String(ativo));
     botao.tabIndex = ativo ? 0 : -1;
   });
@@ -170,6 +170,8 @@ function concluirConfirmacao(texto) {
   mudarModo('entrar');
   email.value = confirmado;
   avisar(texto);
+  $("#feedback-texto").textContent = texto;
+  $("#feedback-conta").showModal();
 }
 
 document
@@ -177,7 +179,7 @@ document
   .forEach((botao) => botao.addEventListener('click', () => mudarModo(botao.dataset.modo)));
 $('#modos-conta').addEventListener('keydown', (evento) => {
   if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(evento.key)) return;
-  const botoes = [...document.querySelectorAll('[data-modo]')].filter((b) => !b.hidden);
+  const botoes = [...document.querySelectorAll('[role=tab][data-modo]')].filter((b) => !b.hidden);
   const atual = botoes.indexOf(document.activeElement);
   if (atual < 0 || emEnvio) return;
   evento.preventDefault();

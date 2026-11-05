@@ -1,0 +1,33 @@
+.sobre-saf {
+  max-width: 1120px;
+  margin: 64px auto;
+  padding: clamp(28px, 5vw, 48px);
+  border-radius: 24px;
+  background: var(--sage);
+}
+
+.sobre-saf__rotulo {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--verde);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sobre-saf h2 {
+  margin: 0 0 16px;
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.sobre-saf p {
+  max-width: 780px;
+  margin: 0;
+  color: var(--texto);
+  font-size: clamp(16px, 2vw, 19px);
+  line-height: 1.75;
+}
+
+.sobre-saf p + p { margin-top: 1rem; }
+.sobre-saf a { display: inline-block; margin-top: 1.25rem; color: var(--verde); font-weight: 700; }

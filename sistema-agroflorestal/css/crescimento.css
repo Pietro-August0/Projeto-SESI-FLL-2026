@@ -490,3 +490,26 @@
     transition: none;
   }
 }
+
+.crescimento-anos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+.crescimento-anos input {
+  flex: 1;
+  min-width: 0;
+}
+.crescimento-anos button {
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  color: var(--texto);
+  background: var(--superficie);
+  font: inherit;
+}
+.crescimento-ano {
+  font-weight: 700;
+}

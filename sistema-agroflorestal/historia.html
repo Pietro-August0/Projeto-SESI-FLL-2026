@@ -8,12 +8,12 @@
       content="Conheça a equipe e o propósito do ybyrá, desenvolvido para complementar seu trabalho na FIRST LEGO League sobre sistemas agroflorestais."
     />
     <meta name="theme-color" content="#26533E" />
-    <title>Sobre nós — Jumpers | ybyrá</title>
-    <link rel="icon" href="assets/marca/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="assets/marca/favicon-32.png" sizes="32x32" type="image/png" />
-    <link rel="icon" href="assets/marca/favicon-16.png" sizes="16x16" type="image/png" />
-    <link rel="shortcut icon" href="assets/marca/favicon.ico" />
-    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png" sizes="180x180" />
+    <title>Sobre — Jumpers | ybyrá</title>
+    <link rel="icon" href="assets/marca/favicon.svg?v=2" type="image/svg+xml" />
+    <link rel="icon" href="assets/marca/favicon-32.png?v=2" sizes="32x32" type="image/png" />
+    <link rel="icon" href="assets/marca/favicon-16.png?v=2" sizes="16x16" type="image/png" />
+    <link rel="shortcut icon" href="assets/marca/favicon.ico?v=2" />
+    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png?v=2" sizes="180x180" />
     <link rel="manifest" href="assets/marca/site.webmanifest" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/projeto.css" />
@@ -23,7 +23,9 @@
     <link rel="stylesheet" href="css/experiencia.css" />
     <script type="module" src="js/interacoes.js"></script>
     <link rel="stylesheet" href="ui/interface.css" />
+    <link rel="stylesheet" href="css/sobre-saf.css" />
     <script type="module" src="ui/interface.js"></script>
+    <link rel="stylesheet" href="css/navegacao.css" />
   </head>
   <body>
     <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -32,35 +34,25 @@
         <a class="marca" href="index.html"
           ><img
             class="marca-logo"
-            src="assets/marca/logo-negativa.svg"
+            src="assets/marca/logo-negativa.svg?v=2"
             alt="ybyrá — Sistema agroflorestal"
             width="180"
             height="95"
         /></a>
         <nav aria-label="Navegação principal">
           <a href="index.html">Início</a><a href="analise.html">Criar SAF</a
-          ><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a>
+          ><a href="especies.html">Plantas</a><a href="historia.html">Sobre</a>
         </nav>
         <div class="cabecalho-ferramentas">
           <button class="ajuda-cabecalho" type="button" data-abrir-guia>Como usar</button
           ><a class="conta-atalho" href="conta.html"
-            ><svg
-              width="22"
-              height="24"
-              viewBox="0 0 24 26"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              aria-hidden="true"
-            >
-              <circle cx="12" cy="7" r="4" />
-              <path d="M3 24v-4c0-7 18-7 18 0v4Z" /></svg
             ><span>Entrar</span></a
           >
         </div>
       </div>
     </header>
-    <main class="container" id="conteudo" data-ui-about>
+    <main class="container" id="conteudo">
+      <div data-ui-about>
       <section class="pagina-titulo">
         <h1>Ideias que criam raízes.</h1>
         <p>
@@ -88,6 +80,16 @@
         </p>
       </section>
       <noscript><p>Ative o JavaScript para explorar o álbum de fotos.</p></noscript>
+      </div>
+      <section class="sobre-saf" id="explicacao-saf" aria-labelledby="titulo-saf">
+        <span class="sobre-saf__rotulo">Sistema Agroflorestal</span>
+        <h2 id="titulo-saf">O que é um SAF?</h2>
+        <p>Um sistema agroflorestal combina árvores e cultivos agrícolas na mesma área.
+          As plantas são escolhidas e organizadas para crescer juntas e cumprir funções diferentes.</p>
+        <p>Por exemplo, uma árvore pode dar sombra, enquanto uma planta de cobertura protege
+          o solo. Outras espécies podem produzir alimentos em diferentes épocas.</p>
+        <a href="especies.html">Conheça as plantas do catálogo</a>
+      </section>
     </main>
     <footer class="rodape">
       <div class="container">
@@ -95,7 +97,7 @@
           <a class="marca" href="index.html"
             ><img
               class="marca-logo"
-              src="assets/marca/logo-negativa.svg"
+              src="assets/marca/logo-negativa.svg?v=2"
               alt="ybyrá — Sistema agroflorestal"
               width="180"
               height="95"
@@ -106,7 +108,7 @@
           </div>
           <nav aria-label="Navegação do rodapé">
             <a href="index.html">Início</a><a href="analise.html">Criar SAF</a
-            ><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a>
+            ><a href="especies.html">Plantas</a><a href="historia.html">Sobre</a>
           </nav>
         </div>
         <div

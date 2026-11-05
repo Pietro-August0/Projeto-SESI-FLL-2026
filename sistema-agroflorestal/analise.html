@@ -14,21 +14,23 @@
     <meta name="theme-color" content="#26533E" />
     <!-- Nome da aba, seguido do ícone da folha. -->
     <title>Análise do solo — ybyrá</title>
-    <link rel="icon" href="assets/marca/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="assets/marca/favicon-32.png" sizes="32x32" type="image/png" />
-    <link rel="icon" href="assets/marca/favicon-16.png" sizes="16x16" type="image/png" />
-    <link rel="shortcut icon" href="assets/marca/favicon.ico" />
-    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" href="assets/marca/favicon.svg?v=2" type="image/svg+xml" />
+    <link rel="icon" href="assets/marca/favicon-32.png?v=2" sizes="32x32" type="image/png" />
+    <link rel="icon" href="assets/marca/favicon-16.png?v=2" sizes="16x16" type="image/png" />
+    <link rel="shortcut icon" href="assets/marca/favicon.ico?v=2" />
+    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png?v=2" sizes="180x180" />
     <link rel="manifest" href="assets/marca/site.webmanifest" />
     <!-- Regras comuns e depois ajustes do formulário; os caminhos partem desta página. -->
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/analise.css" />
+    <link rel="stylesheet" href="css/crescimento.css" />
     <link rel="stylesheet" href="css/orientacao.css" />
     <link rel="stylesheet" href="css/ecologico.css" />
     <!-- O módulo registra o envio após o navegador ler os elementos do formulário. -->
     <script type="module" src="js/analise.js"></script>
     <link rel="stylesheet" href="css/experiencia.css" />
     <script type="module" src="js/interacoes.js"></script>
+    <link rel="stylesheet" href="css/navegacao.css" />
   </head>
   <body>
     <!-- O atalho aponta ao main pelo id e aparece ao receber foco de teclado. -->
@@ -39,29 +41,18 @@
         <a class="marca" href="index.html"
           ><img
             class="marca-logo"
-            src="assets/marca/logo-negativa.svg"
+            src="assets/marca/logo-negativa.svg?v=2"
             alt="ybyrá — Sistema agroflorestal"
             width="180"
             height="95"
         /></a>
         <nav aria-label="Navegação principal">
           <a href="index.html">Início</a><a href="analise.html">Criar SAF</a
-          ><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a>
+          ><a href="especies.html">Plantas</a><a href="historia.html">Sobre</a>
         </nav>
         <div class="cabecalho-ferramentas">
           <button class="ajuda-cabecalho" type="button" data-abrir-guia>Como usar</button
           ><a class="conta-atalho" href="conta.html"
-            ><svg
-              width="22"
-              height="24"
-              viewBox="0 0 24 26"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              aria-hidden="true"
-            >
-              <circle cx="12" cy="7" r="4" />
-              <path d="M3 24v-4c0-7 18-7 18 0v4Z" /></svg
             ><span>Entrar</span></a
           >
         </div>
@@ -73,11 +64,15 @@
         <p class="erro">Ative o JavaScript para carregar o catálogo, os cenários e as análises.</p>
       </noscript>
       <div class="pagina-titulo analise-titulo">
-        <a class="voltar" href="index.html">← Início</a>
+        <a class="voltar" href="explorar.html">← Início</a>
         <h1>Vamos conhecer sua área.</h1>
         <p>Localização, solo e objetivo. Você pode ajustar tudo depois.</p>
       </div>
       <!-- Exemplos fictícios podem preencher todos os campos, que continuam editáveis. -->
+      <details class="painel-extra">
+        <summary>Ver como uma agrofloresta pode crescer</summary>
+        <div id="crescimento-inicio" aria-label="Exemplo ilustrativo de crescimento agroflorestal"></div>
+      </details>
       <details class="escolha-exemplo cenarios-compactos" id="escolher-cenario">
         <summary>Não tenho dados. Quero usar um exemplo</summary>
         <p>Escolha um exemplo e ajuste como quiser.</p>
@@ -312,7 +307,7 @@
           <a class="marca" href="index.html"
             ><img
               class="marca-logo"
-              src="assets/marca/logo-negativa.svg"
+              src="assets/marca/logo-negativa.svg?v=2"
               alt="ybyrá — Sistema agroflorestal"
               width="180"
               height="95"
@@ -323,7 +318,7 @@
           </div>
           <nav aria-label="Navegação do rodapé">
             <a href="index.html">Início</a><a href="analise.html">Criar SAF</a
-            ><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a>
+            ><a href="especies.html">Plantas</a><a href="historia.html">Sobre</a>
           </nav>
         </div>
         <div

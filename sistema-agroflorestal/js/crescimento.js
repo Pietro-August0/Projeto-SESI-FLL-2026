@@ -1,5 +1,5 @@
 /* A sequência é ilustrativa: plantas têm formas próprias e ritmos de desenho
- * distintos. Não representa anos, produtividade ou profundidade real de raízes. */
+ * distintos. Os anos servem apenas de referência para a demonstração. */
 import { escapar, rotulos } from './utils.js';
 import { perfisVisuais, estadoDaPlanta, faseDoProgresso } from './evolucao-plantas.js';
 import { desenharEspecie, desenharRaizes } from './desenhos-plantas.js';
@@ -51,7 +51,7 @@ export function iniciarCrescimento(alvo, saf, { compacto = false } = {}) {
   alvo.classList.add('crescimento');
   alvo.classList.toggle('crescimento-compacto', compacto);
   alvo.innerHTML = `
-        <div class="crescimento-titulo"><div><p class="crescimento-sobretitulo">Uma paisagem em transformação</p><h2>${compacto ? 'Veja a agrofloresta crescer' : 'Explore a vida de cada planta'}</h2></div><span class="crescimento-selo">Sem escala de tempo</span></div>
+        <div class="crescimento-titulo"><div><p class="crescimento-sobretitulo">Uma paisagem em transformação</p><h2>${compacto ? 'Veja a agrofloresta crescer' : 'Explore a vida de cada planta'}</h2></div><span class="crescimento-selo">Anos ilustrativos</span></div>
         <figure class="crescimento-figura">
             <div class="crescimento-panorama" tabindex="0" role="region" aria-label="Paisagem da agrofloresta; role horizontalmente em telas pequenas">
                 <svg id="${id}-paisagem" viewBox="0 0 1000 500" role="img" aria-labelledby="${id}-titulo ${id}-descricao" class="crescimento-cena">
@@ -83,20 +83,20 @@ export function iniciarCrescimento(alvo, saf, { compacto = false } = {}) {
                     <text x="20" y="480" class="solo-rotulo">Solo e raízes · desenho sem escala</text>
                 </svg>
             </div>
-            <figcaption>${compacto ? 'Paisagem ilustrativa · sem escala real de tempo.' : 'Os números ligam as plantas à legenda. <span class="crescimento-dica-pan">Deslize a paisagem para ver toda a composição.</span>'}</figcaption>
+            <figcaption>${compacto ? 'Paisagem ilustrativa · anos de exemplo, sem previsão agronômica.' : 'Os números ligam as plantas à legenda. <span class="crescimento-dica-pan">Deslize a paisagem para ver toda a composição.</span>'}</figcaption>
         </figure>
         <div class="crescimento-controles">
             <div class="crescimento-etapas" role="group" aria-label="Escolher fase da agrofloresta">${fases.map((f, i) => `<button type="button" data-fase="${i}" aria-pressed="false"><span>0${i + 1}</span>${f.nome}</button>`).join('')}</div>
             <div class="crescimento-transporte"><button type="button" class="crescimento-reiniciar" aria-label="Recomeçar a sequência">↺</button><button type="button" class="crescimento-reproduzir" aria-pressed="false">▶ Reproduzir</button></div>
         </div>
         ${compacto ? '<details class="crescimento-extras"><summary>Explorar plantas e controles</summary>' : ''}
-        <div class="crescimento-linha"><label for="tempo-${id}">Percorrer as fases</label><input id="tempo-${id}" type="range" min="0" max="100" value="0" step="1"></div>
+        <div class="crescimento-linha"><label for="tempo-${id}">Ano ilustrativo <output for="tempo-${id}" class="crescimento-ano">0</output></label><div class="crescimento-anos"><button type="button" data-ano="-1" aria-label="Ano anterior">−</button><input id="tempo-${id}" type="range" min="0" max="10" value="0" step="1"><button type="button" data-ano="1" aria-label="Próximo ano">+</button></div></div>
         <div class="crescimento-opcoes"><label class="crescimento-raizes"><input type="checkbox" checked> Ver raízes</label><label class="crescimento-velocidade" for="velocidade-${id}">Velocidade<select id="velocidade-${id}"><option value="0.5">0,5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div>
         <div class="crescimento-leitura" aria-live="polite" aria-atomic="true"></div>
         <p class="crescimento-instrucao">Selecione uma planta para reconhecer sua forma e acompanhar o que muda.</p>
         <ul class="crescimento-legenda" aria-label="Selecionar espécie">${especies.map((e, i) => `<li><button type="button" data-especie="${e.id}" aria-pressed="false" style="--cor-especie:${perfisVisuais[e.id].cor}"><span class="legenda-numero">${i + 1}</span><span><strong>${escapar(e.nome)}</strong><small data-estado="${e.id}"></small></span></button></li>`).join('')}</ul>
         <div id="${id}-inspecao" class="crescimento-inspecao" role="region" aria-label="Detalhes da planta selecionada" hidden></div>
-        <p class="crescimento-nota">Desenhos estilizados, sem proporção de altura, profundidade ou duração real. Crescimento, flores e frutos são ilustrativos. Coberturas de ciclo curto representam novas plantas a cada renovação.</p>${compacto ? '</details>' : ''}`;
+        <p class="crescimento-nota">A escala de 0 a 10 anos é um roteiro de demonstração. O sistema calcula a composição por fases, sem calcular a idade, altura ou profundidade das plantas. Crescimento, flores e frutos são ilustrativos. Coberturas de ciclo curto representam novas plantas a cada renovação.</p>${compacto ? '</details>' : ''}`;
 
   const slider = alvo.querySelector('input[type=range]');
   const botaoReproduzir = alvo.querySelector('.crescimento-reproduzir');
@@ -144,10 +144,12 @@ export function iniciarCrescimento(alvo, saf, { compacto = false } = {}) {
       id: ref.especie.id,
       estado: estadoDaPlanta(ref.especie, posicao, saf.fases),
     }));
-    slider.value = String(Math.round(posicao));
+    const ano = Math.round(posicao / 10);
+    slider.value = String(ano);
+    alvo.querySelector(".crescimento-ano").value = String(ano);
     slider.setAttribute(
       'aria-valuetext',
-      `${fase.nome}; posição ilustrativa ${Math.round(posicao)} de 100`,
+      `Ano ${ano} ilustrativo; ${fase.nome}`,
     );
     if (!tocando)
       botaoReproduzir.textContent = movimentoReduzido.matches
@@ -224,9 +226,15 @@ export function iniciarCrescimento(alvo, saf, { compacto = false } = {}) {
       atualizar(Number(botao.dataset.fase) * 50);
     }),
   );
+  alvo.querySelectorAll('[data-ano]').forEach((botao) => {
+    ouvir(botao, 'click', () => {
+      parar();
+      atualizar((Number(slider.value) + Number(botao.dataset.ano)) * 10);
+    });
+  });
   ouvir(slider, 'input', () => {
     parar();
-    atualizar(slider.value);
+    atualizar(Number(slider.value) * 10);
   });
   ouvir(alvo.querySelector('.crescimento-reiniciar'), 'click', () => {
     parar();

@@ -6,11 +6,11 @@
     <meta name="description" content="Acesso por e-mail e senha ao projeto ybyrá." />
     <meta name="theme-color" content="#26533E" />
     <title>Entrar ou criar conta — ybyrá</title>
-    <link rel="icon" href="assets/marca/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="assets/marca/favicon-32.png" sizes="32x32" type="image/png" />
-    <link rel="icon" href="assets/marca/favicon-16.png" sizes="16x16" type="image/png" />
-    <link rel="shortcut icon" href="assets/marca/favicon.ico" />
-    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" href="assets/marca/favicon.svg?v=2" type="image/svg+xml" />
+    <link rel="icon" href="assets/marca/favicon-32.png?v=2" sizes="32x32" type="image/png" />
+    <link rel="icon" href="assets/marca/favicon-16.png?v=2" sizes="16x16" type="image/png" />
+    <link rel="shortcut icon" href="assets/marca/favicon.ico?v=2" />
+    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png?v=2" sizes="180x180" />
     <link rel="manifest" href="assets/marca/site.webmanifest" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/projeto.css" />
@@ -19,6 +19,7 @@
     <script type="module" src="js/conta.js"></script>
     <link rel="stylesheet" href="css/experiencia.css" />
     <script type="module" src="js/interacoes.js"></script>
+    <link rel="stylesheet" href="css/navegacao.css" />
   </head>
   <body>
     <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -27,29 +28,18 @@
         <a class="marca" href="index.html"
           ><img
             class="marca-logo"
-            src="assets/marca/logo-negativa.svg"
+            src="assets/marca/logo-negativa.svg?v=2"
             alt="ybyrá — Sistema agroflorestal"
             width="180"
             height="95"
         /></a>
         <nav aria-label="Navegação principal">
           <a href="index.html">Início</a><a href="analise.html">Criar SAF</a
-          ><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a>
+          ><a href="especies.html">Plantas</a><a href="historia.html">Sobre</a>
         </nav>
         <div class="cabecalho-ferramentas">
           <button class="ajuda-cabecalho" type="button" data-abrir-guia>Como usar</button
           ><a class="conta-atalho" href="conta.html"
-            ><svg
-              width="22"
-              height="24"
-              viewBox="0 0 24 26"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              aria-hidden="true"
-            >
-              <circle cx="12" cy="7" r="4" />
-              <path d="M3 24v-4c0-7 18-7 18 0v4Z" /></svg
             ><span>Entrar</span></a
           >
         </div>
@@ -57,20 +47,7 @@
     </header>
     <main class="container conta-entrada" id="conteudo">
       <div class="conta-layout">
-        <section class="conta-convite">
-          <figure class="conta-natureza">
-            <img
-              src="assets/imagens/natureza-manaca.png"
-              width="1536"
-              height="1024"
-              alt="Imagem ilustrativa de floresta com folhas verdes e flores roxas"
-              fetchpriority="high"
-            />
-            <figcaption>Imagem de natureza gerada para ilustrar o projeto.</figcaption>
-          </figure>
-          <h1>Cultive ideias.<br /><span class="destaque-flor">Crie sua agrofloresta.</span></h1>
-          <p>Entre para explorar as plantas, criar propostas de SAF e acompanhar suas fases.</p>
-        </section>
+
         <section class="conta-painel" aria-label="Acesso à conta">
           <div id="modos-conta" class="conta-modos" role="tablist" aria-label="Etapas de acesso">
             <button
@@ -96,22 +73,13 @@
             >
               Criar conta
             </button>
-            <button
-              class="botao secundario"
-              type="button"
-              id="aba-confirmar"
-              data-modo="confirmar"
-              role="tab"
-              aria-selected="false"
-              aria-controls="confirmacao-codigo"
-              tabindex="-1"
-              hidden
-            >
-              Confirmar e-mail
-            </button>
           </div>
+          <button class="conta-link" type="button" id="aba-confirmar"
+            data-modo="confirmar" aria-controls="confirmacao-codigo" hidden>
+            Já tenho um código de confirmação
+          </button>
           <div id="conta-apresentacao">
-            <h2 id="conta-titulo">Boas-vindas ao ybyrá</h2>
+            <h1 id="conta-titulo">Boas-vindas ao ybyrá</h1>
             <p id="conta-subtitulo">Acesse sua conta para continuar.</p>
           </div>
           <noscript><p class="erro">Ative o JavaScript para entrar na sua conta.</p></noscript>
@@ -179,7 +147,7 @@
               </fieldset>
             </form>
           </div>
-          <section id="confirmacao-codigo" role="tabpanel" aria-labelledby="aba-confirmar" hidden>
+          <section id="confirmacao-codigo" aria-labelledby="conta-titulo" hidden>
             <div class="conta-etapas" aria-label="Progresso do cadastro">
               <span>01 · Criar conta</span><span aria-hidden="true">→</span
               ><span aria-current="step">02 · Confirmar e-mail</span>
@@ -246,6 +214,7 @@
             <a class="botao" id="continuar-conta" href="index.html">Continuar no ybyrá →</a
             ><button class="botao secundario" type="button" id="sair-conta">Sair da conta</button>
           </div>
+          <dialog id="feedback-conta" aria-labelledby="feedback-titulo"><h2 id="feedback-titulo">Tudo pronto</h2><p id="feedback-texto"></p><form method="dialog"><button class="botao">Continuar</button></form></dialog>
           <p id="mensagem-conta" class="conta-mensagem" role="status" tabindex="-1"></p>
           <button class="conta-link" type="button" id="tentar-conexao" hidden>
             Tentar novamente
@@ -263,7 +232,7 @@
           <a class="marca" href="index.html"
             ><img
               class="marca-logo"
-              src="assets/marca/logo-negativa.svg"
+              src="assets/marca/logo-negativa.svg?v=2"
               alt="ybyrá — Sistema agroflorestal"
               width="180"
               height="95"
@@ -274,7 +243,7 @@
           </div>
           <nav aria-label="Navegação do rodapé">
             <a href="index.html">Início</a><a href="analise.html">Criar SAF</a
-            ><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a>
+            ><a href="especies.html">Plantas</a><a href="historia.html">Sobre</a>
           </nav>
         </div>
         <div

@@ -14,11 +14,11 @@
     <meta name="theme-color" content="#26533E" />
     <!-- Título da aba e, no link seguinte, ícone local da folha. -->
     <title>Catálogo de espécies — ybyrá</title>
-    <link rel="icon" href="assets/marca/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="assets/marca/favicon-32.png" sizes="32x32" type="image/png" />
-    <link rel="icon" href="assets/marca/favicon-16.png" sizes="16x16" type="image/png" />
-    <link rel="shortcut icon" href="assets/marca/favicon.ico" />
-    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" href="assets/marca/favicon.svg?v=2" type="image/svg+xml" />
+    <link rel="icon" href="assets/marca/favicon-32.png?v=2" sizes="32x32" type="image/png" />
+    <link rel="icon" href="assets/marca/favicon-16.png?v=2" sizes="16x16" type="image/png" />
+    <link rel="shortcut icon" href="assets/marca/favicon.ico?v=2" />
+    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png?v=2" sizes="180x180" />
     <link rel="manifest" href="assets/marca/site.webmanifest" />
     <!-- Estilos comuns primeiro, depois regras específicas dos filtros e cartões. -->
     <link rel="stylesheet" href="css/global.css" />
@@ -29,6 +29,7 @@
     <script type="module" src="js/especies.js"></script>
     <link rel="stylesheet" href="css/experiencia.css" />
     <script type="module" src="js/interacoes.js"></script>
+    <link rel="stylesheet" href="css/navegacao.css" />
   </head>
   <body>
     <!-- Atalho para teclado; o # indica o id do destino dentro desta página. -->
@@ -39,29 +40,18 @@
         <a class="marca" href="index.html"
           ><img
             class="marca-logo"
-            src="assets/marca/logo-negativa.svg"
+            src="assets/marca/logo-negativa.svg?v=2"
             alt="ybyrá — Sistema agroflorestal"
             width="180"
             height="95"
         /></a>
         <nav aria-label="Navegação principal">
           <a href="index.html">Início</a><a href="analise.html">Criar SAF</a
-          ><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a>
+          ><a href="especies.html">Plantas</a><a href="historia.html">Sobre</a>
         </nav>
         <div class="cabecalho-ferramentas">
           <button class="ajuda-cabecalho" type="button" data-abrir-guia>Como usar</button
           ><a class="conta-atalho" href="conta.html"
-            ><svg
-              width="22"
-              height="24"
-              viewBox="0 0 24 26"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              aria-hidden="true"
-            >
-              <circle cx="12" cy="7" r="4" />
-              <path d="M3 24v-4c0-7 18-7 18 0v4Z" /></svg
             ><span>Entrar</span></a
           >
         </div>
@@ -76,6 +66,58 @@
         <h1>Encontre sua próxima planta.</h1>
         <p>Busque, filtre e descubra a função de cada espécie.</p>
       </div>
+      <details class="painel-extra"><summary>Filtrar plantas</summary>
+      <div class="filtros">
+        <div class="campo busca">
+          <label for="busca"> Buscar espécie ou função </label>
+          <!-- for liga o label ao input. search sinaliza que o campo serve a uma pesquisa. -->
+          <input
+            id="busca"
+            type="search"
+            placeholder="Ex.: guandu, Cajanus, cobertura…"
+            autocomplete="off"
+          />
+        </div>
+        <div class="campo">
+          <label for="filtro-estrato"> Estrato </label>
+          <!-- value vazio aceita todos; os demais valores são códigos usados no JSON. -->
+          <select id="filtro-estrato">
+            <option value="">Todos os estratos</option>
+            <option value="EMERGENTE">Emergente</option>
+            <option value="ALTO">Alto</option>
+            <option value="MEDIO">Médio</option>
+            <option value="BAIXO">Baixo</option>
+            <option value="COBERTURA">Cobertura</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="filtro-funcao"> Papel </label>
+          <!-- O papel é a função da planta no modelo, diferente do estrato, que é sua camada. -->
+          <select id="filtro-funcao">
+            <option value="">Todas as funções</option>
+            <option value="COBERTURA">Cobertura</option>
+            <option value="ADUBACAO_VERDE">Adubação verde</option>
+            <option value="CULTURA_CURTA">Cultura de ciclo curto</option>
+            <option value="SUPORTE">Suporte e biomassa</option>
+            <option value="FRUTIFERA">Frutífera</option>
+            <option value="ARBOREA">Arbórea</option>
+            <option value="PRODUTIVA">Produção alimentar</option>
+            <option value="PERENE">Perene</option>
+          </select>
+        </div>
+        <!-- button não envia formulário: o evento de clique apenas limpa os filtros. -->
+        <button id="limpar" class="botao secundario" type="button">Limpar filtros</button>
+      </div>
+      </details>
+      <div class="catalogo-nota">
+        <!-- A contagem muda a cada pesquisa; role status ajuda a anunciar a atualização. -->
+        <p id="contagem" role="status">Carregando catálogo…</p>
+        <span>79 registros · cultivo, manejo e fontes</span>
+      </div>
+      <!-- Um erro de carregamento ficará visível aqui, sem apagar as opções dos filtros. -->
+      <p id="erro" class="erro" role="alert" tabindex="-1" hidden></p>
+      <!-- O JavaScript preenche esta seção com um article por espécie encontrada. -->
+      <section id="catalogo" class="catalogo" aria-label="Espécies do catálogo"></section>
       <aside class="nota-curadoria" aria-label="Contribuição do parceiro">
         <strong>Pesquisa com o Grupo Taiobas do Matão USP</strong>
         <p>
@@ -122,56 +164,7 @@
           <option value="HISTORICO">Somente registro histórico</option>
         </select>
       </div>
-      <div class="filtros">
-        <div class="campo busca">
-          <label for="busca"> Buscar espécie ou função </label>
-          <!-- for liga o label ao input. search sinaliza que o campo serve a uma pesquisa. -->
-          <input
-            id="busca"
-            type="search"
-            placeholder="Ex.: guandu, Cajanus, cobertura…"
-            autocomplete="off"
-          />
-        </div>
-        <div class="campo">
-          <label for="filtro-estrato"> Estrato </label>
-          <!-- value vazio aceita todos; os demais valores são códigos usados no JSON. -->
-          <select id="filtro-estrato">
-            <option value="">Todos os estratos</option>
-            <option value="EMERGENTE">Emergente</option>
-            <option value="ALTO">Alto</option>
-            <option value="MEDIO">Médio</option>
-            <option value="BAIXO">Baixo</option>
-            <option value="COBERTURA">Cobertura</option>
-          </select>
-        </div>
-        <div class="campo">
-          <label for="filtro-funcao"> Papel </label>
-          <!-- O papel é a função da planta no modelo, diferente do estrato, que é sua camada. -->
-          <select id="filtro-funcao">
-            <option value="">Todas as funções</option>
-            <option value="COBERTURA">Cobertura</option>
-            <option value="ADUBACAO_VERDE">Adubação verde</option>
-            <option value="CULTURA_CURTA">Cultura de ciclo curto</option>
-            <option value="SUPORTE">Suporte e biomassa</option>
-            <option value="FRUTIFERA">Frutífera</option>
-            <option value="ARBOREA">Arbórea</option>
-            <option value="PRODUTIVA">Produção alimentar</option>
-            <option value="PERENE">Perene</option>
-          </select>
-        </div>
-        <!-- button não envia formulário: o evento de clique apenas limpa os filtros. -->
-        <button id="limpar" class="botao secundario" type="button">Limpar filtros</button>
-      </div>
-      <div class="catalogo-nota">
-        <!-- A contagem muda a cada pesquisa; role status ajuda a anunciar a atualização. -->
-        <p id="contagem" role="status">Carregando catálogo…</p>
-        <span>79 registros · cultivo, manejo e fontes</span>
-      </div>
-      <!-- Um erro de carregamento ficará visível aqui, sem apagar as opções dos filtros. -->
-      <p id="erro" class="erro" role="alert" tabindex="-1" hidden></p>
-      <!-- O JavaScript preenche esta seção com um article por espécie encontrada. -->
-      <section id="catalogo" class="catalogo" aria-label="Espécies do catálogo"></section>
+
       <section class="proximo-passo">
         <div>
           <h2>Quer ver estas plantas juntas?</h2>
@@ -193,7 +186,7 @@
           <a class="marca" href="index.html"
             ><img
               class="marca-logo"
-              src="assets/marca/logo-negativa.svg"
+              src="assets/marca/logo-negativa.svg?v=2"
               alt="ybyrá — Sistema agroflorestal"
               width="180"
               height="95"
@@ -204,7 +197,7 @@
           </div>
           <nav aria-label="Navegação do rodapé">
             <a href="index.html">Início</a><a href="analise.html">Criar SAF</a
-            ><a href="especies.html">Plantas</a><a href="historia.html">Sobre nós</a>
+            ><a href="especies.html">Plantas</a><a href="historia.html">Sobre</a>
           </nav>
         </div>
         <div

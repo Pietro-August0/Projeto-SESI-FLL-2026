@@ -52,27 +52,23 @@ class AutenticacaoTest(unittest.TestCase):
         self.cookie = headers["Set-Cookie"].split(";")[0]
         return headers
 
-    def test_paginas_dados_e_fotos_exigem_login(self):
+    def test_somente_criador_e_resultado_exigem_login(self):
         for pagina in (
-            "/",
-            "/index.html",
             "/analise.html",
             "/resultado.html",
-            "/historia.html",
-            "/sobre.html",
-            "/especies.html",
         ):
             status, headers, corpo = self.requisitar(pagina)
             self.assertEqual(status, 303)
             self.assertTrue(headers["Location"].startswith("/conta.html?proximo="))
             self.assertEqual(corpo, b"")
         for arquivo in (
+            "/explorar.html", "/historia.html", "/sobre.html", "/especies.html",
             "/dados/especies.json",
             "/assets/equipe/equipe-visita.jpg",
             "/css/%2e%2e/dados/especies.json",
             "/css/%2e%2e/assets/equipe/equipe-trilha.jpg",
         ):
-            self.assertEqual(self.requisitar(arquivo)[0], 401)
+            self.assertEqual(self.requisitar(arquivo)[0], 200)
         self.assertEqual(self.requisitar("/conta.html")[0], 200)
 
     def test_icones_e_manifesto_publicos(self):
@@ -89,6 +85,19 @@ class AutenticacaoTest(unittest.TestCase):
         for icone in manifesto["icons"]:
             self.assertEqual(self.requisitar("/assets/marca/" + icone["src"])[0], 200)
 
+    def test_landing_publica_sem_expor_ferramentas(self):
+        for rota in ("/", "/index.html", "/css/../index.html"):
+            status, _, corpo = self.requisitar(rota)
+            self.assertEqual(status, 200)
+            self.assertIn("Ideias que".encode(), corpo)
+            self.assertNotIn(b'js/inicio.js', corpo)
+        status, headers, _ = self.requisitar("/analise.html?cenario=solo-a")
+        self.assertEqual(status, 303)
+        self.assertEqual(headers["Location"], "/conta.html?proximo=analise.html%3Fcenario%3Dsolo-a")
+        self.assertEqual(self.requisitar("/css/../analise.html")[0], 303)
+        for asset in ("css/landing.css", "js/landing.js", "assets/marca/copa.svg"):
+            self.assertEqual(self.requisitar('/' + asset)[0], 200)
+
     def test_cadastro_hash_e_cookie_http_only(self):
         headers = self.cadastrar()
         self.assertIn("HttpOnly", headers["Set-Cookie"])
@@ -98,7 +107,7 @@ class AutenticacaoTest(unittest.TestCase):
             self.assertNotEqual(conta["senha_hash"], "UmaSenhaDeTeste123")
             self.assertEqual(len(conta["sal"]), 32)
             self.assertEqual(len(conta["senha_hash"]), 64)
-        self.assertEqual(self.requisitar("/index.html")[0], 200)
+        self.assertEqual(self.requisitar("/analise.html")[0], 200)
         self.assertEqual(self.requisitar("/dados/especies.json")[0], 200)
         self.assertEqual(self.requisitar("/assets/equipe/equipe-trilha.jpg")[0], 200)
         self.assertEqual(
@@ -109,7 +118,7 @@ class AutenticacaoTest(unittest.TestCase):
         self.cadastrar()
         cookie_antigo = self.cookie
         self.assertEqual(self.requisitar("/api/sair", {})[0], 200)
-        self.assertEqual(self.requisitar("/index.html")[0], 303)
+        self.assertEqual(self.requisitar("/analise.html")[0], 303)
         self.assertIsNone(json.loads(self.requisitar("/api/sessao")[2])["usuario"])
         self.assertEqual(
             self.requisitar("/api/entrar", {"email": "ALUNO@EXAMPLE.COM", "senha": "incorreta"})[0],
@@ -127,12 +136,12 @@ class AutenticacaoTest(unittest.TestCase):
             banco.execute("UPDATE sessoes SET expira = 0")
         self.assertEqual(self.requisitar("/analise.html")[0], 303)
         self.cookie = "ybyra_sessao=inventada"
-        self.assertEqual(self.requisitar("/dados/especies.json")[0], 401)
+        self.assertEqual(self.requisitar("/resultado.html")[0], 303)
 
     def test_origem_externa_e_rejeitada(self):
         self.cadastrar()
         self.assertEqual(self.requisitar("/api/sair", {}, origem="https://externo.example")[0], 403)
-        self.assertEqual(self.requisitar("/index.html")[0], 200)
+        self.assertEqual(self.requisitar("/analise.html")[0], 200)
 
     def test_email_repetido_e_senha_curta(self):
         self.assertEqual(

@@ -35,7 +35,7 @@ O cadastro de produção exige **senha com pelo menos 12 caracteres e confirmaç
 python servidor.py
 ```
 
-Abra [localhost:8765](http://127.0.0.1:8765), crie uma conta e experimente um cenário. No Windows, também é possível usar `py servidor.py`. Encerre com `Ctrl+C`.
+Abra [localhost:8765](http://127.0.0.1:8765), conheça a apresentação pública e entre na sua conta para experimentar um cenário. No Windows, também é possível usar `py servidor.py`. Encerre com `Ctrl+C`.
 
 O modo local usa SQLite em `.dados-locais/`, não envia e-mail e abre a sessão ao cadastrar. Na produção, a confirmação por e-mail é obrigatória antes do login. Contas locais e de produção são independentes.
 
@@ -71,7 +71,7 @@ python -m unittest discover -s tests -v
 node --test tests/crescimento.test.mjs
 ```
 
-A suíte contém 38 testes Python e sete testes Node. Para alterações visuais, confira também navegação, formulário, login, carrossel e crescimento em computador e celular. Os [registros de validação](docs/VALIDACAO-ACESSO.md) indicam os cenários já exercitados.
+A suíte contém 40 testes Python e sete testes Node. Para alterações visuais, confira também navegação, formulário, login, carrossel e crescimento em computador e celular. Os [registros de validação](docs/VALIDACAO-ACESSO.md) indicam os cenários já exercitados.
 
 ## Estrutura
 
@@ -92,7 +92,7 @@ auth_producao.py         Integração da autenticação com Supabase
 
 O [guia de produção](docs/PRODUCAO.md) explica Supabase, SMTP, variáveis e Vercel. Use `.env.example` como referência; nunca versione senhas, chaves secretas, sessões ou bancos locais.
 
-A configuração da Vercel encaminha todas as rotas para `api/site.py`, preservando a autenticação. Páginas, dados e fotos da equipe exigem sessão; recursos necessários ao login são públicos. Não publique somente a pasta estática.
+A configuração da Vercel encaminha todas as rotas para `api/site.py`, preservando a autenticação. A landing, o Sobre nós, a metodologia, o catálogo e a experiência de demonstração são públicos, incluindo seus dados de consulta e fotos. Apenas `/analise.html` (criador de SAFs) e `/resultado.html` exigem sessão. Não publique somente a pasta estática.
 
 ## Equipe, parceria e créditos
 

@@ -187,11 +187,10 @@ class Requisicao(BaseHTTPRequestHandler):
         ):
             self.json(404, {"erro": "Arquivo não encontrado."})
             return
-        # HTML, dados e fotos da equipe ficam protegidos também no servidor.
+        # Somente o criador e seu resultado exigem conta. Conteúdo institucional
+        # e dados de consulta são públicos, inclusive as fotos do Sobre nós.
         relativo = arquivo.relative_to(PUBLICO.resolve()).as_posix()
-        protegido = (arquivo.suffix == ".html" and relativo != "conta.html") or relativo.startswith(
-            ("dados/", "assets/equipe/")
-        )
+        protegido = relativo in {"analise.html", "resultado.html"}
         if protegido and not self.usuario():
             if arquivo.suffix == ".html":
                 caminho = rota.lstrip("/") + (

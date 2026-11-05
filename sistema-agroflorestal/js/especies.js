@@ -76,7 +76,6 @@ function atualizar() {
             <p class="cientifico">${escapar(e.nomeCientifico)}</p>
             ${e.registrosTaiobas?.length ? '<p class="nota-curadoria"><strong>Grupo Taiobas do Matão USP</strong> · Banco de 2021 providenciado pelo parceiro.' + (e.registrosTaiobas.some((r) => r.identificacao === 'PENDENTE') ? ' Identificação pendente.' : '') + '</p>' : ''}
             <p>${escapar(e.funcaoPrincipal)}</p>
-            ${e.descricao ? `<p>${escapar(e.descricao)}</p>` : ''}
             <div class="funcoes">${e.papeis.map((p) => `<span>${rotulos[p] || p}</span>`).join('')}</div>
             <details>
                 <summary>Conhecer a planta e suas fontes</summary>
@@ -92,11 +91,12 @@ function atualizar() {
                 </dl>
                 <p class="nota-curadoria">${escapar(e.motivoUso || '')}</p>
                 ${perfisVisuais[e.id] ? '<div class="preview-planta" data-planta="' + e.id + '"><h3>Modelo de desenvolvimento</h3><svg viewBox="-130 -270 260 290" width="260" height="290" role="img" aria-label="Ilustração esquemática de ' + escapar(e.nome) + '"></svg><label>Etapa ilustrativa <input type="range" min="0" max="100" value="70" aria-label="Etapa ilustrativa de ' + escapar(e.nome) + '"></label><p class="muted">Representação esquemática. Não representa dias, escala real ou garantia de produção.</p></div>' : ''}
+                ${e.descricao ? `<p>${escapar(e.descricao)}</p>` : ''}
                 <h3>Condições de cultivo</h3>
                 <dl>
-                    <dt>Luz</dt><dd>${escapar(e.cultivo.luminosidade)}</dd>
+                    <dt><span aria-hidden="true">☀</span> Luz</dt><dd>${escapar(e.cultivo.luminosidade)}</dd>
                     <dt>Solo e drenagem</dt><dd>${escapar(e.cultivo.solo)}</dd>
-                    <dt>Água</dt><dd>${escapar(e.cultivo.agua)}</dd>
+                    <dt><span aria-hidden="true">◈</span> Água</dt><dd>${escapar(e.cultivo.agua)}</dd>
                 </dl>
                 ${e.cultivo.taxonomia ? `<p class="nota-curadoria">${escapar(e.cultivo.taxonomia)}</p>` : ''}
                 <h3>Referências numéricas</h3>
