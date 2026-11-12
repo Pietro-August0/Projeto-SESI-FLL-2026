@@ -222,6 +222,9 @@ class Requisicao(BaseHTTPRequestHandler):
             self.json(404, {"erro": "Arquivo não encontrado."})
             return
         corpo = arquivo.read_bytes()
+        marcador_rodape = b"<!-- rodape-compartilhado -->"
+        if arquivo.suffix == ".html" and marcador_rodape in corpo:
+            corpo = corpo.replace(marcador_rodape, (PUBLICO / "rodape.html").read_bytes().strip())
         tipo = {
             ".js": "text/javascript",
             ".svg": "image/svg+xml",
