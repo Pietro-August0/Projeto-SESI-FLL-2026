@@ -36,30 +36,34 @@ function Historia() {
               <p>
                 São 15 missões na mesa, e cada rodada dura 2 minutos e 30 segundos.
               </p>
-              <figure className="story-table">
-                <img
-                  src="assets/equipe/jumpers-mesa-missoes.jpg"
-                  alt="Mesa de missões da FIRST LEGO League com o tapete de biodiversidade e os modelos LEGO"
-                  width="876"
-                  height="1600"
-                  loading="lazy"
-                />
-              </figure>
-              <div className="story-robot-photos">
-                <img
-                  src="assets/equipe/jumpers-robo-frente.webp"
-                  alt="Vista lateral do robô LEGO dos Jumpers"
-                  width="180"
-                  height="186"
-                  loading="lazy"
-                />
-                <img
-                  src="assets/equipe/jumpers-robo-lado.webp"
-                  alt="Vista frontal do robô LEGO dos Jumpers"
-                  width="170"
-                  height="202"
-                  loading="lazy"
-                />
+              <div className="story-mission-photos">
+                <figure className="story-table">
+                  <img
+                    src="assets/equipe/jumpers-mesa-missoes.jpg"
+                    alt="Mesa de missões da FIRST LEGO League com o tapete de biodiversidade e os modelos LEGO"
+                    width="876"
+                    height="1600"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure>
+                  <img
+                    src="assets/equipe/jumpers-robo-frente.webp"
+                    alt="Vista lateral do robô LEGO dos Jumpers"
+                    width="180"
+                    height="186"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure>
+                  <img
+                    src="assets/equipe/jumpers-robo-lado.webp"
+                    alt="Vista frontal do robô LEGO dos Jumpers"
+                    width="170"
+                    height="202"
+                    loading="lazy"
+                  />
+                </figure>
               </div>
             </div>
           </div>
