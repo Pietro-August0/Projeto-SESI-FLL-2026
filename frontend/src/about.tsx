@@ -36,6 +36,15 @@ function Historia() {
               <p>
                 São 15 missões na mesa, e cada rodada dura 2 minutos e 30 segundos.
               </p>
+              <figure className="story-table">
+                <img
+                  src="assets/equipe/jumpers-mesa-missoes.jpg"
+                  alt="Mesa de missões da FIRST LEGO League com o tapete de biodiversidade e os modelos LEGO"
+                  width="876"
+                  height="1600"
+                  loading="lazy"
+                />
+              </figure>
               <img
                 className="story-robot"
                 src="assets/equipe/jumpers-robo-frente.webp"
