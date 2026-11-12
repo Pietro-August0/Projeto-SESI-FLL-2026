@@ -1,4 +1,4 @@
-"""Testes de integração das contas, sessões e arquivos protegidos, sem dados reais."""
+"""Testes de integração do acesso público, das contas e do histórico privado."""
 
 import http.client
 import json
@@ -52,16 +52,9 @@ class AutenticacaoTest(unittest.TestCase):
         self.cookie = headers["Set-Cookie"].split(";")[0]
         return headers
 
-    def test_somente_criador_e_resultado_exigem_login(self):
-        for pagina in (
-            "/analise.html",
-            "/resultado.html",
-        ):
-            status, headers, corpo = self.requisitar(pagina)
-            self.assertEqual(status, 303)
-            self.assertTrue(headers["Location"].startswith("/conta.html?proximo="))
-            self.assertEqual(corpo, b"")
+    def test_criador_e_resultado_publicos_com_historico_privado(self):
         for arquivo in (
+            "/analise.html", "/resultado.html", "/conta.html",
             "/explorar.html", "/historia.html", "/sobre.html", "/especies.html",
             "/dados/especies.json",
             "/assets/equipe/equipe-visita.jpg",
@@ -69,7 +62,35 @@ class AutenticacaoTest(unittest.TestCase):
             "/css/%2e%2e/assets/equipe/equipe-trilha.jpg",
         ):
             self.assertEqual(self.requisitar(arquivo)[0], 200)
-        self.assertEqual(self.requisitar("/conta.html")[0], 200)
+        self.assertEqual(self.requisitar("/api/safs")[0], 401)
+        self.assertEqual(self.requisitar("/api/safs", {})[0], 401)
+
+    def test_saf_persiste_sem_duplicar_e_fica_isolado_por_conta(self):
+        self.cadastrar()
+        dono = self.cookie
+        id_saf = "4eab4760-73ea-4dc5-964a-25a6b1b50c37"
+        proposta = {
+            "id": id_saf,
+            "analise": {"municipio": "Belém", "estado": "PA"},
+            "proposta": {"titulo": "Produção + recuperação", "especies": [{"id": "acai"}]},
+            "meses": 25,
+        }
+        self.assertEqual(self.requisitar("/api/safs", proposta, "https://externo.example")[0], 403)
+        for _ in range(2):
+            self.assertEqual(self.requisitar("/api/safs", proposta)[0], 200)
+        rota = "/api/safs?id=" + id_saf
+        self.assertEqual(json.loads(self.requisitar(rota)[2])["dados"]["meses"], 25)
+        self.assertEqual(len(json.loads(self.requisitar("/api/safs")[2])["safs"]), 1)
+        self.cookie = ""
+        status, headers, _ = self.requisitar(
+            "/api/cadastrar", {"email": "outra@example.com", "senha": "UmaSenhaDeTeste123"}
+        )
+        self.assertEqual(status, 200)
+        self.cookie = headers["Set-Cookie"].split(";")[0]
+        self.assertEqual(self.requisitar(rota)[0], 404)
+        self.assertEqual(json.loads(self.requisitar("/api/safs")[2])["safs"], [])
+        self.cookie = dono
+        self.assertEqual(self.requisitar(rota)[0], 200)
 
     def test_icones_e_manifesto_publicos(self):
         for arquivo, tipo in (
@@ -85,16 +106,14 @@ class AutenticacaoTest(unittest.TestCase):
         for icone in manifesto["icons"]:
             self.assertEqual(self.requisitar("/assets/marca/" + icone["src"])[0], 200)
 
-    def test_landing_publica_sem_expor_ferramentas(self):
+    def test_landing_e_criador_publicos(self):
         for rota in ("/", "/index.html", "/css/../index.html"):
             status, _, corpo = self.requisitar(rota)
             self.assertEqual(status, 200)
-            self.assertIn("Ideias que".encode(), corpo)
+            self.assertIn("Agro é".encode(), corpo)
             self.assertNotIn(b'js/inicio.js', corpo)
-        status, headers, _ = self.requisitar("/analise.html?cenario=solo-a")
-        self.assertEqual(status, 303)
-        self.assertEqual(headers["Location"], "/conta.html?proximo=analise.html%3Fcenario%3Dsolo-a")
-        self.assertEqual(self.requisitar("/css/../analise.html")[0], 303)
+        self.assertEqual(self.requisitar("/analise.html?cenario=solo-a")[0], 200)
+        self.assertEqual(self.requisitar("/css/../analise.html")[0], 200)
         for asset in ("css/landing.css", "js/landing.js", "assets/marca/copa.svg"):
             self.assertEqual(self.requisitar('/' + asset)[0], 200)
 
@@ -118,7 +137,7 @@ class AutenticacaoTest(unittest.TestCase):
         self.cadastrar()
         cookie_antigo = self.cookie
         self.assertEqual(self.requisitar("/api/sair", {})[0], 200)
-        self.assertEqual(self.requisitar("/analise.html")[0], 303)
+        self.assertEqual(self.requisitar("/api/safs")[0], 401)
         self.assertIsNone(json.loads(self.requisitar("/api/sessao")[2])["usuario"])
         self.assertEqual(
             self.requisitar("/api/entrar", {"email": "ALUNO@EXAMPLE.COM", "senha": "incorreta"})[0],
@@ -134,9 +153,9 @@ class AutenticacaoTest(unittest.TestCase):
         self.cadastrar()
         with conectar(self.servidor.banco) as banco:
             banco.execute("UPDATE sessoes SET expira = 0")
-        self.assertEqual(self.requisitar("/analise.html")[0], 303)
+        self.assertEqual(self.requisitar("/api/safs")[0], 401)
         self.cookie = "ybyra_sessao=inventada"
-        self.assertEqual(self.requisitar("/resultado.html")[0], 303)
+        self.assertEqual(self.requisitar("/api/safs")[0], 401)
 
     def test_origem_externa_e_rejeitada(self):
         self.cadastrar()

@@ -11,18 +11,81 @@ import {
   escapar,
   numero,
   mostrarErro,
+  validarAnalise,
+  salvarAnalise,
 } from './utils.js';
 import { diagnosticar } from './diagnostico.js';
-import { montarSAFs } from './saf.js';
+import { descreverSAF, montarSAFs } from './saf.js';
 import { iniciarCrescimento } from './crescimento.js';
 import { apresentarInteracao } from './conteudo-catalogo.js';
+import { consultarHistorico, enviarConta, pedirLogin } from './sessao.js';
+import { mostrarPerfilSolo } from './solos.js';
+import { fontesAgua, ocorrencias } from './recomendacao.js';
+import { tempoDecorrido } from './tempo.js';
 let encerrarCrescimento = () => {};
 // O HTML inicial contém esse espaço vazio; os cartões serão acrescentados nele.
 const alvo = document.querySelector('#resultado');
-const analise = lerAnalise();
+const parametros = new URLSearchParams(location.search);
+const registroId = parametros.get('id');
+const destinoSalvar = '/resultado.html?salvar=1';
+let analise = lerAnalise();
+
+function lerPendente() {
+  try {
+    return JSON.parse(sessionStorage.getItem('safPendente'));
+  } catch {
+    return null;
+  }
+}
+
+async function guardarProposta(saf, botao, aviso) {
+  const meses = Number(document.querySelector('#crescimento-resultado').dataset.meses) || 0;
+  const { titulo, resumo } = saf;
+  const especies = saf.especies.map(({ id, papel, faseEntrada, pontuacao, justificativas }) =>
+    ({ id, papel, faseEntrada, pontuacao, justificativas }));
+  const dados = { analise, meses, proposta: { titulo, resumo, especies } };
+  botao.disabled = true;
+  aviso.textContent = 'Salvando…';
+  try {
+    const pendente = lerPendente();
+    const id = JSON.stringify(pendente?.dados) === JSON.stringify(dados) ? pendente.id : crypto.randomUUID();
+    sessionStorage.setItem('safPendente', JSON.stringify({ id, dados }));
+    const registro = await enviarConta('safs', { id, ...dados });
+    if (lerPendente()?.id === id) sessionStorage.removeItem('safPendente');
+    if (parametros.has('salvar')) history.replaceState(null, '', '/resultado.html');
+    aviso.textContent = `Salvo no histórico em ${tempoDecorrido(meses)}. `;
+    const link = document.createElement('a');
+    link.href = `resultado.html?id=${encodeURIComponent(registro.id)}`;
+    link.textContent = 'Abrir registro';
+    aviso.append(link);
+  } catch (erro) {
+    if (erro.status === 401) {
+      location.assign(pedirLogin(destinoSalvar));
+      return;
+    }
+    aviso.textContent = erro.message || 'Não foi possível salvar. Tente novamente.';
+  } finally {
+    botao.disabled = false;
+  }
+}
+
+function recuperarProposta(proposta, catalogo, interacoes) {
+  const especies = proposta.especies.map((item) => {
+    const especie = catalogo.find((e) => e.id === item.id);
+    if (!especie || !especie.papeis.includes(item.papel) ||
+        !['IMPLANTACAO', 'DESENVOLVIMENTO', 'ESTABELECIDO'].includes(item.faseEntrada) ||
+        !Number.isFinite(item.pontuacao) || !Array.isArray(item.justificativas) ||
+        !item.justificativas.every((motivo) => typeof motivo === 'string')) {
+      throw new Error('Não foi possível reabrir as espécies desta proposta.');
+    }
+    const { papel, faseEntrada, pontuacao, justificativas } = item;
+    return { ...especie, papel, faseEntrada, pontuacao, justificativas };
+  });
+  return descreverSAF(proposta, especies, interacoes);
+}
 
 // Desenha uma única proposta no painel compartilhado pelas abas.
-function exibirProposta(saf) {
+function exibirProposta(saf, mesesIniciais = 0) {
   encerrarCrescimento();
   // As chaves correspondem às fases guardadas em saf.fases; os valores são as explicações.
   const faseTextos = {
@@ -46,6 +109,10 @@ function exibirProposta(saf) {
                 <p>${escapar(saf.resumo)}</p>
                 </div>
                 <section id="crescimento-resultado" aria-label="Evolução visual desta proposta"></section>
+                <div class="proposta-salvar">
+                  <button class="botao" id="salvar-saf" type="button">Salvar no histórico</button>
+                  <p id="salvar-saf-status" role="status"></p>
+                </div>
                 <details class="painel-extra"><summary>Entender as camadas e as fases do sistema</summary><h4>Uma composição em diferentes alturas</h4>
                 <p class="muted">Estratos ilustrativos, sem escala de altura ou previsão de crescimento.</p>
                 <div class="estratos">${estratos
@@ -92,6 +159,10 @@ function exibirProposta(saf) {
                 <ul>${e.justificativas.map((j) => `<li>${escapar(j)}</li>`).join('')}</ul>
                 <p class="muted">Pontos são pesos de regras demonstrativas, sem porcentagem de precisão científica.</p>
                 <a href="${escapar(e.fonte.url)}" target="_blank" rel="noopener noreferrer">${escapar(e.fonte.titulo)} ↗</a>
+                ${ocorrencias[e.id]?.ufs.includes(analise.estado)
+                  ? `<p><a href="${ocorrencias[e.id].url}" target="_blank" rel="noopener noreferrer">Fonte de distribuição regional ↗</a></p>` : ''}
+                ${fontesAgua[e.id]
+                  ? `<p><a href="${fontesAgua[e.id]}" target="_blank" rel="noopener noreferrer">Fonte sobre necessidade de água ↗</a></p>` : ''}
                 </div>
                 </details>`,
                   )
@@ -118,7 +189,10 @@ function exibirProposta(saf) {
                 }</ul></details>
                 </div>
                 </details>`;
-  encerrarCrescimento = iniciarCrescimento(document.querySelector('#crescimento-resultado'), saf);
+  encerrarCrescimento = iniciarCrescimento(document.querySelector('#crescimento-resultado'), saf, { mesesIniciais });
+  const botaoSalvar = document.querySelector('#salvar-saf');
+  const aviso = document.querySelector('#salvar-saf-status');
+  botaoSalvar.addEventListener('click', () => guardarProposta(saf, botaoSalvar, aviso));
   // O link aponta para #especie-id; slice(1) remove o # para localizar o details pelo id.
   // Abrimos os detalhes antes de o navegador levar a pessoa até o destino do link.
   document.querySelectorAll('.especie-chip').forEach((link) => {
@@ -130,22 +204,47 @@ function exibirProposta(saf) {
 
 // Carrega as regras e prepara o conteúdo; sem uma análise salva, orienta como começar.
 async function iniciar() {
-  if (!analise) {
+  const rascunho = !registroId && parametros.has('salvar') ? lerPendente() : null;
+  const pendente = !validarAnalise(rascunho?.dados?.analise).length ? rascunho : null;
+  if (pendente) analise = pendente.dados.analise;
+  if (!analise && !registroId) {
     alvo.innerHTML =
       '<section class="estado-vazio"><h2>Vamos começar pelo solo?</h2><p>Nenhuma análise válida está salva neste navegador. Preencha os dados ou escolha um cenário.</p><a class="botao" href="analise.html">Iniciar análise →</a></section>';
     return; // Encerra aqui para não calcular propostas sem os dados do formulário.
   }
   try {
     // As leituras podem acontecer juntas. Promise.all mantém os resultados na ordem pedida.
-    const [config, catalogo, modelos, interacoes] = await Promise.all([
+    const [config, catalogo, modelos, interacoes, cultivo, registro] = await Promise.all([
       carregarJSON('faixas-solo.json'),
       carregarJSON('especies.json'),
       carregarJSON('modelos-saf.json'),
       carregarJSON('interacoes.json'),
+      carregarJSON('cultivo.json'),
+      registroId ? consultarHistorico({ id: registroId }) : null,
     ]);
+    if (registro) analise = registro.dados.analise;
+    const erros = validarAnalise(analise);
+    if (erros.length) throw new Error(erros.join(' '));
     // Primeiro interpretamos o solo; depois usamos essa interpretação na escolha de espécies.
     const diagnostico = diagnosticar(analise, config);
-    const safs = montarSAFs(diagnostico, analise, catalogo, modelos, interacoes, config.pesos);
+    const safs = registro
+      ? [recuperarProposta(registro.dados.proposta, catalogo, interacoes)]
+      : montarSAFs(diagnostico, analise, catalogo, modelos, interacoes, config.pesos, cultivo);
+    const assinatura = (proposta) => proposta.especies.map(({ id, papel }) => `${id}:${papel}`).join('|');
+    let indice = -1;
+    if (pendente?.dados.proposta) {
+      indice = safs.findIndex((saf) => assinatura(saf) === assinatura(pendente.dados.proposta));
+      if (indice < 0) {
+        safs.unshift(recuperarProposta(pendente.dados.proposta, catalogo, interacoes));
+        safs.splice(3);
+        indice = 0;
+      }
+      salvarAnalise(analise);
+    }
+    const editar = registroId ? `analise.html?editar&id=${encodeURIComponent(registroId)}` : 'analise.html?editar';
+    const clima = analise.temperaturaAr != null && analise.chuvaAnual != null
+      ? `Temperatura média de ${numero(analise.temperaturaAr)} °C e chuva média de ${numero(analise.chuvaAnual)} mm por ano${analise.mesMaisFrio != null ? ` · mês mais frio: ${numero(analise.mesMaisFrio)} °C` : ''}. ${analise.fonteClima === 'era5' ? '<a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank" rel="noopener noreferrer">Open-Meteo / ERA5 (1991–2020) ↗</a>' : 'Médias informadas no formulário.'}`
+      : 'Clima municipal indisponível. Você pode editar os dados e informar as médias locais.';
     // O resumo identifica a análise; cada parâmetro vira um cartão de diagnóstico.
     // O status escolhe o texto e a classe de cor. numero formata a medida em português.
     // As abas só são criadas quando há propostas; do contrário mostramos o aviso de falta.
@@ -153,10 +252,12 @@ async function iniciar() {
     alvo.innerHTML = `<section class="resumo-dados">
                 <div>
                 <strong>${escapar(analise.municipio)}, ${escapar(analise.estado)}</strong>
-                <span>${objetivos[analise.objetivo]} · Dados inseridos para demonstração</span>
+                <span>${objetivos[analise.objetivo]}${registro ? ' · Registro do histórico' : ''}</span>
                 </div>
-                <a class="botao secundario" href="analise.html?editar">Editar dados</a>
+                <a class="botao secundario" href="${editar}">Editar dados</a>
                 </section>
+                <p class="aviso">${clima}</p>
+                <figure class="perfil-solo" id="perfil-solo-resultado" hidden></figure>
                 <details class="painel-extra" id="leitura-solo"><summary>Entender a leitura dos dados do solo</summary><section aria-labelledby="titulo-diagnostico">
                 <div class="section-heading">
                 <h2 id="titulo-diagnostico">O que os dados mostram</h2>
@@ -166,14 +267,14 @@ async function iniciar() {
                   .map(
                     (p) => `<article class="parametro">
                 <span>${p.rotulo}</span>
-                <strong>${numero(p.valor)}<small> ${p.unidade}</small>
+                <strong>${p.classificacao || numero(p.valor)}<small> ${p.unidade || ''}</small>
                 </strong>
                 <span class="status status-${p.status.toLowerCase()}">${p.status === 'ADEQUADO' ? '✓' : '!'} ${p.status === 'ATENCAO' ? 'ATENÇÃO' : p.status}</span>
                 <p>${escapar(p.explicacao)}</p>
-                <small>Faixa demonstrativa: ${p.faixa} ${p.unidade}</small>
+                ${p.faixa ? `<small>Faixa demonstrativa: ${p.faixa} ${p.unidade}</small>` : ''}
                 </article>`,
                   )
-                  .join('')}</div>
+                  .join('') || '<p>Nenhuma medida de solo foi informada.</p>'}</div>
                 </section>
                 <section class="necessidades">
                 <h3>Prioridades desta composição</h3>
@@ -192,9 +293,10 @@ async function iniciar() {
                 </div>`
                     : '<p class="aviso">Não há espécies elegíveis suficientes para preencher um modelo. Revise os dados e o catálogo.</p>'
                 }${safs.length === 1 ? '<p class="aviso">Apenas uma composição completa está disponível para estes critérios.</p>' : ''}</section>
-                <section class="proximo-passo"><div><h2>Quer explorar outro caminho?</h2><p>Edite o objetivo ou os dados para gerar outras combinações.</p></div><a class="botao secundario" href="analise.html?editar">Voltar e ajustar os dados →</a></section>
+                <section class="proximo-passo"><div><h2>Quer explorar outro caminho?</h2><p>Edite o objetivo ou os dados para gerar outras combinações.</p></div><a class="botao secundario" href="${editar}">Voltar e ajustar os dados →</a></section>
                 <aside class="aviso">Protótipo demonstrativo. Regras de solo, papéis, estratos e fases são simplificados. Não substitui avaliação agronômica, não prescreve fertilizantes nem prevê produtividade. <a href="sobre.html">Entenda a metodologia →</a>
                 </aside>`;
+    mostrarPerfilSolo(document.querySelector('#perfil-solo-resultado'), analise.tipoSolo);
     // Sem propostas, não existe painel de abas para configurar.
     if (!safs.length) {
       return;
@@ -203,7 +305,7 @@ async function iniciar() {
     const abas = [...document.querySelectorAll('[data-proposta]')];
 
     // i começa em zero. focar só será true na navegação pelo teclado.
-    function selecionar(i, focar = false) {
+    function selecionar(i, focar = false, meses = 0) {
       abas.forEach((aba, j) => {
         // Só a posição j igual à escolhida i fica marcada como selecionada.
         aba.setAttribute('aria-selected', String(i === j));
@@ -212,7 +314,7 @@ async function iniciar() {
       });
       // Liga o nome acessível do painel ao botão que agora está selecionado.
       document.querySelector('#proposta').setAttribute('aria-labelledby', `aba-${i}`);
-      exibirProposta(safs[i]);
+      exibirProposta(safs[i], meses);
       // Ao usar setas, o foco precisa acompanhar a mudança visual da aba.
       if (focar) {
         abas[i].focus();
@@ -241,8 +343,16 @@ async function iniciar() {
         selecionar(indice, true);
       });
     });
-    selecionar(0); // A primeira proposta aparece assim que a página termina de carregar.
+    selecionar(Math.max(0, indice), false, registro?.dados.meses ?? (indice >= 0 ? pendente.dados.meses : 0));
+    if (indice >= 0) {
+      history.replaceState(null, '', '/resultado.html');
+      document.querySelector('#salvar-saf-status').textContent = 'Proposta recuperada. Clique em Salvar no histórico para concluir.';
+    }
   } catch (erro) {
+    if (erro.status === 401) {
+      location.replace(pedirLogin(location.pathname + location.search));
+      return;
+    }
     alvo.innerHTML = ''; // Não deixa um resultado incompleto visível depois de uma falha.
     mostrarErro(document.querySelector('#erro'), erro);
   }

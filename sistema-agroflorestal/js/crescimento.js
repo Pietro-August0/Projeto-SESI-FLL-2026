@@ -2,6 +2,7 @@
  * distintos. Os anos servem apenas de referência para a demonstração. */
 import { escapar, rotulos } from './utils.js';
 import { perfisVisuais, estadoDaPlanta, faseDoProgresso } from './evolucao-plantas.js';
+import { tempoDecorrido } from './tempo.js';
 import { desenharEspecie, desenharRaizes } from './desenhos-plantas.js';
 
 const fases = [
@@ -26,7 +27,7 @@ const fases = [
 ];
 let numeroCena = 0;
 
-export function iniciarCrescimento(alvo, saf, { compacto = false } = {}) {
+export function iniciarCrescimento(alvo, saf, { compacto = false, mesesIniciais = 0 } = {}) {
   const especies = [...saf.especies].sort(
     (a, b) =>
       ['EMERGENTE', 'ALTO', 'MEDIO', 'BAIXO', 'COBERTURA'].indexOf(a.estrato) -
@@ -90,7 +91,7 @@ export function iniciarCrescimento(alvo, saf, { compacto = false } = {}) {
             <div class="crescimento-transporte"><button type="button" class="crescimento-reiniciar" aria-label="Recomeçar a sequência">↺</button><button type="button" class="crescimento-reproduzir" aria-pressed="false">▶ Reproduzir</button></div>
         </div>
         ${compacto ? '<details class="crescimento-extras"><summary>Explorar plantas e controles</summary>' : ''}
-        <div class="crescimento-linha"><label for="tempo-${id}">Ano ilustrativo <output for="tempo-${id}" class="crescimento-ano">0</output></label><div class="crescimento-anos"><button type="button" data-ano="-1" aria-label="Ano anterior">−</button><input id="tempo-${id}" type="range" min="0" max="10" value="0" step="1"><button type="button" data-ano="1" aria-label="Próximo ano">+</button></div></div>
+        <div class="crescimento-linha"><label for="tempo-${id}">Tempo ilustrativo <output for="tempo-${id}" class="crescimento-ano">0 meses</output></label><div class="crescimento-anos"><button type="button" data-mes="-1" aria-label="Mês anterior">−</button><input id="tempo-${id}" type="range" min="0" max="120" value="0" step="1"><button type="button" data-mes="1" aria-label="Próximo mês">+</button></div></div>
         <div class="crescimento-opcoes"><label class="crescimento-raizes"><input type="checkbox" checked> Ver raízes</label><label class="crescimento-velocidade" for="velocidade-${id}">Velocidade<select id="velocidade-${id}"><option value="0.5">0,5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div>
         <div class="crescimento-leitura" aria-live="polite" aria-atomic="true"></div>
         <p class="crescimento-instrucao">Selecione uma planta para reconhecer sua forma e acompanhar o que muda.</p>
@@ -144,13 +145,12 @@ export function iniciarCrescimento(alvo, saf, { compacto = false } = {}) {
       id: ref.especie.id,
       estado: estadoDaPlanta(ref.especie, posicao, saf.fases),
     }));
-    const ano = Math.round(posicao / 10);
-    slider.value = String(ano);
-    alvo.querySelector(".crescimento-ano").value = String(ano);
-    slider.setAttribute(
-      'aria-valuetext',
-      `Ano ${ano} ilustrativo; ${fase.nome}`,
-    );
+    const meses = Math.round(posicao * 120 / 100);
+    slider.value = String(meses);
+    alvo.dataset.meses = String(meses);
+    const tempo = tempoDecorrido(meses);
+    alvo.querySelector('.crescimento-ano').value = tempo;
+    slider.setAttribute('aria-valuetext', `${tempo}, ${fase.nome}`);
     if (!tocando)
       botaoReproduzir.textContent = movimentoReduzido.matches
         ? 'Avançar fase →'
@@ -226,15 +226,15 @@ export function iniciarCrescimento(alvo, saf, { compacto = false } = {}) {
       atualizar(Number(botao.dataset.fase) * 50);
     }),
   );
-  alvo.querySelectorAll('[data-ano]').forEach((botao) => {
+  alvo.querySelectorAll('[data-mes]').forEach((botao) => {
     ouvir(botao, 'click', () => {
       parar();
-      atualizar((Number(slider.value) + Number(botao.dataset.ano)) * 10);
+      atualizar((Number(slider.value) + Number(botao.dataset.mes)) * 100 / 120);
     });
   });
   ouvir(slider, 'input', () => {
     parar();
-    atualizar(Number(slider.value) * 10);
+    atualizar(Number(slider.value) * 100 / 120);
   });
   ouvir(alvo.querySelector('.crescimento-reiniciar'), 'click', () => {
     parar();
@@ -287,7 +287,7 @@ export function iniciarCrescimento(alvo, saf, { compacto = false } = {}) {
   ouvir(document, 'visibilitychange', () => {
     if (document.hidden) parar();
   });
-  atualizar(0);
+  atualizar(mesesIniciais * 100 / 120);
   atualizarPreferencia();
   return () => {
     encerrado = true;

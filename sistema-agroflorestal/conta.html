@@ -84,6 +84,8 @@
           </div>
           <noscript><p class="erro">Ative o JavaScript para entrar na sua conta.</p></noscript>
           <div id="painel-acesso" role="tabpanel" aria-labelledby="aba-entrar">
+            <p id="conta-retomar" class="aviso" hidden>Entre ou crie uma conta para guardar a proposta que você montou.</p>
+            <button class="botao secundario conta-google" type="button" id="entrar-google" hidden>Continuar com Google</button>
             <form id="form-conta">
               <fieldset id="campos-conta" disabled>
                 <legend class="visualmente-oculto">E-mail e senha</legend>
@@ -210,9 +212,14 @@
           <div id="sessao-conta" hidden>
             <h2>Sua conta está conectada</h2>
             <p id="conta-email"></p>
-            <p>Sua sessão está ativa.</p>
             <a class="botao" id="continuar-conta" href="index.html">Continuar no ybyrá →</a
             ><button class="botao secundario" type="button" id="sair-conta">Sair da conta</button>
+            <section class="historico-safs" aria-labelledby="historico-titulo">
+              <h2 id="historico-titulo">Meus SAFs</h2>
+              <p id="historico-status" role="status"></p>
+              <ul id="historico-lista"></ul>
+              <button class="botao secundario" type="button" id="historico-mais" hidden>Carregar mais</button>
+            </section>
           </div>
           <dialog id="feedback-conta" aria-labelledby="feedback-titulo"><h2 id="feedback-titulo">Tudo pronto</h2><p id="feedback-texto"></p><form method="dialog"><button class="botao">Continuar</button></form></dialog>
           <p id="mensagem-conta" class="conta-mensagem" role="status" tabindex="-1"></p>
@@ -238,7 +245,7 @@
               height="95"
           /></a>
           <div class="rodape-proposito">
-            <h2>Ideias que criam raízes.</h2>
+            <h2>Agro é floresta.</h2>
             <p>Uma ideia dos Jumpers. Robótica, pesquisa e agrofloresta.</p>
           </div>
           <nav aria-label="Navegação do rodapé">

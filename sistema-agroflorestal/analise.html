@@ -100,7 +100,7 @@
           <!-- fieldset agrupa os campos da localização; legend dá o título do grupo. -->
           <fieldset>
             <legend><span>01</span> Onde fica a área?</legend>
-            <p class="ajuda">Informe o município e o estado usados neste exercício.</p>
+            <p class="ajuda">Informe o município e a UF para consultar a média histórica de temperatura e chuva.</p>
             <div class="campos localizacao">
               <div class="campo">
                 <label for="municipio"> Município </label>
@@ -124,13 +124,63 @@
                 </select>
               </div>
             </div>
+            <details id="clima-manual" class="analise-opcionais">
+              <summary>Informar clima manualmente</summary>
+              <p class="ajuda">Informe médias históricas do local. Deixe os campos em branco para consultar o município.</p>
+              <div class="campos">
+                <div class="campo">
+                  <label for="temperaturaAr">Temperatura média anual <small>°C</small></label>
+                  <input id="temperaturaAr" name="temperaturaAr" type="number" min="-30" max="50" step="any" />
+                </div>
+                <div class="campo">
+                  <label for="chuvaAnual">Chuva média anual <small>mm</small></label>
+                  <input id="chuvaAnual" name="chuvaAnual" type="number" min="0" max="12000" step="any" />
+                </div>
+                <div class="campo">
+                  <label for="mesMaisFrio">Média do mês mais frio <small>°C · opcional</small></label>
+                  <input id="mesMaisFrio" name="mesMaisFrio" type="number" min="-40" max="50" step="any" />
+                </div>
+              </div>
+            </details>
+            <div class="campo irrigacao-campo">
+              <label for="irrigacao">Irrigação disponível</label>
+              <select id="irrigacao" name="irrigacao">
+                <option value="">Não informada</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+              </select>
+            </div>
           </fieldset>
           <fieldset>
             <legend><span>02</span> Como está o solo?</legend>
             <p class="ajuda">
-              Confira os valores abaixo. N, P e K usam unidades de demonstração; utilize um exemplo
-              para explorar o funcionamento. A condutividade é opcional.
+              Selecione a classe de solo e informe as medidas que você conhece.
             </p>
+            <div class="campos">
+              <div class="campo">
+                <label for="tipoSolo">Classe de solo</label>
+                <select id="tipoSolo" name="tipoSolo"><option value="">Não sei</option></select>
+              </div>
+              <div class="campo">
+                <label for="drenagem">Drenagem observada</label>
+                <select id="drenagem" name="drenagem">
+                  <option value="">Não informada</option>
+                  <option value="boa">Boa drenagem</option>
+                  <option value="lenta">Drenagem lenta</option>
+                  <option value="encharcada">Encharcamento prolongado</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="profundidade">Profundidade para raízes</label>
+                <select id="profundidade" name="profundidade">
+                  <option value="">Não informada</option>
+                  <option value="raso">Solo raso</option>
+                  <option value="profundo">Solo profundo</option>
+                </select>
+              </div>
+            </div>
+            <figure class="perfil-solo" id="perfil-solo" aria-live="polite" hidden></figure>
+            <p class="ajuda"><a href="https://www.embrapa.br/solos/sibcs" target="_blank" rel="noopener noreferrer">Conheça as classes de solo na Embrapa ↗</a></p>
             <div class="campos">
               <div class="campo">
                 <label for="ph"> pH <small>0–14</small> </label>
@@ -144,7 +194,6 @@
                   max="14"
                   step="0.1"
                   placeholder="5,8"
-                  required
                 />
               </div>
               <div class="campo">
@@ -158,7 +207,6 @@
                   max="100"
                   step="0.1"
                   placeholder="55"
-                  required
                 />
               </div>
               <div class="campo">
@@ -172,9 +220,14 @@
                   max="70"
                   step="0.1"
                   placeholder="26"
-                  required
                 />
               </div>
+            </div>
+            <details class="analise-opcionais" id="dados-avancados">
+              <summary>Dados avançados do solo</summary>
+              <p class="ajuda">Se tiver um laudo com faixas interpretadas, informe a classificação de cada nutriente. Os valores em unidades demo servem aos cenários de exemplo.</p>
+              <div class="campos" id="nutrientes-laudo"></div>
+              <div class="campos">
               <div class="campo">
                 <label for="nitrogenio"> Nitrogênio (N) <small>unid. demo</small> </label>
                 <!-- N, P e K usam unidades fictícias. step any aceita casas decimais sem incremento fixo. -->
@@ -186,7 +239,6 @@
                   max="10000"
                   step="any"
                   placeholder="18"
-                  required
                 />
               </div>
               <div class="campo">
@@ -200,7 +252,6 @@
                   max="10000"
                   step="any"
                   placeholder="25"
-                  required
                 />
               </div>
               <div class="campo">
@@ -214,7 +265,6 @@
                   max="10000"
                   step="any"
                   placeholder="100"
-                  required
                 />
               </div>
               <div class="campo">
@@ -233,6 +283,7 @@
                 />
               </div>
             </div>
+            </details>
           </fieldset>
           <fieldset>
             <legend><span>03</span> Qual é seu objetivo?</legend>
@@ -277,14 +328,14 @@
               Gerar minhas propostas →
             </button>
           </div>
-          <p class="ajuda">A análise fica salva somente neste navegador.</p>
+          <p class="ajuda">Teste livremente. Para guardar uma proposta no histórico, entre na sua conta.</p>
         </form>
         <!-- Explicação complementar, ao lado do formulário em telas largas. -->
         <aside class="dicas" aria-label="Ajuda desta etapa">
           <h2>Nesta etapa</h2>
           <p id="ajuda-etapa">
-            A localização identifica sua proposta. Ela não confirma que as plantas são adequadas à
-            região.
+            A consulta usa o clima histórico da sede do município. Se tiver médias da sua área,
+            você pode informá-las manualmente.
           </p>
           <h3>O que acontece depois?</h3>
           <ol>
@@ -296,7 +347,7 @@
           <button class="ajuda-link" type="button" data-abrir-guia>
             Precisa de ajuda? Como usar
           </button>
-          <p><small>Protótipo demonstrativo. Sua conta permite navegar pelo sistema.</small></p>
+          <p><small>Entre na sua conta para guardar e reabrir suas propostas.</small></p>
         </aside>
       </div>
     </main>
@@ -313,7 +364,7 @@
               height="95"
           /></a>
           <div class="rodape-proposito">
-            <h2>Ideias que criam raízes.</h2>
+            <h2>Agro é floresta.</h2>
             <p>Uma ideia dos Jumpers. Robótica, pesquisa e agrofloresta.</p>
           </div>
           <nav aria-label="Navegação do rodapé">

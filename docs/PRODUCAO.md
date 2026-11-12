@@ -6,7 +6,7 @@ O site está publicado em [ybyra-sesi-fll.vercel.app](https://ybyra-sesi-fll.ver
 
 | Serviço       | Função                                                                                            |
 | ------------- | ------------------------------------------------------------------------------------------------- |
-| Vercel        | Executar a função Python e entregar as páginas protegidas.                                        |
+| Vercel        | Entregar as páginas, consultar o clima e executar as APIs da conta.                               |
 | Supabase Free | PostgreSQL, cadastro, senhas, confirmação e sessões.                                              |
 | Brevo Free    | Entregar os e-mails transacionais por SMTP, até 300 envios/dia no plano consultado em 29/10/2026. |
 
@@ -22,7 +22,16 @@ Sem domínio próprio por enquanto, use um endereço existente verificado em **S
 4. Copie a **Project URL** e a **Publishable key** do painel de API do projeto. A chave legada `anon` também funciona neste campo. A integração não precisa da senha do PostgreSQL nem de `service_role` ou secret key.
 5. Em **Authentication**, habilite o provedor **Email**, permita cadastros e mantenha **Confirm email** ativado. Use senha mínima de 12 caracteres. As contas do protótipo SQLite não são transferidas; os participantes devem se cadastrar novamente e confirmar a posse do e-mail.
 
-O banco contém as contas e seus perfis. As análises e propostas continuam no navegador, sem histórico permanente por usuário.
+Execute também `supabase/migrations/202611120001_historico_safs.sql`. A tabela `public.safs` usa políticas de acesso por conta. A função Python usa a chave pública e o token da pessoa autenticada para gravar e consultar o próprio histórico.
+
+### Ativar login com Google
+
+1. No Google Cloud, configure a tela de consentimento e crie um cliente OAuth do tipo **Aplicativo da Web**. Em **URIs de redirecionamento autorizados**, use a URL indicada no painel do provedor Google do Supabase, no formato `https://<projeto>.supabase.co/auth/v1/callback`.
+2. Em **Authentication → Sign In / Providers → Google**, habilite o provedor e informe o Client ID e o Client Secret do Google. Se o aplicativo estiver em modo de teste, adicione as contas que vão validar o acesso.
+3. Em **Authentication → URL Configuration → Redirect URLs**, adicione a origem da aplicação com o caminho `/api/google/retorno`. Em produção, use `https://ybyra-sesi-fll.vercel.app/api/google/retorno`.
+4. Defina `YBYRA_GOOGLE_ATIVO=1` na Vercel e publique a atualização. Use a mesma origem em `YBYRA_ORIGEM` e na URL de retorno. O segredo do Google fica no painel do Supabase.
+
+[Configuração de login com Google no Supabase](https://supabase.com/docs/guides/auth/social-sign-in/auth-google)
 
 ## 2. Configurar o e-mail gratuito
 
@@ -57,10 +66,11 @@ O SMTP padrão do Supabase restringe destinatários a membros autorizados do pro
 | `SUPABASE_URL`             | `https://seu-projeto.supabase.co` |
 | `SUPABASE_PUBLISHABLE_KEY` | A chave publishable do projeto    |
 | `YBYRA_ORIGEM`             | `https://nome-do-site.vercel.app` |
+| `YBYRA_GOOGLE_ATIVO`       | `1` após configurar o provedor Google |
 
 3. Use a URL pública exata, sem caminho e sem barra final. Configure as variáveis para **Production**. Se testar em **Preview**, use a origem exata daquela implantação e, de preferência, um projeto Supabase de teste separado.
 4. No Supabase, em **Authentication → URL Configuration**, defina **Site URL** com a mesma origem pública. O template de confirmação usa essa URL. Para testes locais, altere-a apenas no projeto de teste.
-5. Faça um deploy ou redeploy para aplicar as variáveis. `vercel.json` usa `routes` para encaminhar todas as rotas a `api/site.py` antes da resolução de arquivos estáticos; a função reutiliza a proteção de páginas, JSON e fotos da equipe. Não substitua essa configuração por uma reescrita com prioridade do sistema de arquivos: isso pode expor arquivos pelo prefixo `/sistema-agroflorestal/`. `.vercelignore` impede o envio do banco local e dos arquivos de ambiente.
+5. Faça um deploy ou redeploy para aplicar as variáveis. `vercel.json` encaminha as rotas para `api/site.py`, que atende as páginas públicas e as APIs. `.vercelignore` impede o envio do banco local e dos arquivos de ambiente.
 
 Senhas e SMTP ficam no Supabase/Brevo. Nenhuma chave administrativa deve ir para o JavaScript ou para o Git. A sessão usa cookie `HttpOnly`, `Secure` em produção e `SameSite=Lax`. O acesso é validado junto ao Supabase, incluindo a confirmação do e-mail. Sem as variáveis obrigatórias, o serviço responde como indisponível e não ativa o SQLite.
 
@@ -68,12 +78,12 @@ As sessões duram até uma hora, limitadas também pela validade do token no Sup
 
 ## 4. Validar antes de divulgar
 
-1. Sem estar conectado, abra `/index.html` e `/dados/especies.json`: a primeira rota deve ir para a conta; a segunda deve negar acesso.
+1. Como visitante, abra o criador, gere uma proposta e use **Salvar no histórico**. O site deve encaminhar para a conta preservando a proposta e o mês da evolução.
 2. Cadastre um endereço real de teste. A tela deve pedir confirmação, sem entrar automaticamente. Verifique o recebimento, inclusive na pasta de spam.
 3. Tente entrar antes de confirmar: o acesso deve ser negado. Use **Reenviar confirmação** e respeite o intervalo configurado no Supabase.
-4. Abra o e-mail, volte ao site e confirme pelo código recebido. Entre com a senha e abra uma página protegida.
+4. Abra o e-mail, volte ao site e confirme pelo código recebido. Entre com a senha, conclua o salvamento e reabra a proposta em **Meus SAFs**.
 5. Reabra o mesmo link e teste um link expirado: ambos devem pedir uma nova confirmação. A expiração e o uso único são controlados pelo Supabase.
-6. Saia da conta e confira que a navegação protegida pede login novamente.
+6. Saia da conta, confirme que o histórico pede login e confira que outra conta não consegue abrir o link do registro. Repita o fluxo com Google.
 7. Confira os logs de entrega da Brevo e os logs de autenticação do Supabase. Revise as cotas e os limites em **Authentication → Rate Limits**; o limitador local em memória não é usado na Vercel. Os limites do provedor valem também para chamadas diretas à API. Se houver abuso, complemente com regras de Firewall na Vercel; CAPTCHA exige integração adicional.
 
 Os testes automatizados do repositório simulam o Supabase: cobrem o contrato HTTP, as restrições de acesso e os estados de erro. Eles não substituem aplicar o SQL, validar o isolamento no banco real, fazer um deploy e testar a entrega efetiva do e-mail.

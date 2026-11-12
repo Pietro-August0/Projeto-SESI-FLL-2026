@@ -1,7 +1,7 @@
 /* diagnostico.js interpreta as medidas usando regras educativas de faixas-solo.json.
  * A função não desenha a página: devolve dados que resultado.js vai apresentar.
  */
-import { validarAnalise } from './utils.js';
+import { validarAnalise, niveisNutrientes } from './utils.js';
 
 // Recebe os valores da análise e a configuração; devolve parâmetros e necessidades.
 export function diagnosticar(dados, configuracao) {
@@ -16,6 +16,17 @@ export function diagnosticar(dados, configuracao) {
   // Para cada regra, procura a medida de mesmo nome nos dados digitados.
   for (const [campo, regra] of Object.entries(configuracao.parametros)) {
     const valor = dados[campo];
+    const laudo = dados[campo + 'Laudo'];
+    if (laudo) {
+      parametros[campo] = {
+        status: laudo,
+        rotulo: regra.rotulo,
+        classificacao: niveisNutrientes[laudo],
+        explicacao: 'Classificação informada a partir do laudo.',
+      };
+      (regra.necessidades[laudo] || []).forEach((item) => necessidades.add(item));
+      continue;
+    }
     // Um dado ausente não recebe diagnóstico; zero continua sendo uma medida válida.
     if (valor == null) {
       continue;

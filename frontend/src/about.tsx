@@ -1,80 +1,70 @@
-import { useState } from 'react';
-import { ArrowRight, Users, Bot, Sprout, Clock3, Leaf, HeartHandshake } from 'lucide-react';
+import { ArrowRight, Bot, Sprout, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from '@/components/ui/accordion';
 import { PhotoCarousel } from './photo-carousel';
 
 function Historia() {
-  const [historia, setHistoria] = useState('');
   return (
     <section
       className="about-story"
       id="nossa-historia"
-      aria-label="Conheça os Jumpers"
+      aria-label="O trabalho dos Jumpers"
       data-reveal
     >
-      <Tabs defaultValue="equipe">
-        <TabsList aria-label="Nossa história">
-          <TabsTrigger value="equipe">
-            <Users />
-            Nossa equipe
-          </TabsTrigger>
+      <Tabs defaultValue="desafio">
+        <TabsList aria-label="Conheça o projeto">
           <TabsTrigger value="desafio">
-            <Bot />O desafio
+            <Bot />Na mesa
+          </TabsTrigger>
+          <TabsTrigger value="campo">
+            <Leaf />No campo
           </TabsTrigger>
           <TabsTrigger value="ybyra">
             <Sprout />O ybyrá
           </TabsTrigger>
         </TabsList>
-        <TabsContent value="equipe">
-          <div className="story-panel">
-            <Users className="story-icon" aria-hidden="true" />
-            <div>
-              <h2>Mais do que robótica. Um time.</h2>
-              <p>
-                11 integrantes, uma mentora e uma técnica. Juntos, levamos criatividade, ciência e
-                colaboração para a FIRST LEGO League.
-              </p>
-              <Accordion type="single" collapsible value={historia} onValueChange={setHistoria}>
-                <AccordionItem value="completa">
-                  <AccordionTrigger>Nossa história completa</AccordionTrigger>
-                  <AccordionContent>
-                    <p>
-                      Nós somos os Jumpers, uma equipe de robótica do SESI Cotia formada por 11
-                      integrantes, uma mentora e uma técnica. Participamos da FIRST LEGO League
-                      (FLL), uma competição que reúne estudantes do 6º ao 9º ano para colocar a
-                      criatividade, a ciência, a tecnologia e o trabalho em equipe em ação!
-                    </p>
-                    <p>
-                      Na competição, temos o desafio de desenvolver e programar um robô autônomo
-                      capaz de realizar 15 missões em apenas 2 minutos e 30 segundos. E não para por
-                      aí! Também precisamos criar um projeto de inovação para encontrar soluções
-                      para problemas relacionados ao tema da temporada.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </div>
-          </div>
-        </TabsContent>
         <TabsContent value="desafio">
           <div className="story-panel">
             <Bot className="story-icon" aria-hidden="true" />
             <div>
-              <h2>15 missões. 2 minutos e 30 segundos.</h2>
+              <h2>Nosso robô na mesa de missões</h2>
               <p>
-                Desenvolvemos e programamos um robô autônomo. Fora da arena, criamos um projeto de
-                inovação para investigar problemas do tema da temporada.
+                Montamos nosso robô com peças LEGO e motores SPIKE Prime. Depois que ele sai da
+                base, segue sozinho o percurso que programamos. Cada missão tem uma tarefa
+                própria, como puxar uma peça do modelo ou empurrar outra até a posição certa.
               </p>
-              <p className="story-small">
-                Estudantes do 6º ao 9º ano, colocando as ideias em prática.
+              <p>
+                São 15 missões na mesa, e cada rodada dura 2 minutos e 30 segundos.
               </p>
+              <img
+                className="story-robot"
+                src="assets/equipe/jumpers-robo-frente.webp"
+                alt="Vista frontal do robô LEGO desenvolvido pelos Jumpers"
+                width="180"
+                height="186"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </TabsContent>
+        <TabsContent value="campo">
+          <div className="story-panel">
+            <Leaf className="story-icon" aria-hidden="true" />
+            <div>
+              <h2>O que fomos ver na USP</h2>
+              <p>
+                Fomos ao Instituto de Biociências da USP e conhecemos uma agrofloresta de perto.
+                A visita fez parte da pesquisa da equipe sobre como árvores e cultivos podem
+                crescer na mesma área.
+              </p>
+              <p>
+                A Thalita incentivou nossa pesquisa, fez os contatos, organizou conversas com
+                profissionais da área e levou a equipe à USP. Durante todo o processo, acolheu
+                nossas dúvidas com carinho e respeito.
+              </p>
+              <Button variant="link" asChild>
+                <a href="#album-jumpers">Ver fotos das visitas <ArrowRight data-icon="inline-end" /></a>
+              </Button>
             </div>
           </div>
         </TabsContent>
@@ -82,10 +72,17 @@ function Historia() {
           <div className="story-panel">
             <Sprout className="story-icon" aria-hidden="true" />
             <div>
-              <h2>Da pesquisa à agrofloresta.</h2>
+              <h2>Por que criamos o ybyrá</h2>
               <p>
-                O ybyrá reúne plantas, funções e propostas de Sistemas Agroflorestais. Uma
-                ferramenta criada com as ideias da equipe para explorar nossa pesquisa.
+                A mesa de missões muda de tema a cada ano. Depois da arqueologia, veio a
+                biodiversidade. Foi esse tema que nos deu a ideia de criar o ybyrá, um projeto
+                de implementação que complementa o trabalho do nosso robô na mesa.
+              </p>
+              <p>
+                Pensamos primeiro em agricultores familiares e também em quem quer aprender
+                sobre agrofloresta. Queremos ajudar cada pessoa a identificar plantas que façam
+                sentido para o seu solo e clima, para produzir alimento, cuidar da terra e
+                favorecer a biodiversidade.
               </p>
               <Button variant="link" asChild>
                 <a href="analise.html?cenario=solo-a">
@@ -109,14 +106,10 @@ export function About() {
     <div className="about-page">
       <section className="about-hero">
         <div className="about-hero-copy">
-          <h1>
-            Ideias que
-            <br />
-            criam <em>raízes.</em>
-          </h1>
+          <h1>Da mesa de missões à <em>agrofloresta</em></h1>
           <p>
-            Somos os Jumpers, a equipe de robótica do SESI Cotia. Ciência, criatividade e natureza
-            no mesmo time.
+            Somos os Jumpers, equipe de robótica do SESI Cotia. Nossa equipe tem 11 integrantes
+            e a Thalita, nossa professora, orientadora técnica e mentora.
           </p>
           <div className="about-actions">
             <Button size="lg" asChild>
@@ -143,42 +136,12 @@ export function About() {
           />
           <figcaption>
             <Leaf aria-hidden="true" />
-            Conhecimento que cresce fora da sala de aula.
+            Visita da equipe a uma agrofloresta na USP.
           </figcaption>
         </figure>
       </section>
-      <div className="about-stats" aria-label="A equipe e o desafio">
-        <div>
-          <Users aria-hidden="true" />
-          <p>
-            <strong>11</strong>
-            <span>integrantes</span>
-          </p>
-        </div>
-        <div>
-          <HeartHandshake aria-hidden="true" />
-          <p>
-            <strong>Juntos</strong>
-            <span>uma mentora e uma técnica</span>
-          </p>
-        </div>
-        <div>
-          <Bot aria-hidden="true" />
-          <p>
-            <strong>15</strong>
-            <span>missões</span>
-          </p>
-        </div>
-        <div>
-          <Clock3 aria-hidden="true" />
-          <p>
-            <strong>2min30s</strong>
-            <span>de desafio do robô</span>
-          </p>
-        </div>
-      </div>
-      <PhotoCarousel />
       <Historia />
+      <div id="album-jumpers"><PhotoCarousel /></div>
       <section className="about-partner" id="parceiros" data-reveal>
         <div className="partner-identity">
           <img

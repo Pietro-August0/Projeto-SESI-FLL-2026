@@ -1,6 +1,7 @@
 /* Senhas e tokens de sessão não são gravados no armazenamento do navegador. */
 import './utils.js';
-import { consultarAcesso, enviarConta, encerrarSessao, destinoAposLogin } from './sessao.js';
+import { consultarAcesso, consultarHistorico, enviarConta, encerrarSessao, destinoAposLogin } from './sessao.js';
+import { tempoDecorrido } from './tempo.js';
 
 const $ = (seletor) => document.querySelector(seletor);
 const formulario = $('#form-conta');
@@ -15,6 +16,38 @@ let verificacaoEmail = false;
 let emEnvio = false;
 let emailPendente = '';
 let reenvioAte = 0;
+let proximoHistorico = 0;
+const dataHistorico = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'medium' });
+
+async function mostrarHistorico() {
+  const status = $('#historico-status');
+  const mais = $('#historico-mais');
+  mais.disabled = true;
+  status.textContent = 'Carregando histórico…';
+  try {
+    const { safs, proximo } = await consultarHistorico({ inicio: proximoHistorico });
+    for (const saf of safs) {
+      const item = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = `resultado.html?id=${encodeURIComponent(saf.id)}`;
+      link.textContent = saf.titulo;
+      const detalhe = document.createElement('small');
+      detalhe.textContent = `${saf.municipio}, ${saf.estado} · ${tempoDecorrido(saf.meses)} · ${dataHistorico.format(new Date(saf.criado_em))}`;
+      item.append(link, detalhe);
+      $('#historico-lista').append(item);
+    }
+    status.textContent = safs.length || proximoHistorico ? '' : 'Seus SAFs salvos aparecerão aqui.';
+    proximoHistorico = proximo;
+    mais.textContent = 'Carregar mais';
+    mais.hidden = proximo == null;
+  } catch (erro) {
+    status.textContent = erro.message;
+    mais.hidden = false;
+    mais.textContent = 'Tentar novamente';
+  } finally {
+    mais.disabled = false;
+  }
+}
 try {
   emailPendente = sessionStorage.getItem('ybyra_email_pendente') || '';
   reenvioAte = Number(sessionStorage.getItem('ybyra_reenvio_ate')) || 0;
@@ -144,6 +177,7 @@ function bloquear(ativo) {
   document.querySelectorAll('[data-modo], #alterar-email-codigo, #confirmar-email').forEach((b) => {
     b.disabled = ativo;
   });
+  $('#entrar-google').disabled = ativo;
   atualizarReenvio();
 }
 function erroLegivel(erro) {
@@ -221,11 +255,6 @@ formulario.addEventListener('submit', async (evento) => {
       campoCodigo.focus();
     } else {
       formulario.reset();
-      try {
-        localStorage.removeItem('analiseAtual');
-      } catch {
-        /* A sessão não depende desse armazenamento. */
-      }
       location.replace(destinoAposLogin());
     }
   } catch (erro) {
@@ -325,6 +354,18 @@ $('#sair-conta').addEventListener('click', async (evento) => {
   }
 });
 $('#tentar-conexao').addEventListener('click', () => location.reload());
+$('#historico-mais').addEventListener('click', mostrarHistorico);
+$('#entrar-google').addEventListener('click', async () => {
+  bloquear(true);
+  try {
+    const consulta = new URLSearchParams({ proximo: destinoAposLogin() });
+    const { url } = await enviarConta(`google/iniciar?${consulta}`);
+    location.assign(url);
+  } catch (erro) {
+    avisar(erroLegivel(erro), true);
+    bloquear(false);
+  }
+});
 window.addEventListener('hashchange', () => {
   const token = new URLSearchParams(location.hash.slice(1)).get('token_hash');
   if (location.hash) history.replaceState(null, '', location.pathname + location.search);
@@ -336,15 +377,22 @@ window.addEventListener('hashchange', () => {
 try {
   const acesso = await consultarAcesso();
   verificacaoEmail = Boolean(acesso.verificacao_email);
+  $('#entrar-google').hidden = !acesso.login_google;
+  $('#conta-retomar').hidden = destinoAposLogin() !== '/resultado.html?salvar=1';
   $('#aba-confirmar').hidden = $('#conta-seguranca').hidden = !verificacaoEmail;
   if (acesso.usuario) {
     $('#modos-conta').hidden = $('#conta-apresentacao').hidden = $('#painel-acesso').hidden = true;
     $('#sessao-conta').hidden = false;
     $('#conta-email').textContent = acesso.usuario.email;
     $('#continuar-conta').href = destinoAposLogin();
+    if (!$('#conta-retomar').hidden) $('#continuar-conta').textContent = 'Voltar para minha proposta →';
+    mostrarHistorico();
   } else {
     $('#campos-conta').disabled = false;
     mudarModo(new URLSearchParams(location.search).get('etapa') || 'entrar');
+    if (new URLSearchParams(location.search).get('google') === 'falhou') {
+      avisar('Não foi possível entrar com Google. Tente novamente.', true);
+    }
     mostrarConfirmacaoPorLink();
   }
 } catch (erro) {

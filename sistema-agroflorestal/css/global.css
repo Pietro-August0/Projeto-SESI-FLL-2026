@@ -842,3 +842,23 @@ nav a:hover {
 .evidencia-desconhecida {
   border-left-color: #39434a;
 }
+.perfil-solo {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background: var(--superficie);
+}
+
+.perfil-solo[hidden] { display: none; }
+.perfil-solo svg { width: 100%; display: block; border-radius: 0.5rem; }
+.perfil-solo figcaption p { margin: 0.25rem 0; }
+.perfil-solo figcaption small { color: var(--muted, inherit); }
+
+@media (max-width: 600px) {
+  .perfil-solo { grid-template-columns: 1fr; }
+}

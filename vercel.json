@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
     "api/site.py": {
-      "includeFiles": "{sistema-agroflorestal/**,servidor.py,auth_producao.py}",
+      "includeFiles": "{sistema-agroflorestal/**,servidor.py,auth_producao.py,clima.py}",
       "maxDuration": 30
     }
   },

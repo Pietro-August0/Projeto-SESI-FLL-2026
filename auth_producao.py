@@ -1,13 +1,29 @@
 """Autenticação gerenciada no Supabase; nenhuma conta é gravada na Vercel."""
 
+import base64
+import hashlib
 import json
 import os
 import re
+import secrets
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlsplit
+from urllib.parse import parse_qs, urlencode, urlsplit
 from urllib.request import Request, urlopen
 
-from servidor import Requisicao
+from servidor import Requisicao, TAMANHO_PAGINA
+
+COOKIE_GOOGLE = "ybyra_google"
+PAGINAS_RETORNO = {
+    "/analise.html", "/resultado.html", "/conta.html", "/explorar.html",
+    "/especies.html", "/historia.html", "/sobre.html",
+}
+
+
+def destino_google(valor):
+    caminho = valor.partition("?")[0]
+    if caminho in PAGINAS_RETORNO and len(valor) <= 512 and not re.search(r"[^!-~]|[\\#]", valor):
+        return valor
+    return "/analise.html"
 
 
 class FalhaAuth(Exception):
@@ -36,13 +52,15 @@ def configuracao():
     return url, chave, origem
 
 
-def supabase(caminho, dados=None, token=None):
+def supabase(caminho, dados=None, token=None, *, recurso="auth/v1", preferencia=None):
     url, chave, _ = configuracao()
     headers = {"apikey": chave, "Content-Type": "application/json"}
     if token:
         headers["Authorization"] = "Bearer " + token
+    if preferencia:
+        headers["Prefer"] = preferencia
     requisicao = Request(
-        url + "/auth/v1/" + caminho,
+        f"{url}/{recurso}/{caminho}",
         data=json.dumps(dados).encode() if dados is not None else None,
         headers=headers,
         method="POST" if dados is not None else "GET",
@@ -53,7 +71,8 @@ def supabase(caminho, dados=None, token=None):
             return json.loads(corpo) if corpo else {}
     except HTTPError as erro:
         try:
-            codigo = json.loads(erro.read()).get("error_code", "")
+            detalhe = json.loads(erro.read())
+            codigo = detalhe.get("error_code") or detalhe.get("code", "")
         except (ValueError, AttributeError):
             codigo = ""
         raise FalhaAuth(erro.code, codigo) from None
@@ -62,10 +81,88 @@ def supabase(caminho, dados=None, token=None):
 
 
 class RequisicaoProducao(Requisicao):
-    """Reutiliza a proteção dos arquivos; delega senhas e tokens ao Supabase."""
+    """Usa o Supabase para autenticação e histórico privado."""
 
     server_version = "Ybyra"
     verificacao_email = True
+
+    def google_ativo(self):
+        return os.getenv("YBYRA_GOOGLE_ATIVO") == "1"
+
+    def cookie_google(self, valor, duracao):
+        cookie = f"{COOKIE_GOOGLE}={valor}; Path=/api/google; HttpOnly; SameSite=Lax; Max-Age={duracao}"
+        if os.getenv("YBYRA_ORIGEM", "").startswith("https://"):
+            cookie += "; Secure"
+        return cookie
+
+    def iniciar_google(self):
+        if not self.google_ativo():
+            self.json(404, {"erro": "Login com Google indisponível."})
+            return
+        consulta = parse_qs(urlsplit(self.path).query)
+        destino = destino_google(consulta.get("proximo", [""])[0])
+        retorno = base64.urlsafe_b64encode(destino.encode("utf-8")).decode("ascii").rstrip("=")
+        verificador = secrets.token_urlsafe(48)
+        digest = hashlib.sha256(verificador.encode("ascii")).digest()
+        desafio = base64.urlsafe_b64encode(digest).rstrip(b"=").decode("ascii")
+        url, _, origem = configuracao()
+        parametros = urlencode({
+            "provider": "google", "redirect_to": origem + "/api/google/retorno",
+            "code_challenge": desafio, "code_challenge_method": "s256",
+        })
+        self.json(200, {"url": f"{url}/auth/v1/authorize?{parametros}"},
+                  self.cookie_google(f"{verificador}.{retorno}", 600))
+
+    def concluir_google(self):
+        _, _, origem = configuracao()
+        if not self.google_ativo():
+            self.json(404, {"erro": "Login com Google indisponível."})
+            return
+        cookie = self.ler_cookie(COOKIE_GOOGLE)
+        limpeza = self.cookie_google("", 0)
+        dados_cookie = re.fullmatch(r"([A-Za-z0-9_-]{64})\.([A-Za-z0-9_-]{1,3072})", cookie)
+        destino = "/analise.html"
+        if dados_cookie:
+            try:
+                valor = dados_cookie[2]
+                destino = destino_google(base64.urlsafe_b64decode(valor + "=" * (-len(valor) % 4)).decode())
+            except ValueError:
+                dados_cookie = None
+        parametros = parse_qs(urlsplit(self.path).query)
+        codigo = parametros.get("code", [""])[0]
+        if dados_cookie and re.fullmatch(r"[A-Za-z0-9_-]{1,128}", codigo):
+            try:
+                resultado = supabase("token?grant_type=pkce", {
+                    "auth_code": codigo, "code_verifier": dados_cookie[1],
+                })
+                usuario = resultado.get("user", {})
+                if not (usuario.get("email_confirmed_at") and usuario.get("id") and
+                        usuario.get("email") and resultado.get("access_token")):
+                    raise FalhaAuth(403)
+                sessao = self.cookie_sessao(
+                    resultado["access_token"], min(int(resultado.get("expires_in", 3600)), 3600)
+                )
+                self.cabecalhos(303, "text/plain", cookie=(limpeza, sessao), destino=origem + destino)
+                return
+            except FalhaAuth:
+                pass
+        retorno = urlencode({"google": "falhou", "proximo": destino})
+        self.cabecalhos(303, "text/plain", cookie=limpeza, destino=origem + "/conta.html?" + retorno)
+
+    def carregar_safs(self, usuario, identificador, inicio):
+        consulta = {"usuario_id": "eq." + usuario["id"], "select": "id,criado_em,dados"}
+        if identificador:
+            consulta["id"] = "eq." + identificador
+        else:
+            consulta.update(order="criado_em.desc,id.asc", limit=TAMANHO_PAGINA + 1, offset=inicio)
+        return supabase("safs?" + urlencode(consulta), token=self.token(), recurso="rest/v1")
+
+    def gravar_saf(self, usuario, identificador, dados):
+        supabase(
+            "safs?on_conflict=usuario_id,id",
+            {"id": identificador, "usuario_id": usuario["id"], "dados": dados},
+            self.token(), recurso="rest/v1", preferencia="resolution=ignore-duplicates,return=minimal",
+        )
 
     def cookie_sessao(self, token, duracao=3600):
         # O HTTP local é permitido somente para testar a integração fora da Vercel.
@@ -98,11 +195,16 @@ class RequisicaoProducao(Requisicao):
         return self._usuario
 
     def falha(self, erro):
+        rota = urlsplit(self.path).path
         if erro.status == 429:
             self.json(
                 429,
                 {"erro": "Muitas tentativas. Aguarde alguns minutos antes de tentar novamente."},
             )
+        elif rota == "/api/safs" and erro.status == 401:
+            self.json(401, {"erro": "Entre novamente para acessar o histórico."})
+        elif rota == "/api/safs" and (erro.status >= 500 or erro.codigo in {"PGRST205", "configuracao"}):
+            self.json(503, {"erro": "O histórico está indisponível. Tente novamente em alguns minutos."})
         elif erro.status >= 500 or erro.codigo == "configuracao":
             # Não retorna mensagens do provedor, URLs internas ou credenciais.
             self.json(
@@ -145,8 +247,12 @@ class RequisicaoProducao(Requisicao):
 
     def do_GET(self):
         try:
-            # Configuração ausente nunca ativa automaticamente o cadastro local.
-            configuracao()
+            rota = urlsplit(self.path).path
+            if rota == "/api/google/retorno" and self.command == "GET":
+                self.concluir_google()
+                return
+            if rota in {"/api/sessao", "/api/safs"}:
+                configuracao()
             super().do_GET()
         except FalhaAuth as erro:
             self.falha(erro)
@@ -159,6 +265,8 @@ class RequisicaoProducao(Requisicao):
             "/api/sair",
             "/api/reenviar",
             "/api/confirmar",
+            "/api/safs",
+            "/api/google/iniciar",
         }:
             self.json(404, {"erro": "Endereço não encontrado."})
             return
@@ -166,6 +274,18 @@ class RequisicaoProducao(Requisicao):
             configuracao()
             if not self.mesma_origem():
                 self.json(403, {"erro": "Recarregue a página e tente novamente."})
+                return
+            if rota == "/api/safs":
+                self.salvar_saf()
+                return
+            if rota in {"/api/google/iniciar", "/api/sair"}:
+                try:
+                    self.ler_json(opcional=True)
+                except (ValueError, RecursionError):
+                    self.json(400, {"erro": "Não foi possível ler a requisição."})
+                    return
+            if rota == "/api/google/iniciar":
+                self.iniciar_google()
                 return
             if rota == "/api/sair":
                 token = self.token()
@@ -178,15 +298,7 @@ class RequisicaoProducao(Requisicao):
                 self.json(200, {"ok": True}, self.cookie_sessao("", 0))
                 return
             try:
-                tamanho = int(self.headers.get("Content-Length", "0"))
-                if (
-                    not 0 < tamanho <= 4096
-                    or self.headers.get("Content-Type", "").split(";")[0] != "application/json"
-                ):
-                    raise ValueError()
-                dados = json.loads(self.rfile.read(tamanho))
-                if not isinstance(dados, dict):
-                    raise ValueError()
+                dados = self.ler_json()
                 if rota == "/api/confirmar":
                     if "token_hash" in dados:
                         token_hash = dados["token_hash"]
@@ -223,7 +335,7 @@ class RequisicaoProducao(Requisicao):
                             or (rota == "/api/cadastrar" and len(senha) < 12)
                         ):
                             raise ValueError()
-            except (ValueError, TypeError, UnicodeDecodeError):
+            except (ValueError, TypeError, RecursionError):
                 self.json(
                     400,
                     {

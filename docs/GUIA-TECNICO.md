@@ -7,7 +7,7 @@
 Aplicação de apoio ao trabalho da equipe na FIRST LEGO League sobre sistemas agroflorestais. Usa HTML, CSS e JavaScript, com um servidor Python para contas e
 sessões. As páginas ficam em `sistema-agroflorestal/`. Não é preciso instalar pacotes.
 
-## Executar com login obrigatório
+## Executar localmente
 
 Use Python 3.10 ou mais recente. Na pasta deste repositório, execute:
 
@@ -20,10 +20,9 @@ menos 12 caracteres e confirme a senha. O cadastro abre uma sessão imediatament
 O e-mail é um identificador de acesso: esta versão local não envia confirmação ou
 recuperação de senha por e-mail.
 
-Todas as páginas do sistema, os JSONs do catálogo e as fotos da equipe exigem uma
-sessão válida. A página de conta, os estilos e os recursos visuais usados no login
-são públicos. Um link direto para uma página protegida leva ao login e volta ao
-endereço escolhido após a entrada. **Minha conta → Sair da conta** encerra a sessão.
+O formulário, o resultado da simulação e o catálogo são públicos. O histórico exige
+uma sessão. Depois de entrar para salvar, a pessoa retorna à proposta selecionada,
+no mês em que parou. **Minha conta → Sair da conta** encerra a sessão.
 
 Use o servidor deste projeto. `python -m http.server`, abrir o HTML por duplo clique
 ou publicar somente os arquivos estáticos não aplica as regras de autenticação.
@@ -37,12 +36,13 @@ As características abaixo descrevem o protótipo SQLite. A publicação na Verc
 - Senhas: PBKDF2-HMAC-SHA256, 600.000 iterações e salt aleatório por conta.
 - Sessões: identificadores aleatórios em cookie HttpOnly, SameSite=Lax, com validade
   de oito horas. O banco guarda somente um hash do identificador da sessão.
-- O servidor verifica a sessão antes de entregar páginas e dados protegidos.
+- O servidor verifica a sessão antes de consultar ou gravar registros do histórico.
 - Cadastro, entrada e saída exigem requisição da mesma origem. Há limite de
   tentativas para entrada e cadastro. As respostas não são armazenadas em cache.
-- Senhas e tokens não são gravados em localStorage, sessionStorage ou logs. A
-  análise atual é local ao navegador e é removida ao entrar ou sair de uma conta.
-- Os projetos ainda não são salvos por usuário no servidor.
+- Senhas e tokens não são gravados no armazenamento do navegador nem em logs. A
+  análise atual permanece na aba para permitir a retomada após o login.
+- Cada registro guarda entradas, composição e mês visualizado. O SQLite local e o
+  Supabase em produção isolam registros por conta.
 
 Este é um servidor de desenvolvimento local, vinculado a `127.0.0.1`. Uma publicação
 precisa de HTTPS e servidor de aplicação apropriado, preservando a autenticação das
@@ -55,7 +55,7 @@ e [Python — HTTP server](https://docs.python.org/3/library/http.server.html).
 
 ## Navegação e primeiro uso
 
-O caminho principal é **Começar → Informar dados → Explorar SAF**. Depois do login,
+O caminho principal é **Começar → Informar dados → Explorar SAF**.
 **Experimentar um exemplo** abre o formulário preenchido. **Preencher meus dados**
 começa do zero. O botão **Como usar** abre um guia de três passos, com fechamento por
 Escape e retorno de foco ao botão.
@@ -63,16 +63,18 @@ Escape e retorno de foco ao botão.
 O formulário divide localização, solo e objetivo em três etapas. Continuar valida
 os campos atuais; Voltar conserva os valores. Antes de gerar, há um resumo. No
 resultado, a leitura do solo e as explicações de camadas/fases ficam em seções
-expansíveis. Editar dados recupera a análise atual do navegador.
+expansíveis. Editar dados recupera a análise da aba ou do registro aberto.
 
 ## Onde editar
 
 Os caminhos de páginas, scripts, estilos e recursos abaixo são relativos a `sistema-agroflorestal/`; `servidor.py` fica na raiz do repositório.
 
-- `servidor.py`: contas, sessões e proteção das rotas.
+- `servidor.py`: contas, sessões, clima e histórico.
+- `clima.py`: consulta ao Open-Meteo e cálculo das médias da reanálise ERA5 de 1991 a 2020.
 - `js/sessao.js` e `js/conta.js`: acesso pelo navegador e formulários de conta.
 - `js/guia.js` e `css/orientacao.css`: guia e orientação de navegação.
 - `js/analise.js`: etapas do formulário.
+- `js/solos.js`: classes do SiBCS, características usadas nas regras e perfis ilustrados.
 - `js/crescimento.js` e `css/crescimento.css`: cena, seleção de plantas, fases e controles de reprodução.
 - `js/desenhos-plantas.js`: geometrias vetoriais das 18 espécies e suas raízes, editáveis sem ferramentas externas.
 - `js/evolucao-plantas.js`: ritmos ilustrativos, encerramento de ciclos e renovação da cobertura; esses valores não são taxas agronômicas.
@@ -91,8 +93,7 @@ ramos extraídos da logo oficial fornecida pela equipe. As versões vetoriais po
 Veja o [manual da identidade visual](IDENTIDADE-VISUAL.md) para aplicações, arquivos e originais. O servidor entrega `.ico` e `.webmanifest` com seus tipos de conteúdo correspondentes.
 
 As duas fotos originais fornecidas pela equipe estão em `assets/equipe/` e aparecem
-na página O projeto, sem alteração dos arquivos. Não foram inferidos nomes de
-pessoas, local ou data. O acesso aos arquivos exige login.
+na página História, sem alteração dos arquivos.
 
 `assets/imagens/natureza-manaca.png` foi gerada com a ferramenta integrada de
 imagens. É uma imagem ilustrativa, identificada na página de entrada; não é um

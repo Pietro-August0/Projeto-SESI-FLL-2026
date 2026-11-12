@@ -17,54 +17,49 @@ export function consultarInteracao(a, b, interacoes) {
     }
   );
 }
-// Monta uma proposta. deslocamento permite variar a escolha entre candidatas empatadas.
-function construir(modelo, catalogo, dados, diagnostico, pesos, interacoes, deslocamento = 0) {
-  const escolhidas = [];
-  const pendencias = []; // Guarda os papéis obrigatórios que ficaram sem candidata.
-  for (const papel of modelo.papeis) {
-    // Primeiro aceita só espécies que podem cumprir este papel; depois calcula os pontos.
+function* combinar(modelo, catalogo, dados, diagnostico, pesos, interacoes, cultivo) {
+  const papeis = modelo.papeis.map((papel) => ({
+    ...papel,
+    candidatas: catalogo.filter((especie) => especie.papeis.includes(papel.tipo)),
+  }));
+  function* preencher(indice, escolhidas) {
+    if (indice === papeis.length) {
+      yield descreverSAF(modelo, escolhidas, interacoes);
+      return;
+    }
+    const papel = papeis[indice];
     const candidatas = recomendar(
-      catalogo.filter((especie) => especie.papeis.includes(papel.tipo)),
+      papel.candidatas.filter((especie) => !escolhidas.some((e) =>
+        e.id === especie.id || consultarInteracao(e.id, especie.id, interacoes).status === 'EVITAR',
+      )),
       dados,
       diagnostico,
       pesos,
       {
-        estratos: escolhidas.map((e) => e.estrato), // Camadas que já estão presentes.
         estratosPreferidos: papel.estratosPreferidos,
         funcoes: escolhidas.map((e) => e.funcaoPrincipal),
+        estratos: escolhidas.map((e) => e.estrato),
         sucessao: papel.sucessao,
+        cultivo,
       },
-      // some pergunta se já existe uma escolhida repetida ou uma relação proibida.
-    ).filter(
-      (especie) =>
-        !escolhidas.some(
-          (e) =>
-            e.id === especie.id ||
-            consultarInteracao(e.id, especie.id, interacoes).status === 'EVITAR',
-        ),
     );
-    // recomendar ordena por pontos, então a primeira candidata possui a maior nota.
-    const melhores = candidatas.filter((e) => e.pontuacao === candidatas[0]?.pontuacao);
-    // % calcula o resto: a posição volta ao início quando chega ao fim dos empates.
-    const selecionada = melhores.length ? melhores[deslocamento % melhores.length] : null;
-    // Uma falta opcional é aceita; uma falta obrigatória ficará registrada na proposta.
-    if (!selecionada) {
-      if (!papel.opcional) {
-        pendencias.push(papel.tipo);
-      }
-      continue;
+    for (const especie of candidatas) {
+      yield* preencher(indice + 1, [...escolhidas, {
+        ...especie,
+        papel: papel.tipo,
+        faseEntrada: papel.fase,
+        justificativas: [
+          `Preenche o papel ${papel.tipo.toLowerCase().replaceAll('_', ' ')} deste modelo.`,
+          ...especie.justificativas,
+        ],
+      }]);
     }
-    // Acrescenta a escolhida com o papel que ela cumprirá especificamente neste modelo.
-    escolhidas.push({
-      ...selecionada,
-      papel: papel.tipo,
-      faseEntrada: papel.fase,
-      justificativas: [
-        `Preenche o papel ${papel.tipo.toLowerCase().replaceAll('_', ' ')} deste modelo.`,
-        ...selecionada.justificativas,
-      ],
-    });
+    if (papel.opcional) yield* preencher(indice + 1, escolhidas);
   }
+  yield* preencher(0, []);
+}
+
+export function descreverSAF(modelo, escolhidas, interacoes) {
   // As listas guardam ids para relacionar as fases às mesmas espécies da proposta.
   const fases = {
     implantacao: [],
@@ -99,34 +94,30 @@ function construir(modelo, catalogo, dados, diagnostico, pesos, interacoes, desl
     resumo: modelo.resumo,
     especies: escolhidas,
     fases,
-    pendencias,
     interacoes: relacoes,
   };
 }
 // Tenta combinações até encontrar três propostas completas e diferentes.
-export function montarSAFs(diagnostico, dados, catalogo, modelos, interacoes, pesos) {
-  // Cada objetivo pode permitir modelos diferentes.
-  const compativeis = modelos.filter((modelo) => modelo.objetivos.includes(dados.objetivo));
+export function montarSAFs(diagnostico, dados, catalogo, modelos, interacoes, pesos, fichas = []) {
+  const cultivo = new Map(fichas.map((ficha) => [ficha.id, ficha]));
+  let compativeis = modelos.filter((modelo) => modelo.objetivos.includes(dados.objetivo))
+    .map((modelo) => combinar(modelo, catalogo, dados, diagnostico, pesos, interacoes, cultivo));
   const resultados = [];
-  const assinaturas = new Set(); // Guarda combinações já vistas, sem repetir valores.
-  for (let variante = 0; variante < catalogo.length && resultados.length < 3; variante++) {
-    for (const modelo of compativeis) {
-      const saf = construir(modelo, catalogo, dados, diagnostico, pesos, interacoes, variante);
-      // Ordenar os ids torna a assinatura igual mesmo se a ordem das espécies mudar.
-      const assinatura = saf.especies
-        .map((e) => e.id)
-        .sort()
-        .join('|');
-      // Exige espécies, nenhuma falta obrigatória e uma combinação ainda não usada.
-      if (saf.especies.length && !saf.pendencias.length && !assinaturas.has(assinatura)) {
+  const assinaturas = new Set();
+  while (compativeis.length && resultados.length < 3) {
+    const restantes = [];
+    for (const combinacoes of compativeis) {
+      for (const saf of combinacoes) {
+        const assinatura = saf.especies.map((e) => e.id).sort().join('|');
+        if (!assinatura || assinaturas.has(assinatura)) continue;
         resultados.push(saf);
         assinaturas.add(assinatura);
-      }
-      // Já temos o máximo de propostas mostrado nas abas, então podemos parar.
-      if (resultados.length === 3) {
+        restantes.push(combinacoes);
         break;
       }
+      if (resultados.length === 3) break;
     }
+    compativeis = restantes;
   }
   return resultados;
 }

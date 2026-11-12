@@ -5,21 +5,8 @@
 
 // À esquerda ficam os códigos salvos nos dados; à direita, os nomes mostrados na tela.
 import { iniciarGuia } from './guia.js';
-import { exigirSessao } from './sessao.js';
-
-let usuarioAtual;
-try {
-  usuarioAtual = await exigirSessao();
-} catch (erro) {
-  if (!location.pathname.endsWith('/conta.html')) {
-    const aviso = document.createElement('p');
-    aviso.className = 'erro';
-    aviso.textContent =
-      'Não foi possível verificar sua conta. Atualize a página e tente novamente.';
-    document.querySelector('main').replaceChildren(aviso);
-    throw erro;
-  }
-}
+import { consultarSessao } from './sessao.js';
+import { solos } from './solos.js';
 
 export const objetivos = {
   PRODUCAO: 'Produção',
@@ -70,7 +57,12 @@ export const limitesEntrada = {
   fosforo: [0, 10000],
   potassio: [0, 10000],
   condutividade: [0, 100],
+  temperaturaAr: [-30, 50],
+  chuvaAnual: [0, 12000],
+  mesMaisFrio: [-40, 50],
 };
+export const nutrientes = { nitrogenio: 'Nitrogênio (N)', fosforo: 'Fósforo (P)', potassio: 'Potássio (K)' };
+export const niveisNutrientes = { BAIXO: 'Baixo', ADEQUADO: 'Adequado', ALTO: 'Alto' };
 // Lê um arquivo da pasta dados e devolve os dados que ele contém.
 // async permite usar await: aguardamos a resposta sem impedir o uso da página.
 export async function carregarJSON(arquivo) {
@@ -121,10 +113,7 @@ export function validarAnalise(dados) {
   const erros = []; // push acrescentará uma mensagem para cada problema encontrado.
   // entries fornece pares [nome, valor]; o segundo par separa o mínimo e o máximo.
   for (const [campo, [min, max]] of Object.entries(limitesEntrada)) {
-    // Só a condutividade pode faltar. == null aceita null e undefined, mas preserva zero.
-    if (campo === 'condutividade' && dados[campo] == null) {
-      continue;
-    }
+    if (dados[campo] == null) continue;
     // Rejeita texto, NaN, infinito e números fora dos limites. || significa "ou".
     if (
       typeof dados[campo] !== 'number' ||
@@ -150,6 +139,14 @@ export function validarAnalise(dados) {
   // hasOwn exige um dos códigos que cadastramos no próprio objeto objetivos.
   if (!Object.hasOwn(objetivos, dados.objetivo)) {
     erros.push('Selecione um objetivo válido.');
+  }
+  if (dados.tipoSolo && !Object.hasOwn(solos, dados.tipoSolo)) erros.push('Selecione uma classe de solo válida.');
+  if (dados.drenagem && !['boa', 'lenta', 'encharcada'].includes(dados.drenagem)) erros.push('Confira a drenagem.');
+  if (dados.irrigacao && !['sim', 'nao'].includes(dados.irrigacao)) erros.push('Confira a disponibilidade de irrigação.');
+  if (dados.profundidade && !['raso', 'profundo'].includes(dados.profundidade)) erros.push('Confira a profundidade.');
+  for (const nutriente of Object.keys(nutrientes)) {
+    const nivel = dados[nutriente + 'Laudo'];
+    if (nivel && !Object.hasOwn(niveisNutrientes, nivel)) erros.push('Confira a classificação dos nutrientes.');
   }
   return erros;
 }
@@ -191,17 +188,21 @@ export function salvarAnalise(dados) {
     throw new Error(erros.join(' '));
   }
   try {
-    // localStorage guarda texto; stringify converte o objeto em texto JSON.
-    localStorage.setItem('analiseAtual', JSON.stringify(dados));
+    sessionStorage.setItem('analiseAtual', JSON.stringify(dados));
   } catch {
     throw new Error('O navegador bloqueou o armazenamento. Permita dados locais para continuar.');
+  }
+  try {
+    localStorage.removeItem('analiseAtual');
+  } catch {
+    // A cópia de trabalho já está na aba atual.
   }
 }
 // Faz o caminho inverso de salvarAnalise. Se não houver dados utilizáveis, devolve null.
 export function lerAnalise() {
   try {
     // parse reconstrói o objeto. Um texto corrompido provoca erro e cai no catch.
-    const dados = JSON.parse(localStorage.getItem('analiseAtual'));
+    const dados = JSON.parse(sessionStorage.getItem('analiseAtual') ?? localStorage.getItem('analiseAtual'));
     // condição ? valorSeVerdadeira : valorSeFalsa; qualquer erro invalida o resultado.
     return validarAnalise(dados).length ? null : dados;
   } catch {
@@ -227,7 +228,9 @@ export function iniciarPagina() {
   });
   iniciarGuia(pagina, Boolean(lerAnalise()));
   const conta = document.querySelector('.conta-atalho span');
-  if (conta && usuarioAtual) conta.textContent = 'Minha conta';
+  if (conta) consultarSessao().then((usuario) => {
+    conta.textContent = usuario ? 'Minha conta' : 'Entrar';
+  }).catch(() => {});
 }
 // Os módulos que importam utils também recebem esta preparação compartilhada.
 iniciarPagina();

@@ -16,7 +16,7 @@ export function iniciarGuia(pagina, temAnalise) {
   const telas = [
     [
       'Comece com um exemplo',
-      'Com sua conta, você pode começar mesmo sem ter dados. Escolha um exemplo fictício para conhecer o sistema. SAF é um Sistema Agroflorestal: uma combinação de árvores e outras plantas na mesma área.',
+      'Escolha um cenário de exemplo para começar. Um SAF é um Sistema Agroflorestal, uma combinação de árvores e outras plantas na mesma área.',
     ],
     [
       'Informe uma etapa de cada vez',
@@ -24,7 +24,7 @@ export function iniciarGuia(pagina, temAnalise) {
     ],
     [
       'Explore sua proposta',
-      'Compare as opções de SAF e use Reproduzir para ver as fases. Abra os detalhes para entender a função das plantas. Você pode editar os dados e gerar novas opções.',
+      'Compare as opções e veja a evolução em anos e meses. Para retomar uma proposta depois, salve no histórico da sua conta.',
     ],
   ];
   const dialogo = document.createElement('dialog');

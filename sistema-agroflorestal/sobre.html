@@ -62,7 +62,7 @@
         <p class="erro">Ative o JavaScript para carregar o catálogo, os cenários e as análises.</p>
       </noscript>
       <div class="pagina-titulo">
-        <h1>Regras abertas. Limites claros.</h1>
+        <h1>O que faz uma agrofloresta crescer?</h1>
         <p>Entenda o caminho entre os dados do solo e as propostas agroflorestais.</p>
       </div>
       <!-- Duas áreas: o texto principal em section e o quadro complementar em aside. -->
@@ -74,9 +74,8 @@
               <p>
                 Criado para complementar o trabalho da equipe na FIRST LEGO League sobre sistemas
                 agroflorestais, o ybyrá demonstra como uma medição de solo pode orientar a escolha
-                de funções e espécies em um Sistema Agroflorestal (SAF). As propostas são geradas
-                com dados e regras do próprio projeto. O acesso ao sistema exige uma conta; o
-                servidor local cuida do cadastro e das sessões.
+                de funções e espécies em um Sistema Agroflorestal (SAF). Qualquer pessoa pode gerar
+                propostas. A conta permite guardar e retomar um SAF.
               </p>
               <!-- Lista ordenada: as etapas precisam acontecer nesta sequência.
                          strong destaca o nome; p explica o que acontece em cada uma. -->
@@ -84,24 +83,25 @@
                 <li>
                   <strong>Receber e validar</strong>
                   <p>
-                    pH, umidade, temperatura, N, P, K, município, estado e objetivo. Condutividade é
-                    opcional.
+                    O município e a UF servem para consultar o clima. O objetivo orienta os papéis.
+                    A classe do solo, as condições observadas e as medidas são opcionais.
                   </p>
                 </li>
                 <li>
                   <strong>Interpretar cada parâmetro</strong>
                   <p>
-                    As faixas de <code>faixas-solo.json</code> geram BAIXO, ADEQUADO, ALTO ou
-                    ATENÇÃO. Não existe uma nota geral de saúde do solo.
+                    O modelo usa as classes do Sistema Brasileiro de Classificação de Solos da
+                    Embrapa para indicar cuidados com drenagem e profundidade. As condições
+                    observadas na área têm prioridade. A classificação de nutrientes pode vir do laudo.
                   </p>
                 </li>
                 <li>
                   <strong>Ordenar espécies por motivos</strong>
                   <p>
-                    Faixas conhecidas de pH (+25), temperatura (+20) e umidade (+15), cada
-                    necessidade atendida (+15), novo estrato (+10), sucessão adequada ao papel (+10)
-                    e nova função (+5). Um limite conhecido incompatível elimina a espécie. Um valor
-                    <code>null</code> ignora o critério.
+                    O modelo compara o clima e o solo com as faixas de cultivo do catálogo. Cada
+                    faixa favorável, ocorrência regional documentada e função adequada ao papel
+                    melhora a posição da planta. As justificativas mostram quais critérios foram
+                    usados em cada escolha.
                   </p>
                 </li>
                 <li>
@@ -109,7 +109,8 @@
                   <p>
                     Produção + recuperação, produção diversificada e recuperação + biodiversidade. A
                     montagem evita repetição de espécies, considera funções e estratos, e exclui
-                    pares marcados EVITAR. Alternativas empatadas podem compor variações.
+                    pares marcados EVITAR. Quando a primeira opção deixa um papel obrigatório
+                    sem candidata, o sistema tenta outras combinações.
                   </p>
                 </li>
               </ol>
@@ -119,10 +120,15 @@
             <summary>O que os dados representam</summary>
             <div>
               <p>
-                Os três cenários são fictícios. Todos os limiares do solo são regras pedagógicas,
+                Os três cenários usam amostras fictícias de solo. Os limiares demonstrativos são regras pedagógicas,
                 sem calibração laboratorial. N, P e K usam unidades arbitrárias de demonstração: não
                 são mg/kg, mg/dm³ ou recomendação de adubação. A condutividade usa dS/m, também com
                 limiar demonstrativo.
+              </p>
+              <p>
+                As médias de chuva e temperatura do ar usam a reanálise ERA5 de 1991 a 2020
+                para a sede do município. A busca consulta o Open-Meteo pelo nome do município e UF.
+                Se você tiver dados da sua área, pode informar as médias diretamente no formulário.
               </p>
               <p>
                 Cobertura e diversidade são prioridades dos modelos, não medições de solo exposto ou
@@ -135,9 +141,9 @@
             <summary>Ausência de informação é informação</summary>
             <div>
               <p>
-                O catálogo reúne 18 espécies e uma curadoria de 30 fontes, incluindo Embrapa, FAO,
-                Kew, IDAM, MAPA, SENAR, EMATER-PA e Tropical Forages. As fichas apresentam 43
-                referências numéricas de cultivo, com unidades, contexto e fonte por valor. Faixas
+                A curadoria reúne fontes da Embrapa, FAO, Kew, IDAM, MAPA, SENAR, EMATER-PA e
+                Tropical Forages. As fichas apresentam referências numéricas de cultivo, com
+                unidades, contexto e fonte por valor. Faixas
                 ótimas, condições de ocorrência e limites absolutos são identificados separadamente.
                 O resultado não confirma adequação climática ou regional.
               </p>
@@ -162,18 +168,15 @@
             <summary>Referência de cultivo não é limite automático</summary>
             <div>
               <p>
-                Os limites numéricos usados para exclusão de espécies continuam ausentes quando não
-                há equivalência validada com as entradas do sistema. A temperatura do ar não é a
-                temperatura do solo, a chuva em milímetros não é umidade do solo em porcentagem e
-                uma faixa ótima não é um limite de sobrevivência. As referências estão em
-                <code>cultivo.json</code> e <code>referencias.json</code>; o catálogo permite
-                consultá-las sem aplicar essas conversões indevidas.
+                O modelo usa faixas preferenciais para ordenar as plantas. Limites mínimos
+                explícitos da referência podem excluir uma candidata, como a chuva anual para o
+                cacau. Temperatura do ar, temperatura do solo, chuva e umidade do solo são
+                consideradas em seus próprios contextos.
               </p>
               <p>
-                Não foram inventadas doses de N, P e K nem listas de estados aptos. Uma indicação de
-                distribuição natural ou de cultivo em um município não valida toda a região. A
-                fixação biológica de N é uma capacidade dependente da simbiose e do manejo, sem
-                garantia de fornecer N à cultura vizinha.
+                Os registros de ocorrência em uma UF ajudam a ordenar algumas espécies. A aptidão
+                depende do terreno e do manejo. A fixação biológica de N depende da simbiose e
+                do manejo da biomassa.
               </p>
             </div>
           </details>
@@ -185,8 +188,8 @@
                 de campo. A animação usa formas estilizadas próprias para as 18 espécies, incluindo
                 suas folhas, ramos, frutos e tipos de raízes. Os ritmos de desenho são diferentes,
                 mas não são taxas agronômicas. Culturas iniciais saem do arranjo e coberturas de
-                ciclo curto são renovadas por novas plantas. Não há escala de tempo, altura ou
-                profundidade. O sistema não prevê produtividade, não prescreve fertilizantes, não
+                ciclo curto são renovadas por novas plantas. A linha do tempo em anos e meses é
+                ilustrativa. O sistema não prevê produtividade, não prescreve fertilizantes, não
                 calcula crescimento e não realiza avaliação local de invasividade. A escolha
                 definitiva precisa considerar clima, bioma, método de medição, água e contexto da
                 área.
@@ -286,21 +289,16 @@
         </section>
         <!-- Explica acesso local e privacidade, separados do texto das regras. -->
         <aside class="dicas">
-          <h2>Dados e acesso local</h2>
+          <h2>Dados e acesso</h2>
           <p>
-            A análise usa arquivos deste repositório. O login e os arquivos do projeto funcionam
-            pelo servidor local. As imagens do catálogo estão armazenadas no projeto com créditos e
-            licenças. Os links para fontes externas exigem internet. Se uma imagem não carregar, a
-            ficha continua disponível.
+            A análise combina o catálogo do projeto com a consulta climática. As imagens do
+            catálogo têm créditos e licenças nas fichas.
           </p>
           <hr />
           <h3>Privacidade</h3>
           <p>
-            A análise atual é guardada no localStorage deste navegador. O login é obrigatório. O
-            servidor guarda e-mail, hash da senha e sessões em um banco local fora da pasta pública.
-            Senhas não são guardadas em texto simples. A sessão dura até oito horas e pode ser
-            encerrada em Minha conta. As imagens licenciadas foram obtidas do Wikimedia Commons e
-            são servidas localmente.
+            A análise atual fica na aba do navegador. Ao salvar uma proposta, seus dados, as
+            espécies escolhidas e o mês visualizado ficam disponíveis no histórico da sua conta.
           </p>
           <a class="botao" href="analise.html">Experimentar →</a>
         </aside>
@@ -319,7 +317,7 @@
               height="95"
           /></a>
           <div class="rodape-proposito">
-            <h2>Ideias que criam raízes.</h2>
+            <h2>Agro é floresta.</h2>
             <p>Uma ideia dos Jumpers. Robótica, pesquisa e agrofloresta.</p>
           </div>
           <nav aria-label="Navegação do rodapé">

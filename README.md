@@ -1,6 +1,6 @@
 <div align="center">
 
-![ybyrá — Ideias que criam raízes](docs/imagens/capa-ybyra.svg)
+![ybyrá — Agro é floresta](docs/imagens/capa-ybyra.svg)
 
 **Robótica, pesquisa e agrofloresta. Uma ideia da equipe Jumpers, do SESI Cotia.**
 
@@ -10,7 +10,7 @@
 
 ## Sobre o ybyrá
 
-O ybyrá apoia o projeto de inovação dos Jumpers na FIRST LEGO League. A ferramenta permite explorar espécies, informar um cenário de solo e comparar composições demonstrativas de Sistemas Agroflorestais (SAFs).
+O ybyrá apoia o projeto de inovação dos Jumpers na FIRST LEGO League. A ferramenta permite explorar espécies, comparar propostas de Sistemas Agroflorestais (SAFs) com dados de clima e solo e acompanhar uma evolução ilustrativa em anos e meses.
 
 O projeto reúne **79 registros de plantas**, incluindo o inventário histórico compartilhado pelo **Grupo Taiobas do Matão USP**. As propostas e os desenhos de crescimento usam um subconjunto de **18 espécies**. O catálogo distingue registros de consulta, hipóteses e dados efetivamente usados pelo modelo.
 
@@ -25,7 +25,7 @@ O projeto reúne **79 registros de plantas**, incluindo o inventário histórico
 | Cenários e formulário em três etapas         | Propostas com justificativas e fontes         | Catálogo pesquisável e relações entre espécies   |
 | Representação das fases com plantas e raízes | Controle manual, seleção e movimento reduzido | Sobre nós, fotos da equipe e carrossel acessível |
 
-O cadastro de produção exige **senha com pelo menos 12 caracteres e confirmação por e-mail**. O código tem uma aba própria, com colar, copiar e reenviar. O acesso usa senha e e-mail confirmado; não há segundo fator adicional.
+Qualquer pessoa pode simular. Para guardar e reabrir propostas em **Minha conta → Meus SAFs**, entre com e-mail e senha ou, quando configurado, com Google. O cadastro por e-mail em produção exige senha com pelo menos 12 caracteres e confirmação por código.
 
 ## Executar localmente
 
@@ -35,7 +35,7 @@ O cadastro de produção exige **senha com pelo menos 12 caracteres e confirmaç
 python servidor.py
 ```
 
-Abra [localhost:8765](http://127.0.0.1:8765), conheça a apresentação pública e entre na sua conta para experimentar um cenário. No Windows, também é possível usar `py servidor.py`. Encerre com `Ctrl+C`.
+Abra [localhost:8765](http://127.0.0.1:8765) e experimente um cenário. No Windows, também é possível usar `py servidor.py`. Encerre com `Ctrl+C`.
 
 O modo local usa SQLite em `.dados-locais/`, não envia e-mail e abre a sessão ao cadastrar. Na produção, a confirmação por e-mail é obrigatória antes do login. Contas locais e de produção são independentes.
 
@@ -52,7 +52,7 @@ O modo local usa SQLite em `.dados-locais/`, não envia e-mail e abre a sessão 
 | Contas locais           | SQLite                                              | Senhas com hash e sessões locais                              |
 | Produção                | Vercel, Supabase e Brevo SMTP                       | Hospedagem, PostgreSQL, autenticação e confirmação por e-mail |
 
-A composição do SAF acontece no navegador. O servidor controla o acesso. Não há histórico permanente de propostas por usuário; a análise atual fica no navegador.
+A composição do SAF acontece no navegador. O servidor consulta o Open-Meteo para obter médias municipais da reanálise ERA5 de 1991 a 2020. O formulário também aceita médias informadas manualmente. A simulação atual fica na aba, e o histórico da conta guarda as entradas, a composição selecionada e o mês visualizado.
 
 ## Desenvolver e validar
 
@@ -68,10 +68,10 @@ Edite `frontend/src/`; o build atualiza `sistema-agroflorestal/ui/`. Os arquivos
 
 ```sh
 python -m unittest discover -s tests -v
-node --test tests/crescimento.test.mjs
+node --test tests/crescimento.test.mjs tests/recomendacao.test.mjs
 ```
 
-A suíte contém 40 testes Python e sete testes Node. Para alterações visuais, confira também navegação, formulário, login, carrossel e crescimento em computador e celular. Os [registros de validação](docs/VALIDACAO-ACESSO.md) indicam os cenários já exercitados.
+Para alterações visuais, confira também navegação, formulário, login, carrossel e crescimento em computador e celular.
 
 ## Estrutura
 
@@ -92,11 +92,11 @@ auth_producao.py         Integração da autenticação com Supabase
 
 O [guia de produção](docs/PRODUCAO.md) explica Supabase, SMTP, variáveis e Vercel. Use `.env.example` como referência; nunca versione senhas, chaves secretas, sessões ou bancos locais.
 
-A configuração da Vercel encaminha todas as rotas para `api/site.py`, preservando a autenticação. A landing, o Sobre nós, a metodologia, o catálogo e a experiência de demonstração são públicos, incluindo seus dados de consulta e fotos. Apenas `/analise.html` (criador de SAFs) e `/resultado.html` exigem sessão. Não publique somente a pasta estática.
+A configuração da Vercel encaminha as rotas para `api/site.py`. As páginas, o catálogo e a simulação são públicos. A API de histórico exige sessão, inclusive ao abrir uma proposta salva por link.
 
 ## Equipe, parceria e créditos
 
-Os Jumpers são uma equipe de robótica do SESI Cotia com 11 integrantes, uma mentora e uma técnica. O Grupo Taiobas do Matão USP compartilhou o banco de sementes de 2021 que apoia a pesquisa. O [documento original](docs/fontes/banco-sementes-taiobas-2021.docx) e seu [inventário rastreável](docs/INVENTARIO-ORIGINAL-TAIOBAS.json) permanecem no repositório.
+Os Jumpers são uma equipe de robótica do SESI Cotia formada por 11 integrantes e pela Thalita, professora, orientadora técnica e mentora da equipe. O Grupo Taiobas do Matão USP compartilhou o banco de sementes de 2021 que apoia a pesquisa. O [documento original](docs/fontes/banco-sementes-taiobas-2021.docx) e seu [inventário rastreável](docs/INVENTARIO-ORIGINAL-TAIOBAS.json) permanecem no repositório.
 
 As fotografias da equipe foram fornecidas pelo time. A fotografia de floresta da abertura e as imagens do catálogo têm fontes e licenças registradas nos [créditos](docs/CREDITOS-IMAGENS.md). A imagem ilustrativa da tela de acesso é gerada e identificada como tal. As marcas das instituições são preservadas nos assets.
 

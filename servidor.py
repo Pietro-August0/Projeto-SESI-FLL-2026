@@ -7,6 +7,7 @@ um servidor de aplicação apropriado, preservando a proteção destas rotas.
 
 import argparse
 from contextlib import contextmanager
+from datetime import datetime, timezone
 import hashlib
 import hmac
 import json
@@ -20,13 +21,18 @@ import threading
 import time
 from http.cookies import SimpleCookie, CookieError
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import quote, unquote, urlsplit
+from urllib.parse import parse_qs, unquote, urlsplit
+from urllib.error import URLError
+
+from clima import ESTADOS, clima_municipal
 
 RAIZ = Path(__file__).resolve().parent
 PUBLICO = RAIZ / "sistema-agroflorestal"
 ITERACOES = 600_000
 DURACAO = 8 * 60 * 60
 COOKIE = "ybyra_sessao"
+ID_SAF = re.compile(r"[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}")
+TAMANHO_PAGINA = 25
 
 
 @contextmanager
@@ -54,6 +60,12 @@ def iniciar_banco(arquivo):
                 expira INTEGER NOT NULL,
                 FOREIGN KEY(usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
             );
+            CREATE TABLE IF NOT EXISTS safs (
+                usuario_id INTEGER NOT NULL, id TEXT NOT NULL, criado_em TEXT NOT NULL,
+                dados TEXT NOT NULL, PRIMARY KEY (usuario_id, id),
+                FOREIGN KEY(usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
+            );
+            CREATE INDEX IF NOT EXISTS safs_historico ON safs (usuario_id, criado_em DESC, id);
         """)
 
 
@@ -93,7 +105,8 @@ class Requisicao(BaseHTTPRequestHandler):
             "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://upload.wikimedia.org; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'",
         )
         if cookie:
-            self.send_header("Set-Cookie", cookie)
+            for valor in (cookie,) if isinstance(cookie, str) else cookie:
+                self.send_header("Set-Cookie", valor)
         if destino:
             self.send_header("Location", destino)
         self.end_headers()
@@ -104,10 +117,24 @@ class Requisicao(BaseHTTPRequestHandler):
         if self.command != "HEAD":
             self.wfile.write(corpo)
 
+    def ler_json(self, limite=4096, *, opcional=False):
+        tamanho = int(self.headers.get("Content-Length", "0"))
+        if opcional and tamanho == 0:
+            return {}
+        if not 0 < tamanho <= limite or self.headers.get_content_type() != "application/json":
+            raise ValueError()
+        dados = json.loads(self.rfile.read(tamanho))
+        if not isinstance(dados, dict):
+            raise ValueError()
+        return dados
+
     def token(self):
+        return self.ler_cookie(COOKIE)
+
+    def ler_cookie(self, nome):
         try:
             cookies = SimpleCookie(self.headers.get("Cookie", ""))
-            return cookies[COOKIE].value if COOKIE in cookies else ""
+            return cookies[nome].value if nome in cookies else ""
         except CookieError:
             return ""
 
@@ -152,12 +179,19 @@ class Requisicao(BaseHTTPRequestHandler):
 
     def do_GET(self):
         rota = unquote(urlsplit(self.path).path)
+        if rota == "/api/clima":
+            self.responder_clima()
+            return
+        if rota == "/api/safs":
+            self.responder_historico()
+            return
         if rota == "/api/sessao":
             self.json(
                 200,
                 {
                     "usuario": self.usuario(),
                     "verificacao_email": getattr(self, "verificacao_email", False),
+                    "login_google": self.google_ativo(),
                 },
             )
             return
@@ -187,21 +221,6 @@ class Requisicao(BaseHTTPRequestHandler):
         ):
             self.json(404, {"erro": "Arquivo não encontrado."})
             return
-        # Somente o criador e seu resultado exigem conta. Conteúdo institucional
-        # e dados de consulta são públicos, inclusive as fotos do Sobre nós.
-        relativo = arquivo.relative_to(PUBLICO.resolve()).as_posix()
-        protegido = relativo in {"analise.html", "resultado.html"}
-        if protegido and not self.usuario():
-            if arquivo.suffix == ".html":
-                caminho = rota.lstrip("/") + (
-                    "?" + urlsplit(self.path).query if urlsplit(self.path).query else ""
-                )
-                self.cabecalhos(
-                    303, "text/plain", destino="/conta.html?proximo=" + quote(caminho, safe="")
-                )
-            else:
-                self.json(401, {"erro": "Entre na sua conta para continuar."})
-            return
         corpo = arquivo.read_bytes()
         tipo = {
             ".js": "text/javascript",
@@ -212,6 +231,114 @@ class Requisicao(BaseHTTPRequestHandler):
         self.cabecalhos(200, tipo, len(corpo))
         if self.command != "HEAD":
             self.wfile.write(corpo)
+
+    def google_ativo(self):
+        return False
+
+    def responder_clima(self):
+        consulta = parse_qs(urlsplit(self.path).query)
+        municipio = consulta.get("municipio", [""])[0].strip()
+        uf = consulta.get("estado", [""])[0]
+        if not 2 <= len(municipio) <= 100 or uf not in ESTADOS:
+            self.json(400, {"erro": "Confira o município e a UF."})
+            return
+        try:
+            clima = clima_municipal(municipio, uf)
+        except (URLError, OSError, ValueError, KeyError, TypeError):
+            self.json(503, {"erro": "A consulta climática está indisponível."})
+            return
+        if clima is None:
+            self.json(404, {"erro": "Município não localizado com segurança na UF informada."})
+            return
+        self.json(200, clima)
+
+    def carregar_safs(self, usuario, identificador, inicio):
+        sql = "SELECT id, criado_em, dados FROM safs WHERE usuario_id = ?"
+        parametros = [usuario["id"]]
+        if identificador:
+            sql += " AND id = ?"
+            parametros.append(identificador)
+        else:
+            sql += " ORDER BY criado_em DESC, id LIMIT ? OFFSET ?"
+            parametros.extend((TAMANHO_PAGINA + 1, inicio))
+        with conectar(self.server.banco) as banco:
+            linhas = banco.execute(sql, parametros).fetchall()
+        return [{**dict(linha), "dados": json.loads(linha["dados"])} for linha in linhas]
+
+    def gravar_saf(self, usuario, identificador, dados):
+        with conectar(self.server.banco) as banco:
+            banco.execute(
+                "INSERT INTO safs VALUES (?, ?, ?, ?) ON CONFLICT(usuario_id, id) DO NOTHING",
+                (usuario["id"], identificador, datetime.now(timezone.utc).isoformat(),
+                 json.dumps(dados, ensure_ascii=False)),
+            )
+
+    def responder_historico(self):
+        usuario = self.usuario()
+        if not usuario:
+            self.json(401, {"erro": "Entre na sua conta para acessar o histórico."})
+            return
+        consulta = parse_qs(urlsplit(self.path).query)
+        identificador = consulta.get("id", [""])[0]
+        deslocamento = consulta.get("inicio", ["0"])[0]
+        if (identificador and not ID_SAF.fullmatch(identificador)) or not re.fullmatch(
+            r"[0-9]{1,8}", deslocamento
+        ):
+            self.json(400, {"erro": "Confira o endereço do histórico."})
+            return
+        inicio = int(deslocamento)
+        safs = self.carregar_safs(usuario, identificador, inicio)
+        if identificador:
+            if safs:
+                self.json(200, safs[0])
+            else:
+                self.json(404, {"erro": "SAF não encontrado no seu histórico."})
+            return
+        itens = [{
+            "id": saf["id"], "criado_em": saf["criado_em"],
+            "titulo": saf["dados"]["proposta"]["titulo"], "meses": saf["dados"]["meses"],
+            "municipio": saf["dados"]["analise"]["municipio"],
+            "estado": saf["dados"]["analise"]["estado"],
+        } for saf in safs[:TAMANHO_PAGINA]]
+        self.json(200, {
+            "safs": itens,
+            "proximo": inicio + TAMANHO_PAGINA if len(safs) > TAMANHO_PAGINA else None,
+        })
+
+    def salvar_saf(self):
+        try:
+            dados = self.ler_json(16384)
+        except (ValueError, RecursionError):
+            self.json(400, {"erro": "Não foi possível ler os dados do SAF."})
+            return
+        usuario = self.usuario()
+        if not usuario:
+            self.json(401, {"erro": "Entre na sua conta para salvar o SAF."})
+            return
+        try:
+            identificador = dados.pop("id")
+            analise = dados["analise"]
+            proposta = dados["proposta"]
+            if (
+                not ID_SAF.fullmatch(identificador)
+                or not isinstance(analise["municipio"], str)
+                or not 1 <= len(analise["municipio"].strip()) <= 100
+                or analise["estado"] not in ESTADOS
+                or not isinstance(proposta["titulo"], str)
+                or not 1 <= len(proposta["titulo"]) <= 120
+                or not isinstance(proposta["especies"], list)
+                or not 1 <= len(proposta["especies"]) <= 10
+                or type(dados["meses"]) is not int
+                or not 0 <= dados["meses"] <= 120
+            ):
+                raise ValueError()
+            # Rejeita NaN e outros valores que não pertencem ao JSON.
+            json.dumps(dados, allow_nan=False)
+        except (ValueError, TypeError, KeyError, AttributeError, RecursionError):
+            self.json(400, {"erro": "Não foi possível ler os dados do SAF."})
+            return
+        self.gravar_saf(usuario, identificador, dados)
+        self.json(200, {"id": identificador})
 
     def mesma_origem(self):
         origem = self.headers.get("Origin", "")
@@ -241,13 +368,21 @@ class Requisicao(BaseHTTPRequestHandler):
 
     def do_POST(self):
         rota = urlsplit(self.path).path
-        if rota not in {"/api/entrar", "/api/cadastrar", "/api/sair"}:
+        if rota not in {"/api/entrar", "/api/cadastrar", "/api/sair", "/api/safs"}:
             self.json(404, {"erro": "Endereço não encontrado."})
             return
         if not self.mesma_origem():
             self.json(403, {"erro": "Recarregue a página e tente novamente."})
             return
+        if rota == "/api/safs":
+            self.salvar_saf()
+            return
         if rota == "/api/sair":
+            try:
+                self.ler_json(opcional=True)
+            except (ValueError, RecursionError):
+                self.json(400, {"erro": "Não foi possível ler a requisição."})
+                return
             with conectar(self.server.banco) as banco:
                 banco.execute(
                     "DELETE FROM sessoes WHERE token_hash = ?",
@@ -259,16 +394,7 @@ class Requisicao(BaseHTTPRequestHandler):
             self.json(429, {"erro": "Muitas tentativas. Aguarde 15 minutos e tente novamente."})
             return
         try:
-            tamanho = int(self.headers.get("Content-Length", "0"))
-            if (
-                tamanho <= 0
-                or tamanho > 4096
-                or self.headers.get("Content-Type", "").split(";")[0] != "application/json"
-            ):
-                raise ValueError()
-            dados = json.loads(self.rfile.read(tamanho))
-            if not isinstance(dados, dict):
-                raise ValueError()
+            dados = self.ler_json()
             email = dados.get("email", "")
             senha = dados.get("senha", "")
             if not isinstance(email, str) or not isinstance(senha, str):
@@ -280,7 +406,7 @@ class Requisicao(BaseHTTPRequestHandler):
                 or not 1 <= len(senha) <= 128
             ):
                 raise ValueError()
-        except (ValueError, UnicodeDecodeError, TypeError):
+        except (ValueError, TypeError, RecursionError):
             self.json(400, {"erro": "Confira o e-mail e a senha informados."})
             return
         if rota == "/api/cadastrar":
@@ -321,7 +447,7 @@ class Requisicao(BaseHTTPRequestHandler):
 
 
 def main():
-    argumentos = argparse.ArgumentParser(description="ybyrá: servidor local com login obrigatório")
+    argumentos = argparse.ArgumentParser(description="ybyrá: servidor local")
     argumentos.add_argument("--port", type=int, default=8765)
     argumentos.add_argument("--banco", type=Path, default=RAIZ / ".dados-locais" / "ybyra.sqlite3")
     argumentos.add_argument(

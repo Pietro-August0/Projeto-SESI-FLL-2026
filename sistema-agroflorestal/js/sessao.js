@@ -3,6 +3,7 @@ export async function consultarAcesso() {
   const resposta = await fetch("/api/sessao", {
     credentials: "same-origin",
     cache: "no-store",
+    signal: AbortSignal.timeout(20000),
   });
   if (!resposta.ok)
     throw new Error(
@@ -13,6 +14,16 @@ export async function consultarAcesso() {
 
 export async function consultarSessao() {
   return (await consultarAcesso()).usuario;
+}
+
+export function pedirLogin(destino) {
+  return `/conta.html?proximo=${encodeURIComponent(destino)}`;
+}
+
+export async function consultarHistorico(parametros = {}) {
+  const consulta = new URLSearchParams(parametros);
+  const resposta = await fetch(`/api/safs?${consulta}`, { signal: AbortSignal.timeout(20000) });
+  return lerResposta(resposta);
 }
 
 export function destinoAposLogin() {
@@ -43,8 +54,12 @@ export async function enviarConta(acao, dados = {}) {
     credentials: "same-origin",
     headers: { "Content-Type": "application/json", "X-Ybyra-Request": "1" },
     body: JSON.stringify(dados),
-    signal: AbortSignal.timeout(15000),
+    signal: AbortSignal.timeout(20000),
   });
+  return lerResposta(resposta);
+}
+
+async function lerResposta(resposta) {
   const resultado = await resposta.json();
   if (!resposta.ok) {
     const erro = new Error(
@@ -60,45 +75,11 @@ export async function enviarConta(acao, dados = {}) {
 export async function encerrarSessao() {
   await enviarConta("sair");
   try {
+    sessionStorage.removeItem("analiseAtual");
+    sessionStorage.removeItem("safPendente");
     localStorage.removeItem("analiseAtual");
   } catch {
     /* A saída funciona mesmo com armazenamento local bloqueado. */
   }
   location.replace("/conta.html");
 }
-
-const paginasProtegidas = new Set(["analise.html", "resultado.html"]);
-export function paginaExigeSessao() {
-  return paginasProtegidas.has(location.pathname.split("/").pop());
-}
-
-export async function exigirSessao() {
-  const pagina = location.pathname.split("/").pop() || "index.html";
-  // A consulta opcional personaliza o cabeçalho, sem bloquear conteúdo público.
-  let usuario;
-  try {
-    usuario = await consultarSessao();
-  } catch (erro) {
-    if (paginaExigeSessao()) throw erro;
-    return null;
-  }
-  if (paginaExigeSessao() && !usuario) {
-    document.documentElement.classList.add("conferindo-sessao");
-    location.replace(
-      `/conta.html?proximo=${encodeURIComponent(pagina + location.search)}`,
-    );
-    return null;
-  }
-  return usuario;
-}
-
-window.addEventListener("pageshow", async (evento) => {
-  if (!evento.persisted || !paginaExigeSessao()) return;
-  document.documentElement.classList.add("conferindo-sessao");
-  try {
-    if (await exigirSessao())
-      document.documentElement.classList.remove("conferindo-sessao");
-  } catch {
-    location.replace("/conta.html");
-  }
-});

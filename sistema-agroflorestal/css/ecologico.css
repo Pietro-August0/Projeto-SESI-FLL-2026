@@ -663,3 +663,8 @@
     align-items: flex-start;
   }
 }
+.conta-google { width: 100%; margin: 0 0 1rem; }
+.historico-safs { border-top: 1px solid var(--borda); margin-top: 1.5rem; padding-top: 1rem; }
+.historico-safs ul { list-style: none; padding: 0; }
+.historico-safs li { padding: 0.75rem 0; border-bottom: 1px solid var(--borda); }
+.historico-safs li a { display: block; font-weight: 600; }

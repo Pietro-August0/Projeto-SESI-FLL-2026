@@ -136,3 +136,13 @@ form > .ajuda {
     width: 100%;
   }
 }
+.analise-opcionais {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+}
+
+.analise-opcionais > summary { cursor: pointer; font-weight: 600; }
+.analise-opcionais > .campos { margin-top: 1rem; }
+.irrigacao-campo { max-width: 17rem; }

@@ -7,13 +7,15 @@ import os
 import threading
 import unittest
 from unittest.mock import patch
+from urllib.parse import parse_qs, urlsplit
 
 from auth_producao import FalhaAuth, RequisicaoProducao, supabase
 
 
 class ProducaoTest(unittest.TestCase):
     def test_landing_publica_nao_consulta_provedor(self):
-        for rota in ('/', '/index.html', '/historia.html', '/sobre.html', '/especies.html', '/explorar.html'):
+        for rota in ('/', '/index.html', '/historia.html', '/sobre.html', '/especies.html',
+                     '/explorar.html', '/analise.html', '/resultado.html'):
             status, _, corpo = self.requisitar(rota)
             self.assertEqual(status, 200)
             self.assertIn(b'<html', corpo)
@@ -75,7 +77,7 @@ class ProducaoTest(unittest.TestCase):
         self.auth.assert_called_with(
             "signup", {"email": "aluno@example.com", "password": "SenhaDeTeste123"}
         )
-        self.assertEqual(self.requisitar("/analise.html")[0], 303)
+        self.assertEqual(self.requisitar("/api/safs")[0], 401)
         self.assertEqual(self.requisitar("/api/reenviar", {"email": "aluno@example.com"})[0], 202)
         self.auth.assert_called_with("resend", {"type": "signup", "email": "aluno@example.com"})
 
@@ -101,15 +103,41 @@ class ProducaoTest(unittest.TestCase):
         self.auth.return_value = self.usuario
         self.assertEqual(self.requisitar("/analise.html")[0], 200)
         self.assertEqual(self.requisitar("/dados/especies.json")[0], 200)
-        self.auth.assert_called_with("user", token="jwt-teste")
         self.assertTrue(json.loads(self.requisitar("/api/sessao")[2])["verificacao_email"])
+        self.auth.assert_called_with("user", token="jwt-teste")
 
     def test_usuario_nao_confirmado_e_token_expirado_nao_acessam(self):
         self.cookie = "ybyra_sessao=jwt-teste"
         self.auth.return_value = {**self.usuario, "email_confirmed_at": None}
-        self.assertEqual(self.requisitar("/resultado.html")[0], 303)
+        self.assertEqual(self.requisitar("/api/safs")[0], 401)
         self.auth.side_effect = FalhaAuth(401)
-        self.assertEqual(self.requisitar("/analise.html")[0], 303)
+        self.assertEqual(self.requisitar("/api/safs")[0], 401)
+
+    @patch.dict(os.environ, {"YBYRA_GOOGLE_ATIVO": "1"})
+    def test_google_troca_codigo_pkce_e_retorna_a_proposta(self):
+        inicio = "/api/google/iniciar?proximo=%2Fresultado.html%3Fsalvar%3D1"
+        status, headers, corpo = self.requisitar(inicio, {})
+        self.assertEqual(status, 200)
+        consulta = parse_qs(urlsplit(json.loads(corpo)["url"]).query)
+        self.assertEqual(consulta["provider"], ["google"])
+        self.assertEqual(consulta["redirect_to"], ["https://ybyra.example/api/google/retorno"])
+        self.assertEqual(consulta["code_challenge_method"], ["s256"])
+        self.cookie = headers["Set-Cookie"].split(";")[0]
+        self.assertIn("HttpOnly", headers["Set-Cookie"])
+        verificador = self.cookie.split("=")[1].split(".")[0]
+        self.auth.return_value = {"user": self.usuario, "access_token": "jwt-teste"}
+        status, headers, corpo = self.requisitar("/api/google/retorno?code=teste")
+        self.assertEqual(status, 303)
+        self.assertEqual(headers["Location"], "https://ybyra.example/resultado.html?salvar=1")
+        self.assertIn("ybyra_sessao=jwt-teste", headers["Set-Cookie"])
+        self.assertEqual(corpo, b"")
+        self.auth.assert_called_once_with(
+            "token?grant_type=pkce", {"auth_code": "teste", "code_verifier": verificador},
+        )
+        self.cookie = ""
+        self.auth.reset_mock()
+        self.assertEqual(self.requisitar("/api/google/retorno?code=teste")[0], 303)
+        self.auth.assert_not_called()
 
     def test_confirmacao_por_codigo_enviado_ao_email(self):
         self.auth.return_value = {"user": self.usuario}
