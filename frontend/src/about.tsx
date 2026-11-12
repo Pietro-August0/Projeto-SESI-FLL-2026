@@ -45,14 +45,22 @@ function Historia() {
                   loading="lazy"
                 />
               </figure>
-              <img
-                className="story-robot"
-                src="assets/equipe/jumpers-robo-frente.webp"
-                alt="Vista frontal do robô LEGO desenvolvido pelos Jumpers"
-                width="180"
-                height="186"
-                loading="lazy"
-              />
+              <div className="story-robot-photos">
+                <img
+                  src="assets/equipe/jumpers-robo-frente.webp"
+                  alt="Vista lateral do robô LEGO dos Jumpers"
+                  width="180"
+                  height="186"
+                  loading="lazy"
+                />
+                <img
+                  src="assets/equipe/jumpers-robo-lado.webp"
+                  alt="Vista frontal do robô LEGO dos Jumpers"
+                  width="170"
+                  height="202"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </TabsContent>

@@ -362,12 +362,18 @@
   line-height: 1.7;
   margin-bottom: 12px;
 }
-.story-robot {
+.story-robot-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 180px));
+  gap: 16px;
+  align-items: start;
+  margin-top: 16px;
+}
+.story-robot-photos img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 12px;
-  margin-top: 16px;
 }
 .story-table {
   position: relative;
