@@ -27,9 +27,10 @@ Execute também `supabase/migrations/202611120001_historico_safs.sql`. A tabela 
 ### Ativar login com Google
 
 1. No Google Cloud, configure a tela de consentimento e crie um cliente OAuth do tipo **Aplicativo da Web**. Em **URIs de redirecionamento autorizados**, use a URL indicada no painel do provedor Google do Supabase, no formato `https://<projeto>.supabase.co/auth/v1/callback`.
-2. Em **Authentication → Sign In / Providers → Google**, habilite o provedor e informe o Client ID e o Client Secret do Google. Se o aplicativo estiver em modo de teste, adicione as contas que vão validar o acesso.
+2. Em **Authentication → Sign In / Providers → Google**, habilite o provedor. Substitua todo o conteúdo dos campos **Client IDs** e **Client Secret** pelos valores copiados do cliente web. Confira se o ID salvo corresponde exatamente ao do Google, pois um prefixo ou sufixo extra causa `401 invalid_client`.
 3. Em **Authentication → URL Configuration → Redirect URLs**, adicione a origem da aplicação com o caminho `/api/google/retorno`. Em produção, use `https://ybyra-sesi-fll.vercel.app/api/google/retorno`.
 4. Defina `YBYRA_GOOGLE_ATIVO=1` na Vercel e publique a atualização. Use a mesma origem em `YBYRA_ORIGEM` e na URL de retorno. O segredo do Google fica no painel do Supabase.
+5. Para acesso público, confira se o aplicativo está **Em produção** no Google Auth Platform. O ybyrá usa o [aviso de privacidade do site](https://ybyra-sesi-fll.vercel.app/sobre.html#privacidade) no branding. Teste **Continuar com Google** e confirme que o navegador volta ao ybyrá com a conta conectada.
 
 [Configuração de login com Google no Supabase](https://supabase.com/docs/guides/auth/social-sign-in/auth-google)
 
