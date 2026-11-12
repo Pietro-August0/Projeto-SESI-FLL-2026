@@ -663,7 +663,36 @@
     align-items: flex-start;
   }
 }
-.conta-google { width: 100%; margin: 0 0 1rem; }
+.conta-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 44px;
+  margin: 0 0 1rem;
+  padding: 8px 12px;
+  border: 1px solid #747775;
+  border-radius: 4px;
+  background: #fff;
+  color: #1f1f1f;
+  font: 500 14px/20px 'Google Sans', Arial, sans-serif;
+  cursor: pointer;
+}
+
+.conta-google img {
+  flex: none;
+  object-fit: contain;
+}
+
+.conta-google:hover:enabled {
+  background: #f8faff;
+}
+
+.conta-google:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
 .historico-safs { border-top: 1px solid var(--borda); margin-top: 1.5rem; padding-top: 1rem; }
 .historico-safs ul { list-style: none; padding: 0; }
 .historico-safs li { padding: 0.75rem 0; border-bottom: 1px solid var(--borda); }
