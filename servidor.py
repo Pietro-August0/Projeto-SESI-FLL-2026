@@ -8,6 +8,7 @@ um servidor de aplicação apropriado, preservando a proteção destas rotas.
 import argparse
 from contextlib import contextmanager
 from datetime import datetime, timezone
+import gzip
 import hashlib
 import hmac
 import json
@@ -92,11 +93,12 @@ class Requisicao(BaseHTTPRequestHandler):
         # Não registra credenciais, e-mails, cookies ou parâmetros de URLs.
         pass
 
-    def cabecalhos(self, status, tipo, tamanho=0, cookie=None, destino=None):
+    def cabecalhos(self, status, tipo, tamanho=0, cookie=None, destino=None, extras=None):
         self.send_response(status)
         self.send_header("Content-Type", tipo)
         self.send_header("Content-Length", str(tamanho))
-        self.send_header("Cache-Control", "no-store")
+        for nome, valor in (extras or {"Cache-Control": "no-store"}).items():
+            self.send_header(nome, valor)
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("X-Frame-Options", "DENY")
         self.send_header("Referrer-Policy", "same-origin")
@@ -231,7 +233,29 @@ class Requisicao(BaseHTTPRequestHandler):
             ".ico": "image/x-icon",
             ".webmanifest": "application/manifest+json",
         }.get(arquivo.suffix, mimetypes.guess_type(str(arquivo))[0] or "application/octet-stream")
-        self.cabecalhos(200, tipo, len(corpo))
+        self.enviar_estatico(tipo, corpo, arquivo.suffix.lower())
+
+    def enviar_estatico(self, tipo, corpo, sufixo):
+        """Entrega arquivos públicos com revalidação (ETag) e compressão de texto.
+
+        Imagens mudam raramente e ficam em cache por uma semana; páginas, estilos
+        e scripts sempre revalidam, então uma publicação nova aparece de imediato.
+        """
+        etag = '"' + hashlib.sha256(corpo).hexdigest()[:20] + '"'
+        imagem = sufixo in {".jpg", ".jpeg", ".png", ".webp", ".ico"}
+        extras = {
+            "Cache-Control": "public, max-age=604800" if imagem else "no-cache",
+            "ETag": etag,
+            "Vary": "Accept-Encoding",
+        }
+        if self.headers.get("If-None-Match") == etag:
+            self.cabecalhos(304, tipo, 0, extras=extras)
+            return
+        comprimivel = sufixo in {".html", ".css", ".js", ".json", ".svg", ".webmanifest"}
+        if comprimivel and len(corpo) > 1024 and "gzip" in self.headers.get("Accept-Encoding", ""):
+            corpo = gzip.compress(corpo, 6, mtime=0)
+            extras["Content-Encoding"] = "gzip"
+        self.cabecalhos(200, tipo, len(corpo), extras=extras)
         if self.command != "HEAD":
             self.wfile.write(corpo)
 

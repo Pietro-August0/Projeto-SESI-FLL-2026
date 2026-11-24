@@ -4,6 +4,36 @@
   --altura-logo-cabecalho: 96px;
   --fundo-cabecalho: #24513e;
   --destaque-cabecalho: #c7ef9b;
+  /* Medida única: cabeçalho, conteúdo e rodapé usam a mesma coluna. */
+  --medida: 1200px;
+  --gutter: 48px;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --gutter: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --gutter: 20px;
+  }
+}
+
+.container,
+.wrap {
+  width: min(var(--medida), calc(100% - 2 * var(--gutter)));
+  margin-inline: auto;
+}
+
+/* Respiro padrão antes do rodapé nas páginas internas. */
+main.container:not(.inicio-page) {
+  padding-bottom: 72px;
+}
+
+main.container:not(.inicio-page) > :last-child {
+  margin-bottom: 0;
 }
 
 .cabecalho {
@@ -151,7 +181,7 @@ html {
 @media (min-width: 761px) {
   .cabecalho .cabecalho-interno,
   .navbar-surface .nav {
-    width: min(1200px, calc(100% - 48px));
+    width: min(var(--medida), calc(100% - 2 * var(--gutter)));
     max-width: none;
     padding-inline: 0;
     margin-inline: auto;
@@ -169,6 +199,9 @@ html {
   .cabecalho-interno > nav,
   .navbar-surface .nav > .nav-links {
     grid-column: 2;
+    order: 0;
+    width: auto;
+    flex-wrap: nowrap;
     margin: 0;
     justify-content: center;
   }
@@ -199,5 +232,57 @@ html {
     grid-column: 2;
     grid-row: 1;
     justify-self: end;
+  }
+}
+
+/* Telas médias (521–760px): o menu cabe na mesma linha da marca e do botão. */
+@media (min-width: 521px) and (max-width: 760px) {
+  .cabecalho .cabecalho-interno {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .cabecalho-interno > nav {
+    grid-column: 2;
+    grid-row: 1;
+    order: 0;
+    width: auto;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .cabecalho-interno > .cabecalho-ferramentas {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+/* Entre 521 e 640px tudo encolhe um pouco para continuar em uma linha só. */
+@media (min-width: 521px) and (max-width: 640px) {
+  .cabecalho .conta-atalho {
+    width: 96px;
+  }
+
+  .cabecalho nav a {
+    padding-inline: 8px;
+    font-size: 13px;
+  }
+}
+
+/* Até 520px: marca e botão em cima; o menu ocupa a linha de baixo, com os links distribuídos. */
+@media (max-width: 520px) {
+  .cabecalho .cabecalho-interno {
+    row-gap: 4px;
+    padding-bottom: 6px;
+  }
+
+  .cabecalho-interno > nav {
+    justify-content: space-between;
+    border-top: 1px solid #ffffff1f;
+    padding-top: 4px;
+  }
+
+  .cabecalho nav a {
+    padding-inline: 6px;
   }
 }

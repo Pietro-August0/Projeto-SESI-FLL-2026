@@ -22,11 +22,11 @@ body {
   color: var(--texto);
   background: var(--fundo);
 }
+/* Títulos seguem a identidade: Georgia, peso normal (definido em global.css). */
 h1,
 h2 {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  font-weight: 600;
   letter-spacing: -0.035em;
+  text-wrap: balance;
 }
 h1 {
   line-height: 1.08;
@@ -954,3 +954,30 @@ details[open] > summary {
   background: var(--superficie);
 }
 #feedback-conta::backdrop { background: rgb(12 30 21 / 65%); }
+
+/* Alvos de toque confortáveis (mínimo de 44px) nos controles que a varredura apontou. */
+.ajuda-link,
+.hero .nota .ajuda-link,
+.hero-natural .ajuda-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.especie-card summary,
+.especie-card details > summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
+.percurso li > span,
+.percurso li > a {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+}
+/* Destaque do título do início do criador alinhado ao restante do site (sem frase isolada em cor). */
+.destaque-flor,
+.hero-natural .destaque-flor {
+  color: inherit;
+  font-style: normal;
+}

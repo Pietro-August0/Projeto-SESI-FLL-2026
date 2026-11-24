@@ -31,3 +31,16 @@
 
 .sobre-saf p + p { margin-top: 1rem; }
 .sobre-saf a { display: inline-block; margin-top: 1.25rem; color: var(--verde); font-weight: 700; }
+
+/* Título do Sobre nós alinhado ao restante do site: Georgia, peso normal, sem destaque em uma palavra. */
+.about-hero h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.about-hero h1 em {
+  font-style: normal;
+  color: inherit;
+}

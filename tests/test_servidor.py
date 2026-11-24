@@ -65,6 +65,19 @@ class AutenticacaoTest(unittest.TestCase):
         self.assertEqual(self.requisitar("/api/safs")[0], 401)
         self.assertEqual(self.requisitar("/api/safs", {})[0], 401)
 
+    def test_arquivos_estaticos_usam_cache_e_api_nao(self):
+        _, estilo, _ = self.requisitar("/css/global.css")
+        self.assertEqual(estilo["Cache-Control"], "no-cache")
+        conexao = http.client.HTTPConnection("127.0.0.1", self.servidor.server_port, timeout=10)
+        conexao.request("GET", "/css/global.css", headers={"If-None-Match": estilo["ETag"]})
+        resposta = conexao.getresponse()
+        resposta.read()
+        conexao.close()
+        self.assertEqual(resposta.status, 304)
+        _, imagem, _ = self.requisitar("/assets/equipe/equipe-visita.jpg")
+        self.assertIn("max-age", imagem["Cache-Control"])
+        self.assertEqual(self.requisitar("/api/sessao")[1]["Cache-Control"], "no-store")
+
     def test_saf_persiste_sem_duplicar_e_fica_isolado_por_conta(self):
         self.cadastrar()
         dono = self.cookie

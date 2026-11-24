@@ -97,8 +97,10 @@ button:focus-visible {
     background 0.2s;
 }
 .button:hover {
-  transform: translateY(-3px);
   background: #c5ffa1;
+}
+.button:active {
+  transform: translateY(1px);
 }
 .button svg {
   width: 19px;
@@ -150,8 +152,9 @@ h1 {
   font-size: clamp(56px, 6.2vw, 88px);
   line-height: 1.02;
 }
-h1 span {
-  color: var(--lime);
+h1,
+h2 {
+  text-wrap: balance;
 }
 .hero-copy p {
   font-size: 20px;
@@ -272,8 +275,6 @@ h2 {
   width: 100%;
   max-height: 350px;
   opacity: 0.8;
-  animation: sway 7s ease-in-out infinite;
-  transform-origin: 50% 90%;
 }
 .reveal {
   transition:

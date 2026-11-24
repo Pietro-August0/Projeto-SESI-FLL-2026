@@ -513,3 +513,29 @@
 .crescimento-ano {
   font-weight: 700;
 }
+
+/* Em telas estreitas, o controle de tempo desce para baixo do rótulo em vez de encolher até sumir. */
+.crescimento-linha {
+  flex-wrap: wrap;
+}
+.crescimento-linha label {
+  white-space: normal;
+}
+.crescimento-anos {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+/* O rótulo ocupa sempre a linha inteira e o valor tem largura fixa:
+   o controle de tempo não muda de tamanho enquanto os números mudam. */
+.crescimento-linha label {
+  flex: 0 0 100%;
+  font-variant-numeric: tabular-nums;
+}
+.crescimento-ano {
+  display: inline-block;
+  min-width: 17ch;
+}
+.crescimento-anos {
+  flex: 1 1 100%;
+}

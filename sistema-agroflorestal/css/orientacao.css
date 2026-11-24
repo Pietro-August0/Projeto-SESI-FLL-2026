@@ -329,6 +329,10 @@
   padding-bottom: 16px;
 }
 
+.analise-titulo p {
+  margin-inline: auto;
+}
+
 .analise-titulo .voltar {
   display: none;
 }
