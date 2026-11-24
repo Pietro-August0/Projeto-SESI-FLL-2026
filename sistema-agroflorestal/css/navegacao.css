@@ -286,3 +286,50 @@ html {
     padding-inline: 6px;
   }
 }
+
+/* Cabeçalho das páginas internas na mesma altura e posição do cabeçalho do início:
+   remove os recuos antigos no topo que empurravam tudo para baixo entre 521 e 1100px. */
+@media (min-width: 521px) {
+  .cabecalho .cabecalho-interno {
+    padding-block: 0;
+  }
+}
+
+/* "Como usar" com o mesmo desenho dos links do menu (altura, fonte, cantos e hover). */
+/* Em telas de até 900px o "Como usar" do cabeçalho fica oculto: não cabe ao lado do menu. */
+@media (max-width: 900px) {
+  .cabecalho .ajuda-cabecalho {
+    display: none;
+  }
+}
+
+.cabecalho .ajuda-cabecalho {
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 12px;
+  background: none;
+  color: #f5fbf7;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.cabecalho .ajuda-cabecalho:hover {
+  color: #fff;
+  background: #ffffff26;
+}
+
+.cabecalho .ajuda-cabecalho:focus-visible {
+  outline: 2px solid var(--destaque-cabecalho);
+  outline-offset: 2px;
+}
+
+@media (min-width: 901px) {
+  .cabecalho .ajuda-cabecalho {
+    display: inline-flex;
+  }
+}
